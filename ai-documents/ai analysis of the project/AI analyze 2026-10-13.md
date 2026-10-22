@@ -105,5 +105,5 @@ git clone https://github.com/jutge-org/jutge-driver-std.git
 
 > [!NOTE]
 > The operational system prompt and senior engineer directives for your AI assistant have been decoupled and moved to:
-> **[`ai assistant files/AI-ASSISTANT-SYSTEM-PROMPT.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/ai-documents/ai%20analyze/ai%20assistant%20files/AI-ASSISTANT-SYSTEM-PROMPT.md)**.
+> **[`ai-documents/ai assistant files/AI-ASSISTANT-SYSTEM-PROMPT.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/ai-documents/ai%20assistant%20files/AI-ASSISTANT-SYSTEM-PROMPT.md)**.
 > Refer to that file or copy its instructions directly into your AI coding assistant (Anti-Gravity, Cursor, Claude Code, Windsurf, Aider).

@@ -86,7 +86,7 @@ my-problem.pbm/
 
 ## 4. Synthesis of Existing AI Analysis Documents
 
-Reviewing the previous analysis documents in `ai-documents/ai analyze/`:
+Reviewing the previous analysis documents in `ai-documents/ai analysis of the project/`:
 
 | Document | Focus | Core Takeaway |
 |---|---|---|

@@ -1,6 +1,6 @@
 # AI Assistant Master System Prompt & Operational Directives
 
-**Location:** `ai-documents/ai analyze/ai assistant files/AI-ASSISTANT-SYSTEM-PROMPT.md`  
+**Location:** `ai-documents/ai assistant files/AI-ASSISTANT-SYSTEM-PROMPT.md`  
 **Purpose:** Dedicated system prompt and operational guidelines for AI coding assistants (Anti-Gravity, Cursor, Claude Code, Windsurf, Aider) assisting the student in this workspace.
 
 ---
@@ -35,5 +35,5 @@ The local workspace has the Jutge.org repositories cloned inside `jutge_repos/`:
    - When asked to inspect a bug or implement a feature, inspect the respective local repository directory first.
    - Validate dependencies, check `package.json` scripts, run builds/tests, and outline exact terminal commands before modifying files.
    - Never write expected testcase outputs (`*.cor`) by hand or LLM — they are always deterministically compiled from golden solutions.
-   - Maintain documentation integrity in `ai-documents/ai analyze/` (human learning guides) and update `ai-documents/ai analyze/ai assistant files/` (AI tracking and state).
+   - Maintain documentation integrity in `ai-documents/ai analysis of the project/` (human learning guides) and update `ai-documents/ai assistant files/` (AI tracking and state).
 ```

@@ -1,6 +1,6 @@
 # AI Assistant Project Knowledge Base & Operational Context
 
-**Location:** `ai-documents/ai analyze/ai assistant files/AI-ASSISTANT-KNOWLEDGE-BASE.md`  
+**Location:** `ai-documents/ai assistant files/AI-ASSISTANT-KNOWLEDGE-BASE.md`  
 **Audience:** AI Assistants (Anti-Gravity, Claude, Cursor) working with Simin Shoeibi on this project.  
 **Purpose:** Rapid grounding reference detailing project scope, key stakeholders, architectural invariants, and command workflows.
 
@@ -33,7 +33,7 @@
 
 ## 3. Directory Layout & Document Separation
 
-* **Human Understanding / Study Materials (Stay in `ai-documents/ai analyze/`):**
+* **Human Understanding / Study Materials (Stored in `ai-documents/ai analysis of the project/`):**
   * `AI analyze 2026-10-22 - Project Overview & Scholarship Summary.md`: High-level synthesis of Jutge ecosystem.
   * `AI analyze 2026-10-22 - Ecosystem Architecture & JTK Deep Dive.md`: Complete map of all 31 repos + `jtk` internals.
   * `AI analyze 2026-10-22 - Problem Authoring Walkthrough & Replication Guide.md`: Step-by-step replication of professor's live terminal demo.
@@ -41,7 +41,7 @@
   * `jutge-toolkit-ai-features-summary-15min.md`: 15-minute quick study sheet.
   * `AI analyze 2026-10-13.md` & `AI analyze 2026-10-14.md`: Initial briefing and talking points.
 
-* **AI Operational & Assistant State (Stored in `ai-documents/ai analyze/ai assistant files/`):**
+* **AI Operational & Assistant State (Stored in `ai-documents/ai assistant files/`):**
   * `AI-ASSISTANT-SYSTEM-PROMPT.md`: System prompt and senior engineering directives.
   * `AI-ASSISTANT-KNOWLEDGE-BASE.md`: This grounding knowledge reference.
   * `STATE-2026-10-22.md`: Session tracker, completed milestones, and meeting agendas.
