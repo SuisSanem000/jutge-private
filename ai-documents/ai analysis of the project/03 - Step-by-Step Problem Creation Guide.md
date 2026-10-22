@@ -123,6 +123,8 @@ The input consists of several natural numbers $n$ ($2 \le n \le 100$), one per l
 
 \Output
 For each number $n$, print the sum of all prime numbers between $2$ and $n$ on a single line.
+
+\Sample
 ```
 
 Create `problem.en.yml` for metadata:
