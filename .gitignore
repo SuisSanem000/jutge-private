@@ -1,2 +1,5 @@
 # Ignore all cloned Jutge repositories
 jutge_repos/
+
+# Ignore local editor configuration
+.vscode/
