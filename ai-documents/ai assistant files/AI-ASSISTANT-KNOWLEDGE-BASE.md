@@ -34,12 +34,10 @@
 ## 3. Directory Layout & Document Separation
 
 * **Human Understanding / Study Materials (Stored in `ai-documents/ai analysis of the project/`):**
-  * `AI analyze 2026-10-22 - Project Overview & Scholarship Summary.md`: High-level synthesis of Jutge ecosystem.
-  * `AI analyze 2026-10-22 - Ecosystem Architecture & JTK Deep Dive.md`: Complete map of all 31 repos + `jtk` internals.
-  * `AI analyze 2026-10-22 - Problem Authoring Walkthrough & Replication Guide.md`: Step-by-step replication of professor's live terminal demo.
-  * `jutge-toolkit-ai-features-study.md`: Deep technical study of `jtk generate problem`.
-  * `jutge-toolkit-ai-features-summary-15min.md`: 15-minute quick study sheet.
-  * `AI analyze 2026-10-13.md` & `AI analyze 2026-10-14.md`: Initial briefing and talking points.
+  * `01 - Project Overview & Strategy.md`: High-level synthesis of Jutge, professors, and scholarship strategy.
+  * `02 - JTK Architecture & AI Features.md`: JTK mechanics, problem anatomy, AI generator flow, and closed-loop proposal.
+  * `03 - Step-by-Step Problem Creation Guide.md`: Complete replication guide of the meeting's live terminal demo.
+  * `04 - Meeting Cheat Sheet & Talking Points.md`: 5-minute pre-meeting review, elevator pitch, and glossary.
 
 * **AI Operational & Assistant State (Stored in `ai-documents/ai assistant files/`):**
   * `AI-ASSISTANT-SYSTEM-PROMPT.md`: System prompt and senior engineering directives.
