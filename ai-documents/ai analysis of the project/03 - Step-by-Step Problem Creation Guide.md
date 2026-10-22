@@ -6,14 +6,76 @@
 
 ---
 
-## 1. Overview of the Flow
+## 0. Two Important Questions Answered (Read First!)
 
-You will follow these 7 simple steps in your terminal:
-1. Check setup and account login.
+### Q1: Do I need to build/compile the cloned projects to get binary files?
+**No! You do NOT need to build or compile the 31 cloned repositories to produce binaries.**  
+`jutge-toolkit` is an installable command-line tool that runs on **Bun** (a fast JavaScript runtime). 
+
+To have the `jtk` command ready in your terminal, run these 2 quick commands:
+
+```bash
+# 1. Install Bun runtime on your Mac (if not already installed)
+curl -fsSL https://bun.sh/install | bash
+
+# 2. Install Jutge Toolkit globally
+bun install --global @jutge.org/toolkit
+
+# 3. Verify that jtk is installed:
+jtk --version
+```
+
+*(Note: When you run `jtk make` later to build a problem, `jtk` will automatically call your Mac's built-in C++ compiler `/usr/bin/clang++` to compile your solution. You do not need to manually compile anything beforehand!)*
+
+---
+
+### Q2: I am already logged in on the browser. How do I sign in via terminal?
+You have 4 simple ways to sign in from your terminal:
+
+- **Method 1 (Easiest — Automatic Terminal Prompt):**  
+  You do not need to sign in beforehand! The first time you run a command that talks to the server (like `jtk upload` or `jtk submit`), `jtk` will automatically pause and ask you:
+  ```text
+  Jutge.org email: <Type your university email>
+  Password: <Type your password (characters stay hidden for security)>
+  ```
+  Once you press Enter, it connects, verifies your account, and saves your login token locally. You won't have to enter it again.
+
+- **Method 2 (Using Environment Variables):**  
+  If you prefer not to wait for prompts, you can export your credentials directly in your terminal:
+  ```bash
+  export JUTGE_EMAIL="your-university-email@estudiantat.upc.edu"
+  export JUTGE_PASSWORD="your-password"
+  ```
+  `jtk` checks these environment variables automatically.
+
+- **Method 3 (Copy Token from Browser):**  
+  Since you are already logged in to `jutge.org` or `new.jutge.org` in your browser:
+  1. Open Developer Tools in your browser (Press `Cmd + Option + I` or Right-Click $\to$ **Inspect**).
+  2. Go to **Application** (Chrome/Brave) or **Storage** (Firefox/Safari) $\to$ **Cookies** or **Local Storage** for `jutge.org`.
+  3. Find the `token` value and copy it.
+  4. In your terminal, paste it:
+     ```bash
+     export JUTGE_TOKEN="your_copied_token_here"
+     ```
+
+- **Method 4 (Using Jutge CLI):**  
+  Install the Jutge CLI tool and log in once:
+  ```bash
+  bun install --global @jutge.org/cli
+  jutge login
+  ```
+  Both `jutge` and `jtk` share the exact same credentials file, so logging into `jutge` logs you into `jtk` automatically.
+
+---
+
+## 1. Overview of the Problem Flow
+
+Once your terminal is ready, you will follow these 7 simple steps:
+1. Check setup and account login (`jtk doctor`, `jtk config show`).
 2. Create the folder `lily-primes.pbm`.
 3. Write the story statement in LaTeX (`problem.en.tex`).
 4. Write the golden solution in C++ (`solution.cc`).
-5. Write the sample and private test inputs (`sample-*.inp`, `test-*.inp`).
+5. Write sample and private test inputs (`sample-*.inp`, `test-*.inp`).
 6. Run `jtk make` to compile the solution and generate correct outputs (`*.cor`).
 7. Run `jtk upload` to publish the problem to Jutge.org.
 
@@ -27,10 +89,9 @@ Open your terminal and verify your environment:
 # Verify compilers and tools are ready
 jtk doctor
 
-# Verify you are logged into your authorized Jutge account
+# Verify your saved configuration
 jtk config show
 ```
-*(If you need to log in, run `jutge login` and enter your authorized university credentials).*
 
 ---
 
