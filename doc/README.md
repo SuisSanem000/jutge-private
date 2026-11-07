@@ -17,6 +17,7 @@ To avoid duplicating large external repositories while maintaining clean version
 | Path | What it is |
 |---|---|
 | [`SENIOR-DEV-BRIEF.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/SENIOR-DEV-BRIEF.md) | **Executive summary:** Domain context, architecture diagram, 4-hour study plan, and meeting proposals. |
+| [`meeting-20261112/`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/meeting-20261112/ONBOARDING-STUDY-PLAN-AND-PROPOSALS.md) | **Nov 12 Meeting Prep:** Comprehensive onboarding summary, 4-hour study plan, and meeting proposals. |
 | `ai-analysis-20261103/` | Verified knowledge base about Jutge, `jtk`, and problem-editor (technical deep-dive). |
 | `task-01-problem-editor-analysis/` | Detailed audit of Pau's problem-editor material (spec inconsistencies, models, skills). |
 | `task-02-meeting-20261022-next-steps/` | Action items, open questions, and preparation for supervisor meetings. |
