@@ -18,6 +18,7 @@ Contacts (verified from git history and package files; see `01-project-state.md`
 6. The folder structure is: `doc/ai-analysis/`, `doc/understanding/`, `doc/meetings-and-next-steps/`, and `work/`.
 7. **Clickable Relative Links:** All links in markdown documents must be clean, clickable markdown links using valid relative paths (e.g. `[Title](relative-target-path)`). Never display raw file paths/addresses as the link text, and never use brittle absolute `file:///` paths that break preview navigation. Every file or folder referenced in markdown documents must be directly clickable to open in the editor.
 8. **Clean External Copies & Git Ignore Rule:** The entire `resources/` directory and all `problem-editor/` folders are ignored in `.gitignore`. Simin maintains their working copy of `problem-editor` elsewhere on their machine for committing and pushing. The copy in `resources/` is for read-only AI context. If a new `problem-editor` copy is brought into `resources/`, always immediately remove any nested `.git/` directory so it is never tracked as a submodule or gitlink.
+9. **No Shortcut Folders:** Never create shortcut, alias, or symlink folders (such as `ai-assistant`). The directory is named strictly `doc/ai-analysis/`.
 
 ## Task protocol
 

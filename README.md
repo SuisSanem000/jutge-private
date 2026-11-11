@@ -35,7 +35,7 @@ jutge-private/
 │
 ├── doc/                 📖 WHAT AI EXPLAINS TO SIMIN (Knowledge, Translations & Meetings)
 │   ├── problem-editor-en-translate-20261111/ -> Complete English translation of problem-editor
-│   ├── ai-analysis/ (or ai-assistant/)       -> AI assistant system prompt and operational rules
+│   ├── ai-analysis/                          -> AI assistant system prompt and operational rules
 │   ├── understanding/                        -> System architecture, .pbm specs, and codebase debt
 │   └── meetings-and-next-steps/              -> Chronological meeting notes, study plans, and logs
 │

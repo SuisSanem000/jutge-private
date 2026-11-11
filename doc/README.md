@@ -9,7 +9,7 @@
 ```
 doc/
 │
-├── ai-analysis/ (or ai-assistant/) 🤖 AI SETTINGS & SYSTEM PROMPTS ONLY
+├── ai-analysis/                 🤖 AI SETTINGS & SYSTEM PROMPTS ONLY
 │   └── 01-ai-system-prompt.md      # System prompt and operational rules for AI assistants
 │
 ├── problem-editor-en-translate-20261111/ 📖 FULL ENGLISH TRANSLATION OF PROBLEM EDITOR
