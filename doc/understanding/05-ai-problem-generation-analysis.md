@@ -94,3 +94,4 @@ In the `problem-editor` README, Pau wrote:
 Your primary internship mandate—**rebuilding `jtk` into a decoupled, testable engine**—directly provides the missing foundation:
 * By extracting pure authoring logic into `@jutge/core`, you allow both the CLI and the future Next.js web app to share the exact same problem validation logic.
 * By adding a standardized `--json` output flag and deterministic exit codes, you give Pau's AI agent the exact feedback loop it needs to draft, compile, test, and package problems without human intervention.
+
