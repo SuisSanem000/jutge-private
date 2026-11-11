@@ -1,9 +1,9 @@
 # Problem Editor Deep-Dive, Phase 1 & 2 Execution, & Supervisor Meeting Guide
 
-> **Directory:** `work/01-claude-problem-generation-20261111/`  
+> **Directory:** `work/01-meeting-presentation-and-demo-20261112/`  
 > **Author:** Simin Shoeibi  
-> **Date:** November 11, 2026  
-> **Key Documents:** [Master Prompt](./CLAUDE-MASTER-PROMPT.md) • [VS Code Execution Guide](./HOW-TO-USE-CLAUDE-CODE.md) • [Sample Idea](./sample-problem-idea/IDEA.md) • [English Specs](../../doc/problem-editor-en-translate-20261111/README.md) • [Tomorrow's Meeting Proposal](../03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)
+> **Date:** November 11–12, 2026  
+> **Key Documents:** [Engineering Proposal](./PROPOSAL-PRESENTATION-20261112.md) • [Generated Problem Code](./claude-code-generated-task-solutions/dominant-peaks.pbm/) • [Master Prompt](./CLAUDE-MASTER-PROMPT.md) • [VS Code Execution Guide](./HOW-TO-USE-CLAUDE-CODE.md) • [Sample Idea](./sample-problem-idea/IDEA.md) • [English Specs](../../doc/problem-editor-en-translate-20261111/README.md)
 
 ---
 
@@ -138,12 +138,15 @@ Walk into the meeting with confidence following this 4-step script:
 >
 > *I prepared a structured 4-month architecture proposal document for today's meeting, and I would love to get your decisions on repository access and priority features."*
 
-*(Hand over or screen-share [**`PROPOSAL-PRESENTATION-20261112.md`**](../03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)).*
+*(Hand over or screen-share [**`PROPOSAL-PRESENTATION-20261112.md`**](./PROPOSAL-PRESENTATION-20261112.md)).*
 
 ---
 
 ## Part 4: File Reference in This Directory
 
+- [**`PROPOSAL-PRESENTATION-20261112.md`**](./PROPOSAL-PRESENTATION-20261112.md): The official 4-month architecture proposal and roadmap for supervisors.
+- [**`claude-code-generated-task-solutions/dominant-peaks.pbm/`**](./claude-code-generated-task-solutions/dominant-peaks.pbm/): The complete generated problem package created with Claude Code and verified via `jtk make`.
 - [**`CLAUDE-MASTER-PROMPT.md`**](./CLAUDE-MASTER-PROMPT.md): The exact prompt to copy and paste into Claude Code in VS Code.
 - [**`HOW-TO-USE-CLAUDE-CODE.md`**](./HOW-TO-USE-CLAUDE-CODE.md): Operational guide detailing how to open `problem-editor` in VS Code and run the commands.
 - [**`sample-problem-idea/IDEA.md`**](./sample-problem-idea/IDEA.md): Algorithmic specification for "Dominant Mountain Peaks".
+

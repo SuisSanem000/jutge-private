@@ -28,8 +28,7 @@
 
 | Subfolder | Task / Deliverable | Status |
 |---|---|---|
-| [**01. Problem Generation via Claude Code**](../../work/01-claude-problem-generation-20261111/README.md) | **Core Focus (Phase 1 & 2):** Complete guide, master prompt, and problem generation suite for VS Code Claude extension. | **ACTIVE** |
-| [**Meeting Presentation (Nov 12)**](../../work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md) | Presentation agenda, architectural roadmap & questions for the 2026-11-12 meeting. | **ACTIVE (Meeting Tomorrow)** |
+| [**01. Meeting Presentation & Claude Problem Demo**](../../work/01-meeting-presentation-and-demo-20261112/README.md) | **Unified Meeting Workspace:** Complete proposal ([PROPOSAL-PRESENTATION-20261112.md](../../work/01-meeting-presentation-and-demo-20261112/PROPOSAL-PRESENTATION-20261112.md)), live generated code ([dominant-peaks.pbm](../../work/01-meeting-presentation-and-demo-20261112/claude-code-generated-task-solutions/dominant-peaks.pbm/)), walkthrough guide, and master prompt. | **ACTIVE (Meeting Tomorrow)** |
 
 ---
 

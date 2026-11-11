@@ -7,7 +7,7 @@
 ## 🧭 Where to Look First
 
 1. **For Phase 1 & 2 problem generation with Claude Code (VS Code):**  
-   👉 [01. Problem Generation Deep-Dive & Guide (Nov 11)](./work/01-claude-problem-generation-20261111/README.md) • [Copy-Paste Prompt](./work/01-claude-problem-generation-20261111/CLAUDE-MASTER-PROMPT.md)  
+   👉 [01. Meeting Presentation & Problem Demo (Nov 12)](./work/01-meeting-presentation-and-demo-20261112/README.md) • [Copy-Paste Prompt](./work/01-meeting-presentation-and-demo-20261112/CLAUDE-MASTER-PROMPT.md)  
    *Explains what problem-editor is, what you did, the master prompt for Claude Code, and your presentation script for tomorrow.*
 
 2. **For the full English translation of the Problem Editor specs:**  
@@ -19,7 +19,7 @@
    *Includes your talking points and proposal pitch for Jordi Petit and Pau Fernandez.*
 
 4. **For the presentation slides & architecture proposal document:**  
-   👉 [Proposal & Presentation Document (Nov 12)](./work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)  
+   👉 [Proposal & Presentation Document (Nov 12)](./work/01-meeting-presentation-and-demo-20261112/PROPOSAL-PRESENTATION-20261112.md)  
    *The structured engineering proposal: jtk v5 architecture, 4-month roadmap, and discussion questions.*
 
 ---
@@ -40,8 +40,7 @@ jutge-private/
 │   └── meetings-and-next-steps/              -> Chronological meeting notes, study plans, and logs
 │
 └── work/                💻 WHAT SIMIN DOES & PRESENTS TO PROFESSORS (Code & Prototypes)
-    ├── 01-claude-problem-generation-20261111/ -> Phase 1 & 2: Guide, what did I do, master prompt, & idea
-    └── 03-meeting-presentation-20261112/     -> Proposal & presentation for Nov 12 meeting
+    └── 01-meeting-presentation-and-demo-20261112/ -> Unified meeting package: proposal, generated code, guide & prompt
 ```
 
 ### Quick Folder Navigation
@@ -55,8 +54,7 @@ jutge-private/
 | ↳ [**`doc/meetings-and-next-steps/`**](./doc/meetings-and-next-steps/) | Chronological meeting summaries, study plans, and project logs. |
 | ↳ [**`doc/ai-analysis/`**](./doc/ai-analysis/) | AI system prompt and operational rules. |
 | [**`work/`**](./work/) | Code implementations, active tasks, and deliverables to present. |
-| ↳ [**`work/01-claude-problem-generation-20261111/`**](./work/01-claude-problem-generation-20261111/) | **Core Focus (Phase 1 & 2):** Comprehensive guide (what is `problem-editor`, what you did, meeting script), master prompt, and idea. |
-| ↳ [**`work/03-meeting-presentation-20261112/`**](./work/03-meeting-presentation-20261112/) | Architectural proposal and 4-month roadmap for November 12 meeting. |
+| ↳ [**`work/01-meeting-presentation-and-demo-20261112/`**](./work/01-meeting-presentation-and-demo-20261112/) | **Unified Meeting Workspace:** Complete proposal, live generated code (`dominant-peaks.pbm`), walkthrough guide, and master prompt. |
 
 ---
 

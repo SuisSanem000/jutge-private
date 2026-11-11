@@ -1,10 +1,13 @@
+# Ignore entire resources folder (managed solely by Simin)
+resources/
+resources/**
+
+# Ignore problem-editor repositories anywhere
+**/problem-editor/
+problem-editor/
+
 # Ignore all cloned Jutge repositories
 jutge_repos/
-resources/jutge_repos/
-
-# Ignore problem-editor repository in resources
-resources/professor gave 2026-10-25/problem-editor/
-**/problem-editor/
 
 # Ignore OS and editor configuration
 .vscode/

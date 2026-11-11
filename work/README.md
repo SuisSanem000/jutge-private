@@ -8,8 +8,7 @@ This directory is designated for your active tasks, implementations, and deliver
 
 | Folder / Document | What it is |
 |---|---|
-| [**01. Problem Generation via Claude Code (2026-11-11)**](./01-claude-problem-generation-20261111/) | **Core Focus (Phase 1 & 2):** Comprehensive guide, what is `problem-editor`, what you did, meeting walkthrough script, master prompt, and sample idea (`IDEA.md`). |
-| [**Meeting Presentation & Roadmap (2026-11-12)**](./03-meeting-presentation-20261112/) | **For tomorrow's meeting:** 4-month architectural roadmap and discussion questions to present to Jordi Petit and Pau Fernandez. (Document: [PROPOSAL-PRESENTATION-20261112.md](./03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)) |
+| [**01. Meeting Presentation & Claude Problem Demo (2026-11-12)**](./01-meeting-presentation-and-demo-20261112/) | **Unified Workspace for Tomorrow's Meeting:** Contains the 4-month architecture proposal ([PROPOSAL-PRESENTATION-20261112.md](./01-meeting-presentation-and-demo-20261112/PROPOSAL-PRESENTATION-20261112.md)), the live generated problem code ([dominant-peaks.pbm/](./01-meeting-presentation-and-demo-20261112/claude-code-generated-task-solutions/dominant-peaks.pbm/)), the meeting walkthrough script ([README.md](./01-meeting-presentation-and-demo-20261112/README.md)), the Claude master prompt ([CLAUDE-MASTER-PROMPT.md](./01-meeting-presentation-and-demo-20261112/CLAUDE-MASTER-PROMPT.md)), and execution instructions. |
 
 ---
 

@@ -1,0 +1,27 @@
+\Problem{Dominant Mountain Peaks}
+
+\Statement
+
+A hiker walks along a mountain range from left to right and records the elevation of each peak. A peak is \emph{dominant} if it is strictly higher than \textbf{every} peak that appears to its right in the sequence. Therefore, the last peak is always dominant, since there is no peak to its right.
+
+\medskip
+
+Formally, given elevations $E_1, E_2, \ldots, E_N$, the peak $i$ is dominant if and only if $E_i > E_j$ for all $j$ with $i < j \leq N$.
+
+\medskip
+
+Write a program that, for each sequence of elevations, prints the dominant peaks in their original left-to-right order.
+
+\Observation
+
+The focus of this problem is efficiency. The sequences can have up to $100\,000$ peaks, so a solution that compares every peak with all the peaks to its right is too slow.
+
+\Input
+
+The input consists of several cases, until the end of the file. Each case starts with an integer $N$ with $1 \leq N \leq 100\,000$, followed by $N$ integers $E_1, \ldots, E_N$ with $-10^9 \leq E_i \leq 10^9$.
+
+\Output
+
+For each case, print on a single line the elevations of the dominant peaks, from left to right, separated by single spaces.
+
+\SampleTwoCol
