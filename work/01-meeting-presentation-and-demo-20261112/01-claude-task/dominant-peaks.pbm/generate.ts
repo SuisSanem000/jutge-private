@@ -1,7 +1,11 @@
 #!/usr/bin/env bun
 
+// Problem limits and test parameters.
 const maxN = 100000
 const maxE = 1000000000
+const smallRange = 5
+const smallMaxN = 15
+const mediumMaxN = 30
 
 // Deterministic pseudo-random generator (mulberry32), so tests are reproducible.
 let seed = 20240607
@@ -36,60 +40,85 @@ const write = async (filename: string, cases: Case[]) => {
     await Bun.write(filename, lines.join("\n") + "\n")
 }
 
-// Edge cases: N = 1, identical heights, negatives, extreme values, simple shapes.
-await write("private-correctness-1-edge.inp", [
-    [0],
-    [5],
-    [-7],
-    [maxE],
-    [-maxE],
-    [3, 3],
-    [4, 4, 4, 4, 4],
-    [-2, -2, -2],
-    [-5, -3, -4, -1, -9],
-    [-maxE, maxE],
-    [maxE, -maxE],
-    [maxE, maxE, -maxE, -maxE],
-    [1, 2, 3, 4, 5],
-    [5, 4, 3, 2, 1],
-    [1, 4, 2, 3, 5],
-    [7, 7, 8, 8, 6, 6],
-    [2, 1, 2, 1, 2],
-])
-
-// Alternating values, small random sequences with many ties.
-const mixed: Case[] = []
-for (let n = 2; n <= 12; n++) {
-    mixed.push(Array.from({ length: n }, (_, i) => (i % 2 == 0 ? 10 : -10)))
-    mixed.push(Array.from({ length: n }, (_, i) => (i % 2 == 0 ? -10 : 10)))
-    mixed.push(Array.from({ length: n }, (_, i) => (i % 2 == 0 ? i : -i)))
+const generateEdgeCases = async (filename: string) => {
+    await write(filename, [
+        [0],
+        [5],
+        [-7],
+        [maxE],
+        [-maxE],
+        [3, 3],
+        [4, 4, 4, 4, 4],
+        [-2, -2, -2],
+        [-5, -3, -4, -1, -9],
+        [-maxE, maxE],
+        [maxE, -maxE],
+        [maxE, maxE, -maxE, -maxE],
+        [1, 2, 3, 4, 5],
+        [5, 4, 3, 2, 1],
+        [1, 4, 2, 3, 5],
+        [7, 7, 8, 8, 6, 6],
+        [2, 1, 2, 1, 2],
+    ])
 }
-for (let k = 0; k < 300; k++) {
-    mixed.push(randomCase(randInt(1, 15), -5, 5))
-}
-for (let k = 0; k < 100; k++) {
-    mixed.push(randomCase(randInt(1, 30), -maxE, maxE))
-}
-await write("private-correctness-2-alternating-small.inp", mixed)
 
-// Efficiency: large random sequences, wide and narrow ranges.
-await write("private-efficiency-1-random.inp", [
-    randomCase(maxN, -maxE, maxE),
-    randomCase(maxN, -maxE, maxE),
-    randomCase(maxN, -1000, 1000),
-    randomCase(maxN, -3, 3),
-])
+// Alternating sequences of every length up to maxLength, plus small random
+// sequences with many ties (values in [-smallRange, smallRange]) and a few
+// with the full range of elevations.
+const generateAlternatingAndSmall = async (
+    filename: string,
+    maxLength: number,
+    numTies: number,
+    numWide: number
+) => {
+    const cases: Case[] = []
+    for (let n = 2; n <= maxLength; n++) {
+        cases.push(Array.from({ length: n }, (_, i) => (i % 2 == 0 ? 10 : -10)))
+        cases.push(Array.from({ length: n }, (_, i) => (i % 2 == 0 ? -10 : 10)))
+        cases.push(Array.from({ length: n }, (_, i) => (i % 2 == 0 ? i : -i)))
+    }
+    for (let k = 0; k < numTies; k++) {
+        cases.push(randomCase(randInt(1, smallMaxN), -smallRange, smallRange))
+    }
+    for (let k = 0; k < numWide; k++) {
+        cases.push(randomCase(randInt(1, mediumMaxN), -maxE, maxE))
+    }
+    await write(filename, cases)
+}
 
-// Efficiency: monotone sequences. Strictly decreasing ones are the worst case for
+// Large random sequences: `count` cases of length n and elevations in [-range, range].
+const generateRandom = async (filename: string, count: number, n: number, range: number) => {
+    const cases: Case[] = []
+    for (let k = 0; k < count; k++) {
+        cases.push(randomCase(n, -range, range))
+    }
+    await write(filename, cases)
+}
+
+// Monotone sequences of length n. Strictly decreasing ones are the worst case for
 // the quadratic solution (every peak is dominant, so each one is compared with
 // all the peaks to its right); the increasing ones have a single dominant peak.
-await write("private-efficiency-2-monotone.inp", [
-    increasingCase(maxN),
-    increasingCase(maxN),
-    decreasingCase(maxN),
-    decreasingCase(maxN),
-    decreasingCase(maxN),
-])
+// The expected output can exceed the default 2 MB limit, hence the .ops file.
+const generateMonotone = async (
+    filename: string,
+    n: number,
+    numIncreasing: number,
+    numDecreasing: number,
+    maxOutputMB: number
+) => {
+    const cases: Case[] = []
+    for (let k = 0; k < numIncreasing; k++) {
+        cases.push(increasingCase(n))
+    }
+    for (let k = 0; k < numDecreasing; k++) {
+        cases.push(decreasingCase(n))
+    }
+    await write(filename, cases)
+    await Bun.write(filename.replace(".inp", ".ops"), `--maxoutput=${maxOutputMB}\n`)
+}
 
-// The expected output of the monotone test is larger than the default 2 MB limit.
-await Bun.write("private-efficiency-2-monotone.ops", "--maxoutput=4\n")
+await generateEdgeCases("private-correctness-1-edge.inp")
+await generateAlternatingAndSmall("private-correctness-2-alternating-small.inp", 12, 300, 100)
+await generateRandom("private-efficiency-1-random.inp", 2, maxN, maxE)
+await generateRandom("private-efficiency-1-random-ties.inp", 2, maxN, 3)
+await generateMonotone("private-efficiency-2-monotone.inp", maxN, 2, 3, 4)

@@ -41,3 +41,8 @@
   *"In the kickoff notes, a JutgeAI token endpoint was mentioned. For powering the AI assistant inside the Next.js SaaS editor, will students/teachers use a centralized UPC API proxy, or will they supply their own provider API keys (Anthropic / OpenAI / Google)?"*
 - **Why this helps:** Clarifies the authentication and API key architecture for Phase 3.
 
+### Question 7: Code Comments & Statement Languages (English vs Catalan)
+- **How to ask:**  
+  *"In `dominant-peaks.pbm`, we generated the problem statement and code comments in English. In the long term, should the AI agent support multilingual statement generation (Catalan, Spanish, English) simultaneously, and what is your preferred language for golden solution comments?"*
+- **Why this helps:** Addresses Pau's original note in `problem-editor/README.md` and aligns on localization requirements.
+

@@ -63,7 +63,12 @@ Explain what they are seeing on screen:
 > *"As you can see:*
 > *• The golden solution executes in at most **0.41 seconds** on 100,000 elements.*
 > *• The naive $O(N^2)$ solution takes **3.8 seconds** on the monotonic test case, running over 9× slower and properly failing the efficiency test.*
-> *• `jtk lint` confirms 100% adherence to formatting and file conventions."*
+> *• `jtk lint` confirms 100% adherence to formatting and file conventions.*
+>
+> *Additionally, we observed how the agent handled several subtle real-world edge cases:*
+> *1. It caught that the C++ compiler vectorized the first naive loop (causing only a 3× slowdown), so it introduced an early `break` and strictly decreasing inputs to force a true 9× slowdown.*
+> *2. It detected that the largest test produced 3.1 MB of output and automatically wrote a `.ops` file with `--maxoutput=4`.*
+> *3. It structured `generate.ts` into modular, parameterized functions using a deterministic seeded PRNG."*
 
 ### Part 4: The Pivot to Phase 3 & The 4-Month Rebuild
 > *"Executing Phase 2 directly brought me to my main engineering conclusion for Phase 3 (the Next.js SaaS Web Editor):*

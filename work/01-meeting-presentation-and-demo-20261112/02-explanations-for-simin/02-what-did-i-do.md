@@ -69,6 +69,13 @@ Claude Code generated the complete directory `dominant-peaks.pbm/` ([located in 
 - `jtk lint` passed with **0 errors**.
 - `jtk verify solution-slow.cc` confirmed the naive solution took 3.8s (>9× slower than optimal), proving the time limit is properly enforced.
 
+### Step 5: Real-World Issues Caught and Self-Corrected by Claude Code
+As documented in [Claude's Self-Report](../01-claude-task/claude-expalanation-of-the-task.md), Claude Code actively self-corrected four practical issues during problem generation:
+1. **Defeating Compiler Vectorization:** The first version of `solution-slow.cc` counted over all elements without stopping; the C++ compiler vectorized the loop, reducing the slowdown to only 3×. Claude changed the inner loop to early-exit on the first peak $\ge$ current, and crafted strictly decreasing test cases where every peak is dominant, forcing full scans and achieving a true 9× slowdown (3.8s vs 0.42s).
+2. **Output Size Override (`.ops`):** The output of `private-efficiency-2-monotone` reached 3.1 MB, exceeding the default 2 MB Jutge limit. Claude automatically generated `private-efficiency-2-monotone.ops` with `--maxoutput=4`.
+3. **Modular Generator Architecture:** Claude refactored `generate.ts` from a monolithic script into modular functions per test file, with named constants and a seeded PRNG for deterministic test generation.
+4. **Git Hygiene:** Added `.gitignore` inside `dominant-peaks.pbm/` to prevent generated `*.cor` files and temporary `jtk-*` artifacts from polluting version control.
+
 ---
 
 ## 4. The Big Technical Finding: Why `jtk` Must Be Rebuilt
