@@ -135,13 +135,13 @@ You have **4 hours** total to ramp up. Do not read the entire corpus; follow thi
 
 ### Hour 2: The Problem Editor Vision & Agent Skills (60 min)
 1. Read Pau's vision: [Problem Editor README](../../resources/professor%20gave%202026-10-25/problem-editor/README.md) — 15 min.
-2. Read [02. AI Generation & Skills Guide](../ai-analysis/02-ai-generation-and-skills.md) — 20 min.
+2. Read [05. AI Problem Generation Analysis](./05-ai-problem-generation-analysis.md) — 20 min.
 3. Read the agent skill file: [Problem Creation Skill](../../resources/professor%20gave%202026-10-25/problem-editor/skills/) — 15 min.
 4. Inspect the generated exam sample: [Generated Exam Samples](../../resources/professor%20gave%202026-10-25/problem-editor/generated-exam-sample/) — 10 min.
 
 ### Hour 3: Existing `jtk` Codebase & Architectural Debt (60 min)
 1. Read [03. jtk Architecture](./03-jtk-architecture.md) — 15 min.
-2. Read [05. jtk Rewrite Observations](./05-jtk-rewrite-observations.md) — 25 min.
+2. Read [06. jtk Rewrite Observations](./06-jtk-rewrite-observations.md) — 25 min.
 3. Skim real source code to see the coupling: [jtk maker.ts](../../resources/jutge_repos/jutge-toolkit/lib/maker.ts) and [jtk problem.ts](../../resources/jutge_repos/jutge-toolkit/lib/problem.ts) — 20 min.
 
 ### Hour 4: Meeting Strategy & Proposal Selection (60 min)

@@ -38,14 +38,14 @@ When Simin gives new instructions or decisions, add a short entry to the log in 
 | Category | File | Content |
 |---|---|---|
 | AI Settings | [01. AI System Prompt](./01-ai-system-prompt.md) | System prompt, rules, and task protocols |
-| AI Settings | [02. AI Generation & Skills](./02-ai-generation-and-skills.md) | `jtk generate`, problem-editor skills, the SaaS vision |
 | Understanding | [01. Senior Dev Brief](../understanding/01-senior-dev-brief.md) | High-level onboarding briefing |
 | Understanding | [02. Ecosystem](../understanding/02-ecosystem.md) | The repos and how they relate |
 | Understanding | [03. jtk Architecture](../understanding/03-jtk-architecture.md) | How `jtk` works today (verified) |
 | Understanding | [04. Problem Format & Grading](../understanding/04-problem-format-and-grading.md) | `.pbm` format, `handler.yml`, server grading |
-| Understanding | [05. jtk Rewrite Observations](../understanding/05-jtk-rewrite-observations.md) | Smells and bugs in current `jtk`; things to keep |
-| Understanding | [06. Commands & Glossary](../understanding/06-commands-and-glossary.md) | Correct commands and terms |
-| Understanding | [07. Source Verification Log](../understanding/07-source-verification-log.md) | What was kept, corrected or dropped |
+| Understanding | [05. AI Problem Generation Analysis](../understanding/05-ai-problem-generation-analysis.md) | `jtk generate`, problem-editor skills, the SaaS vision |
+| Understanding | [06. jtk Rewrite Observations](../understanding/06-jtk-rewrite-observations.md) | Smells and bugs in current `jtk`; things to keep |
+| Understanding | [07. Commands & Glossary](../understanding/07-commands-and-glossary.md) | Correct commands and terms |
+| Understanding | [08. Source Verification Log](../understanding/08-source-verification-log.md) | What was kept, corrected or dropped |
 | Meetings | [01. Kickoff Summary (2026-10-22)](../meetings-and-next-steps/01-meeting-notes-summary-20261022.md) | Meeting notes summary |
 | Meetings | [02. Meeting Prep & Study Plan (2026-11-12)](../meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md) | Study roadmap and pitch |
 | Meetings | [03. Project State & Living Log](../meetings-and-next-steps/03-project-state-and-living-log-20261111.md) | Living state, people, timeline, task registry, log |

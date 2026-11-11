@@ -14,7 +14,7 @@ Input files located in [Problem Editor Repository](../../resources/professor%20g
 - [skills/](../../resources/professor%20gave%202026-10-25/problem-editor/skills/) (8 skills; topic skills are marked "ignore" by the README; `__OLD__` is deprecated)
 - [generated-exam-sample/](../../resources/professor%20gave%202026-10-25/problem-editor/generated-exam-sample/) (3 PRO2 problems, exam PDFs, Typst solutions)
 - [private-problems/](../../resources/professor%20gave%202026-10-25/problem-editor/private-problems/) (eda 12, ap1 87, ap2 63; "not to be distributed")
-- Context: [04. Problem Format](../../doc/understanding/04-problem-format-and-grading.md), [02. AI Generation](../../doc/ai-analysis/02-ai-generation-and-skills.md), and [05. Rewrite Observations](../../doc/understanding/05-jtk-rewrite-observations.md).
+- Context: [04. Problem Format](../../doc/understanding/04-problem-format-and-grading.md), [05. AI Problem Generation Analysis](../../doc/understanding/05-ai-problem-generation-analysis.md), and [06. Rewrite Observations](../../doc/understanding/06-jtk-rewrite-observations.md).
 
 ## Scope
 - Understand every file type and convention. Read the real files, do not rely only on the summary in file 05.
