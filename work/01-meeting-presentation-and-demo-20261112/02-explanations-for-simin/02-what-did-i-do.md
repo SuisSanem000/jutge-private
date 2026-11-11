@@ -84,3 +84,4 @@ Executing Phase 2 revealed the critical engineering bottleneck that prevents bui
 3. **The Proposal for Your 4-Month Internship:**
    - Rebuilding `jtk` into a decoupled headless engine (`@jutge/core`) with a machine-readable CLI/MCP contract is the **exact foundation needed to power the Phase 3 web editor**.
    - You have formulated a 4-month architecture proposal ([`PROPOSAL-PRESENTATION-20261112.md`](../03-for-meeting-tomorrow/PROPOSAL-PRESENTATION-20261112.md)) to deliver this engine.
+

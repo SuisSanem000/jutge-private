@@ -40,3 +40,4 @@
 - **How to ask:**  
   *"In the kickoff notes, a JutgeAI token endpoint was mentioned. For powering the AI assistant inside the Next.js SaaS editor, will students/teachers use a centralized UPC API proxy, or will they supply their own provider API keys (Anthropic / OpenAI / Google)?"*
 - **Why this helps:** Clarifies the authentication and API key architecture for Phase 3.
+

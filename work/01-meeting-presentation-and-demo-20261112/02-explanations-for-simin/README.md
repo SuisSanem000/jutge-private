@@ -22,3 +22,4 @@ This folder provides in-depth technical briefings written specifically for you t
 1. **`problem-editor` is the blueprint for an AI SaaS platform:** It contains the rules, reference models, and skills that allow an AI agent to build problems for teachers.
 2. **You proved that Phase 1 & 2 work:** You used Claude Code to generate a complete, working problem that compiles, runs, and passes `jtk lint`.
 3. **You discovered the missing link:** An AI agent in a web editor needs structured JSON outputs and closed-loop verification, which current `jtk` does not provide. That is the mandate of your 4-month internship.
+

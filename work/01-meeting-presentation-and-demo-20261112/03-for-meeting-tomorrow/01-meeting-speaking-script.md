@@ -77,3 +77,4 @@ Explain what they are seeing on screen:
 > *I prepared a structured 4-month architecture proposal document for today's meeting, and I would love to walk through it with you."*
 
 *(Open [**`PROPOSAL-PRESENTATION-20261112.md`**](./PROPOSAL-PRESENTATION-20261112.md)).*
+

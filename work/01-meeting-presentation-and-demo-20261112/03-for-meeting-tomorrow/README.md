@@ -35,3 +35,4 @@ This folder contains all the materials, presentation notes, scripts, and decisio
 2. **Run the Live Demo:** Run `jtk make exe cor && jtk lint && jtk verify solution-slow.cc` live. Show the 0.41s vs 3.8s execution difference!
 3. **Present the Proposal:** Share your screen on `PROPOSAL-PRESENTATION-20261112.md` to walk through the 4-month `@jutge/core` plan.
 4. **Ask the Questions:** Go through [**`02-questions-to-ask-professors.md`**](./02-questions-to-ask-professors.md) to get concrete decisions on repository access and review workflows.
+
