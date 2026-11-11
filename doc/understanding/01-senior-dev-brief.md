@@ -137,7 +137,7 @@ You have **4 hours** total to ramp up. Do not read the entire corpus; follow thi
 1. Read Pau's vision: [Problem Editor Complete English Translation](../problem-editor-en-translate-20261111/README.md) — 15 min.
 2. Read [05. AI Problem Generation Analysis](./05-ai-problem-generation-analysis.md) — 20 min.
 3. Read the agent skill file: [Problem Creation Skill](../problem-editor-en-translate-20261111/skills/jutge-problems/SKILL.md) — 15 min.
-4. Inspect the Claude generation guide: [Phase 1 & 2 Execution Guide](../../work/problem-generation-claude-20261111/README.md) — 10 min.
+4. Inspect the Claude generation guide: [Phase 1 & 2 Execution Guide](../../work/01-claude-problem-generation-20261111/README.md) — 10 min.
 
 ### Hour 3: Existing `jtk` Codebase & Architectural Debt (60 min)
 1. Read [03. jtk Architecture](./03-jtk-architecture.md) — 15 min.

@@ -7,8 +7,8 @@
 ## 🧭 Where to Look First
 
 1. **For Phase 1 & 2 problem generation with Claude Code (VS Code):**  
-   👉 [Claude Code Master Prompt & Execution Guide](./doc/ai-analysis/delegate-to-claude/HOW-TO-USE-CLAUDE-CODE.md) • [Copy-Paste Prompt](./doc/ai-analysis/delegate-to-claude/CLAUDE-MASTER-PROMPT.md)  
-   *Includes exact step-by-step instructions for the Claude VS Code extension, master prompt, and presentation script.*
+   👉 [01. Problem Generation Deep-Dive & Guide (Nov 11)](./work/01-claude-problem-generation-20261111/README.md) • [Copy-Paste Prompt](./work/01-claude-problem-generation-20261111/CLAUDE-MASTER-PROMPT.md)  
+   *Explains what problem-editor is, what you did, the master prompt for Claude Code, and your presentation script for tomorrow.*
 
 2. **For the full English translation of the Problem Editor specs:**  
    👉 [Problem Editor Complete English Translation](./doc/problem-editor-en-translate-20261111/README.md)  
@@ -35,12 +35,12 @@ jutge-private/
 │
 ├── doc/                 📖 WHAT AI EXPLAINS TO SIMIN (Knowledge, Translations & Meetings)
 │   ├── problem-editor-en-translate-20261111/ -> Complete English translation of problem-editor
-│   ├── ai-analysis/ (or ai-assistant/)       -> System prompt & delegate-to-claude master prompt
+│   ├── ai-analysis/ (or ai-assistant/)       -> AI assistant system prompt and operational rules
 │   ├── understanding/                        -> System architecture, .pbm specs, and codebase debt
 │   └── meetings-and-next-steps/              -> Chronological meeting notes, study plans, and logs
 │
 └── work/                💻 WHAT SIMIN DOES & PRESENTS TO PROFESSORS (Code & Prototypes)
-    ├── problem-generation-claude-20261111/   -> Phase 1 & 2: Claude problem generation target & idea
+    ├── 01-claude-problem-generation-20261111/ -> Phase 1 & 2: Guide, what did I do, master prompt, & idea
     └── 03-meeting-presentation-20261112/     -> Proposal & presentation for Nov 12 meeting
 ```
 
@@ -50,13 +50,12 @@ jutge-private/
 |---|---|
 | [**`resources/`**](./resources/) | Upstream repositories and professor documents (**read-only to AI**). |
 | [**`doc/`**](./doc/) | Knowledge base, translations, architecture guides, and meeting plans. |
-| ↳ [**`doc/ai-assistant/delegate-to-claude/`**](./doc/ai-analysis/delegate-to-claude/) | **Delegate to Claude:** Master prompt and step-by-step VS Code guide. |
 | ↳ [**`doc/problem-editor-en-translate-20261111/`**](./doc/problem-editor-en-translate-20261111/) | Complete English translation of `problem-editor` (constitution, specs, skills). |
 | ↳ [**`doc/understanding/`**](./doc/understanding/) | Codebase architecture, `.pbm` specifications, and rewrite observations. |
 | ↳ [**`doc/meetings-and-next-steps/`**](./doc/meetings-and-next-steps/) | Chronological meeting summaries, study plans, and project logs. |
 | ↳ [**`doc/ai-analysis/`**](./doc/ai-analysis/) | AI system prompt and operational rules. |
 | [**`work/`**](./work/) | Code implementations, active tasks, and deliverables to present. |
-| ↳ [**`work/problem-generation-claude-20261111/`**](./work/problem-generation-claude-20261111/) | **Core Focus:** Target directory for generated problem (`dominant-peaks.pbm`) and sample idea. |
+| ↳ [**`work/01-claude-problem-generation-20261111/`**](./work/01-claude-problem-generation-20261111/) | **Core Focus (Phase 1 & 2):** Comprehensive guide (what is `problem-editor`, what you did, meeting script), master prompt, and idea. |
 | ↳ [**`work/03-meeting-presentation-20261112/`**](./work/03-meeting-presentation-20261112/) | Architectural proposal and 4-month roadmap for November 12 meeting. |
 
 ---

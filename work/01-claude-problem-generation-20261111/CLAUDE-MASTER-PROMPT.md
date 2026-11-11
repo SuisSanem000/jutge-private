@@ -1,8 +1,9 @@
-# Ready-to-Copy Master Prompt for Claude Code (Inside `problem-editor`)
+# Master Prompt for Claude Code (Running Inside `problem-editor`)
 
-> **Location:** `work/problem-generation-claude-20261111/CLAUDE-CODE-PROMPT.md`  
-> **Master File:** [CLAUDE-MASTER-PROMPT.md](../../doc/ai-analysis/delegate-to-claude/CLAUDE-MASTER-PROMPT.md)  
-> **How to use:** Open `resources/professor gave 2026-10-25/problem-editor/` in VS Code, then copy and paste the prompt below into the Claude extension chat.
+> **Location:** `work/01-claude-problem-generation-20261111/CLAUDE-MASTER-PROMPT.md`  
+> **Master Guide:** [README.md](./README.md)  
+> **Workspace Context:** Run this prompt in VS Code when the workspace root is **`problem-editor`** (`resources/professor gave 2026-10-25/problem-editor/`).  
+> **Related Guide:** See [How to Use Claude Code Guide](./HOW-TO-USE-CLAUDE-CODE.md) for step-by-step instructions and tomorrow's presentation script.
 
 ---
 

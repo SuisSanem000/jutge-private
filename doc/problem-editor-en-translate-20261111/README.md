@@ -3,7 +3,7 @@
 > **Source:** Translated and structured from `resources/professor gave 2026-10-25/problem-editor/`  
 > **Date:** November 11, 2026  
 > **Target Audience:** Senior Software Engineer executing Phases 1 & 2.  
-> **Navigation:** [Root Workspace](../../README.md) • [Phase 1 & 2 Execution Guide](../../work/problem-generation-claude-20261111/README.md) • [Constitution Spec](./spec/constitution.md) • [Problem Spec](./spec/problem-spec.md)
+> **Navigation:** [Root Workspace](../../README.md) • [Phase 1 & 2 Execution Guide](../../work/01-claude-problem-generation-20261111/README.md) • [Constitution Spec](./spec/constitution.md) • [Problem Spec](./spec/problem-spec.md)
 
 ---
 

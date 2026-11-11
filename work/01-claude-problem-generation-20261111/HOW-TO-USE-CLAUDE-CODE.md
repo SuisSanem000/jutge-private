@@ -1,9 +1,10 @@
 # How to Run Claude Code Inside `problem-editor` & Meeting Guide
 
-> **Location:** `doc/ai-analysis/delegate-to-claude/HOW-TO-USE-CLAUDE-CODE.md`  
+> **Location:** `work/01-claude-problem-generation-20261111/HOW-TO-USE-CLAUDE-CODE.md`  
 > **Master Prompt:** [CLAUDE-MASTER-PROMPT.md](./CLAUDE-MASTER-PROMPT.md)  
+> **Master README:** [README.md](./README.md)  
 > **Original Problem Editor Path:** `resources/professor gave 2026-10-25/problem-editor/`  
-> **Meeting Proposal Document:** [`work/03-meeting-presentation-20261112/`](../../../work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)
+> **Meeting Proposal Document:** [PROPOSAL-PRESENTATION-20261112.md](../03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)
 
 ---
 
@@ -121,6 +122,7 @@ Present your work in the meeting using this crisp 3-part script:
 ## 5. Quick Links & Workspace Reference
 
 - Master Prompt to Copy: [CLAUDE-MASTER-PROMPT.md](./CLAUDE-MASTER-PROMPT.md)
-- Translated Constitution Spec: [`spec/constitution.md`](../../problem-editor-en-translate-20261111/spec/constitution.md)
-- Translated Problem Spec: [`spec/problem-spec.md`](../../problem-editor-en-translate-20261111/spec/problem-spec.md)
-- Tomorrow's Presentation Proposal: [`PROPOSAL-PRESENTATION-20261112.md`](../../../work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)
+- Problem Idea Specification: [`sample-problem-idea/IDEA.md`](./sample-problem-idea/IDEA.md)
+- Translated Constitution Spec: [constitution.md](../../doc/problem-editor-en-translate-20261111/spec/constitution.md)
+- Translated Problem Spec: [problem-spec.md](../../doc/problem-editor-en-translate-20261111/spec/problem-spec.md)
+- Tomorrow's Presentation Proposal: [PROPOSAL-PRESENTATION-20261112.md](../03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)
