@@ -25,14 +25,17 @@ By focusing on **Phase 1 and Phase 2**, you are executing **exactly what the pro
 
 ## 2. How to Run Phase 2 in VS Code (Step-by-Step)
 
-You have the Claude extension installed in VS Code with a paid plan. Follow these steps:
+You have the Claude extension installed in VS Code with a paid plan. To keep your context 100% clean and focused on Phase 1 & 2, you run Claude Code directly inside the `problem-editor` repository:
 
-### Step 1: Open the Project in VS Code
-Open the root `jutge-private` directory in VS Code.
+### Step 1: Open `problem-editor` in VS Code
+Open a new VS Code window on:
+```text
+resources/professor gave 2026-10-25/problem-editor/
+```
 
 ### Step 2: Open the Claude Extension Chat
 1. Open the Claude extension sidebar in VS Code.
-2. Ensure Claude has access to the workspace files.
+2. Ensure Claude is ready and logged in.
 
 ### Step 3: Copy and Paste the Master Prompt
 1. Open [**`CLAUDE-MASTER-PROMPT.md`**](../../doc/ai-analysis/delegate-to-claude/CLAUDE-MASTER-PROMPT.md) (or [**`CLAUDE-CODE-PROMPT.md`**](./CLAUDE-CODE-PROMPT.md)).
@@ -41,9 +44,10 @@ Open the root `jutge-private` directory in VS Code.
 
 ### Step 4: What Claude Will Do Automatically
 Claude will:
-1. Read the translated specifications in `doc/problem-editor-en-translate-20261111/`.
-2. Read the sample problem idea in `work/problem-generation-claude-20261111/sample-problem-idea/IDEA.md`.
-3. Scaffold the complete problem folder at `work/problem-generation-claude-20261111/dominant-peaks.pbm/`:
+1. Read the specifications in `spec/constitucio.md` and `spec/problema-jutge.md`.
+2. Inspect the reference models in `spec/models/`.
+3. Read the authoring skill instructions in `skills/problemes-jutge/SKILL.md`.
+4. Scaffold the complete problem folder at `dominant-peaks.pbm/` inside `problem-editor/`:
    - `handler.yml` (G++17 configuration)
    - `problem.en.yml` (metadata)
    - `problem.en.tex` (LaTeX statement with preconditions and sample tables)
@@ -58,7 +62,7 @@ Open your VS Code terminal and run:
 
 ```bash
 # 1. Navigate to the generated problem folder
-cd work/problem-generation-claude-20261111/dominant-peaks.pbm
+cd dominant-peaks.pbm
 
 # 2. Make the generator executable and generate private test cases
 chmod +x generate.ts

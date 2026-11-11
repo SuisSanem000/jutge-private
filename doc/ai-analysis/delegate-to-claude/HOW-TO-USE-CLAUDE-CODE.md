@@ -1,54 +1,52 @@
-# How to Work with Claude Code in VS Code & Tomorrow's Meeting Guide
+# How to Run Claude Code Inside `problem-editor` & Meeting Guide
 
 > **Location:** `doc/ai-analysis/delegate-to-claude/HOW-TO-USE-CLAUDE-CODE.md`  
 > **Master Prompt:** [CLAUDE-MASTER-PROMPT.md](./CLAUDE-MASTER-PROMPT.md)  
-> **Target Problem Folder:** [`work/problem-generation-claude-20261111/`](../../../work/problem-generation-claude-20261111/README.md)  
+> **Original Problem Editor Path:** `resources/professor gave 2026-10-25/problem-editor/`  
 > **Meeting Proposal Document:** [`work/03-meeting-presentation-20261112/`](../../../work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)
 
 ---
 
-## 1. What Are We Doing & Why?
+## 1. Why Running Claude Inside `problem-editor` Is the Best Strategy
 
-In `problem-editor/README.md`, your supervisor Pau Fernandez outlined the 4 project phases:
+You are running Claude Code with the **`problem-editor`** folder opened as your VS Code workspace root.
 
-```text
-Phase 1: Learn the problem format (spec/models, problem specifications)
-Phase 2: Use the skills to generate new problems using an AI agent (Claude Code / VS Code)
-Phase 3: Scaffold a website (Next.js)
-Phase 4: Iterate and harden
-```
-
-You are executing **Phase 1 and Phase 2**. You have Claude Code installed as an active extension in your separate VS Code IDE with a paid plan. By delegating the problem generation to Claude Code using the master prompt, you will produce a complete, real Jutge problem (`dominant-peaks.pbm`) that compiles, runs, and passes grading checks via `jtk`.
+This gives you three huge advantages:
+1. **Clean Context Window:** Claude Code sees only the problem specifications (`spec/`), reference models (`spec/models/`), and authoring skills (`skills/`). There is zero noise or distraction from other Jutge repositories or workspace notes.
+2. **Exact Skill Alignment:** Pau Fernandez authored the skill files using paths relative to the `problem-editor` root (e.g. `/spec/constitucio.md`). Running Claude directly inside `problem-editor` matches Pau's intended execution environment 100%.
+3. **Direct Supervisor Demonstration:** Tomorrow, you can open Pau's own repository and show `dominant-peaks.pbm/` living directly inside `problem-editor`, demonstrating Phase 1 & 2 completion in its native environment.
 
 ---
 
-## 2. Step-by-Step Instructions: Running Claude Code in VS Code
+## 2. Step-by-Step Instructions in VS Code
 
-### Step 1: Open the Repository in VS Code
-Open the root directory `jutge-private` in VS Code so that Claude has access to the full repository context.
+### Step 1: Open `problem-editor` in VS Code
+Open a new VS Code window and choose **File > Open Folder...**, then select:
+```text
+resources/professor gave 2026-10-25/problem-editor/
+```
 
 ### Step 2: Open the Claude Code Extension
-1. Click the Claude icon in the VS Code Activity Bar (or open the Claude Code panel).
-2. Ensure Claude is logged into your paid Anthropic account and ready to receive prompts.
+1. Open the Claude Code panel or chat window in VS Code.
+2. Confirm you are logged into your paid Claude subscription.
 
 ### Step 3: Copy and Paste the Master Prompt
 1. Open [**`CLAUDE-MASTER-PROMPT.md`**](./CLAUDE-MASTER-PROMPT.md).
 2. Copy the entire prompt text inside the fenced code block.
-3. Paste it into the Claude Code input box and press Enter.
+3. Paste it into the Claude Code chat window in your `problem-editor` VS Code session and press Enter.
 
-### Step 4: Grant Workspace Tool Permissions
-As Claude begins working, it will ask for permission to:
-- Read workspace files (the translated specs in `doc/problem-editor-en-translate-20261111/` and the idea in `work/problem-generation-claude-20261111/`).
-- Create directories and write files in `work/problem-generation-claude-20261111/dominant-peaks.pbm/`.
-- Run terminal commands (if Claude Code command execution is enabled).
+### Step 4: Approve File Creation Permissions
+Claude Code will:
+- Read `spec/constitucio.md` and `spec/problema-jutge.md` (and translate the Catalan specifications).
+- Inspect the reference models in `spec/models/`.
+- Consult the authoring instructions in `skills/problemes-jutge/SKILL.md`.
+- Ask for permission to create the directory `dominant-peaks.pbm/` and write the problem files.
 
-**Click "Allow" / "Approve"** for these actions.
+Click **"Allow" / "Approve"** for each file.
 
-### Step 5: What Claude Code Will Produce
-Claude Code will scaffold the complete `.pbm` directory:
-
+### Step 5: What Gets Created Inside `problem-editor/dominant-peaks.pbm/`
 ```text
-work/problem-generation-claude-20261111/dominant-peaks.pbm/
+dominant-peaks.pbm/
 ├── handler.yml        # G++17 mode, 1.0s limit, source_modifier: none
 ├── problem.en.yml     # Metadata, title, author info
 ├── problem.en.tex     # LaTeX statement with formal description, input, output, sample tables
@@ -64,17 +62,17 @@ work/problem-generation-claude-20261111/dominant-peaks.pbm/
 
 ## 3. Terminal Compilation & Verification
 
-Once Claude Code finishes creating the files (or if you run the commands yourself in the VS Code terminal):
+Open your terminal inside VS Code (or your system terminal) and run:
 
 ```bash
-# 1. Navigate to the generated problem directory
-cd work/problem-generation-claude-20261111/dominant-peaks.pbm
+# 1. Enter the generated problem directory
+cd dominant-peaks.pbm
 
 # 2. Make the test generator executable and run it to produce private test cases
 chmod +x generate.ts
 bun run generate.ts
 
-# 3. Run jtk make to compile the golden solution and generate all .cor expected outputs
+# 3. Run jtk make to compile the golden solution, generate .cor files, and build the PDF
 jtk make
 
 # 4. Lint the problem folder to verify 0 style and formatting errors
@@ -84,32 +82,31 @@ jtk lint
 jtk verify solution-slow.cc
 ```
 
-### What If There Is a Compilation or Lint Error?
-If `jtk make` or `jtk lint` outputs an error:
-1. Copy the error message from your terminal.
-2. Paste it back to Claude in the chat:  
-   *"Running `jtk make` failed with this error: `[paste error]`. Fix the code while maintaining the C++17 pedagogical constitution."*
-3. Claude will self-correct the file.
-4. Re-run `jtk make`.
+### Self-Correction Loop (If Errors Occur)
+If `jtk make` or `jtk lint` outputs a compilation warning or error:
+1. Copy the terminal error output.
+2. Paste it back into Claude Code:  
+   *"Running `jtk make` gave this error: `[paste error]`. Please fix the issue while maintaining the C++17 pedagogical constitution."*
+3. Claude Code will edit the code, and you can re-run `jtk make`.
 
 ---
 
-## 4. What to Tell Your Professors Tomorrow (November 12)
+## 4. What to Tell Your Supervisors Tomorrow (November 12)
 
-You are walking into the meeting with concrete results. Follow this 3-part presentation structure:
+Present your work in the meeting using this crisp 3-part script:
 
 ### Part 1: "What Did I Study?" (Phase 1)
-> *"I studied the problem-editor repository and the Jutge problem creation ecosystem:*
-> 1. *I analyzed the `.pbm` directory anatomy, `handler.yml` options, and compiler pipelines.*
+> *"I reviewed your roadmap in the `problem-editor` repository. For Phase 1:*
+> 1. *I studied the `.pbm` directory anatomy, `handler.yml` options, and compiler pipelines.*
 > 2. *I mastered the C++17 Pedagogical Constitution: early exit on searches, no `std::unordered_map` or lambdas, and high-readability code.*
-> 3. *I reviewed the 7 reference models to understand how `PRO2` and `G++17` problems differ in test generation and harnesses."*
+> 3. *I reviewed the 7 reference models in `spec/models/` to understand how `PRO2` and `G++17` problems differ in test generation and harnesses."*
 
 ### Part 2: "What Did I Implement?" (Phase 2 Demo)
-> *"To validate Pau's Phase 2, I tested generating problems using Claude Code loaded with Pau's skill specifications:*
-> 1. *I drafted an algorithm idea with $O(N)$ optimal complexity and $O(N^2)$ naive complexity.*
-> 2. *Claude Code generated the full `.pbm` package: LaTeX statement, optimal `solution.cc`, naive `solution-slow.cc`, Bun test generator, and YAML configs.*
+> *"For Phase 2, I tested generating problems using Claude Code running directly inside your `problem-editor` repository loaded with your skills:*
+> 1. *I designed an algorithmic problem ('Dominant Mountain Peaks') with $O(N)$ optimal complexity and $O(N^2)$ naive complexity.*
+> 2. *Claude Code read your Catalan specifications in `spec/` and generated the complete package in English: LaTeX statement, optimal `solution.cc`, naive `solution-slow.cc`, Bun test generator, and YAML configs.*
 > 3. *I ran `generate.ts`, compiled it with `jtk make`, and verified that the slow solution fails the efficiency tests with time-limit exceeded.*
-> 4. *Let me show you the generated files and run `jtk make` live right now."*
+> 4. *Let me show you `dominant-peaks.pbm/` right here in your repository and run `jtk make` live."*
 
 ### Part 3: "Key Architectural Insight & The Proposal for Phase 3"
 > *"My main engineering takeaway from executing Phase 2:*
@@ -124,8 +121,6 @@ You are walking into the meeting with concrete results. Follow this 3-part prese
 ## 5. Quick Links & Workspace Reference
 
 - Master Prompt to Copy: [CLAUDE-MASTER-PROMPT.md](./CLAUDE-MASTER-PROMPT.md)
-- Problem Idea: [`sample-problem-idea/IDEA.md`](../../../work/problem-generation-claude-20261111/sample-problem-idea/IDEA.md)
-- Translated Constitution: [`spec/constitution.md`](../../problem-editor-en-translate-20261111/spec/constitution.md)
+- Translated Constitution Spec: [`spec/constitution.md`](../../problem-editor-en-translate-20261111/spec/constitution.md)
 - Translated Problem Spec: [`spec/problem-spec.md`](../../problem-editor-en-translate-20261111/spec/problem-spec.md)
 - Tomorrow's Presentation Proposal: [`PROPOSAL-PRESENTATION-20261112.md`](../../../work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)
-

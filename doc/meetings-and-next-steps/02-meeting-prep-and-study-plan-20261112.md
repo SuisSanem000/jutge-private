@@ -39,13 +39,14 @@ Spend your 5 hours today following this exact reading path:
 
 ## 3. What to Say in Tomorrow's Meeting (The Pitch)
 
-### Part 1: The Credibility Opener
-> *"Over the past week, I've conducted an in-depth audit of the ecosystem and domain materials:*
-> 1. *The `.pbm` file specifications, LaTeX statement structure, and the judge driver (`judge.py`).*
-> 2. *Pau's `problem-editor` repository, Claude skills, and the 4-phase vision for an AI-assisted SaaS editor.*
-> 3. *The existing `jtk` Bun/TS codebase: I analyzed its architecture, execution pipeline, and current bottlenecks.*
+### Part 1: The Credibility Opener & Phase 1/2 Live Demo
+> *"Over the past week, I conducted an in-depth review of your roadmap in `problem-editor`:*
+> 1. *For Phase 1, I mastered the `.pbm` file specifications, LaTeX statement structure, the C++17 Pedagogical Constitution, and the 7 reference models.*
+> 2. *For Phase 2, I tested generating problems using Claude Code running directly inside your `problem-editor` repository loaded with your skills.*
+> 3. *I generated `dominant-peaks.pbm`, compiled it with `jtk make`, and verified that the slow solution triggers time-limit exceeded (EE).*
+> 4. *Let me show you the problem folder right inside `problem-editor` and run `jtk make` live right now.*
 >
-> *My takeaway: The biggest blocker to Pau's vision is that `jtk` was written as an interactive human CLI rather than a headless authoring engine. It has no test harness, UI logic is mixed into core functions, and it cannot give an AI agent structured JSON diagnostics to self-correct."*
+> *My key takeaway: The generative pipeline works, but current `jtk` was written as an interactive human CLI. It cannot give an AI agent structured JSON diagnostics to self-correct when code or tests fail."*
 
 ### Part 2: What You Propose to Implement (The 4-Month Architecture Plan)
 Propose this clear, 4-phase delivery plan:
