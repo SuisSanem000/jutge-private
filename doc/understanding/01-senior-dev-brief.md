@@ -130,14 +130,14 @@ You have **4 hours** total to ramp up. Do not read the entire corpus; follow thi
 ### Hour 1: Domain & The Problem Spec (60 min)
 1. Read this brief (`doc/understanding/01-senior-dev-brief.md`) — 10 min.
 2. Read [04. Problem Format & Grading](./04-problem-format-and-grading.md) — 15 min.
-3. Open and inspect a real reference problem: [Reference Model 01 (Odd or Even)](../../resources/professor%20gave%202026-10-25/problem-editor/spec/models/) — 20 min.
-4. Skim the pedagogical rules: [Pedagogical Rules & Constitution Spec](../../resources/professor%20gave%202026-10-25/problem-editor/spec/) (lines 1–50) — 15 min.
+3. Open and inspect the reference models: [Reference Models Guide](../problem-editor-en-translate-20261111/spec/models-guide.md) — 20 min.
+4. Skim the pedagogical rules: [Pedagogical Constitution](../problem-editor-en-translate-20261111/spec/constitution.md) (lines 1–50) — 15 min.
 
 ### Hour 2: The Problem Editor Vision & Agent Skills (60 min)
-1. Read Pau's vision: [Problem Editor README](../../resources/professor%20gave%202026-10-25/problem-editor/README.md) — 15 min.
+1. Read Pau's vision: [Problem Editor Complete English Translation](../problem-editor-en-translate-20261111/README.md) — 15 min.
 2. Read [05. AI Problem Generation Analysis](./05-ai-problem-generation-analysis.md) — 20 min.
-3. Read the agent skill file: [Problem Creation Skill](../../resources/professor%20gave%202026-10-25/problem-editor/skills/) — 15 min.
-4. Inspect the generated exam sample: [Generated Exam Samples](../../resources/professor%20gave%202026-10-25/problem-editor/generated-exam-sample/) — 10 min.
+3. Read the agent skill file: [Problem Creation Skill](../problem-editor-en-translate-20261111/skills/jutge-problems/SKILL.md) — 15 min.
+4. Inspect the Claude generation guide: [Phase 1 & 2 Execution Guide](../../work/problem-generation-claude-20261111/README.md) — 10 min.
 
 ### Hour 3: Existing `jtk` Codebase & Architectural Debt (60 min)
 1. Read [03. jtk Architecture](./03-jtk-architecture.md) — 15 min.

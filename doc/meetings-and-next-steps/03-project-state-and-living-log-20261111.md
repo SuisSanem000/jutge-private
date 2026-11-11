@@ -28,9 +28,8 @@
 
 | Subfolder | Task / Deliverable | Status |
 |---|---|---|
-| [**01. Task: Problem Editor Analysis**](../../work/01-task-problem-editor-analysis-20261103/) | In-depth audit of Pau's problem-editor (specs, models, skills). | Prepared |
-| [**02. Task: Meeting Follow-ups**](../../work/02-task-meeting-followups-20261103/) | Action items tracking the 2026-10-22 meeting notes. | Prepared |
-| [**03. Meeting Presentation (Nov 12)**](../../work/03-meeting-presentation-20261112/) | Presentation agenda & proposals for the 2026-11-12 meeting. | **ACTIVE (Meeting Tomorrow)** |
+| [**Problem Generation via Claude Code**](../../work/problem-generation-claude-20261111/README.md) | **Core Focus (Phase 1 & 2):** Complete guide, master prompt, and problem generation suite for VS Code Claude extension. | **ACTIVE** |
+| [**Meeting Presentation (Nov 12)**](../../work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md) | Presentation agenda, architectural roadmap & questions for the 2026-11-12 meeting. | **ACTIVE (Meeting Tomorrow)** |
 
 ---
 

@@ -29,10 +29,10 @@
 
 | Item from Notes | Status | Evidence in Workspace |
 |---|---|---|
-| Problem-making documentation & format spec | **Received** | Found in [Problem Editor Specs Folder](../../resources/professor%20gave%202026-10-25/problem-editor/spec/) (problem specification and pedagogical guidelines). |
-| Claude skills from Pau | **Received** | Found in [Problem Editor Skills Folder](../../resources/professor%20gave%202026-10-25/problem-editor/skills/) (problem creation and review skills). |
-| Sample problems | **Received** | 7 reference models in [Reference Models Folder](../../resources/professor%20gave%202026-10-25/problem-editor/spec/models/) and [Generated Exam Samples](../../resources/professor%20gave%202026-10-25/problem-editor/generated-exam-sample/). |
-| Private problems repository | **Received** | Added by Jordi Petit on 2026-10-27 in [Private Problems Folder](../../resources/professor%20gave%202026-10-25/problem-editor/private-problems/) (with EDA, AP1, AP2 problems). |
+| Problem-making documentation & format spec | **Received** | See translated [Problem Spec](../problem-editor-en-translate-20261111/spec/problem-spec.md) and [Constitution](../problem-editor-en-translate-20261111/spec/constitution.md). |
+| Claude skills from Pau | **Received** | See translated [Problem Creation Skill](../problem-editor-en-translate-20261111/skills/jutge-problems/SKILL.md) and [Review Skill](../problem-editor-en-translate-20261111/skills/review-jutge-problems/SKILL.md). |
+| Sample problems | **Received** | See [Reference Models Guide](../problem-editor-en-translate-20261111/spec/models-guide.md) (7 reference models) and [Problem Editor Overview](../problem-editor-en-translate-20261111/README.md). |
+| Private problems repository | **Received** | Added by Jordi Petit on 2026-10-27 in original `problem-editor/private-problems/` (with EDA, AP1, AP2 problems). |
 | Token / LLM budget | **Pending / Unclear** | Mentions JutgeAI token endpoint, but direct budget/quota limits are not formalized. |
 | jtk repository access & review workflow | **Needs Discussion** | Need to agree on git workflow for the rewrite in the Nov 12 meeting. |
 

@@ -6,17 +6,21 @@
 
 ## 🧭 Where to Look First
 
-1. **For your 5-hour study plan & tomorrow's meeting preparation (Nov 12):**  
-   👉 [Meeting Prep & Study Plan (Nov 12)](./doc/meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md)  
-   *Includes your block-by-block study roadmap, talking points, and pitch for Jordi Petit and Pau Fernandez.*
+1. **For Phase 1 & 2 problem generation with Claude Code (VS Code):**  
+   👉 [Claude Code Master Prompt & Execution Guide](./doc/ai-analysis/delegate-to-claude/HOW-TO-USE-CLAUDE-CODE.md) • [Copy-Paste Prompt](./doc/ai-analysis/delegate-to-claude/CLAUDE-MASTER-PROMPT.md)  
+   *Includes exact step-by-step instructions for the Claude VS Code extension, master prompt, and presentation script.*
 
-2. **For what you can present/share on screen with your professors tomorrow:**  
+2. **For the full English translation of the Problem Editor specs:**  
+   👉 [Problem Editor Complete English Translation](./doc/problem-editor-en-translate-20261111/README.md)  
+   *Pure English translation of the constitution, problem anatomy, reference models, and Claude skills.*
+
+3. **For your meeting preparation & 5-hour study plan (Nov 12):**  
+   👉 [Meeting Prep & Study Plan (Nov 12)](./doc/meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md)  
+   *Includes your talking points and proposal pitch for Jordi Petit and Pau Fernandez.*
+
+4. **For the presentation slides & architecture proposal document:**  
    👉 [Proposal & Presentation Document (Nov 12)](./work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)  
    *The structured engineering proposal: jtk v5 architecture, 4-month roadmap, and discussion questions.*
-
-3. **For an instant 15-minute senior developer domain briefing:**  
-   👉 [Senior Developer Onboarding Brief](./doc/understanding/01-senior-dev-brief.md)  
-   *Covers the Jutge domain, system architecture, `.pbm` format, and current technical debt.*
 
 ---
 
@@ -29,15 +33,15 @@ jutge-private/
 │                        Contains upstream git clones of Jutge repos and original materials
 │                        from the professors. Simin pulls updates here via `git pull`.
 │
-├── doc/                 📖 WHAT AI EXPLAINS TO SIMIN (Knowledge, Prompts & Meetings)
-│   ├── ai-analysis/                 -> AI settings, system prompt, and API mechanics
-│   ├── understanding/               -> System architecture, .pbm specs, and codebase debt
-│   └── meetings-and-next-steps/     -> Chronological meeting notes, study plans, and logs
+├── doc/                 📖 WHAT AI EXPLAINS TO SIMIN (Knowledge, Translations & Meetings)
+│   ├── problem-editor-en-translate-20261111/ -> Complete English translation of problem-editor
+│   ├── ai-analysis/ (or ai-assistant/)       -> System prompt & delegate-to-claude master prompt
+│   ├── understanding/                        -> System architecture, .pbm specs, and codebase debt
+│   └── meetings-and-next-steps/              -> Chronological meeting notes, study plans, and logs
 │
-└── work/                💻 WHAT SIMIN DOES & PRESENTS TO PROFESSORS (Code & Tasks)
-    ├── 01-task-problem-editor-analysis-20261103/ -> Analysis of Pau's problem-editor
-    ├── 02-task-meeting-followups-20261103/       -> Action items from Oct 22 kickoff
-    └── 03-meeting-presentation-20261112/         -> Proposal & presentation for Nov 12 meeting
+└── work/                💻 WHAT SIMIN DOES & PRESENTS TO PROFESSORS (Code & Prototypes)
+    ├── problem-generation-claude-20261111/   -> Phase 1 & 2: Claude problem generation target & idea
+    └── 03-meeting-presentation-20261112/     -> Proposal & presentation for Nov 12 meeting
 ```
 
 ### Quick Folder Navigation
@@ -45,14 +49,15 @@ jutge-private/
 | Folder | What it is |
 |---|---|
 | [**`resources/`**](./resources/) | Upstream repositories and professor documents (**read-only to AI**). |
-| [**`doc/`**](./doc/) | Knowledge base, AI prompts, architecture guides, and meeting plans. |
-| ↳ [**`doc/ai-analysis/`**](./doc/ai-analysis/) | AI system prompt and JutgeAI generation mechanics. |
+| [**`doc/`**](./doc/) | Knowledge base, translations, architecture guides, and meeting plans. |
+| ↳ [**`doc/ai-assistant/delegate-to-claude/`**](./doc/ai-analysis/delegate-to-claude/) | **Delegate to Claude:** Master prompt and step-by-step VS Code guide. |
+| ↳ [**`doc/problem-editor-en-translate-20261111/`**](./doc/problem-editor-en-translate-20261111/) | Complete English translation of `problem-editor` (constitution, specs, skills). |
 | ↳ [**`doc/understanding/`**](./doc/understanding/) | Codebase architecture, `.pbm` specifications, and rewrite observations. |
 | ↳ [**`doc/meetings-and-next-steps/`**](./doc/meetings-and-next-steps/) | Chronological meeting summaries, study plans, and project logs. |
+| ↳ [**`doc/ai-analysis/`**](./doc/ai-analysis/) | AI system prompt and operational rules. |
 | [**`work/`**](./work/) | Code implementations, active tasks, and deliverables to present. |
-| ↳ [**`work/01-task-problem-editor-analysis-20261103/`**](./work/01-task-problem-editor-analysis-20261103/) | Task 01: Audit of problem-editor specifications and models. |
-| ↳ [**`work/02-task-meeting-followups-20261103/`**](./work/02-task-meeting-followups-20261103/) | Task 02: Tracking action items from the October 22 kickoff. |
-| ↳ [**`work/03-meeting-presentation-20261112/`**](./work/03-meeting-presentation-20261112/) | Task 03: Engineering proposal and slides for the November 12 meeting. |
+| ↳ [**`work/problem-generation-claude-20261111/`**](./work/problem-generation-claude-20261111/) | **Core Focus:** Target directory for generated problem (`dominant-peaks.pbm`) and sample idea. |
+| ↳ [**`work/03-meeting-presentation-20261112/`**](./work/03-meeting-presentation-20261112/) | Architectural proposal and 4-month roadmap for November 12 meeting. |
 
 ---
 

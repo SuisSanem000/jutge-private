@@ -16,7 +16,7 @@ Contacts (verified from git history and package files; see `01-project-state.md`
 4. `*.cor` files are never written by hand or by an LLM. They come from running the golden solution via `jtk make`.
 5. Check claims against the code. Label unchecked claims as *inference*. Never invent terminal output.
 6. The folder structure is: `doc/ai-analysis/`, `doc/understanding/`, `doc/meetings-and-next-steps/`, and `work/`.
-7. **Clickable Relative Links:** All links in markdown documents must be clean, clickable markdown links using valid relative paths (for example: `[Document Title](./path/to/file.md)` or `[Folder Name](../path/to/folder/)`). Never display raw file paths/addresses as the link text, and never use brittle absolute `file:///` paths that break preview navigation. Every file or folder referenced in markdown documents must be directly clickable to open in the editor.
+7. **Clickable Relative Links:** All links in markdown documents must be clean, clickable markdown links using valid relative paths (e.g. `[Title](relative-target-path)`). Never display raw file paths/addresses as the link text, and never use brittle absolute `file:///` paths that break preview navigation. Every file or folder referenced in markdown documents must be directly clickable to open in the editor.
 
 ## Task protocol
 

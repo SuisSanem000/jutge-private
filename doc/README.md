@@ -9,20 +9,28 @@
 ```
 doc/
 │
-├── ai-analysis/                 🤖 AI SETTINGS & PROMPTS ONLY
-│   └── 01-ai-system-prompt.md   # System prompt and operational rules for AI assistants
+├── ai-analysis/ (or ai-assistant/) 🤖 AI SETTINGS, PROMPTS & DELEGATION
+│   ├── 01-ai-system-prompt.md      # System prompt and operational rules for AI assistants
+│   └── delegate-to-claude/         # Claude Code master prompt & execution guide
+│       ├── CLAUDE-MASTER-PROMPT.md # Ready-to-copy master prompt for VS Code Claude extension
+│       └── HOW-TO-USE-CLAUDE-CODE.md # Step-by-step guide & presentation script for tomorrow
 │
-├── understanding/               💡 CODEBASE & DOMAIN KNOWLEDGE
-│   ├── 01-senior-dev-brief.md   # 15-minute high-level briefing for senior developers
-│   ├── 02-ecosystem.md          # Architecture and repository relationships
-│   ├── 03-jtk-architecture.md   # Existing jtk CLI execution flows
+├── problem-editor-en-translate-20261111/ 📖 FULL ENGLISH TRANSLATION OF PROBLEM EDITOR
+│   ├── README.md                   # Problem Editor overview, architecture & phases
+│   ├── spec/                       # Translated constitution, problem spec, reference models
+│   └── skills/                     # Translated Claude authoring & review skills
+│
+├── understanding/                  💡 CODEBASE & DOMAIN KNOWLEDGE
+│   ├── 01-senior-dev-brief.md      # 15-minute high-level briefing for senior developers
+│   ├── 02-ecosystem.md             # Architecture and repository relationships
+│   ├── 03-jtk-architecture.md      # Existing jtk CLI execution flows
 │   ├── 04-problem-format-and-grading.md # .pbm anatomy, LaTeX, YAML specs, judge grading
 │   ├── 05-ai-problem-generation-analysis.md # Comparison of jtk generate vs Problem Editor
 │   ├── 06-jtk-rewrite-observations.md   # Code smells, bugs, and technical debt in jtk
 │   ├── 07-commands-and-glossary.md      # CLI cheat sheet & domain glossary
 │   └── 08-source-verification-log.md   # Audit log of verified facts vs inferences
 │
-└── meetings-and-next-steps/     📅 MEETINGS & CHRONOLOGICAL STUDY PLANS
+└── meetings-and-next-steps/        📅 MEETINGS & CHRONOLOGICAL STUDY PLANS
     ├── 01-meeting-notes-summary-20261022.md # Summary & analysis of kickoff meeting
     ├── 02-meeting-prep-and-study-plan-20261112.md # 5-hour study plan & proposal pitch
     └── 03-project-state-and-living-log-20261111.md # Living project state and decision log
@@ -32,7 +40,8 @@ doc/
 
 | Section | Documents |
 |---|---|
-| [**`ai-analysis/`**](./ai-analysis/) | • [01. AI System Prompt](./ai-analysis/01-ai-system-prompt.md) |
+| [**`ai-analysis/`**](./ai-analysis/) | • [01. AI System Prompt](./ai-analysis/01-ai-system-prompt.md)<br>• [Claude Master Prompt](./ai-analysis/delegate-to-claude/CLAUDE-MASTER-PROMPT.md)<br>• [How to Use Claude Code](./ai-analysis/delegate-to-claude/HOW-TO-USE-CLAUDE-CODE.md) |
+| [**`problem-editor-en-translate-20261111/`**](./problem-editor-en-translate-20261111/) | • [Problem Editor Overview](./problem-editor-en-translate-20261111/README.md)<br>• [Pedagogical Constitution](./problem-editor-en-translate-20261111/spec/constitution.md)<br>• [Problem Specification](./problem-editor-en-translate-20261111/spec/problem-spec.md)<br>• [Reference Models Guide](./problem-editor-en-translate-20261111/spec/models-guide.md)<br>• [Problem Creation Skill](./problem-editor-en-translate-20261111/skills/jutge-problems/SKILL.md) |
 | [**`understanding/`**](./understanding/) | • [01. Senior Dev Brief](./understanding/01-senior-dev-brief.md)<br>• [02. Ecosystem & Repos](./understanding/02-ecosystem.md)<br>• [03. jtk Architecture](./understanding/03-jtk-architecture.md)<br>• [04. Problem Format & Grading](./understanding/04-problem-format-and-grading.md)<br>• [05. AI Problem Generation Analysis](./understanding/05-ai-problem-generation-analysis.md)<br>• [06. jtk Rewrite Observations](./understanding/06-jtk-rewrite-observations.md)<br>• [07. Commands & Glossary](./understanding/07-commands-and-glossary.md)<br>• [08. Source Verification Log](./understanding/08-source-verification-log.md) |
 | [**`meetings-and-next-steps/`**](./meetings-and-next-steps/) | • [01. Kickoff Meeting Notes Summary (2026-10-22)](./meetings-and-next-steps/01-meeting-notes-summary-20261022.md)<br>• [02. Meeting Prep & 5-Hour Study Plan (2026-11-12)](./meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md)<br>• [03. Project State & Living Log](./meetings-and-next-steps/03-project-state-and-living-log-20261111.md) |
 
