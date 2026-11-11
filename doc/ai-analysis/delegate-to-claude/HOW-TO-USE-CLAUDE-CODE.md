@@ -128,3 +128,4 @@ You are walking into the meeting with concrete results. Follow this 3-part prese
 - Translated Constitution: [`spec/constitution.md`](../../problem-editor-en-translate-20261111/spec/constitution.md)
 - Translated Problem Spec: [`spec/problem-spec.md`](../../problem-editor-en-translate-20261111/spec/problem-spec.md)
 - Tomorrow's Presentation Proposal: [`PROPOSAL-PRESENTATION-20261112.md`](../../../work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)
+

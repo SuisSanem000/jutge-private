@@ -105,3 +105,4 @@ If you have bash execution tools in VS Code:
 
 If you do not have command execution privileges, create all files cleanly and list the exact commands for me to run in my terminal.
 ```
+
