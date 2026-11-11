@@ -7,8 +7,8 @@
 ## 🧭 Where to Look First
 
 1. **For Phase 1 & 2 problem generation with Claude Code (VS Code):**  
-   👉 [01. Meeting Presentation & Problem Demo (Nov 12)](./work/01-meeting-presentation-and-demo-20261112/README.md) • [Copy-Paste Prompt](./work/01-meeting-presentation-and-demo-20261112/CLAUDE-MASTER-PROMPT.md)  
-   *Explains what problem-editor is, what you did, the master prompt for Claude Code, and your presentation script for tomorrow.*
+   👉 [01. Meeting Presentation & Problem Demo (Nov 12)](./work/01-meeting-presentation-and-demo-20261112/README.md) • [Copy-Paste Prompt](./work/01-meeting-presentation-and-demo-20261112/01-claude-task/CLAUDE-MASTER-PROMPT.md)  
+   *Organized into 3 folders: Claude task artifacts, in-depth explanations for you, and tomorrow's presentation.*
 
 2. **For the full English translation of the Problem Editor specs:**  
    👉 [Problem Editor Complete English Translation](./doc/problem-editor-en-translate-20261111/README.md)  
@@ -19,7 +19,7 @@
    *Includes your talking points and proposal pitch for Jordi Petit and Pau Fernandez.*
 
 4. **For the presentation slides & architecture proposal document:**  
-   👉 [Proposal & Presentation Document (Nov 12)](./work/01-meeting-presentation-and-demo-20261112/PROPOSAL-PRESENTATION-20261112.md)  
+   👉 [Proposal & Presentation Document (Nov 12)](./work/01-meeting-presentation-and-demo-20261112/03-for-meeting-tomorrow/PROPOSAL-PRESENTATION-20261112.md)  
    *The structured engineering proposal: jtk v5 architecture, 4-month roadmap, and discussion questions.*
 
 ---

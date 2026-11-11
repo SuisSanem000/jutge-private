@@ -1,9 +1,9 @@
 # Master Prompt for Claude Code (Running Inside `problem-editor`)
 
-> **Location:** `work/01-meeting-presentation-and-demo-20261112/CLAUDE-MASTER-PROMPT.md`  
-> **Master Guide:** [README.md](./README.md)  
+> **Location:** `work/01-meeting-presentation-and-demo-20261112/01-claude-task/CLAUDE-MASTER-PROMPT.md`  
+> **Folder Overview:** [01-claude-task README](./README.md) • [Task 01 Root Overview](../README.md)  
 > **Workspace Context:** Run this prompt in VS Code when the workspace root is **`problem-editor`** (`resources/professor gave 2026-10-25/problem-editor/`).  
-> **Related Guide:** See [How to Use Claude Code Guide](./HOW-TO-USE-CLAUDE-CODE.md) for step-by-step instructions and tomorrow's presentation script.
+> **Related Guide:** See [How to Use Claude Code Guide](./HOW-TO-USE-CLAUDE-CODE.md) for step-by-step instructions.
 
 ---
 

@@ -28,7 +28,7 @@
 
 | Subfolder | Task / Deliverable | Status |
 |---|---|---|
-| [**01. Meeting Presentation & Claude Problem Demo**](../../work/01-meeting-presentation-and-demo-20261112/README.md) | **Unified Meeting Workspace:** Complete proposal ([PROPOSAL-PRESENTATION-20261112.md](../../work/01-meeting-presentation-and-demo-20261112/PROPOSAL-PRESENTATION-20261112.md)), live generated code ([dominant-peaks.pbm](../../work/01-meeting-presentation-and-demo-20261112/claude-code-generated-task-solutions/dominant-peaks.pbm/)), walkthrough guide, and master prompt. | **ACTIVE (Meeting Tomorrow)** |
+| [**01. Meeting Presentation & Claude Problem Demo**](../../work/01-meeting-presentation-and-demo-20261112/README.md) | **Unified Meeting Workspace:** Complete proposal ([PROPOSAL-PRESENTATION-20261112.md](../../work/01-meeting-presentation-and-demo-20261112/03-for-meeting-tomorrow/PROPOSAL-PRESENTATION-20261112.md)), live generated code ([dominant-peaks.pbm](../../work/01-meeting-presentation-and-demo-20261112/01-claude-task/dominant-peaks.pbm/)), walkthrough guide, and master prompt. | **ACTIVE (Meeting Tomorrow)** |
 
 ---
 
