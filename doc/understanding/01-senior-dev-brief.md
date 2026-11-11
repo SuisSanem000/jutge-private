@@ -8,7 +8,7 @@
 ## 1. Executive Context & The Core Problem
 
 ### What is Jutge.org?
-[Jutge.org](https://jutge.org) is the automated grading and computer science learning platform used across Catalonia (primarily UPC - Universitat Politècnica de Catalunya). It has hundreds of thousands of student submissions across C++, Python, Haskell, and other languages.
+[Jutge.org](https://jutge.org) is the automated grading and computer science learning platform used across universities in Barcelona (primarily UPC - Barcelona Tech). It has hundreds of thousands of student submissions across C++, Python, Haskell, and other languages.
 
 ### The Problem
 - **Problem exhaustion & leakage:** Public problems quickly get solved, shared, or memorized.
@@ -59,7 +59,7 @@ flowchart TD
 ### The Key Repositories & Actors
 - **Professors / Stakeholders:**
   - **Jordi Petit:** Jutge creator, project lead. Authored most of Jutge and existing `jtk`.
-  - **Pau Fernández:** Co-maintainer. Authored the `problem-editor` specification, AI skills, and sample exam.
+  - **Pau Fernandez:** Co-maintainer. Authored the `problem-editor` specification, AI skills, and sample exam.
 - **Upstream Repositories** (mirrored in `resources/jutge_repos/`):
   - `jutge-toolkit` (`jtk`): Bun/TypeScript CLI for teachers to manage problems.
   - `jutge-driver-std`: The server-side Python grading driver that determines ground truth for test execution.
@@ -74,7 +74,7 @@ A problem in Jutge is stored as a directory ending with `.pbm`. It has a strict 
 | File | Purpose | Source / Invariant |
 |---|---|---|
 | `handler.yml` | Execution schema (problem type, compiler, checker rules, tolerances) | Authored / Generated |
-| `problem.<lang>.tex` | Formal LaTeX statement (e.g. `problem.en.tex`, `problem.ca.tex`) | Authored / Generated |
+| `problem.<lang>.tex` | Formal LaTeX statement (e.g. `problem.en.tex`, `problem.fr.tex`) | Authored / Generated |
 | `problem.<lang>.yml` | Metadata (title, author, email, translation status) | Authored / Generated |
 | `solution.<ext>` | The **Golden Solution** (reference implementation) | Authored / Generated |
 | `solution-*.<ext>` | Alternative solutions (slow algorithms, wrong answers for test tuning) | Optional |
@@ -130,13 +130,13 @@ You have **4 hours** total to ramp up. Do not read the entire corpus; follow thi
 ### Hour 1: Domain & The Problem Spec (60 min)
 1. Read this brief (`doc/SENIOR-DEV-BRIEF.md`) — 10 min.
 2. Read [`doc/ai-analysis-20261103/04-problem-format-and-grading.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/ai-analysis-20261103/04-problem-format-and-grading.md) — 15 min.
-3. Open and inspect a real reference problem: [`resources/professor gave 2026-10-25/problem-editor/spec/models/01-senar-o-parell.pbm/`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/spec/models/01-senar-o-parell.pbm) — 20 min.
-4. Skim the pedagogical rules: [`resources/professor gave 2026-10-25/problem-editor/spec/constitucio.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/spec/constitucio.md) (lines 1–50) — 15 min.
+3. Open and inspect a real reference problem: [Reference Model 01 (Odd or Even)](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/spec/models/) — 20 min.
+4. Skim the pedagogical rules: [Pedagogical Rules & Constitution](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/spec/) (lines 1–50) — 15 min.
 
 ### Hour 2: The Problem Editor Vision & Agent Skills (60 min)
 1. Read Pau's vision: [`resources/professor gave 2026-10-25/problem-editor/README.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/README.md) — 15 min.
-2. Read [`doc/ai-analysis-20261103/05-ai-generation-and-problem-editor-vision.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/ai-analysis-20261103/05-ai-generation-and-problem-editor-vision.md) — 20 min.
-3. Read the agent skill file: [`resources/professor gave 2026-10-25/problem-editor/skills/problemes-jutge/SKILL.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/skills/problemes-jutge/SKILL.md) — 15 min.
+2. Read [`doc/ai-analysis/02-ai-generation-and-skills.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/ai-analysis/02-ai-generation-and-skills.md) — 20 min.
+3. Read the agent skill file: [Problem Creation Skill](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/skills/) — 15 min.
 4. Inspect the generated exam sample: [`resources/professor gave 2026-10-25/problem-editor/generated-exam-sample/`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/generated-exam-sample/) — 10 min.
 
 ### Hour 3: Existing `jtk` Codebase & Architectural Debt (60 min)
@@ -170,7 +170,7 @@ To prove high seniority and immediate value in your first milestone meeting, her
 
 ### Proposal C: Upstream `problem-editor` Bug Fixes & Spec Audit (Immediate Contributions)
 - **What it is:** A targeted pull request / commit series for `problem-editor`:
-  - Fixes contradictions in `problema-jutge.md` (e.g. 5x vs 3x slow solution threshold).
+  - Fixes contradictions in the problem specification (e.g. 5x vs 3x slow solution threshold).
   - Supplies missing template files (`spec/templates/*`).
   - Adds an automated validation script that verifies all 7 model problems against `jtk lint`.
 

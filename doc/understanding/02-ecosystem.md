@@ -32,7 +32,7 @@ All repos are under `resources/jutge_repos/` (cloned, read only). Data from git 
 | jutge-util, easyinput, yogi, pil-turtle | Python helper libs | Python | various | used by legacy toolkit; generated Python solutions use `yogi` |
 | jutge-code-metrics, code-metrics | Code metrics | Python/web | 2020/2016 | jtk `stage` calls `jutge-code-metrics` |
 | cmm, cmm-frontend, cpp2many, pyweb | Browser interpreters and converters | JS | old | no |
-| callmebot, jutge-diplomes-oicat, jutge-logos, jutge-vinga-bin | Misc | various | various | no |
+| callmebot, jutge-diplomas, jutge-logos, jutge-binary-tools | Misc | various | various | no |
 
 Empty (unfilled submodules): `jutge-dockerfiles/jutge-exec`, `jutge-tests/jutge-exec`, `jutge-tests/drivers/*`, `jutge-api-doc/jutge-api-clients`. The real code is in the top-level repos of the same name.
 

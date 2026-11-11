@@ -1,6 +1,6 @@
 # 03 — jtk architecture (verified against the code)
 
-Repo: `resources/jutge_repos/jutge-toolkit`. Package `@jutge.org/toolkit` v4.4.50, Apache-2.0, ESM, Bun. 384 commits, 2026-01-08 to 2026-10-22 (Jordi Petit 354, Pau Fernández 29, one other).
+Repo: `resources/jutge_repos/jutge-toolkit`. Package `@jutge.org/toolkit` v4.4.50, Apache-2.0, ESM, Bun. 384 commits, 2026-01-08 to 2026-10-22 (Jordi Petit 354, Pau Fernandez 29, one other).
 
 ## Entry and build
 

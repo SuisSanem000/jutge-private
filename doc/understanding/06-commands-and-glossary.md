@@ -26,7 +26,7 @@ description: ...
 golden_proglang: cc
 original_language: en
 more_proglangs: [py]
-more_languages: [ca, es]
+more_languages: [fr, de]
 generators: [hard, random, efficiency]
 ```
 

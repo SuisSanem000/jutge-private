@@ -1,6 +1,6 @@
 # Engineering Proposal: jtk v5 Architecture & 4-Month Roadmap
 
-> **Presented to:** Prof. Jordi Petit & Pau Fernández  
+> **Presented to:** Prof. Jordi Petit & Pau Fernandez  
 > **Author:** Simin Shoeibi  
 > **Date:** November 12, 2026  
 > **Subject:** Restructure & Rebuild of `@jutge.org/toolkit` (`jtk`) and Problem-Editor AI Integration

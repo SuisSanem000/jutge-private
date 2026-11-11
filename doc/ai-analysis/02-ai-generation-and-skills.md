@@ -13,7 +13,7 @@
 - **Models** (`docs/jutge-ai.md`): gemini-2.5-flash-lite, flash, pro; openai/gpt-6-luna (default), gpt-6-sol.
 - Prompts: `assets/prompts/` (io, funcs, examples, ask). `creators/system-prompt.txt` is unused.
 
-## B. problem-editor (from Pau Fernández, 2026-10-22; Jordi Petit, 2026-10-27)
+## B. problem-editor (from Pau Fernandez, 2026-10-22; Jordi Petit, 2026-10-27)
 
 Repo `jutge-org/problem-editor`. Contents: `README.md`, `spec/` (constitution, problem spec, 7 model problems), `skills/` (8 Claude-Code style skills), `generated-exam-sample/`, `private-problems/` (about 162 real problems: eda 12, ap1 87, ap2 63; "not to be distributed").
 
@@ -26,7 +26,7 @@ Repo `jutge-org/problem-editor`. Contents: `README.md`, `spec/` (constitution, p
 
 **Phases (README):** learn the format → generate problems with skills in Claude Code, opencode or pi → scaffold a Next.js site doing the same as the terminal → iterate to release.
 
-**Problem skills:** `problemes-jutge` (create or modify a problem from an optional `IDEA.md`, then run `generate.ts` and `jtk make`) and `revisa-problemes-jutge` (review checklist). **Topic skills** (`recerca-tema`, `exemples-canonics`, `conceptes-tema`, `especificar-tema`, `revisa-tema`) are for course notes; the README says to ignore them. `__OLD__` is deprecated.
+**Problem skills:** The problem-creation skill (creates or modifies a problem from an optional `IDEA.md`, then runs `generate.ts` and `jtk make`) and the problem-review skill (review checklist). **Topic skills** (topic research, canonical examples, topic concepts, topic specification, review topic) are for course notes; the README says to ignore them. `__OLD__` is deprecated.
 
 **Generated sample:** three PRO2 exam problems (trees, priority queue, map of heaps) made with Claude Code from `IDEA.md` files, then uploaded and turned into an exam PDF and a solutions PDF (Typst).
 
@@ -37,7 +37,7 @@ Repo `jutge-org/problem-editor`. Contents: `README.md`, `spec/` (constitution, p
 | Driver | One-shot LLM calls via Jutge API | Interactive agent in Claude Code with specs |
 | Feedback | none | agent runs `jtk make`, `verify` |
 | Languages | io/funcs, C++ and Python | C++ (G++17, PRO2) |
-| Format knowledge | prompts in `assets/prompts/` | `problema-jutge.md` plus models |
+| Format knowledge | prompts in `assets/prompts/` | Problem specification document plus models |
 
 The professors' target (agent + CLI with per-command success/failure + web UI) implies a `jtk` that is **scriptable**: stable machine-readable output, exit codes, no interactive prompts when not needed, and core logic separated from terminal UI. That is a design input for the rewrite, not yet a decision.
 

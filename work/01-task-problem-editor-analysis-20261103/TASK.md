@@ -10,7 +10,7 @@ Analyse everything in the problem-editor material that the professors gave Simin
 
 ## Input (read only; never modify `resources/`)
 `resources/professor gave 2026-10-25/problem-editor/`
-- `README.md` (vision and phases), `spec/` (`constitucio.md`, `problema-jutge.md`, `models/` 7 reference problems)
+- `README.md` (vision and phases), `spec/` (constitution spec, problem specification document, 7 reference models)
 - `skills/` (8 skills; topic skills are marked "ignore" by the README; `__OLD__` is deprecated)
 - `generated-exam-sample/` (3 PRO2 problems, exam PDFs, Typst solutions)
 - `private-problems/` (eda 12, ap1 87, ap2 63; "not to be distributed")
@@ -23,7 +23,7 @@ Analyse everything in the problem-editor material that the professors gave Simin
 - Do **not** redistribute private-problems content in `for-professor/` beyond short quoted excerpts needed as evidence. Passcodes found in `problem.yml` files must not be copied.
 
 ## Deliverables
-`study/` (for Simin, plain B2 English): overview map, format guide with examples from real problems, skills explained, what the sample exam shows, glossary of Catalan terms used, how it relates to jtk.
+`study/` (for Simin, plain B2 English): overview map, format guide with examples from real problems, skills explained, what the sample exam shows, glossary of domain terms used, how it relates to jtk.
 `for-professor/` (formal): report with findings, inconsistencies in the spec (with file references), coverage gaps (Python, quiz, graphic, MakePRO2), security note about committed passcodes, proposals for the jtk rewrite, and open questions. See `for-professor/README.md` for the outline.
 
 ## Known starting points (from the first pass, to verify)

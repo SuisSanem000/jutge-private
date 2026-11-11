@@ -6,7 +6,7 @@ Read this first in every session. Then read `01-project-state.md`.
 
 **Simin Shoeibi**, a UPC master's student on a **4-month internship** on the Jutge.org project. Simin is **responsible for restructuring and rebuilding `jtk` (the jutge-toolkit CLI) from scratch**, and for bringing ideas for it. This is the core mandate. Everything else (problem-editor, AI problem generation, meeting follow-ups) serves it.
 
-Contacts (verified from git history and package files; see `01-project-state.md`): Jordi Petit (lead), Pau Fernández (maintainer, gave the problem-editor material), Salvador Roura, Jordi Cortadella.
+Contacts (verified from git history and package files; see `01-project-state.md`): Jordi Petit (lead), Pau Fernandez (maintainer, gave the problem-editor material), Salvador Roura, Jordi Cortadella.
 
 ## Hard rules
 

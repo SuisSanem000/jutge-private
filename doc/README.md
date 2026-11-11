@@ -19,7 +19,7 @@ doc/
 │   ├── 03-jtk-architecture.md   # Existing jtk CLI execution flows
 │   ├── 04-problem-format-and-grading.md # .pbm anatomy, LaTeX, YAML specs, judge grading
 │   ├── 05-jtk-rewrite-observations.md   # Code smells, bugs, and technical debt in jtk
-│   ├── 06-commands-and-glossary.md      # CLI cheat sheet & Catalan-English glossary
+│   ├── 06-commands-and-glossary.md      # CLI cheat sheet & domain glossary
 │   └── 07-source-verification-log.md   # Audit log of verified facts vs inferences
 │
 └── meetings-and-next-steps/     📅 MEETINGS & CHRONOLOGICAL STUDY PLANS

@@ -1,15 +1,15 @@
 # 04 — Problem format (.pbm) and grading
 
-Sources: jtk code (`lib/types.ts`, `lib/problem.ts`, `lib/lint.ts`), jtk `docs/problem-anatomy.md`, `problem-editor/spec/problema-jutge.md`, `jutge-driver-std/std/judge.py`.
+Sources: jtk code (`lib/types.ts`, `lib/problem.ts`, `lib/lint.ts`), jtk `docs/problem-anatomy.md`, problem specification documentation, `jutge-driver-std/std/judge.py`.
 
 ## Folder anatomy
 
-A problem is a folder ending in `.pbm`. Two layouts exist: **flat** (preferred, all languages in one folder) and **per-language subfolders** (`ca/`, `en/`, legacy, discouraged). Many old problems in `private-problems/` use the legacy layout.
+A problem is a folder ending in `.pbm`. Two layouts exist: **flat** (preferred, all languages in one folder) and **per-language subfolders** (`<lang>/`, legacy, discouraged). Many old problems in `private-problems/` use the legacy layout.
 
 | File | Required | Meaning |
 |---|---|---|
 | `handler.yml` | yes | Problem type and checker options (below) |
-| `problem.<lang>.yml` | yes, one per language | Original: `title`, `author`, `email`. Translation: `title`, `translator`, `translator_email`, `original_language`. Languages: en, ca, es, fr, de |
+| `problem.<lang>.yml` | yes, one per language | Original: `title`, `author`, `email`. Translation: `title`, `translator`, `translator_email`, `original_language`. Languages: en, fr, de, etc. |
 | `problem.<lang>.tex` | yes | Statement; lint requires `\Problem{` and `\Statement` |
 | `solution.<ext>` | yes | Golden solution (chosen by `handler.solution` or `compilers`); other `solution-*` files are alternatives or wrong solutions |
 | `*.inp` | yes | Test inputs. Name with `sample` = shown in the statement; names starting `public`, `hint`, `distilled` are public |

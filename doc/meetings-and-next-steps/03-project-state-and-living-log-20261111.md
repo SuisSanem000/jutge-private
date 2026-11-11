@@ -9,7 +9,7 @@
 | Person | Role & Context |
 |---|---|
 | Jordi Petit | UPC Professor, Jutge.org Lead & Creator. Author of most of `jtk` and Jutge services. |
-| Pau Fernández | UPC Collaborator / Maintainer. Authored `problem-editor` specs, skills, and sample exam. |
+| Pau Fernandez | UPC Collaborator / Maintainer. Authored `problem-editor` specs, skills, and sample exam. |
 | Simin Shoeibi | Senior Software Engineer / UPC Intern. Responsible for `jtk` architecture & rebuild. |
 
 ---
@@ -36,7 +36,7 @@
 
 ## 4. Timeline Log
 
-*   **2026-10-22:** Kickoff meeting between Simin, Jordi Petit, and Pau Fernández.
+*   **2026-10-22:** Kickoff meeting between Simin, Jordi Petit, and Pau Fernandez.
 *   **2026-10-25:** Pau provided `problem-editor` materials (spec, models, Claude skills).
 *   **2026-10-27:** Jordi Petit added `private-problems/` (EDA, AP1, AP2 problems).
 *   **2026-11-03:** Initial ecosystem analysis and task scaffolds created.

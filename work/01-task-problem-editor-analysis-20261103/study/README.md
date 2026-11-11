@@ -9,4 +9,4 @@ Not written yet. Fill when TASK 01 runs. Plain B2 English, short sentences, tabl
 5. `04-exam-sample.md` — how the three exam problems were produced
 6. `05-private-problems.md` — corpus statistics and layouts
 7. `06-relation-to-jtk.md` — which jtk commands are used and what is missing
-8. `07-glossary-ca-en.md` — Catalan terms
+8. `07-domain-glossary.md` — Domain terms

@@ -1,6 +1,6 @@
 # Meeting Notes Summary & Analysis (2026-10-22)
 
-> **Context:** Kickoff meeting between Simin and the professors (Jordi Petit, Pau Fernández).  
+> **Context:** Kickoff meeting between Simin and the professors (Jordi Petit, Pau Fernandez).  
 > **Source:** `resources/original-info-from-professors/meeting notes 20261022.md` (read-only reference).
 
 ---
@@ -14,7 +14,7 @@
 
 2. **The Tooling & Ecosystem:**
    * **`jtk` (`@jutge.org/toolkit`):** The primary CLI authoring tool. This is what teachers and tools interact with to make, verify, and upload problems. Simin's mandate is to restructure and rebuild this tool.
-   * **Claude Skills / Problem Editor:** Pau Fernández prepared initial AI skills (`problemes-jutge`) and specifications to guide an LLM agent in creating problems.
+   * **Claude Skills / Problem Editor:** Pau Fernandez prepared initial AI skills (problem-creation skill) and specifications to guide an LLM agent in creating problems.
    * **User Interface:** Pau proposed a SaaS web service (eventual Next.js web editor) where teachers interact with an AI agent.
 
 3. **Courses & Problem Varieties:**
@@ -29,8 +29,8 @@
 
 | Item from Notes | Status | Evidence in Workspace |
 |---|---|---|
-| Problem-making documentation & format spec | **Received** | Found in `resources/professor gave 2026-10-25/problem-editor/spec/` (`problema-jutge.md`, `constitucio.md`). |
-| Claude skills from Pau | **Received** | Found in `resources/professor gave 2026-10-25/problem-editor/skills/` (`problemes-jutge`, `revisa-problemes-jutge`). |
+| Problem-making documentation & format spec | **Received** | Found in `resources/professor gave 2026-10-25/problem-editor/spec/` (problem specification and pedagogical guidelines). |
+| Claude skills from Pau | **Received** | Found in `resources/professor gave 2026-10-25/problem-editor/skills/` (problem creation and review skills). |
 | Sample problems | **Received** | 7 reference models in `problem-editor/spec/models/` and sample exam problems in `generated-exam-sample/`. |
 | Private problems repository | **Received** | Added by Jordi Petit on 2026-10-27 (`private-problems/` with EDA, AP1, AP2 problems). |
 | Token / LLM budget | **Pending / Unclear** | Mentions JutgeAI token endpoint, but direct budget/quota limits are not formalized. |

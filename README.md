@@ -8,7 +8,7 @@
 
 1. **For your 5-hour study plan & tomorrow's meeting preparation (Nov 12):**  
    👉 Read [`doc/meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md)  
-   *Includes your block-by-block study roadmap, talking points, and pitch for Jordi Petit and Pau Fernández.*
+   *Includes your block-by-block study roadmap, talking points, and pitch for Jordi Petit and Pau Fernandez.*
 
 2. **For what you can present/share on screen with your professors tomorrow:**  
    👉 Read [`work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)  
