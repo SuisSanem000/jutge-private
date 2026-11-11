@@ -1,41 +1,37 @@
-# Documentation & Engineering Workspace Map
+# Documentation (`doc/`) Map
 
-> **Start Here:** For a high-signal 15-minute onboarding guide written for senior engineers, read [`SENIOR-DEV-BRIEF.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/SENIOR-DEV-BRIEF.md).
+> **Purpose:** `doc/` contains everything the AI analyzes, clarifies, or structures for Simin.
 
-## Workspace Structure (No Duplication Policy)
+---
 
-To avoid duplicating large external repositories while maintaining clean version control:
+## Folder Organization
 
-| Directory | Role | Description |
-|---|---|---|
-| `resources/` | **Upstream / External** | Cloned Jutge repos (`jutge-toolkit`, drivers, etc.) and original materials from professors. Keep read-only; update via `git pull`. |
-| `doc/` | **Knowledge & Deliverables** | Architectural documentation, analysis, meeting agendas, and formal reports for supervisors. |
-| `work/` | **Active Implementation** | Your working code, POCs, experiments, and staging branches for upstream PRs. |
+```
+doc/
+│
+├── ai-analysis/                 🤖 AI SETTINGS & PROMPTS ONLY
+│   ├── 01-ai-system-prompt.md   # System prompt and operational rules for AI assistants
+│   └── 02-ai-generation-and-skills.md # JutgeAI API mechanics and Pau's Claude skills
+│
+├── understanding/               💡 CODEBASE & DOMAIN KNOWLEDGE
+│   ├── 01-senior-dev-brief.md   # 15-minute high-level briefing for senior developers
+│   ├── 02-ecosystem.md          # Architecture and repository relationships
+│   ├── 03-jtk-architecture.md   # Existing jtk CLI execution flows
+│   ├── 04-problem-format-and-grading.md # .pbm anatomy, LaTeX, YAML specs, judge grading
+│   ├── 05-jtk-rewrite-observations.md   # Code smells, bugs, and technical debt in jtk
+│   ├── 06-commands-and-glossary.md      # CLI cheat sheet & Catalan-English glossary
+│   └── 07-source-verification-log.md   # Audit log of verified facts vs inferences
+│
+└── meetings-and-next-steps/     📅 MEETINGS & CHRONOLOGICAL STUDY PLANS
+    ├── 01-meeting-notes-summary-20261022.md # Summary & analysis of kickoff meeting
+    ├── 02-meeting-prep-and-study-plan-20261112.md # 5-hour study plan & proposal pitch
+    └── 03-project-state-and-living-log-20261111.md # Living project state and decision log
+```
 
-## What is in `doc/`
+---
 
-| Path | What it is |
-|---|---|
-| [`SENIOR-DEV-BRIEF.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/SENIOR-DEV-BRIEF.md) | **Executive summary:** Domain context, architecture diagram, 4-hour study plan, and meeting proposals. |
-| [`meeting-20261112/`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/meeting-20261112/ONBOARDING-STUDY-PLAN-AND-PROPOSALS.md) | **Nov 12 Meeting Prep:** Comprehensive onboarding summary, 4-hour study plan, and meeting proposals. |
-| `ai-analysis-20261103/` | Verified knowledge base about Jutge, `jtk`, and problem-editor (technical deep-dive). |
-| `task-01-problem-editor-analysis/` | Detailed audit of Pau's problem-editor material (spec inconsistencies, models, skills). |
-| `task-02-meeting-20261022-next-steps/` | Action items, open questions, and preparation for supervisor meetings. |
+## Non-Negotiable Rules
 
-## Engineering Rules
-
-1. **Keep `resources/` clean:** Treat files in `resources/` as upstream mirrors. Do not make untracked manual edits inside it; pull updates when professors push changes.
-2. **Develop in `work/` or branches:** Code contributions, prototypes, and PR candidates live under `work/` or on dedicated git feature branches.
-3. **Verify claims against code:** Ground every finding on concrete repository evidence.
-
-
-## How to run a task ("next task is in folder X, go do it")
-
-1. Read `doc/README.md` (this file).
-2. Read `ai-analysis-20261103/00-START-HERE-system-prompt.md`.
-3. Read `ai-analysis-20261103/01-project-state.md`.
-4. Read `X/TASK.md`. It is self-contained.
-5. Do the work. Write results only into `X/study/` (for Simin) and `X/for-professor/` (for the professor).
-6. Set the status in `X/TASK.md`. Update the task registry and the log in `01-project-state.md`.
-
-To add a new task: create `task-NN-short-name/` with `TASK.md`, `study/` and `for-professor/`, and add a row to the registry in `01-project-state.md`.
+1. **`resources/` is untouched:** `resources/` holds upstream mirrors managed solely by Simin.
+2. **`doc/` vs `work/`:** Explanations and knowledge belong in `doc/`. Code, implementation tasks, and professor presentations belong in `work/`.
+3. **Naming Convention:** All chronological files in `meetings-and-next-steps/` have an order number at the start and a date at the end (`NN-name-YYYYMMDD.md`).

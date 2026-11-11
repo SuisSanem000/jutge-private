@@ -6,13 +6,17 @@
 
 ## 🧭 Where to Look First
 
-1. **For an instant 15-minute briefing (Senior Dev perspective):**  
-   👉 Read [`doc/SENIOR-DEV-BRIEF.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/SENIOR-DEV-BRIEF.md)  
-   *Covers the domain, system architecture, core `.pbm` entity, and current technical debt.*
+1. **For your 5-hour study plan & tomorrow's meeting preparation (Nov 12):**  
+   👉 Read [`doc/meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md)  
+   *Includes your block-by-block study roadmap, talking points, and pitch for Jordi Petit and Pau Fernández.*
 
-2. **For your upcoming supervisor meeting (November 12th) & 4-hour study plan:**  
-   👉 Read [`doc/meeting-20261112/ONBOARDING-STUDY-PLAN-AND-PROPOSALS.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/meeting-20261112/ONBOARDING-STUDY-PLAN-AND-PROPOSALS.md)  
-   *Covers your hour-by-hour reading schedule and 3 concrete proposals to present to Jordi Petit and Pau Fernández.*
+2. **For what you can present/share on screen with your professors tomorrow:**  
+   👉 Read [`work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)  
+   *The structured engineering proposal: jtk v5 architecture, 4-month roadmap, and discussion questions.*
+
+3. **For an instant 15-minute senior developer domain briefing:**  
+   👉 Read [`doc/understanding/01-senior-dev-brief.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/understanding/01-senior-dev-brief.md)  
+   *Covers the Jutge domain, system architecture, `.pbm` format, and current technical debt.*
 
 ---
 
@@ -25,37 +29,30 @@ jutge-private/
 │                        Contains upstream git clones of Jutge repos and original materials
 │                        from the professors. Simin pulls updates here via `git pull`.
 │
-├── doc/                 📖 DOCUMENTATION, STUDY NOTES & MEETING PREP
-│                        All analysis, knowledge base files, architectural RFCs, and formal
-│                        reports for your professors live here.
+├── doc/                 📖 WHAT AI EXPLAINS TO SIMIN (Knowledge, Prompts & Meetings)
+│   ├── ai-analysis/                 -> AI settings, system prompt, and API mechanics
+│   ├── understanding/               -> System architecture, .pbm specs, and codebase debt
+│   └── meetings-and-next-steps/     -> Chronological meeting notes, study plans, and logs
 │
-└── work/                💻 ACTIVE DEVELOPMENT & CODE
-                         All your actual code, proofs-of-concept, new modules, and PR
-                         branches live here. No duplicating external repos.
+└── work/                💻 WHAT SIMIN DOES & PRESENTS TO PROFESSORS (Code & Tasks)
+    ├── 01-task-problem-editor-analysis-20261103/ -> Analysis of Pau's problem-editor
+    ├── 02-task-meeting-followups-20261103/       -> Action items from Oct 22 kickoff
+    └── 03-meeting-presentation-20261112/         -> Proposal & presentation for Nov 12 meeting
 ```
 
 ---
 
-## 🔒 Directory Policies & Non-Negotiable Rules
+## 🔒 Directory Policies & Naming Rules
 
 1. **`resources/` is strictly for Simin (Read-Only to AI):**  
    - This folder holds original copies of `jutge_repos` and `problem-editor`.
    - Simin manages updates here directly (e.g. `git pull`).
    - The AI assistant will **NEVER** edit, create, or delete any file inside `resources/`.
 
-2. **No Folder Duplication:**  
+2. **Subfolder Naming Standard (`work/` and `doc/meetings-and-next-steps/`):**  
+   - Every chronological folder and file begins with a two-digit order number and ends with the date:  
+     `NN-<short-name>-YYYYMMDD` (e.g. `02-meeting-prep-and-study-plan-20261112.md`, `03-meeting-presentation-20261112/`).
+
+3. **No Folder Duplication:**  
    - Never copy entire repos from `resources/` into `work/` or `doc/`.
-   - `work/` contains only new code, isolated packages, and focused PR candidates.
-
-3. **Where New Work Happens:**  
-   - Analysis, notes, and meeting documents go in `doc/`.
-   - Code, scripts, and prototypes go in `work/`.
-
----
-
-## 📅 Immediate Next Steps (Meeting on Nov 12)
-
-*   **Study Plan:** Allocate ~4 hours following the schedule in [`ONBOARDING-STUDY-PLAN-AND-PROPOSALS.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/meeting-20261112/ONBOARDING-STUDY-PLAN-AND-PROPOSALS.md).
-*   **Pick a Meeting Deliverable:** Choose between **Proposal A** (Architecture RFC & 4-Month Roadmap), **Proposal B** (Working Closed-Loop Verifier POC in `work/`), or the **Recommended Hybrid** (both).
-*   **Tell the Assistant to Implement:** Once you approve the proposal track, the AI will implement the complete deliverable so you can share it in the meeting.
-
+   - `work/` contains only targeted code modules, tasks, and presentation materials.
