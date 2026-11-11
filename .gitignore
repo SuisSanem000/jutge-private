@@ -1,5 +1,12 @@
 # Ignore all cloned Jutge repositories
 jutge_repos/
+resources/jutge_repos/
 
-# Ignore local editor configuration
+# Ignore problem-editor repository in resources
+resources/professor gave 2026-10-25/problem-editor/
+**/problem-editor/
+
+# Ignore OS and editor configuration
 .vscode/
+.DS_Store
+**/._*
