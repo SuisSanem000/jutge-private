@@ -29,10 +29,10 @@
 
 | Item from Notes | Status | Evidence in Workspace |
 |---|---|---|
-| Problem-making documentation & format spec | **Received** | Found in `resources/professor gave 2026-10-25/problem-editor/spec/` (problem specification and pedagogical guidelines). |
-| Claude skills from Pau | **Received** | Found in `resources/professor gave 2026-10-25/problem-editor/skills/` (problem creation and review skills). |
-| Sample problems | **Received** | 7 reference models in `problem-editor/spec/models/` and sample exam problems in `generated-exam-sample/`. |
-| Private problems repository | **Received** | Added by Jordi Petit on 2026-10-27 (`private-problems/` with EDA, AP1, AP2 problems). |
+| Problem-making documentation & format spec | **Received** | Found in [Problem Editor Specs Folder](../../resources/professor%20gave%202026-10-25/problem-editor/spec/) (problem specification and pedagogical guidelines). |
+| Claude skills from Pau | **Received** | Found in [Problem Editor Skills Folder](../../resources/professor%20gave%202026-10-25/problem-editor/skills/) (problem creation and review skills). |
+| Sample problems | **Received** | 7 reference models in [Reference Models Folder](../../resources/professor%20gave%202026-10-25/problem-editor/spec/models/) and [Generated Exam Samples](../../resources/professor%20gave%202026-10-25/problem-editor/generated-exam-sample/). |
+| Private problems repository | **Received** | Added by Jordi Petit on 2026-10-27 in [Private Problems Folder](../../resources/professor%20gave%202026-10-25/problem-editor/private-problems/) (with EDA, AP1, AP2 problems). |
 | Token / LLM budget | **Pending / Unclear** | Mentions JutgeAI token endpoint, but direct budget/quota limits are not formalized. |
 | jtk repository access & review workflow | **Needs Discussion** | Need to agree on git workflow for the rewrite in the Nov 12 meeting. |
 

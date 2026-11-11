@@ -9,9 +9,9 @@ Review everything and list what Simin should do **next** and in the **near futur
 2. A version Simin can send to the professor (`for-professor/`).
 
 ## Input (read only)
-- `resources/original-info-from-professors/meeting notes 20261022.md`
-- `doc/ai-analysis-20261103/` (all files, especially `01-project-state.md`, 05 and 06)
-- Task 01 outputs if they exist.
+- [Kickoff Meeting Notes (2026-10-22)](../../resources/original-info-from-professors/meeting%20notes%2020261022.md)
+- [Meetings & Next Steps Summary](../../doc/meetings-and-next-steps/01-meeting-notes-summary-20261022.md) and [Understanding Documents](../../doc/understanding/)
+- [Task 01 Folder](../01-task-problem-editor-analysis-20261103/) if outputs exist.
 
 ## Meeting notes themes to cover (do not skip any line)
 Format of problems first; why we are doing this (old problems, democratise with AI, representative problem, big sample pool, Claude skills); what the professors should give Simin (problem-making documentation, Pau's skills, Pau's sample problems); MVP first or extend; Jordi's programming courses (C++, Haskell, Clojure); I/O vs function problems; compilers; jtk as the main tool; GitHub repository; the user interface for the agent (Pau: web service); token budget for the LLM; email and repository documents.
@@ -25,7 +25,7 @@ Format of problems first; why we are doing this (old problems, democratise with 
 - Do not decide the jtk architecture; list the decisions that need to be made.
 
 ## Deliverables
-`study/`: annotated meeting notes, action list, decision list. `for-professor/`: short formal update (status, proposed next steps, questions, requests). See each `README.md`.
+`study/`: annotated meeting notes, action list, decision list. `for-professor/`: short formal update (status, proposed next steps, questions, requests). See [study/README.md](./study/README.md) and [for-professor/README.md](./for-professor/README.md).
 
 ## How to execute
-Follow `doc/README.md`. Write only in this folder. When done, set status to DONE and update `doc/ai-analysis-20261103/01-project-state.md`.
+Follow [doc/README.md](../../doc/README.md). Write only in this folder. When done, set status to DONE and update [doc/meetings-and-next-steps/03-project-state-and-living-log-20261111.md](../../doc/meetings-and-next-steps/03-project-state-and-living-log-20261111.md).

@@ -7,15 +7,15 @@
 ## 🧭 Where to Look First
 
 1. **For your 5-hour study plan & tomorrow's meeting preparation (Nov 12):**  
-   👉 Read [`doc/meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md)  
+   👉 [Meeting Prep & Study Plan (Nov 12)](./doc/meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md)  
    *Includes your block-by-block study roadmap, talking points, and pitch for Jordi Petit and Pau Fernandez.*
 
 2. **For what you can present/share on screen with your professors tomorrow:**  
-   👉 Read [`work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)  
+   👉 [Proposal & Presentation Document (Nov 12)](./work/03-meeting-presentation-20261112/PROPOSAL-PRESENTATION-20261112.md)  
    *The structured engineering proposal: jtk v5 architecture, 4-month roadmap, and discussion questions.*
 
 3. **For an instant 15-minute senior developer domain briefing:**  
-   👉 Read [`doc/understanding/01-senior-dev-brief.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/understanding/01-senior-dev-brief.md)  
+   👉 [Senior Developer Onboarding Brief](./doc/understanding/01-senior-dev-brief.md)  
    *Covers the Jutge domain, system architecture, `.pbm` format, and current technical debt.*
 
 ---
@@ -39,6 +39,20 @@ jutge-private/
     ├── 02-task-meeting-followups-20261103/       -> Action items from Oct 22 kickoff
     └── 03-meeting-presentation-20261112/         -> Proposal & presentation for Nov 12 meeting
 ```
+
+### Quick Folder Navigation
+
+| Folder | What it is |
+|---|---|
+| [**`resources/`**](./resources/) | Upstream repositories and professor documents (**read-only to AI**). |
+| [**`doc/`**](./doc/) | Knowledge base, AI prompts, architecture guides, and meeting plans. |
+| ↳ [**`doc/ai-analysis/`**](./doc/ai-analysis/) | AI system prompt and JutgeAI generation mechanics. |
+| ↳ [**`doc/understanding/`**](./doc/understanding/) | Codebase architecture, `.pbm` specifications, and rewrite observations. |
+| ↳ [**`doc/meetings-and-next-steps/`**](./doc/meetings-and-next-steps/) | Chronological meeting summaries, study plans, and project logs. |
+| [**`work/`**](./work/) | Code implementations, active tasks, and deliverables to present. |
+| ↳ [**`work/01-task-problem-editor-analysis-20261103/`**](./work/01-task-problem-editor-analysis-20261103/) | Task 01: Audit of problem-editor specifications and models. |
+| ↳ [**`work/02-task-meeting-followups-20261103/`**](./work/02-task-meeting-followups-20261103/) | Task 02: Tracking action items from the October 22 kickoff. |
+| ↳ [**`work/03-meeting-presentation-20261112/`**](./work/03-meeting-presentation-20261112/) | Task 03: Engineering proposal and slides for the November 12 meeting. |
 
 ---
 

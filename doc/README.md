@@ -28,6 +28,14 @@ doc/
     └── 03-project-state-and-living-log-20261111.md # Living project state and decision log
 ```
 
+### Quick Navigation Links
+
+| Section | Documents |
+|---|---|
+| [**`ai-analysis/`**](./ai-analysis/) | • [01. AI System Prompt](./ai-analysis/01-ai-system-prompt.md)<br>• [02. AI Generation & Skills](./ai-analysis/02-ai-generation-and-skills.md) |
+| [**`understanding/`**](./understanding/) | • [01. Senior Dev Brief](./understanding/01-senior-dev-brief.md)<br>• [02. Ecosystem & Repos](./understanding/02-ecosystem.md)<br>• [03. jtk Architecture](./understanding/03-jtk-architecture.md)<br>• [04. Problem Format & Grading](./understanding/04-problem-format-and-grading.md)<br>• [05. jtk Rewrite Observations](./understanding/05-jtk-rewrite-observations.md)<br>• [06. Commands & Glossary](./understanding/06-commands-and-glossary.md)<br>• [07. Source Verification Log](./understanding/07-source-verification-log.md) |
+| [**`meetings-and-next-steps/`**](./meetings-and-next-steps/) | • [01. Kickoff Meeting Notes Summary (2026-10-22)](./meetings-and-next-steps/01-meeting-notes-summary-20261022.md)<br>• [02. Meeting Prep & 5-Hour Study Plan (2026-11-12)](./meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md)<br>• [03. Project State & Living Log](./meetings-and-next-steps/03-project-state-and-living-log-20261111.md) |
+
 ---
 
 ## Non-Negotiable Rules

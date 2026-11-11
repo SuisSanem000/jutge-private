@@ -28,9 +28,9 @@
 
 | Subfolder | Task / Deliverable | Status |
 |---|---|---|
-| `work/01-task-problem-editor-analysis-20261103/` | In-depth audit of Pau's problem-editor (specs, models, skills). | Prepared |
-| `work/02-task-meeting-followups-20261103/` | Action items tracking the 2026-10-22 meeting notes. | Prepared |
-| `work/03-meeting-presentation-20261112/` | Presentation agenda & proposals for the 2026-11-12 meeting. | **ACTIVE (Meeting Tomorrow)** |
+| [**01. Task: Problem Editor Analysis**](../../work/01-task-problem-editor-analysis-20261103/) | In-depth audit of Pau's problem-editor (specs, models, skills). | Prepared |
+| [**02. Task: Meeting Follow-ups**](../../work/02-task-meeting-followups-20261103/) | Action items tracking the 2026-10-22 meeting notes. | Prepared |
+| [**03. Meeting Presentation (Nov 12)**](../../work/03-meeting-presentation-20261112/) | Presentation agenda & proposals for the 2026-11-12 meeting. | **ACTIVE (Meeting Tomorrow)** |
 
 ---
 

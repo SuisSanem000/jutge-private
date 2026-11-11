@@ -3,7 +3,8 @@
 > **Presented to:** Prof. Jordi Petit & Pau Fernandez  
 > **Author:** Simin Shoeibi  
 > **Date:** November 12, 2026  
-> **Subject:** Restructure & Rebuild of `@jutge.org/toolkit` (`jtk`) and Problem-Editor AI Integration
+> **Subject:** Restructure & Rebuild of `@jutge.org/toolkit` (`jtk`) and Problem-Editor AI Integration  
+> **Navigation:** [Root Workspace](../../README.md) • [Study Plan & Meeting Prep](../../doc/meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md) • [Senior Developer Brief](../../doc/understanding/01-senior-dev-brief.md)
 
 ---
 

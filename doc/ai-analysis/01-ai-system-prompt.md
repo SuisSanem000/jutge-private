@@ -10,12 +10,13 @@ Contacts (verified from git history and package files; see `01-project-state.md`
 
 ## Hard rules
 
-1. **Never modify anything under `resources/`.** It is original information. Read only.
-2. **Write only inside `doc/`.** No other folder, no root `CLAUDE.md`, no memory files.
+1. **Never modify anything under `resources/`.** It is original information managed solely by Simin. Read only.
+2. **Write only inside `doc/` and `work/`.** Never touch `resources/`. No root `CLAUDE.md`, no memory files.
 3. Do not touch `jutge-driver-std`, `jutge-dockerfiles` or `jutge-exec` content (production grading). Read only anyway.
 4. `*.cor` files are never written by hand or by an LLM. They come from running the golden solution via `jtk make`.
 5. Check claims against the code. Label unchecked claims as *inference*. Never invent terminal output.
-6. The `doc/` folder structure is temporary. Do not reorganise it unless asked.
+6. The folder structure is: `doc/ai-analysis/`, `doc/understanding/`, `doc/meetings-and-next-steps/`, and `work/`.
+7. **Clickable Relative Links:** All links in markdown documents must be clean, clickable markdown links using valid relative paths (for example: `[Document Title](./path/to/file.md)` or `[Folder Name](../path/to/folder/)`). Never display raw file paths/addresses as the link text, and never use brittle absolute `file:///` paths that break preview navigation. Every file or folder referenced in markdown documents must be directly clickable to open in the editor.
 
 ## Task protocol
 
@@ -32,15 +33,19 @@ When Simin gives new instructions or decisions, add a short entry to the log in 
 - **Professor files:** formal and concise. Lead with findings, then evidence, then open questions and proposals. No flattery, no scripts to "impress". Say what was verified and what was not.
 - Use Markdown links or plain paths for files. Keep each file focused.
 
-## Knowledge base map (`ai-analysis-20261103/`)
+## Knowledge base map
 
-| File | Content |
-|---|---|
-| `01-project-state.md` | Living state, people, timeline, task registry, log |
-| `02-ecosystem.md` | The repos and how they relate |
-| `03-jtk-architecture.md` | How `jtk` works today (verified) |
-| `04-problem-format-and-grading.md` | `.pbm` format, `handler.yml`, server grading |
-| `05-ai-generation-and-problem-editor-vision.md` | `jtk generate`, problem-editor skills, the SaaS vision |
-| `06-jtk-rewrite-observations.md` | Smells and bugs in current `jtk`; things to keep |
-| `07-commands-cheatsheet-and-glossary.md` | Correct commands and terms |
-| `08-source-verification-log.md` | What was kept, corrected or dropped from the old AI documents |
+| Category | File | Content |
+|---|---|---|
+| AI Settings | [01. AI System Prompt](./01-ai-system-prompt.md) | System prompt, rules, and task protocols |
+| AI Settings | [02. AI Generation & Skills](./02-ai-generation-and-skills.md) | `jtk generate`, problem-editor skills, the SaaS vision |
+| Understanding | [01. Senior Dev Brief](../understanding/01-senior-dev-brief.md) | High-level onboarding briefing |
+| Understanding | [02. Ecosystem](../understanding/02-ecosystem.md) | The repos and how they relate |
+| Understanding | [03. jtk Architecture](../understanding/03-jtk-architecture.md) | How `jtk` works today (verified) |
+| Understanding | [04. Problem Format & Grading](../understanding/04-problem-format-and-grading.md) | `.pbm` format, `handler.yml`, server grading |
+| Understanding | [05. jtk Rewrite Observations](../understanding/05-jtk-rewrite-observations.md) | Smells and bugs in current `jtk`; things to keep |
+| Understanding | [06. Commands & Glossary](../understanding/06-commands-and-glossary.md) | Correct commands and terms |
+| Understanding | [07. Source Verification Log](../understanding/07-source-verification-log.md) | What was kept, corrected or dropped |
+| Meetings | [01. Kickoff Summary (2026-10-22)](../meetings-and-next-steps/01-meeting-notes-summary-20261022.md) | Meeting notes summary |
+| Meetings | [02. Meeting Prep & Study Plan (2026-11-12)](../meetings-and-next-steps/02-meeting-prep-and-study-plan-20261112.md) | Study roadmap and pitch |
+| Meetings | [03. Project State & Living Log](../meetings-and-next-steps/03-project-state-and-living-log-20261111.md) | Living state, people, timeline, task registry, log |

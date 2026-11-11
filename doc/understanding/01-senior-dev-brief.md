@@ -128,21 +128,21 @@ jutge-private/
 You have **4 hours** total to ramp up. Do not read the entire corpus; follow this high-yield path:
 
 ### Hour 1: Domain & The Problem Spec (60 min)
-1. Read this brief (`doc/SENIOR-DEV-BRIEF.md`) — 10 min.
-2. Read [`doc/ai-analysis-20261103/04-problem-format-and-grading.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/ai-analysis-20261103/04-problem-format-and-grading.md) — 15 min.
-3. Open and inspect a real reference problem: [Reference Model 01 (Odd or Even)](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/spec/models/) — 20 min.
-4. Skim the pedagogical rules: [Pedagogical Rules & Constitution](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/spec/) (lines 1–50) — 15 min.
+1. Read this brief (`doc/understanding/01-senior-dev-brief.md`) — 10 min.
+2. Read [04. Problem Format & Grading](./04-problem-format-and-grading.md) — 15 min.
+3. Open and inspect a real reference problem: [Reference Model 01 (Odd or Even)](../../resources/professor%20gave%202026-10-25/problem-editor/spec/models/) — 20 min.
+4. Skim the pedagogical rules: [Pedagogical Rules & Constitution Spec](../../resources/professor%20gave%202026-10-25/problem-editor/spec/) (lines 1–50) — 15 min.
 
 ### Hour 2: The Problem Editor Vision & Agent Skills (60 min)
-1. Read Pau's vision: [`resources/professor gave 2026-10-25/problem-editor/README.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/README.md) — 15 min.
-2. Read [`doc/ai-analysis/02-ai-generation-and-skills.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/ai-analysis/02-ai-generation-and-skills.md) — 20 min.
-3. Read the agent skill file: [Problem Creation Skill](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/skills/) — 15 min.
-4. Inspect the generated exam sample: [`resources/professor gave 2026-10-25/problem-editor/generated-exam-sample/`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/generated-exam-sample/) — 10 min.
+1. Read Pau's vision: [Problem Editor README](../../resources/professor%20gave%202026-10-25/problem-editor/README.md) — 15 min.
+2. Read [02. AI Generation & Skills Guide](../ai-analysis/02-ai-generation-and-skills.md) — 20 min.
+3. Read the agent skill file: [Problem Creation Skill](../../resources/professor%20gave%202026-10-25/problem-editor/skills/) — 15 min.
+4. Inspect the generated exam sample: [Generated Exam Samples](../../resources/professor%20gave%202026-10-25/problem-editor/generated-exam-sample/) — 10 min.
 
 ### Hour 3: Existing `jtk` Codebase & Architectural Debt (60 min)
-1. Read [`doc/ai-analysis-20261103/03-jtk-architecture.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/ai-analysis-20261103/03-jtk-architecture.md) — 15 min.
-2. Read [`doc/ai-analysis-20261103/06-jtk-rewrite-observations.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/doc/ai-analysis-20261103/06-jtk-rewrite-observations.md) — 25 min.
-3. Skim real source code to see the coupling: [`resources/jutge_repos/jutge-toolkit/toolkit/maker.ts`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/toolkit/maker.ts) and [`resources/jutge_repos/jutge-toolkit/toolkit/problem.ts`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/toolkit/problem.ts) — 20 min.
+1. Read [03. jtk Architecture](./03-jtk-architecture.md) — 15 min.
+2. Read [05. jtk Rewrite Observations](./05-jtk-rewrite-observations.md) — 25 min.
+3. Skim real source code to see the coupling: [jtk maker.ts](../../resources/jutge_repos/jutge-toolkit/lib/maker.ts) and [jtk problem.ts](../../resources/jutge_repos/jutge-toolkit/lib/problem.ts) — 20 min.
 
 ### Hour 4: Meeting Strategy & Proposal Selection (60 min)
 1. Review the 3 proposals in Section 7 below.
