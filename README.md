@@ -11,7 +11,7 @@
    *Organized into 3 folders: Claude task artifacts, in-depth explanations for you, and tomorrow's presentation.*
 
 2. **For the full English translation of the Problem Editor specs:**  
-   👉 [Problem Editor Complete English Translation](./doc/problem-editor-en-translate-20261111/README.md)  
+   👉 [Problem Editor Complete English Translation](./doc/related-core-topics/problem-editor-en-translate-20261111/README.md)  
    *Pure English translation of the constitution, problem anatomy, reference models, and Claude skills.*
 
 3. **For your meeting preparation & 5-hour study plan (Nov 12):**  
@@ -26,6 +26,10 @@
    👉 [Problem Definition & Upload Workflow Guide](./doc/related-core-topics/problem-definition-and-upload-workflow/README.md)  
    *Detailed breakdown of the terminal demo from your first meeting, API protocol, and step-by-step upload manual.*
 
+6. **For the 15-Minute / 30-Slide Meeting Summary Presentation:**  
+   👉 [Meeting Summary Presentation (Markdown)](./work/01-meeting-presentation-and-demo-20261112/meeting-summary-presentation.md) • [PowerPoint Deck (`.pptx`)](./work/01-meeting-presentation-and-demo-20261112/meeting-summary-presentation.pptx)  
+   *Categorized bullet points summarizing 30 hours of work, prompt engineering details, benchmarks, and live commands.*
+
 ---
 
 ## 📁 Meaning of Folders
@@ -38,8 +42,7 @@ jutge-private/
 │                        from the professors. Simin pulls updates here via `git pull`.
 │
 ├── doc/                 📖 WHAT AI EXPLAINS TO SIMIN (Knowledge, Translations & Meetings)
-│   ├── problem-editor-en-translate-20261111/ -> Complete English translation of problem-editor
-│   ├── related-core-topics/                  -> Deep dives on core workflows (e.g. jtk login & upload)
+│   ├── related-core-topics/                  -> Deep dives on core workflows & problem-editor translations
 │   ├── ai-analysis/                          -> AI assistant system prompt and operational rules
 │   ├── understanding/                        -> System architecture, .pbm specs, and codebase debt
 │   └── meetings-and-next-steps/              -> Chronological meeting notes, study plans, and logs
@@ -54,8 +57,8 @@ jutge-private/
 |---|---|
 | [**`resources/`**](./resources/) | Upstream repositories and professor documents (**read-only to AI**). |
 | [**`doc/`**](./doc/) | Knowledge base, translations, architecture guides, and meeting plans. |
-| ↳ [**`doc/related-core-topics/`**](./doc/related-core-topics/problem-definition-and-upload-workflow/) | Deep-dive guides on platform workflows (e.g., `jtk login`, webstream API & `upload`). |
-| ↳ [**`doc/problem-editor-en-translate-20261111/`**](./doc/problem-editor-en-translate-20261111/) | Complete English translation of `problem-editor` (constitution, specs, skills). |
+| ↳ [**`doc/related-core-topics/`**](./doc/related-core-topics/) | Deep-dive guides on platform workflows (`jtk upload` guide, English translations). |
+| ↳ [**`doc/related-core-topics/problem-editor-en-translate-20261111/`**](./doc/related-core-topics/problem-editor-en-translate-20261111/) | Complete English translation of `problem-editor` (constitution, specs, skills). |
 | ↳ [**`doc/understanding/`**](./doc/understanding/) | Codebase architecture, `.pbm` specifications, and rewrite observations. |
 | ↳ [**`doc/meetings-and-next-steps/`**](./doc/meetings-and-next-steps/) | Chronological meeting summaries, study plans, and project logs. |
 | ↳ [**`doc/ai-analysis/`**](./doc/ai-analysis/) | AI system prompt and operational rules. |

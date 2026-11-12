@@ -15,6 +15,8 @@ Everything in this task directory is cleanly decoupled into three dedicated subf
 ```text
 work/01-meeting-presentation-and-demo-20261112/
 │
+├── meeting-summary-presentation.md          # Complete 30-slide categorized summary of all work done & commands
+├── meeting-summary-presentation.pptx        # 30-slide PowerPoint presentation deck (16:9 widescreen)
 ├── checking-and-uploading-the-problem-I-made.md # Quick one-line commands cheat sheet to run in the meeting
 │
 ├── 01-claude-task/              🤖 CLAUDE CODE TASK & GENERATED SOLUTION
@@ -43,6 +45,7 @@ work/01-meeting-presentation-and-demo-20261112/
 
 | Subfolder | Purpose & Contents |
 |---|---|
+| [**`meeting-summary-presentation.md`**](./meeting-summary-presentation.md) | **Complete 30-Hour Work Summary:**<br>• [15-minute / 30-slide categorized presentation of all work, prompt engineering & live commands](./meeting-summary-presentation.md)<br>• [PowerPoint Deck (`meeting-summary-presentation.pptx`)](./meeting-summary-presentation.pptx) |
 | [**`checking-and-uploading-the-problem-I-made.md`**](./checking-and-uploading-the-problem-I-made.md) | **Live Demo Cheat Sheet:**<br>• [One-line sequential commands to check, verify, and upload in the meeting](./checking-and-uploading-the-problem-I-made.md) |
 | [**`01-claude-task/`**](./01-claude-task/README.md) | **The Claude Task:**<br>• [Claude's Self-Report](./01-claude-task/claude-expalanation-of-the-task.md)<br>• [Master Prompt](./01-claude-task/CLAUDE-MASTER-PROMPT.md)<br>• [VS Code Execution Guide](./01-claude-task/HOW-TO-USE-CLAUDE-CODE.md)<br>• [Problem Idea (`IDEA.md`)](./01-claude-task/sample-problem-idea/IDEA.md)<br>• [Generated Problem Code (`dominant-peaks.pbm/`)](./01-claude-task/dominant-peaks.pbm/) |
 | [**`02-explanations-for-simin/`**](./02-explanations-for-simin/README.md) | **Deep-Dive Explanations for Simin:**<br>• [What is `problem-editor`?](./02-explanations-for-simin/01-what-is-problem-editor.md)<br>• [What did I do?](./02-explanations-for-simin/02-what-did-i-do.md) |
