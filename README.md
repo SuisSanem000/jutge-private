@@ -28,7 +28,7 @@
 
 6. **For the 15-Minute / 30-Slide Meeting Summary Presentation:**  
    👉 [Meeting Summary Presentation (Markdown)](./work/01-meeting-presentation-and-demo-20261112/meeting-summary-presentation.md) • [PowerPoint Deck (`.pptx`)](./work/01-meeting-presentation-and-demo-20261112/meeting-summary-presentation.pptx)  
-   *Categorized bullet points summarizing 30 hours of work, prompt engineering details, benchmarks, and live commands.*
+   *Categorized bullet points summarizing system architecture, prompt engineering details, benchmarks, and live commands.*
 
 7. **For Project Learning & Skill Tracking (Typst, MCP, WebStreams):**  
    👉 [Learning Tracker & Skill Acquisition Board](./doc/learning-tracker/README.md)  

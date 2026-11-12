@@ -13,7 +13,7 @@ This folder contains all the materials, presentation notes, scripts, and decisio
 
 | Document | Purpose & Content |
 |---|---|
-| [**`meeting-summary-presentation.md`**](../meeting-summary-presentation.md) | **30-Hour Work Summary Presentation:** Complete 30-slide categorized presentation summarizing all research, prompt engineering, empirical benchmarks, and live commands. |
+| [**`meeting-summary-presentation.md`**](../meeting-summary-presentation.md) | **Engineering Presentation Briefing:** Complete 30-slide categorized presentation summarizing all research, prompt engineering, empirical benchmarks, and live commands. |
 | [**`meeting-summary-presentation.pptx`**](../meeting-summary-presentation.pptx) | **PowerPoint Presentation Deck:** 30-slide 16:9 widescreen presentation deck ready to open and present. |
 | [**`checking-and-uploading-the-problem-I-made.md`**](../checking-and-uploading-the-problem-I-made.md) | **Live Demo Cheat Sheet:** Clean, sequential one-line commands to check, verify, upload, and test your problem on Jutge.org in front of your professors. |
 | [**`PROPOSAL-PRESENTATION-20261112.md`**](./PROPOSAL-PRESENTATION-20261112.md) | **The Architecture Proposal:** Formal engineering document detailing findings in legacy `jtk`, the `@jutge/core` decoupled architecture, the 4-month milestone roadmap, and system diagrams. |
