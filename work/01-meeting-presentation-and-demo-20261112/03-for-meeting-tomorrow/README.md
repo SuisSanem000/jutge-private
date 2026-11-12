@@ -13,6 +13,7 @@ This folder contains all the materials, presentation notes, scripts, and decisio
 
 | Document | Purpose & Content |
 |---|---|
+| [**`checking-and-uploading-the-problem-I-made.md`**](../checking-and-uploading-the-problem-I-made.md) | **Live Demo Cheat Sheet:** Clean, sequential one-line commands to check, verify, upload, and test your problem on Jutge.org in front of your professors. |
 | [**`PROPOSAL-PRESENTATION-20261112.md`**](./PROPOSAL-PRESENTATION-20261112.md) | **The Architecture Proposal:** Formal engineering document detailing findings in legacy `jtk`, the `@jutge/core` decoupled architecture, the 4-month milestone roadmap, and system diagrams. |
 | [**`01-meeting-speaking-script.md`**](./01-meeting-speaking-script.md) | **Speaking Script & Live Demo:** Word-for-word talking points, opener, live terminal demonstration steps, and how to transition to the proposal pitch. |
 | [**`02-questions-to-ask-professors.md`**](./02-questions-to-ask-professors.md) | **Key Questions for Supervisors:** Specific, senior-level questions for Jordi Petit and Pau Fernandez (git workflow, MCP vs CLI `--json`, language scope, and storage conventions). |
