@@ -13,8 +13,8 @@ This folder contains all the materials, presentation notes, scripts, and decisio
 
 | Document | Purpose & Content |
 |---|---|
-| [**`meeting-summary-presentation.md`**](../meeting-summary-presentation.md) | **10-Slide Meeting Briefing:** Clean, concise 10-slide presentation summarizing prompt engineering, empirical benchmarks (3.7s slowdown), live commands, and the 4-month roadmap. |
-| [**`meeting-summary-presentation.pptx`**](../meeting-summary-presentation.pptx) | **PowerPoint Presentation Deck:** 10-slide 16:9 widescreen presentation deck ready to open and present. |
+| [**`summary/README.md`**](../summary/README.md) | **Simple 10-Slide Meeting Presentation & Speaking Scripts:** Clean, conversational 10 slides with "what to say aloud" scripts, exact terminal commands, and real benchmark results (3.7s slowdown). |
+| [**`summary/meeting-presentation.pptx`**](../summary/meeting-presentation.pptx) | **PowerPoint Presentation Deck:** Simple, clean 10-slide 16:9 widescreen presentation deck ready to open and present. |
 | [**`checking-and-uploading-the-problem-I-made.md`**](../checking-and-uploading-the-problem-I-made.md) | **Live Demo Cheat Sheet:** Clean, sequential one-line commands to check, verify, upload, and test your problem on Jutge.org in front of your professors. |
 | [**`PROPOSAL-PRESENTATION-20261112.md`**](./PROPOSAL-PRESENTATION-20261112.md) | **The Architecture Proposal:** Formal engineering document detailing findings in legacy `jtk`, the `@jutge/core` decoupled architecture, the 4-month milestone roadmap, and system diagrams. |
 | [**`01-meeting-speaking-script.md`**](./01-meeting-speaking-script.md) | **Speaking Script & Live Demo:** Word-for-word talking points, opener, live terminal demonstration steps, and how to transition to the proposal pitch. |
