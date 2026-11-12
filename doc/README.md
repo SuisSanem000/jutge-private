@@ -9,6 +9,9 @@
 ```
 doc/
 │
+├── learning-tracker/            🎯 LIVING LEARNING & SKILL TRACKING
+│   └── README.md                   # Systematic skill acquisition board (Typst, MCP, WebStreams)
+│
 ├── ai-analysis/                 🤖 AI SETTINGS & SYSTEM PROMPTS ONLY
 │   └── 01-ai-system-prompt.md      # System prompt and operational rules for AI assistants
 │
@@ -36,6 +39,7 @@ doc/
 
 | Section | Documents |
 |---|---|
+| [**`learning-tracker/`**](./learning-tracker/) | • [Learning Tracker & Skill Acquisition Board](./learning-tracker/README.md) *(Typst task checklist, MCP, WebStreams)* |
 | [**`related-core-topics/`**](./related-core-topics/) | • [Problem Definition & Upload Workflow](./related-core-topics/problem-definition-and-upload-workflow/README.md) *(jtk login, upload, webstream API & guide)*<br>• [Problem Editor Complete Translation](./related-core-topics/problem-editor-en-translate-20261111/README.md)<br>• [Pedagogical Constitution](./related-core-topics/problem-editor-en-translate-20261111/spec/constitution.md)<br>• [Problem Specification](./related-core-topics/problem-editor-en-translate-20261111/spec/problem-spec.md)<br>• [Reference Models Guide](./related-core-topics/problem-editor-en-translate-20261111/spec/models-guide.md)<br>• [Problem Creation Skill](./related-core-topics/problem-editor-en-translate-20261111/skills/jutge-problems/SKILL.md) |
 | [**`ai-analysis/`**](./ai-analysis/) | • [01. AI System Prompt](./ai-analysis/01-ai-system-prompt.md) |
 | [**`understanding/`**](./understanding/) | • [01. Senior Dev Brief](./understanding/01-senior-dev-brief.md)<br>• [02. Ecosystem & Repos](./understanding/02-ecosystem.md)<br>• [03. jtk Architecture](./understanding/03-jtk-architecture.md)<br>• [04. Problem Format & Grading](./understanding/04-problem-format-and-grading.md)<br>• [05. AI Problem Generation Analysis](./understanding/05-ai-problem-generation-analysis.md)<br>• [06. jtk Rewrite Observations](./understanding/06-jtk-rewrite-observations.md)<br>• [07. Commands & Glossary](./understanding/07-commands-and-glossary.md)<br>• [08. Source Verification Log](./understanding/08-source-verification-log.md) |

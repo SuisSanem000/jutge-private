@@ -30,6 +30,10 @@
    👉 [Meeting Summary Presentation (Markdown)](./work/01-meeting-presentation-and-demo-20261112/meeting-summary-presentation.md) • [PowerPoint Deck (`.pptx`)](./work/01-meeting-presentation-and-demo-20261112/meeting-summary-presentation.pptx)  
    *Categorized bullet points summarizing 30 hours of work, prompt engineering details, benchmarks, and live commands.*
 
+7. **For Project Learning & Skill Tracking (Typst, MCP, WebStreams):**  
+   👉 [Learning Tracker & Skill Acquisition Board](./doc/learning-tracker/README.md)  
+   *Actionable task tracking file for skills needed in the scholarship, featuring Typst for exam/statement PDF compilation.*
+
 ---
 
 ## 📁 Meaning of Folders
@@ -42,6 +46,7 @@ jutge-private/
 │                        from the professors. Simin pulls updates here via `git pull`.
 │
 ├── doc/                 📖 WHAT AI EXPLAINS TO SIMIN (Knowledge, Translations & Meetings)
+│   ├── learning-tracker/                     -> Systematic skill acquisition board (Typst, MCP, WebStreams)
 │   ├── related-core-topics/                  -> Deep dives on core workflows & problem-editor translations
 │   ├── ai-analysis/                          -> AI assistant system prompt and operational rules
 │   ├── understanding/                        -> System architecture, .pbm specs, and codebase debt
@@ -57,6 +62,7 @@ jutge-private/
 |---|---|
 | [**`resources/`**](./resources/) | Upstream repositories and professor documents (**read-only to AI**). |
 | [**`doc/`**](./doc/) | Knowledge base, translations, architecture guides, and meeting plans. |
+| ↳ [**`doc/learning-tracker/`**](./doc/learning-tracker/) | Systematic skill acquisition board (Typst, MCP, WebStreams). |
 | ↳ [**`doc/related-core-topics/`**](./doc/related-core-topics/) | Deep-dive guides on platform workflows (`jtk upload` guide, English translations). |
 | ↳ [**`doc/related-core-topics/problem-editor-en-translate-20261111/`**](./doc/related-core-topics/problem-editor-en-translate-20261111/) | Complete English translation of `problem-editor` (constitution, specs, skills). |
 | ↳ [**`doc/understanding/`**](./doc/understanding/) | Codebase architecture, `.pbm` specifications, and rewrite observations. |
