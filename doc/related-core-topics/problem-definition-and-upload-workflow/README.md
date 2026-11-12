@@ -196,11 +196,21 @@ export JUTGE_PASSWORD="YourPasswordHere"
 There are three ways to define a problem directory:
 
 #### Way 1: Use your AI-Generated Problem (Recommended for your demo)
-In your workspace, Claude Code has already generated a complete, compliant problem folder:
-```bash
-# Navigate to your generated problem
-cd work/01-meeting-presentation-and-demo-20261112/01-claude-task/dominant-peaks.pbm
-```
+Claude Code has generated a complete, compliant problem folder. Depending on which terminal you are in:
+
+- **If you are inside your separate `problem-editor` workspace (in VS Code):**
+  ```bash
+  cd dominant-peaks.pbm
+  ```
+
+- **If you are inside the `jutge-private` repository (or using absolute path):**
+  ```bash
+  # Go directly using the full path:
+  cd /Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/work/01-meeting-presentation-and-demo-20261112/01-claude-task/dominant-peaks.pbm
+
+  # Or navigate from the jutge-private root:
+  cd work/01-meeting-presentation-and-demo-20261112/01-claude-task/dominant-peaks.pbm
+  ```
 
 #### Way 2: Clone an Official Template
 `jtk` includes built-in reference templates that you can clone:
