@@ -16,10 +16,8 @@ Everything in this task directory is cleanly decoupled into three dedicated subf
 work/01-meeting-presentation-and-demo-20261112/
 │
 ├── summary/                     🌟 SIMPLIFIED 10-SLIDE PRESENTATION & SUMMARY
-│   ├── README.md                # Simple 10-slide summary with "What to say aloud" scripts
+│   ├── README.md                # Simple 10-slide summary with "What to say aloud" scripts & commands
 │   └── meeting-presentation.pptx# Simple 10-slide PowerPoint presentation deck
-│
-├── checking-and-uploading-the-problem-I-made.md # Quick one-line commands cheat sheet to run in the meeting
 │
 ├── 01-claude-task/              🤖 CLAUDE CODE TASK & GENERATED SOLUTION
 │   ├── README.md                # Overview of the Claude task & verification
@@ -47,8 +45,7 @@ work/01-meeting-presentation-and-demo-20261112/
 
 | Subfolder | Purpose & Contents |
 |---|---|
-| [**`summary/`**](./summary/README.md) | **Simple 10-Slide Presentation & Speaking Script:**<br>• [10 simple slides with conversational "What to say aloud" scripts](./summary/README.md)<br>• [Simplified PowerPoint Deck (`summary/meeting-presentation.pptx`)](./summary/meeting-presentation.pptx) |
-| [**`checking-and-uploading-the-problem-I-made.md`**](./checking-and-uploading-the-problem-I-made.md) | **Live Demo Cheat Sheet:**<br>• [One-line sequential commands to check, verify, and upload in the meeting](./checking-and-uploading-the-problem-I-made.md) |
+| [**`summary/`**](./summary/README.md) | **Simple 10-Slide Presentation & Speaking Script:**<br>• [10 simple slides with conversational "What to say aloud" scripts & live commands](./summary/README.md)<br>• [Simplified PowerPoint Deck (`summary/meeting-presentation.pptx`)](./summary/meeting-presentation.pptx) |
 | [**`01-claude-task/`**](./01-claude-task/README.md) | **The Claude Task:**<br>• [Claude's Self-Report](./01-claude-task/claude-expalanation-of-the-task.md)<br>• [Master Prompt](./01-claude-task/CLAUDE-MASTER-PROMPT.md)<br>• [VS Code Execution Guide](./01-claude-task/HOW-TO-USE-CLAUDE-CODE.md)<br>• [Problem Idea (`IDEA.md`)](./01-claude-task/sample-problem-idea/IDEA.md)<br>• [Generated Problem Code (`dominant-peaks.pbm/`)](./01-claude-task/dominant-peaks.pbm/) |
 | [**`02-explanations-for-simin/`**](./02-explanations-for-simin/README.md) | **Deep-Dive Explanations for Simin:**<br>• [What is `problem-editor`?](./02-explanations-for-simin/01-what-is-problem-editor.md)<br>• [What did I do?](./02-explanations-for-simin/02-what-did-i-do.md) |
 | [**`03-for-meeting-tomorrow/`**](./03-for-meeting-tomorrow/README.md) | **Materials for Tomorrow's Meeting:**<br>• [Engineering Proposal & Roadmap](./03-for-meeting-tomorrow/PROPOSAL-PRESENTATION-20261112.md)<br>• [Speaking Script & Live Demo](./03-for-meeting-tomorrow/01-meeting-speaking-script.md)<br>• [Key Questions to Ask Supervisors](./03-for-meeting-tomorrow/02-questions-to-ask-professors.md) |
