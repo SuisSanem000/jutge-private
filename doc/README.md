@@ -17,6 +17,10 @@ doc/
 │   ├── spec/                       # Translated constitution, problem spec, reference models
 │   └── skills/                     # Translated Claude authoring & review skills
 │
+├── related-core-topics/         🔬 CORE PLATFORM WORKFLOWS & RESEARCH
+│   └── problem-definition-and-upload-workflow/ # jtk login, scaffolding, web services & upload guide
+│       └── README.md
+│
 ├── understanding/                  💡 CODEBASE & DOMAIN KNOWLEDGE
 │   ├── 01-senior-dev-brief.md      # 15-minute high-level briefing for senior developers
 │   ├── 02-ecosystem.md             # Architecture and repository relationships
@@ -37,6 +41,7 @@ doc/
 
 | Section | Documents |
 |---|---|
+| [**`related-core-topics/`**](./related-core-topics/problem-definition-and-upload-workflow/) | • [Problem Definition & Upload Workflow](./related-core-topics/problem-definition-and-upload-workflow/README.md) *(jtk login, upload, webstream API & guide)* |
 | [**`ai-analysis/`**](./ai-analysis/) | • [01. AI System Prompt](./ai-analysis/01-ai-system-prompt.md) |
 | [**`problem-editor-en-translate-20261111/`**](./problem-editor-en-translate-20261111/) | • [Problem Editor Overview](./problem-editor-en-translate-20261111/README.md)<br>• [Pedagogical Constitution](./problem-editor-en-translate-20261111/spec/constitution.md)<br>• [Problem Specification](./problem-editor-en-translate-20261111/spec/problem-spec.md)<br>• [Reference Models Guide](./problem-editor-en-translate-20261111/spec/models-guide.md)<br>• [Problem Creation Skill](./problem-editor-en-translate-20261111/skills/jutge-problems/SKILL.md) |
 | [**`understanding/`**](./understanding/) | • [01. Senior Dev Brief](./understanding/01-senior-dev-brief.md)<br>• [02. Ecosystem & Repos](./understanding/02-ecosystem.md)<br>• [03. jtk Architecture](./understanding/03-jtk-architecture.md)<br>• [04. Problem Format & Grading](./understanding/04-problem-format-and-grading.md)<br>• [05. AI Problem Generation Analysis](./understanding/05-ai-problem-generation-analysis.md)<br>• [06. jtk Rewrite Observations](./understanding/06-jtk-rewrite-observations.md)<br>• [07. Commands & Glossary](./understanding/07-commands-and-glossary.md)<br>• [08. Source Verification Log](./understanding/08-source-verification-log.md) |

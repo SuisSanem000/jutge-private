@@ -22,6 +22,10 @@
    👉 [Proposal & Presentation Document (Nov 12)](./work/01-meeting-presentation-and-demo-20261112/03-for-meeting-tomorrow/PROPOSAL-PRESENTATION-20261112.md)  
    *The structured engineering proposal: jtk v5 architecture, 4-month roadmap, and discussion questions.*
 
+5. **For Problem Definition, Login & Upload Workflow (`jtk upload` guide):**  
+   👉 [Problem Definition & Upload Workflow Guide](./doc/related-core-topics/problem-definition-and-upload-workflow/README.md)  
+   *Detailed breakdown of the terminal demo from your first meeting, API protocol, and step-by-step upload manual.*
+
 ---
 
 ## 📁 Meaning of Folders
@@ -35,6 +39,7 @@ jutge-private/
 │
 ├── doc/                 📖 WHAT AI EXPLAINS TO SIMIN (Knowledge, Translations & Meetings)
 │   ├── problem-editor-en-translate-20261111/ -> Complete English translation of problem-editor
+│   ├── related-core-topics/                  -> Deep dives on core workflows (e.g. jtk login & upload)
 │   ├── ai-analysis/                          -> AI assistant system prompt and operational rules
 │   ├── understanding/                        -> System architecture, .pbm specs, and codebase debt
 │   └── meetings-and-next-steps/              -> Chronological meeting notes, study plans, and logs
@@ -49,6 +54,7 @@ jutge-private/
 |---|---|
 | [**`resources/`**](./resources/) | Upstream repositories and professor documents (**read-only to AI**). |
 | [**`doc/`**](./doc/) | Knowledge base, translations, architecture guides, and meeting plans. |
+| ↳ [**`doc/related-core-topics/`**](./doc/related-core-topics/problem-definition-and-upload-workflow/) | Deep-dive guides on platform workflows (e.g., `jtk login`, webstream API & `upload`). |
 | ↳ [**`doc/problem-editor-en-translate-20261111/`**](./doc/problem-editor-en-translate-20261111/) | Complete English translation of `problem-editor` (constitution, specs, skills). |
 | ↳ [**`doc/understanding/`**](./doc/understanding/) | Codebase architecture, `.pbm` specifications, and rewrite observations. |
 | ↳ [**`doc/meetings-and-next-steps/`**](./doc/meetings-and-next-steps/) | Chronological meeting summaries, study plans, and project logs. |
