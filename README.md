@@ -26,9 +26,9 @@
    👉 [Problem Definition & Upload Workflow Guide](./doc/related-core-topics/problem-definition-and-upload-workflow/README.md)  
    *Detailed breakdown of the terminal demo from your first meeting, API protocol, and step-by-step upload manual.*
 
-6. **For the 15-Minute / 30-Slide Meeting Summary Presentation:**  
+6. **For the 10-Slide Meeting Summary Presentation:**  
    👉 [Meeting Summary Presentation (Markdown)](./work/01-meeting-presentation-and-demo-20261112/meeting-summary-presentation.md) • [PowerPoint Deck (`.pptx`)](./work/01-meeting-presentation-and-demo-20261112/meeting-summary-presentation.pptx)  
-   *Categorized bullet points summarizing system architecture, prompt engineering details, benchmarks, and live commands.*
+   *Categorized bullet points summarizing prompt engineering, live verification (3.7s slowdown), commands, and the 4-month roadmap.*
 
 7. **For Project Learning & Skill Tracking (Typst, MCP, WebStreams):**  
    👉 [Learning Tracker & Skill Acquisition Board](./doc/learning-tracker/README.md)  
