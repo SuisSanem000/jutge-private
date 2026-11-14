@@ -23,7 +23,7 @@
 
 ### Why Typst Is Critical for the Jutge Project
 1. **Direct Adoption by Supervisors:**  
-   In `resources/professor gave 2026-10-25/problem-editor/generated-exam-sample/`, Pau Fernandez created [`PRO2_Parcial_2026P_Solucio.typ`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/generated-exam-sample/PRO2_Parcial_2026P_Solucio.typ), which imports `@preview/codly` and dynamically reads source solutions (`#let p1 = read("P1-tresors-inaccessibles.Y52290.pbm/solution.cc")`) to compile exam solution manuals automatically.
+   In `resources/professor gave 2026-10-25/problem-editor/generated-exam-sample/`, Pau Fernandez created [`PRO2_Parcial_2026P_Solucio.typ`](../../resources/professor%20gave%202026-10-25/problem-editor/generated-exam-sample/PRO2_Parcial_2026P_Solucio.typ), which imports `@preview/codly` and dynamically reads source solutions (`#let p1 = read("P1-tresors-inaccessibles.Y52290.pbm/solution.cc")`) to compile exam solution manuals automatically.
 2. **Solving the Legacy `jtk` Toolchain Bottleneck:**  
    During local problem verification with `jtk make`, macOS repeatedly warns: `pandoc with lua support not found`. Compiling LaTeX statements currently requires Pandoc with custom Lua filters and `pdflatex`. Replacing or supplementing this pipeline with Typst allows `@jutge/core` to generate instant PDF statements with zero heavy system dependencies.
 3. **Automated Exam & Problem Book Compilation:**  
@@ -47,7 +47,7 @@
   - Contrast with LaTeX: Notice clean delimiters and lack of verbose `\begin{equation}` environments.
 
 - [ ] **Task 3: Dissect Supervisor's Exam Solution Template**
-  - Read and analyze [`PRO2_Parcial_2026P_Solucio.typ`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/professor%20gave%202026-10-25/problem-editor/generated-exam-sample/PRO2_Parcial_2026P_Solucio.typ).
+  - Read and analyze [`PRO2_Parcial_2026P_Solucio.typ`](../../resources/professor%20gave%202026-10-25/problem-editor/generated-exam-sample/PRO2_Parcial_2026P_Solucio.typ).
   - Understand package imports:
     ```typst
     #import "@preview/codly:1.3.0"

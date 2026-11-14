@@ -9,7 +9,7 @@
 1. [Executive Summary: What Part of the Project Was This?](#1-executive-summary-what-part-of-the-project-was-this)
 2. [Codebase & Documentation Map](#2-codebase--documentation-map)
 3. [Under the Hood: Web Service Protocol & Architecture](#3-under-the-hood-web-service-protocol--architecture)
-4. [Step-by-Step Practical Guide for Simin](#4-step-by-step-practical-guide-for-simin)
+4. [Step-by-Step Practical Guide](#4-step-by-step-practical-guide-for-simin)
    - [Step 0: Prerequisites & Tool Verification](#step-0-prerequisites--tool-verification)
    - [Step 1: Authenticate with Jutge Web Services (`jtk login` / `jutge login`)](#step-1-authenticate-with-jutge-web-services)
    - [Step 2: Define and Scaffold a Problem Directory](#step-2-define-and-scaffold-a-problem-directory)
@@ -77,12 +77,12 @@ The behavior demonstrated by your professor is implemented across two main repos
 
 | Component | Repository | Key Paths | Purpose |
 |---|---|---|---|
-| **Authoring CLI** | `jutge-toolkit` | [`docs/getting-started-guide.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/docs/getting-started-guide.md#L238-L260)<br>[`docs/reference.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/docs/reference.md#L109-L150)<br>[`docs/problem-anatomy.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/docs/problem-anatomy.md) | Official author documentation for problem format, compilation, login, upload, and sharing. |
-| **Upload Logic** | `jutge-toolkit` | [`lib/upload.ts`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/lib/upload.ts)<br>[`toolkit/upload.ts`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/toolkit/upload.ts) | Implementation of zip archive creation, exclusion filters, RPC call to `instructor.problems.create`, webstream log listener, and `problem.yml` creation. |
-| **Auth Logic** | `jutge-toolkit` | [`lib/login.ts`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/lib/login.ts) | Resolution order for credentials: environment variables, `jutge-cli` config file, and interactive terminal prompt. |
-| **API Client** | `jutge-toolkit` | [`lib/jutge_api_client.ts`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/lib/jutge_api_client.ts#L4713-L4940) | TypeScript client calling `instructor.problems.create`, `instructor.problems.update`, and `instructor.problems.setSharingSettings`. |
-| **General CLI** | `jutge-cli` | [`README.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-cli/README.md#L31-L100) | General terminal interface for students/instructors; manages saved tokens and multi-account configurations in `credentials.json`. |
-| **Meeting Notes** | `original-info` | [`meeting notes 20261022.md`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/original-info-from-professors/meeting%20notes%2020261022.md#L22) | Line 22: *"our current tools: jtk - this is the main tool that generates problem and pdf and upload etc , you will use it all the time"*. |
+| **Authoring CLI** | `jutge-toolkit` | [`docs/getting-started-guide.md`](../../../resources/jutge_repos/jutge-toolkit/docs/getting-started-guide.md#L238-L260)<br>[`docs/reference.md`](../../../resources/jutge_repos/jutge-toolkit/docs/reference.md#L109-L150)<br>[`docs/problem-anatomy.md`](../../../resources/jutge_repos/jutge-toolkit/docs/problem-anatomy.md) | Official author documentation for problem format, compilation, login, upload, and sharing. |
+| **Upload Logic** | `jutge-toolkit` | [`lib/upload.ts`](../../../resources/jutge_repos/jutge-toolkit/lib/upload.ts)<br>[`toolkit/upload.ts`](../../../resources/jutge_repos/jutge-toolkit/toolkit/upload.ts) | Implementation of zip archive creation, exclusion filters, RPC call to `instructor.problems.create`, webstream log listener, and `problem.yml` creation. |
+| **Auth Logic** | `jutge-toolkit` | [`lib/login.ts`](../../../resources/jutge_repos/jutge-toolkit/lib/login.ts) | Resolution order for credentials: environment variables, `jutge-cli` config file, and interactive terminal prompt. |
+| **API Client** | `jutge-toolkit` | [`lib/jutge_api_client.ts`](../../../resources/jutge_repos/jutge-toolkit/lib/jutge_api_client.ts#L4713-L4940) | TypeScript client calling `instructor.problems.create`, `instructor.problems.update`, and `instructor.problems.setSharingSettings`. |
+| **General CLI** | `jutge-cli` | [`README.md`](../../../resources/jutge_repos/jutge-cli/README.md#L31-L100) | General terminal interface for students/instructors; manages saved tokens and multi-account configurations in `credentials.json`. |
+| **Meeting Notes** | `original-info` | [`meeting notes 20261022.md`](../../../resources/original-info-from-professors/meeting%20notes%2020261022.md#L22) | Line 22: *"our current tools: jtk - this is the main tool that generates problem and pdf and upload etc , you will use it all the time"*. |
 
 ---
 
@@ -122,7 +122,7 @@ sequenceDiagram
 4. **Assigned Problem ID:** The server assigns a canonical identifier (for example, `P12345` or `X98765`). Once `jtk` detects this in the log stream, it creates a local file named `problem.yml` containing:
    ```yaml
    problem_nm: P12345
-   email: simin.shoeibi@estudiantat.upc.edu
+   email: <your-upc-email>
    passcode: abcdefgh1234
    shared_testcases: false
    shared_solutions: false
@@ -133,9 +133,9 @@ sequenceDiagram
 
 ---
 
-## 4. Step-by-Step Practical Guide for Simin
+## 4. Step-by-Step Practical Guide
 
-Because your UPC email (`simin.shoeibi@estudiantat.upc.edu`) has already been authorized in their system with instructor permissions, you can execute this complete authoring and upload pipeline from your terminal.
+Because your UPC email (`<your-upc-email>`) has already been authorized in their system with instructor permissions, you can execute this complete authoring and upload pipeline from your terminal.
 
 ### Step 0: Prerequisites & Tool Verification
 
@@ -166,25 +166,25 @@ If you have `jutge-cli` installed:
 ```bash
 jutge login
 ```
-Enter your UPC email (`simin.shoeibi@estudiantat.upc.edu`) and password. The credentials and session token are securely stored in:
+Enter your UPC email (`<your-upc-email>`) and password. The credentials and session token are securely stored in:
 - **macOS:** `~/Library/Application Support/jutge-cli/credentials.json`
 - **Linux:** `~/.config/jutge-cli/credentials.json`
 
-Because `jtk` automatically reads this credentials file (see [`lib/login.ts#L148-L156`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/lib/login.ts#L148-L156)), any subsequent `jtk` command will immediately recognize your active session without prompting you again.
+Because `jtk` automatically reads this credentials file (see [`lib/login.ts#L148-L156`](../../../resources/jutge_repos/jutge-toolkit/lib/login.ts#L148-L156)), any subsequent `jtk` command will immediately recognize your active session without prompting you again.
 
 #### Option B: Let `jtk` prompt you on demand
 If you do not run `jutge login` beforehand, running any command requiring authorization (such as `jtk upload`) will automatically prompt you in the terminal:
 ```text
-? Select email: simin.shoeibi@estudiantat.upc.edu
-? Jutge.org password for simin.shoeibi@estudiantat.upc.edu: [hidden]
-✔ Logged in as Simin Shoeibi with email simin.shoeibi@estudiantat.upc.edu
+? Select email: <your-upc-email>
+? Jutge.org password for <your-upc-email>: [hidden]
+✔ Logged in as <Your Name> with email <your-upc-email>
 ```
 
 #### Option C: Environment Variables (CI/CD or scripted environments)
 You can export your credentials or token in your shell:
 ```bash
-export JUTGE_EMAIL="simin.shoeibi@estudiantat.upc.edu"
-export JUTGE_PASSWORD="YourPasswordHere"
+export JUTGE_EMAIL="<your-upc-email>"
+export JUTGE_PASSWORD="<your-password>"
 # Or if you have a personal access token:
 # export JUTGE_TOKEN="your-access-token"
 ```
@@ -206,7 +206,7 @@ Claude Code has generated a complete, compliant problem folder. Depending on whi
 - **If you are inside the `jutge-private` repository (or using absolute path):**
   ```bash
   # Go directly using the full path:
-  cd /Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/work/01-meeting-presentation-and-demo-20261112/01-claude-task/dominant-peaks.pbm
+  cd <repo-root>/work/01-meeting-presentation-and-demo-20261112/01-claude-task/dominant-peaks.pbm
 
   # Or navigate from the jutge-private root:
   cd work/01-meeting-presentation-and-demo-20261112/01-claude-task/dominant-peaks.pbm
@@ -271,7 +271,7 @@ Never upload an untested problem. Run the local verification sequence:
 3. **What You Will See in the Terminal:**
    ```text
    ✔ Logging in to Jutge.org
-     ✔ Logged in as Simin Shoeibi with email simin.shoeibi@estudiantat.upc.edu
+     ✔ Logged in as <Your Name> with email <your-upc-email>
    ✔ Zipping problem to .jtk-zip/a1b2c3d4/dominant-peaks.zip
      adding dominant-peaks.pbm/handler.yml
      adding dominant-peaks.pbm/problem.en.tex
@@ -291,7 +291,7 @@ Never upload an untested problem. Run the local verification sequence:
    
    problem.yml:
      problem_nm: P98421
-     email: simin.shoeibi@estudiantat.upc.edu
+     email: <your-upc-email>
      passcode: xK9qL2mP4vR8
      shared_testcases: false
      shared_solutions: false
@@ -324,10 +324,10 @@ Once the problem is uploaded, you can manage permissions and verify it directly 
 3. **Set or Change Access Passcode:**
    ```bash
    # Set a custom secret passcode
-   jtk share --passcode SecretPasscode123
+   jtk share --passcode <your-passcode>
 
    # Or email the passcode to your professors for review:
-   jtk share with jpetit@cs.upc.edu pau.fernandez@upc.edu -t "Here is the dominant mountain peaks problem"
+   jtk share with <supervisor1-email> <supervisor2-email> -t "Here is the dominant mountain peaks problem"
    ```
 
 4. **Submit a Solution to Verify the Remote Judge Verdict:**
@@ -348,7 +348,7 @@ Understanding the exact source files that power this workflow gives you technica
 
 ### Authentication Hierarchy (`lib/login.ts`)
 
-In [`resources/jutge_repos/jutge-toolkit/lib/login.ts`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/lib/login.ts#L172-L192), `getLoggedInJutgeClient()` runs every time an authenticated operation begins:
+In [`resources/jutge_repos/jutge-toolkit/lib/login.ts`](../../../resources/jutge_repos/jutge-toolkit/lib/login.ts#L172-L192), `getLoggedInJutgeClient()` runs every time an authenticated operation begins:
 
 ```typescript
 // Resolution order:
@@ -366,7 +366,7 @@ tui.success(`Logged in as ${profile.name} with email ${profile.email}`)
 
 ### Packaging and Upload Logic (`lib/upload.ts`)
 
-In [`resources/jutge_repos/jutge-toolkit/lib/upload.ts`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/lib/upload.ts#L15-L33), notice the exclusion filter:
+In [`resources/jutge_repos/jutge-toolkit/lib/upload.ts`](../../../resources/jutge_repos/jutge-toolkit/lib/upload.ts#L15-L33), notice the exclusion filter:
 
 ```typescript
 function accept(file: string): boolean {
@@ -376,7 +376,7 @@ function accept(file: string): boolean {
 }
 ```
 
-Then in `createProblemInJutgeOrg` ([lines 100-134](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/lib/upload.ts#L100-L134)):
+Then in `createProblemInJutgeOrg` ([lines 100-134](../../../resources/jutge_repos/jutge-toolkit/lib/upload.ts#L100-L134)):
 ```typescript
 const file = await createFileFromPath(zipFilePath, 'application/zip')
 const { id } = await jutge.instructor.problems.create(info.passcode, file)
@@ -388,7 +388,7 @@ await saveProblemYml(directory, info, 'Created')
 
 ### API Client & WebStream Streaming (`lib/jutge_api_client.ts`)
 
-In [`resources/jutge_repos/jutge-toolkit/lib/jutge_api_client.ts`](file:///Users/siminshoeibizadeh/mienne/Programming/dev/projects/scholarship-project-uni/jutge-private/resources/jutge_repos/jutge-toolkit/lib/jutge_api_client.ts#L4906-L4915):
+In [`resources/jutge_repos/jutge-toolkit/lib/jutge_api_client.ts`](../../../resources/jutge_repos/jutge-toolkit/lib/jutge_api_client.ts#L4906-L4915):
 
 ```typescript
 /**
@@ -435,7 +435,7 @@ Both tools live in the ecosystem, and it is helpful to know their distinct roles
 3. **Never Author `.cor` Files by Hand:**
    Jutge requires `.cor` files to be deterministically produced by compiling and executing `solution.cc` through `jtk make cor`.
 4. **Instructor Role Requirement:**
-   The `instructor.problems.create` endpoint is strictly guarded. If you log in with an unauthorized student account, the API will reject the request with `UnauthorizedError`. Your UPC email (`simin.shoeibi@estudiantat.upc.edu`) has already been granted instructor permissions by the supervisors.
+   The `instructor.problems.create` endpoint is strictly guarded. If you log in with an unauthorized student account, the API will reject the request with `UnauthorizedError`. Your UPC email (`<your-upc-email>`) has already been granted instructor permissions by the supervisors.
 
 ---
 

@@ -13,3 +13,8 @@ jutge_repos/
 .vscode/
 .DS_Store
 **/._*
+
+# Ignore local personal notes, credentials, and environment files
+private-local/
+.env
+.env.*
