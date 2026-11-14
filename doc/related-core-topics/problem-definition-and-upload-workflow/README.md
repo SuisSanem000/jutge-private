@@ -123,7 +123,7 @@ sequenceDiagram
    ```yaml
    problem_nm: P12345
    email: <your-upc-email>
-   passcode: abcdefgh1234
+   passcode: <generated-passcode>
    shared_testcases: false
    shared_solutions: false
    created_at: 2026-11-12T10:00:00.000Z
@@ -292,7 +292,7 @@ Never upload an untested problem. Run the local verification sequence:
    problem.yml:
      problem_nm: P98421
      email: <your-upc-email>
-     passcode: xK9qL2mP4vR8
+     passcode: <generated-passcode>
      shared_testcases: false
      shared_solutions: false
      created_at: 2026-11-12T10:45:00.000Z
