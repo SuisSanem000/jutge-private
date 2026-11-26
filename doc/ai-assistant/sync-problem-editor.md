@@ -21,5 +21,5 @@ Take the unified `pedit/` folder from local `projects/02/problem-editor/pedit/` 
 
 1. Read from local `projects/<NN>/problem-editor/pedit/` (gitignored source of truth in `jutge-private`).
 2. **Public mirror (`SuisSanem000/pedit-demo`):** Sync only `pedit/`, safe `demo-problems/`, and `.github/workflows/pages.yml` (excluding `node_modules/`, `.env*`, `**/problem.yml`, `private-problems/`, `spec/`, `skills/`, `generated-exam-sample/`), commit with `YYYY-MM-DD: ...`, and push `main`.
-3. **Upstream (`jutge-org/problem-editor`):** Sync `pedit/`, `generated-demo/`, `.github/workflows/pages.yml`, and `README.md` (excluding `node_modules/`, `.env*`, `**/problem.yml`), commit with `YYYY-MM-DD: ...`, tag `vYYYY-MM-DD`, and push `main --tags`.
+3. **Upstream (`jutge-org/problem-editor`):** Sync identical `pedit/` + `generated-demo/` and update `README.md` for local execution (no `.github/workflows/pages.yml` since repo stays private), commit with `YYYY-MM-DD: ...`, tag `vYYYY-MM-DD`, and push `main --tags`.
 4. Verify no secrets or local paths leaked, log to `doc/ai-log/YYYY-MM-DD/NN.md`, and push `jutge-private`.
