@@ -1,6 +1,6 @@
 # Guide to Reference Model Problems
 
-> **Source:** Translated and analyzed from `resources/professor gave 2026-10-25/problem-editor/spec/models/`  
+> **Source:** Translated and analyzed from `resources/problem-editor/spec/models/`  
 > **Purpose:** Reference implementations demonstrating exact file structures for different problem categories.  
 > **Navigation:** [Problem Editor Master README](../README.md) • [Constitution Spec](./constitution.md) • [Problem Spec](./problem-spec.md)
 

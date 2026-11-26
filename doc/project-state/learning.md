@@ -19,7 +19,7 @@
 ## Active Focus: `SK-01` Typst
 
 - [ ] Install locally (`brew install typst`) and verify with `typst --version` plus Tinymist in VS Code.
-- [ ] Review Pau's template (`resources/professor gave 2026-10-25/problem-editor/generated-exam-sample/PRO2_Parcial_2026P_Solucio.typ`) using `@preview/codly` and `#let p1 = read(...)`.
+- [ ] Review Pau's template (`resources/problem-editor/generated-exam-sample/PRO2_Parcial_2026P_Solucio.typ`) using `@preview/codly` and `#let p1 = read(...)`.
 - [ ] Convert a sample `.pbm` statement (`projects/01-demo-20261112/01-claude-task/dominant-peaks.pbm/problem.en.tex`) to Typst and benchmark `typst compile`.
 
 ## Upcoming: `SK-04` OpenRouter SDK & DeepSeek Harness

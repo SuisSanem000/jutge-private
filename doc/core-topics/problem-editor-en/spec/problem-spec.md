@@ -1,6 +1,6 @@
 # Jutge.org Problem Specification (.pbm Format)
 
-> **Source:** Translated from `resources/professor gave 2026-10-25/problem-editor/spec/problema-jutge.md`  
+> **Source:** Translated from `resources/problem-editor/spec/problema-jutge.md`  
 > **Rule:** Detailed technical anatomy and invariants for all Jutge problems.  
 > **Navigation:** [Problem Editor Master README](../README.md) • [Constitution Spec](./constitution.md) • [Reference Models Guide](./models-guide.md)
 

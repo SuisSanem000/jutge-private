@@ -18,7 +18,7 @@
 
 | Folder | Owner | Purpose |
 | --- | --- | --- |
-| `resources/` | Simin | Read-only upstream clones (`jutge_repos/`, `problem-editor/`) and professor notes. Never modified by AI. |
+| `resources/` | Simin | Read-only upstream `problem-editor/` (in `resources/` root) and professor notes (`original-info-from-professors/`). Only `resources/private-local/` is local/gitignored. Never modified by AI. |
 | `doc/` | AI & Simin | AI assistant rules, daily AI logs, current project state, core topic translations/guides, and architecture references. |
 | `projects/` | Simin & AI | Time-boxed 10–15 day deliverable phases for supervisor check-ins. |
 

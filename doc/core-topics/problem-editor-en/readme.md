@@ -1,6 +1,6 @@
 # Problem Editor — Complete English Specification & Overview
 
-> **Source:** Translated and structured from `resources/professor gave 2026-10-25/problem-editor/`  
+> **Source:** Translated and structured from `resources/problem-editor/`  
 > **Date:** November 11, 2026  
 > **Target Audience:** Senior Software Engineer executing Phases 1 & 2.  
 > **Navigation:** [Root Workspace](../../README.md) • [Phase 1 & 2 Execution Guide](../../work/01-meeting-presentation-and-demo-20261112/README.md) • [Constitution Spec](./spec/constitution.md) • [Problem Spec](./spec/problem-spec.md)

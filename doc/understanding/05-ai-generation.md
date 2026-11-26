@@ -42,7 +42,7 @@ When a teacher runs this command:
 
 ## 3. Approach 2: The Future Vision (Pau's Problem Editor & Agent Skills)
 
-Professor Jordi Petit and Pau Fernandez realized that rigid, one-shot CLI commands do not produce reliable educational problems. In late October 2026, Pau launched the `problem-editor` initiative (`resources/professor gave 2026-10-25/problem-editor/`).
+Professor Jordi Petit and Pau Fernandez realized that rigid, one-shot CLI commands do not produce reliable educational problems. In late October 2026, Pau launched the `problem-editor` initiative (`resources/problem-editor/`).
 
 ### How Pau Tested the Concept
 Instead of hardcoding generation logic in TypeScript, Pau tested using an **interactive AI coding agent** (such as Claude Code or Antigravity):

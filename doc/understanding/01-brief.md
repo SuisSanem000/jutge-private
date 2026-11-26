@@ -105,7 +105,7 @@ To avoid duplicating large repos while keeping your local workspace clean and ve
 jutge-private/
 ├── resources/           # [READ-ONLY REFERENCE] Upstream code & professor materials
 │   ├── jutge_repos/     # Upstream git clones (jutge-toolkit, drivers, etc.)
-│   └── professor gave 2026-10-25/problem-editor/  # Upstream problem-editor repo
+│   └── problem-editor/  # Upstream problem-editor repo (in resources/ root)
 │
 ├── doc/                 # [DOCUMENTATION & MEETINGS] Analysis, study notes, reports
 │   ├── SENIOR-DEV-BRIEF.md              # This onboarding file
@@ -119,7 +119,7 @@ jutge-private/
 ```
 
 **Rule of thumb:**
-- Never edit code inside `resources/` directly. When professors push updates, you simply run `git pull` inside `resources/professor gave 2026-10-25/problem-editor` or `resources/jutge_repos/*`.
+- Never edit code inside `resources/` directly. When professors push updates, you simply run `git pull` inside `resources/problem-editor` or `resources/private-local/jutge_repos/*`.
 - All your experiments, clean architectural modules, and POCs live in `work/` or in dedicated git branches.
 
 ---
