@@ -5,6 +5,7 @@
 ## Table of Contents
 
 - [Goal](#goal)
+- [Background: `jtk` vs. `pedit`](./jtk-vs-pedit.md)
 - [Problem-Editing Operations Catalog](#problem-editing-operations-catalog)
 - [What We Build First (MVP Step 1)](#what-we-build-first-mvp-step-1)
 
