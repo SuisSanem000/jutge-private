@@ -28,7 +28,7 @@
 |---|---|---|
 | **Local Source** (`projects/02/problem-editor/`) | `pedit/`, `viewer/`, `generated-demo/sum-evens.pbm/` | Gitignored source of truth |
 | **Public Pages Mirror** ([`SuisSanem000/pedit-demo`](https://github.com/SuisSanem000/pedit-demo)) | `pedit/`, `viewer/`, `demo-problems/sum-evens.pbm/` | Live: [Hub](https://suissanem000.github.io/pedit-demo/) • [CLI](https://suissanem000.github.io/pedit-demo/cli/) • [Viewer](https://suissanem000.github.io/pedit-demo/pdf-viewer/) |
-| **Private Upstream** (`jutge-org/problem-editor`) | Synced at `687f6f5` (`v2026-11-26`) + README fix (`eb330c2`) | Sync paused until requested |
+| **Private Upstream** (`jutge-org/problem-editor`) | Synced at `f4465de` (`v2026-11-26-2`) | Up to date |
 
 ## Technical Steps
 
