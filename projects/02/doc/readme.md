@@ -36,7 +36,8 @@
 ## Technical Details
 
 - **Modules (`pedit/src/`):** `index.ts` (CLI router), `jtk.ts` (`jtk` + `generate.ts` runner), `pbm.ts` (scanner & write guard), `pdf.ts` (`jtk make pdf` + headless Chrome fallback), `ai.ts` (`@openrouter/sdk` + 2-retry loop), `viewer-server.ts`, `export-static.ts`, and `public/index.html`.
-- **Verification:** `bun test` (2/2 pass), live OpenRouter `create` + `edit` on `sum-evens.pbm` (`openai/gpt-4o-mini`), live `pedit viewer` (`HTTP 200`, `%PDF-1.4`), and `export-static.ts` all verified.
+- **Verification:** `bun test` (2/2 pass), compiled standalone binary (`bun run compile` → `./pedit --help`, `list`, `viewer`), live OpenRouter `create` + `edit` on `sum-evens.pbm`, live `pedit viewer` (`HTTP 200`, `%PDF-1.4`), and `export-static.ts` all verified.
+- **For professors:** Step-by-step verification commands are in `pedit/README.md` (`bun test`, `bun run compile`, `pedit build`/`lint`, `pedit create`/`edit`, `pedit viewer`).
 
 ## Related Docs
 
