@@ -1,10 +1,10 @@
-# Ignore local-only folders (private-local and cloned repos inside it)
+# Ignore local-only folders (private-local, cloned repos, and problem-editor copies)
 resources/private-local/
 private-local/
 **/private-local/
 jutge_repos/
 **/jutge_repos/
-projects/02/problem-editor/
+**/problem-editor/
 
 # Ignore Jutge problem.yml files (contain server email + passcode credentials)
 **/problem.yml

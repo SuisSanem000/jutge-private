@@ -16,5 +16,5 @@ This directory holds time-boxed implementation phases delivered to supervisors e
 
 ## Policies
 
-- Never copy entire repos from `resources/` into `projects/`.
+- Never copy entire repos from `resources/` into `projects/` for tracking; any local `problem-editor/` working copy must remain gitignored (`**/problem-editor/`) and never be pushed.
 - Track each new phase in [Project State](../doc/project-state/state.md).
