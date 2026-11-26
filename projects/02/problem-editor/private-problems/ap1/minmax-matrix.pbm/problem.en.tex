@@ -1,0 +1,26 @@
+\Problem{Min-Max Matrix}
+
+\UsePython
+
+\Statement
+
+Given a square matrix $M$ of $n\times n$ (with $n\geq 1$) of integers,
+its matrix minMax is the matrix $mM$ of $n\times 2$ such that for all $i$ (with $0\leq i<n$),
+$mM[i][0]$ is the minimum element of the $i$-th row of $M$ and $mM[i][1]$ is
+the maximum element of the $i$-th column of $M$.
+
+\medskip
+
+For instance, if $M = [[1,2,3], [3,1,2], [2,3,1]]$, $mM = [[1,3], [1,3], [1,3]]$
+
+\medskip
+
+Implement the @min_Max(M)@ function that given the square matrix $M$
+returns its minMax matrix.
+
+\medskip
+
+You can use the @min()@ and @max()@ functions of Python,
+that given a list, they return their minimum and maximum element respectively.
+
+\SampleSession

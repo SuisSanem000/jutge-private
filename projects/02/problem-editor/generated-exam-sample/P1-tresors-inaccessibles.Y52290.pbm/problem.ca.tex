@@ -1,0 +1,66 @@
+
+\Problem{Tresors Inaccessibles}
+
+\Statement
+
+Un arbre binari de \verb|char|s representa el mapa d'una cova. Cada node indica una de tres coses:
+
+\begin{itemize}
+\item \verb|'.'|: hi ha un passadís que es pot creuar.
+\item \verb|'X'|: hi ha un passadís que \textbf{no} es pot creuar.
+\item \verb|'*'|: hi ha un tresor (i es pot creuar).
+\end{itemize}
+
+\medskip
+
+A la cova s'entra per l'arrel de l'arbre. Un tresor és \textbf{accessible} si es pot arribar a ell des de l'arrel sense passar per cap node amb \verb|'X'|. Un tresor és \textbf{inaccessible} si algun node del camí des de l'arrel fins al tresor conté una \verb|'X'|.
+
+\medskip
+
+Fixeu-vos que l'arrel de l'arbre podria ser una \verb|'X'|, i en aquest cas tots els tresors de l'arbre serien inaccessibles.
+
+\medskip
+
+\textbf{Apartat 1.} Fes una funció
+
+\begin{verbatim}
+int compta_tresors_accessibles(BinTree<char> t);
+\end{verbatim}
+
+que compti el nombre de tresors accessibles de l'arbre \verb|t|.
+
+\medskip
+
+\textbf{Apartat 2.} Fes una funció
+
+\begin{verbatim}
+int compta_tresors_inaccessibles(BinTree<char> t);
+\end{verbatim}
+
+que compti el nombre de tresors inaccessibles de l'arbre \verb|t|.
+
+\medskip
+
+Noteu que un tresor inaccessible és un node \verb|'*'| que no es pot arribar des de l'arrel perquè algun node del camí és una \verb|'X'|. Concretament, si un node conté \verb|'X'|, tot el subarbre que penja d'aquest node és inaccessible, i els tresors que hi hagi allà s'han de comptar.
+
+\Observation
+
+Als fitxers públics (icona del gatet) trobaràs: \verb|main.cc|, \verb|tresors.cc| (a on has d'implementar les funcions), \verb|bintree.hh|, \verb|bintree-io.hh|, \verb|assert.hh|, un \verb|Makefile| i el directori \verb|.vscode|.
+
+\medskip
+
+Al fitxer \verb|tresors.cc| hi ha dues funcions d'esquelet comentades que cal descomentar per poder compilar i provar el programa. Pots implementar-les per separat: hi ha jocs de prova específics per a cadascuna, de manera que pots validar un apartat sense tenir l'altre acabat.
+
+\medskip
+
+Has d'implementar les dues funcions en el fitxer \verb|tresors.cc| i enviar només aquest fitxer.
+
+\Input
+
+La primera línia de l'entrada conté \verb|apartat1| o \verb|apartat2|, indicant quin apartat s'ha d'executar. A continuació es llegeixen arbres binaris de \verb|char|s en format visual, un darrere l'altre.
+
+\Output
+
+Per a cada arbre, s'escriu el resultat de la funció corresponent.
+
+\SampleTwoCol

@@ -1,0 +1,26 @@
+\Problem{Min-Max Matrix}
+
+\UsePython
+
+\Statement
+
+Donada una matriu quadrada $M$ de $n\times n$ (amb $n\geq 1$) amb elements enters,
+la seva matriu minMax és la matriu $mM$ de  tamany $n\times 2$ tal que per tot $i$ (amb $0\leq i < n$),
+$mM[i][0]$ és l'element mínim de la fila $i$ de la matriu $M$ i $mM[i][1]$ és
+l'element màxim de la columna $i$ de la matriu $M$.
+
+\medskip
+
+Per exemple, si $M = [[1,2,3],[3,1,2],[2,3,1]]$, $mM = [[1,3],[1,3],[1,3]]$
+
+\medskip
+
+Implementeu la funció @min_Max(M)@ que donada la matriu quadrada $M$
+retorna la seva matriu minMax.
+
+\medskip
+
+Si us convé, podeu fer servir les funcions @min()@ i @max()@ de Python,
+que donada una llista, retornen el seu element mínim i màxim respectivament.
+
+\SampleSession

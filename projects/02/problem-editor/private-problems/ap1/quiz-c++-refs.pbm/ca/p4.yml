@@ -1,0 +1,41 @@
+type: FillIn
+
+text: |
+
+    ```c++
+    void f4(int& p, int& q) {
+        ++p;
+        ++q;
+    }
+
+    int main() {
+        int i = $i;
+        int j = $j;
+        f4(i, j);
+    }
+    ```
+
+context: |
+
+    Digueu quin és el valor de les variables de la funció `main` al final del programa de l'esquerra:
+
+    `i`: R1
+
+    `j`: R2
+
+items:
+
+    R1:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$ii"
+        ignorecase: true
+        trim: true    
+        
+    R2:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$jj"
+        ignorecase: true
+        trim: true
+

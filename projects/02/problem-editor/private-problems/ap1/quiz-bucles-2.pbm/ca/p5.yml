@@ -1,0 +1,20 @@
+
+type: MultipleChoice
+
+text: |
+
+    Marqueu les afirmacions correctes.
+
+choices:
+    -   text: "El darrer element de `range($a)` és `$a`."
+        correct: false
+    -   text: "El darrer element de `range($b)` és `$bm1`."
+        correct: true
+    -   text: "El primer element de `range($b)` és `1`."
+        correct: false
+    -   text: "El primer element de `range($bm1)` és `0`."
+        correct: true
+    -   text: "`range(1, $c, 2)` correspon als naturals senars menors o iguals que $c."
+        correct: true
+    -   text: "`range(10, 0, -1)` no té sentit."
+        correct: false

@@ -1,0 +1,42 @@
+
+\Problem{Tortuga --- Rellotge}
+
+\Statement
+
+Feu un programa que llegeixi dos enters que representen una hora del rellotge en hores i minuts i dibuixi el rellotge corresponent seguint el format dels exemples.
+
+\medskip
+
+El rellotge es troba centrat a l'orígen de la tortuga. El seu radi és de 200 unitats. Les ratlletes de les vores tenen llargada 50. La busca de les hores té llargada 90 i la busca dels minuts té llargada 140. Les puntes de les busques són triangles equilàters de 25 unitats de costat.
+
+\medskip
+
+Descomposeu el vostre programa en accions adients. Per exemple, es podria fer el dibuix tot cridant un cop a l'acció @dibuixa_rellotge()@ que pinta el cercle amb les ratlletes, i cridant dos cops a l'acció @dibuixa_busca()@ per dibuixar cada busca (amb els paràmetres adeqüats). Documenteu cadascuna de les accions que escriviu (especialment respecte de l'estat inicial i final de la tortuga). No utilitzeu variables globals.
+
+\medskip
+
+Operacions de tortuga suggerides: 
+\texttt{forward},
+\texttt{backward},
+\texttt{left},
+\texttt{right},
+\texttt{penup},
+\texttt{pendown},
+\texttt{goto},
+\texttt{circle}.
+Assegureu-vos d'utilitzar divisions reals!
+
+\Input 
+
+Dos enters $h$ i $m$ amb $0\le h <12$ i $0\le m<60$ que corresponen a les hores i els minuts.
+
+\Observation
+
+Per tal d'atenuar petits problemes de precisió del mòdul turtle, aquest
+problema pot atorgar el veredicte AC a solucions que no són exactament
+iguals a les esperades si no en són gaire diferents. Si teniu un PE mireu
+les diferències entre les imatges per saber si és un error vostre o un error
+de precisió.
+
+\Sample
+

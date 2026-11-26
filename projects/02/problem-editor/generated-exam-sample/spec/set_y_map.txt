@@ -1,0 +1,6 @@
+Se recoge dinero para algo. Se guarda el nombre y la cantidad.
+Una persona puede dar dinero varias veces, en momentos diferentes. Así que en la
+lista de pares nombre, cantidad, hay nombres repetidos.
+Queremos sacar la lista de personas y cantidades totales que han pagado por orden alfabético.
+
+Además, para cada cantidad, queremos sacar el número de personas que han pagado esa cantidad.

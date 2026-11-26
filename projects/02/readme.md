@@ -9,7 +9,7 @@ Phase 02 implements the two post-Nov 12 priorities:
 
 ## Working Copy Workflow
 
-- All implementation code will live inside `projects/02/problem-editor/` (copied cleanly without `.git` from `resources/` and gitignored via `**/problem-editor/` so `private-problems/` stay local).
+- All implementation code will live inside `projects/02/problem-editor/` (copied cleanly without `.git` from `resources/`). Only `resources/private-local/` remains local/gitignored.
 - Once Phase 02 features are built and verified locally, Simin will manually copy/replace them into her upstream `problem-editor` GitHub repository.
 
 ---

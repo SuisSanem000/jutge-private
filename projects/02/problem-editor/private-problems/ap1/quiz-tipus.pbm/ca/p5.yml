@@ -1,0 +1,46 @@
+
+type: FillIn
+
+text: "Avalueu les expressions."
+
+context: |
+
+    `int($x1 + $y1)` = R1
+
+    `int($a2 / $b2)` = R2
+    
+    `float("3.14")` = R3
+    
+    `int($a4 == $b4)` = R4
+    
+    `(($a5 + $b5) // $c5)` = R5
+
+
+
+items:
+    R1:
+        correct: "$r1"
+        trim: true
+        maxlength: 10
+
+    R2:
+        correct: "$r2"
+        trim: true
+        maxlength: 10
+
+    R3:
+        correct: "3.14"
+        trim: true
+        maxlength: 10
+
+    R4:
+        correct: "$r4"
+        trim: true
+        maxlength: 10
+
+    R5:
+        correct: "$r5"
+        trim: true
+        maxlength: 10
+
+

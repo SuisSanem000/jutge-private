@@ -1,0 +1,112 @@
+\Problem{Generadors de Collatz}
+
+\UsePython
+
+\Statement
+
+Sigui $n$ qualsevol natural estrictament positiu. Considereu el procés següent: Si $n$ és parell, dividiu-lo per dos. Altrament, multipliqueu-lo per 3 i sumeu-li 1. Quan arribeu a 1, pareu. Per exemple, començant en 3, s'obté la seqüència de Collatz $S(3)$:
+\[
+3,~ 10,~ 5,~ 16,~ 8,~ 4,~ 2,~ 1 .
+\]
+
+Des de l'any 1937 es conjectura que aquest procés acaba per a qualsevol $n$ inicial, encara que no ho ha sabut demostrar ningú. En aquest problema suposarem que la conjectura és certa.
+
+\begin{enumerate}
+
+    \item Escriviu una funció 
+
+    \begin{lstlisting}
+    def collatz (n: int) -> Iterator[int]
+    \end{lstlisting}\vspace*{-6mm}    
+    
+    que, donat un natural $n\ge 1$, generi la seqüència de Collatz $S(n)$.
+
+    \item Escriviu una funció 
+
+    \begin{lstlisting}
+    def collatz_length (n: int) -> int
+    \end{lstlisting}\vspace*{-6mm}
+    
+    que, donat un natural $n\ge 1$, retorni la llargada d'$S(n)$.
+
+    \item Escriviu una funció 
+
+    \begin{lstlisting}
+    def collatz_highest (n: int) -> int
+    \end{lstlisting}\vspace*{-6mm}
+
+    que, donat un natural $n\ge 1$, retorni l'element més alt d'$S(n)$.
+
+    \item Escriviu una funció 
+
+    \begin{lstlisting}
+    def collatz_highest_position (n: int) -> tuple[int, int]
+    \end{lstlisting}\vspace*{-6mm}
+
+    que, donat un natural $n\ge1$, retorni una tupla amb la posició de l'element més alt d'$S(n)$ i el seu valor. Les posicions es comencen a comptar des de zero.
+
+    \item Escriviu una funció 
+
+    \begin{lstlisting}
+        def collatz_11(int) -> bool
+    \end{lstlisting}\vspace*{-6mm}
+
+    que, donat un natural $n\ge1$, indiqui si $S(n)$ conté algún múltiple de 11 (excepte en la primera posició).
+
+    \item Escriviu una funció 
+
+    \begin{lstlisting}
+    def collatz_first_common (n1: int, n2: int) -> int
+    \end{lstlisting}\vspace*{-6mm}
+
+    que, donats dos naturals $n_1,n_2\ge1$, retorni el primer element comú d'$S(n_1)$ i $S(n_2)$.
+
+    \item Escriviu una funció 
+
+    \begin{lstlisting}
+    def collatz_common_elements (n1: int, n2: int) -> int
+    \end{lstlisting}\vspace*{-6mm}
+    
+    que, donats dos naturals $n_1,n_2\ge1$, retorni el nombre d'elements comuns en $S(n_1)$ i $S(n_2)$.
+
+    \item Escriviu una funció 
+
+    \begin{lstlisting}
+    def collatz_union (n1: int, n2: int) -> list[int]
+    \end{lstlisting}\vspace*{-6mm}
+
+    que, donats dos naturals $n_1,n_2\ge1$, retorni tots els elements d'$S(n_1)$ i $S(n_2)$ en ordre estrictament creixent.
+
+    \item Escriviu una funció 
+
+    \begin{lstlisting}
+    def collatz_top_numbers() -> Iterator[int]
+    \end{lstlisting}\vspace*{-6mm}
+
+    que generi la llista infinita de valors inicials pels quals el seu element més alt és més gran que qualsevol dels valors inicials menors Altrament dit, es vol la seqüència des\-crita per $[i \mid \max S(i) > \max S(j) \ \ \forall j < i]$.
+
+
+    \item Escriviu una funció 
+
+    \begin{lstlisting}
+    def collatz_first_missing(n: int) -> int
+    \end{lstlisting}\vspace*{-6mm}
+
+    que, donat un natural $n\ge1$, retorni el natural no nul més petit que no pertany a $S(n)$.
+
+\end{enumerate}
+
+\Observations
+
+\begin{itemize}
+
+\item    Implementeu totes les funcions de forma senzilla, clara i concisa treient profit de Python.
+
+\item Descarregueu-vos el fitxer \texttt{code.py}. El programa principal i l'esquelet de les funcions ja se us dóna implementat.
+
+\item El Jutge dóna puntuacions parcials per a cada apartat, però l'avaluació va a càrrec del professor.
+
+\end{itemize}
+
+
+\SampleOneCol

@@ -1,0 +1,85 @@
+\Problem{Carambola (1)}
+
+\Statement
+% de $1.5 \times 3$ metres  
+
+El billar francès o \emph{carambola} és una de les modalitats de jocs de billar existents. En aquest cas volem resoldre un problema per fer simulacións i ajudar a l'entrenament. 
+
+Tenim un jugador i dos bolas (blanca i vermella) sobre un tauler entapissat que no té forats a les cantonades. Es coloca la bola vermella sense que toqui cap banda  i la bola blanca a una de les quatre  cantonades (vegeu figura)
+
+La bola blanca inicia un recorregut a traves de la diagonal y rebota (seguint l'altre diagonal) quan topa amb una banda.  Si arriba a una cantonada (on nom\'{e}s  hi ha una diagonal) s'atura.
+
+\FigureC{width=8cm}{Rebots1} 
+
+\ \\ 
+Per  la simulació asumiren que tenim un tauler de dimensions $n\times m$ i que el recorregut de la  bola blanca acaba quan:
+
+\begin{enumerate}
+    \item topa amb una cantonada, 
+    \item topa amb la bola vermella,  
+    \item fa quatre bandes.
+\end{enumerate}
+
+El jugador fa carambola si el recorregut de la bola blanca acaba topant amb la bola vermella després d'haver tocat exactament tres bandas. 
+
+\smallskip
+Feu un programa que llegeixi la configuració d'un tauler de billar francès i determini si el jugador  fa o no carambola. El programa també ha d'enumerar les posicions on la bola xoca amb les bandes del tauler i mostrar-ne la configuració final. 
+
+%\newpage
+
+%\ \\ 
+El vostre programa ha de fer servir les seg\"{u}ents definicions:
+
+\begin{quote}
+
+\textbf{typedef} vector$<$ vector $<$\textbf{char}$>$ $>$ Tauler;
+
+\textbf{struct}  Bola $\{$ 
+
+\hspace{10pt} \textbf{int} x\_ant, y\_ant;\hspace{10pt} // Posicio anterior de la bola
+
+\hspace{10pt} \textbf{int} x\_act, y\_act;\hspace{11pt} // Posicio actual de la bola
+
+\hspace{10pt} \textbf{int} x\_seg, y\_seg;\hspace{10pt} // Posicio seguent de la bola
+
+$\}$;
+
+\end{quote}
+
+%\ \\ 
+i tamb\'{e} ha de definir, implementar i utilitzar la funci\'{o}:
+
+\begin{quote}
+ $void$ moure\_fins\_xocar ($Tauler$\& t, $Bola$\& b); 
+\end{quote}
+
+que, donat un tauler $t$ i la posició de la bola blanca  $b$,  
+mou la bola $b$ dins de $t$ en la direcció i sentit definits per la seva posició actual i següènt. La bola s'ha d'aturar quan xopa amb la bola vermella (si ho fa) o quan arribi a una  banda. Quan acabi l'execució $b$  ha de tenir la posició on s'atura la bola com a posició actual i la posició previa i posterior correcta. 
+   
+Cal tenir en compte que quan la bola es mou a una cantonada la posició següènt és la mateixa posició que l'actual.  A més les posicions recorregudes per la bola han de quedar marcades a $t$. 
+
+
+%    - xoca_cantonada => xoca_banda
+%    - pot ser xoca_bola i xoca_banda (i/o xoca_cantonada) true al mateix temps 
+
+%\newpage
+
+\Input
+
+L'entrada consisteix en diverses descripcions inicials de taulers de billar francès. Cadascuna està formada per dos enters $n, m \geq 2$ que indiquen el nombre de files i col.lumnes de la matriu que representa el tauler, respectivament. A continuació ve una seqüència de quatre enters $x_1, y_1, x_2, y_2$ que descriuen les posicions inicials $(x_1, y_1)$, $(x_2, y_2)$ i $(x_3, y_3)$ de les tres boles. 
+
+\ \\
+La bola a la posicio $(x_1, y_1)$ és la bola blanca i sempre està col.locada a una de les cantonades del tauler (és a dir, a les posicions $(0,0)$, 
+$(0, M - 1)$, $(N - 1, 0)$ o $(N - 1, M - 1)$). La bola a la posició $(x_2,y_2)$ és la bola vermella i sempre està col.locada a dintre del tauler (és a dir, $0<x_2<N-1$ i $0<y_2<M-1$).
+
+
+\Output
+
+Per a cada tauler d'entrada, escriviu les coordenades de les posicions on la bola jugadora topa amb les bandes del tauler. Indiqueu també si fa carambola o no i mostreu-ne la trajectòria descrita. Seguiu el format especificat als exemples. 
+
+%\ \\
+\medskip
+
+
+
+\Sample

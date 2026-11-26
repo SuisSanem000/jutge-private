@@ -1,0 +1,66 @@
+
+type: FillIn
+
+text: |
+
+    Suposant que 
+    `a = $a`,
+    `b = $b`,
+    `c = $c` i
+    `d = $d`,
+    digueu quin és el resultat de les expressions de la dreta.
+
+context: |
+
+    `a + b > c - d` = R1
+
+    `(a + b) * c > d or a - b < 0` = R2
+    
+    `a >= b and a >= b and a >= c` = R3
+
+    `(b != c or b >= a) and (a < c or a == b) and True` = R4
+
+    `not (c == d + a)` = R5
+
+
+
+items:
+
+    R1:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$r1"
+        ignorecase: false
+        trim: true
+
+    R2:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$r2"
+        ignorecase: false
+        trim: true
+        
+    R3:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$r3"
+        ignorecase: false
+        trim: true
+
+        
+    R4:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$r4"
+        ignorecase: false
+        trim: true
+
+        
+    R5:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$r5"
+        ignorecase: false
+        trim: true
+
+  

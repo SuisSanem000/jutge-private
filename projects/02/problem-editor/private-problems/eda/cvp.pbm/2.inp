@@ -1,0 +1,49 @@
+OUTPUT n0n0 n0n1 n0n2 END
+INPUT n9n0 n9n1 n9n2 n9n3 END
+OR n0n0 n1n1 n1n3
+NOT n0n1 n1n0
+AND n0n2 n1n2 n1n0
+OR n0n3 n1n1 n1n3
+OR n1n0 n2n2 n2n3
+NOT n1n1 n2n2
+OR n1n2 n2n1 n2n3
+OR n1n3 n2n1 n2n0
+OR n2n0 n3n0 n3n1
+AND n2n1 n3n2 n3n3
+AND n2n2 n3n1 n3n0
+NOT n2n3 n3n1
+OR n3n0 n4n1 n4n0
+NOT n3n1 n4n1
+AND n3n2 n4n0 n4n2
+OR n3n3 n4n3 n4n0
+AND n4n0 n5n3 n5n2
+AND n4n1 n5n0 n5n3
+OR n4n2 n5n1 n5n2
+NOT n4n3 n5n1
+OR n5n0 n6n0 n6n1
+OR n5n1 n6n2 n6n1
+AND n5n2 n6n0 n6n1
+OR n5n3 n6n3 n6n2
+AND n6n0 n7n2 n7n1
+OR n6n1 n7n0 n7n1
+NOT n6n2 n7n2
+AND n6n3 n7n2 n7n1
+OR n7n0 n8n2 n8n2
+NOT n7n1 n8n2
+OR n7n2 n8n2 n8n2
+AND n7n3 n8n2 n8n0
+AND n8n0 n9n0 n9n2
+AND n8n1 n9n1 n9n2
+NOT n8n2 n9n3
+OR n8n3 n9n3 n9n2
+END
+T F F F
+F T T T
+F F T F
+T T T T
+F T T F
+T T T T
+F F F F
+F F T F
+T T T F
+F T F F

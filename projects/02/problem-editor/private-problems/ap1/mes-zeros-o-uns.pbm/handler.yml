@@ -1,0 +1,4 @@
+handler: std
+source_modifier: no_main
+func_name: zeros_o_uns
+solution: Python3

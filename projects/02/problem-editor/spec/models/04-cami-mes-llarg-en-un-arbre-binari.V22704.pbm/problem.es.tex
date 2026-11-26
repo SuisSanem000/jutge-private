@@ -1,0 +1,67 @@
+\Problem{Camino más largo en un árbol binario}
+
+\Statement
+
+Implementad una función \emph{recursiva} que, dado un árbol binario de enteros, devuelva la lista de valores que se encuentran desde la raíz siguiendo el camino más largo del árbol. En caso de que haya varios caminos máximos, se deberá escoger el camino que va lo más a la izquierda posible. Esta es la cabecera:
+
+\begin{verbatim}
+/**
+ * @brief Devuelve los valores del camino más largo de un árbol binario.
+ *
+ * Un camino va desde la raíz del árbol hasta una hoja (un nodo sin hijos).
+ * Si hay más de un camino máximo, hay que devolver el que va por las ramas de más
+ * a la izquierda posible.
+ *
+ * @param t El árbol binario.
+ * @returns Los valores de los nodos del camino más largo de `t`.
+ */
+vector<int> longest_leftmost_path(BinTree<int> t);
+\end{verbatim}
+
+Un ejemplo de árbol y su salida correspondiente sería:
+
+\begin{verbatim}
+longest_leftmost_path( 3            ) => [3,3,2,1]
+                       |-- 1        
+                       |   |-- #    
+                       |   '-- 5    
+                       '-- 3        
+                           |-- 2    
+                           |   |-- 1
+                           |   '-- 7
+                           '-- #    
+\end{verbatim}
+
+Los ficheros públicos (icono del gatito) contienen:
+\smallskip
+\begin{tabular}{ll}
+ \verb|bintree.hh| & la clase \verb|BinTree| \\
+ \verb|bintree-io.hh| & la entrada/salida de \verb|BinTree| \\
+ \verb|bintree-inline.hh| & la e/s en formato "inline" \\
+ \verb|vector-io.hh| & la función \verb|print_vector| \\
+ \verb|main.cc| & el programa principal \\
+\end{tabular}
+
+También hay un \verb|Makefile| y el directorio \verb|.vscode| que tiene la configuración para compilar y depurar con VSCode.
+
+\medskip
+
+Hay que implementar \verb|longest_leftmost_path| en un \textbf{fichero \texttt{.cc} nuevo}, compilar (está preparado para poder compilar y depurar con VSCode), y finalmente \textbf{enviar solo el fichero con la función}.
+
+\Input
+
+La primera línea de la entrada describe el formato en el que se describen los árboles, "inline" o "visual". Después vienen un número arbitrario de casos. Cada caso consiste en la descripción de un árbol binario de enteros.
+
+\Output
+
+Para cada caso, la salida contiene el correspondiente camino más largo y más a la izquierda del árbol, en un formato del que ya se encarga el programa principal.
+
+\Observation
+
+Vuestra función y subfunciones que creéis deben trabajar solo con árboles. Debéis encontrar una solución \emph{recursiva} del problema.
+
+\medskip
+
+Os aconsejamos hacer este problema en dos fases: 1) hacer una solución correcta a pesar de que no sea eficiente; y 2) buscar una solución más eficiente utilizando inmersión.
+
+\SampleTwoCol

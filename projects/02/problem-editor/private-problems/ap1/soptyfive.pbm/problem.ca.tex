@@ -1,0 +1,64 @@
+\Problem{Soptyfive Wrapped}
+
+
+\Statement
+
+Soptyfive és una plataforma mundialment coneguda per escoltar música en \emph{streaming}. Tu treballes al seu Departament de Dades i, com cada any, toca oferir als usuaris un resum de les cançons i artistes que més han escoltat. Per fer el resum (també conegut com a Soptyfive Wrapped) et demanen poder veure tres mètriques:
+
+\begin{itemize}
+    \item Total de minuts escoltats per usuari (arrodonits a la baixa).
+    \item 5 artistes més escoltats per usuari.
+    \item 5 cançons més escoltades per usuari.
+\end{itemize}
+
+Considerem que l'artista més escoltat és aquell que ha estat escoltat durant més temps i considerarem la cançó més escoltada és aquella que ha estat escoltada més vegades (independentment de la seva duració).
+
+\Input
+
+Considereu que l'entrada és un únic cas per un sol usuari. Aquesta consisteix en un enter $n$ seguit d'una seqüència d'$n$ cançons, representades pel nom de la cançó, l'autor, el nombre de cops que l'usuari l'ha escoltat durant l'any, i la durada de la cançó (en segons). Per simplificar, els noms de les cançons i artistes no contenen espais. Després de les cançons poden venir entre una i tres línies amb un text indicant quina mètrica es vol veure:
+
+\begin{itemize}
+    \item \texttt{minutes} indica que s'ha de dir el nombre de minuts.
+    \item \texttt{artists} indica que s'han de dir els 5 artistes més escoltats.
+    \item \texttt{songs} indica que s'han de dir les 5 cançons més escoltades.
+\end{itemize}
+
+Podeu assumir que sempre hi ha 5 o més cançons diferents, i 5 o més artistes diferents a l'entrada.
+
+\Output
+
+La sortida del programa ha de ser fins a tres línies indicant quants minuts de música ha escoltat l'usuari, els 5 artistes més escoltats i les 5 cançons més escoltades. Seguiu el patró de la mostra, i recordeu calcular només les mètriques que es demanen.
+
+\Observation
+
+L'ordre de les 5 cançons i artistes va en funció d'una mètrica numèrica, en cas d'empat, utilitzeu l'ordre lexicogràfic.
+
+\medskip
+
+Definiu una estructura \emph{Song} per desar les cançons que es llegeixen i tres funcions per obtenir la sortida que es demana. Les funcions poden ser així:
+
+\begin{footnotesize}
+\begin{verbatim}
+def sum_minutes(songs: list[Song]) -> int:
+    """
+    Calcula quants minuts s'han escoltat en total, 
+    donada una llista de cançons.
+    """
+
+def compute_top_artists(songs: list[Song]) -> list[str]:
+    """
+    Calcula els 5 artistes més escoltats dins la llista de cançons.    
+    Precondició: hi ha 5 o més artistes diferents.
+    """
+
+def compute_top_songs(songs: list[Song]) -> list[str]:
+    """
+    Calcula les 5 cançons que més cops s'han escoltat de la llista de cançons.
+    Precondició: hi ha 5 o més cançons diferents.
+    """
+\end{verbatim}
+\end{footnotesize}
+
+El Jutge dóna puntuacions parcials indicatives per a cada funció i per als jocs de proves públics, però l'avaluació va a càrrec del professor.
+
+\SampleOneCol

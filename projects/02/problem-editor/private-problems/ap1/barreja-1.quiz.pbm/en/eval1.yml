@@ -1,0 +1,11 @@
+type: SingleChoice
+
+text: "Quant val `$a + $b * $c`?"
+
+choices:
+    -   text: "`$s1`"
+        correct: true
+    -   text: "`$s2`"
+    -   text: "`$s3`"
+    -   text: "`$s4`"
+    -   text: "`$s5`"

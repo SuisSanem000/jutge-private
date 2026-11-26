@@ -1,0 +1,106 @@
+
+\Problem{Cargols i femelles}
+
+\Statement
+
+Ens han caigut a terra $n$ cargols i $n$ femelles ($n\ge0$). Cada cargol té
+un ample diferent, cada femella té un ample diferent, i cada cargol encaixa
+únicament amb una femella.
+
+\FigureC{width=0.4\textwidth}{cargols}
+
+\medskip
+
+Volem aparellar els cargols amb les femelles però, maulauradament, l'única
+operació bàsica que podem fer és comparar un cargol amb una femella: el
+resultat pot ser que el cargol encaixa amb la femella, que el cargol és massa
+gran per la femella, o que el cargol és massa petit per la femella.
+
+\medskip
+
+Primer, penseu com resoldre aquest problema en temps $O(n\log n)$ en mitjana.
+Per a fer-ho, inspireu-vos en l'algorisme de \emph{quick sort}
+i utilitzeu aquestes ajudes:
+
+\begin{itemize}
+
+\item Donat un cargol i algunes femelles, hi haurà una femella que encaixarà i que permetrà decidir si la resta de femelles són més grans o més petites.
+
+\item Igualment, donada una femella i alguns cargols, hi haurà un cargol que encaixarà i que permetrà decidir si la resta de cargols són més grans o més petits.
+
+\end{itemize}
+
+Un cop hagueu pensat com resoldre el problema, descarregueu el programa
+\texttt{code.cc} (icona .cpp al principi de l'enunciat)
+per implementar l'acció
+
+\begin{lstlisting}
+    void ordenar(const Cargols& cargols, const Femelles& femelles,
+        Cargols& cargols_ordenats, Femelles& femelles_ordenades);
+\end{lstlisting}
+
+que, donat un vector d'$n$ cargols i  un vector d'$n$ femelles (cada cargol
+amb un ample diferent, cada femella amb un ample diferent, i cada cargol
+encaixant únicament amb una femella), retorni un vector amb els cargols
+ordenats i un vector amb les femelles ordenades (en ordre creixent ambdós). Fixeu-vos que @cargols_ordenats@
+i @femelles_ordenades@ són paràmetres de sortida (no d'entrada/sortida)
+i que ja teniu el cas base escrit.
+
+\medskip
+
+La vostra acció @ordenar()@ ha d'utilitzar la funció
+
+\begin{lstlisting}
+    int compara(Cargol cargol, Femella femella);
+\end{lstlisting}
+
+que compara un cargol amb una femella: si el cargol és més estret que la
+femella, retorna~$-1$; si el cargol encaixa amb la femella, retorna 0; i  si el
+cargol és més ample que la femella, retorna 1.
+
+\medskip
+
+El tipus @Cargol@ i el tipus @Femella@ tenen un sol atribut que és el seu @ample@, però
+\textbf{heu de consi\-derar que aquest atribut és privat}: no el podeu consultar
+ni modificar en el \emph{vostre} codi (per senzillesa, el codi que us donem sí que l'utilitza).
+
+\medskip
+
+El programa principal (ja escrit), s'encarrega de llegir els vectors de cargols i femelles,
+cridar a @ordenar()@ i escriure els vectors ordenats.
+
+\Input
+
+L'entrada té diferents casos.
+Cada cas comença amb el nombre $n$ de cargols i femelles i després venen els
+$n$ amples dels cargols i els $n$ amples de les femelles. Cada cargol té un ample diferent, cada
+femella té un ample diferent, i cada cargol encaixa únicament amb una femella.
+Els amples dels cargols i de les femelles venen permutats a l'atzar.
+
+\Output
+
+La sortida és el vector de cargols i el vector de femelles ordenats (per tant, dos cops
+la mateixa informació) per a cada cas.
+
+
+\subsection*{Important:}
+
+\begin{itemize}
+
+\item El vostre programa ha de començar amb un comentari que expliqui l'estratègia
+del funcionament del vostre algorisme.
+
+\item No podeu comparar cargols entre ells ni femelles entre elles.
+Només podeu comparar cargols amb femelles.
+
+\item Les funcions donades no es poden modificar. Podeu afegir noves funcions si ho considereu
+adient.
+
+\item No podeu utilitzar l'atribut @ample@ dels cargols ni de les femelles.
+
+\item L'algorisme trivial $O(n^2)$ no és una solució acceptable.
+
+\end{itemize}
+
+
+\Sample

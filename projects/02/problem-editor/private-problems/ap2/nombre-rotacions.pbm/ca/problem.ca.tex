@@ -1,0 +1,41 @@
+
+\Problem{Nombre de rotacions (1)}
+
+\Statement
+
+Donat un vector (no buit) circularment ordenat d'enters,
+es vol trobar el nombre de cops que s'ha rotat.
+Assumiu que no hi ha duplicats al vector
+i que la rotació és en sentit antihorari.
+
+\medskip
+
+Per exemple,
+\begin{itemize*}
+\item {} [8, 9, 10, 2, 5, 6] s'ha rotat tres cops,
+\item {} [9, 10, 2, 5, 6, 8] s'ha rotat dos cops,
+\item {} [4, 0, 1, 2, 3] s'ha rotat un cop, i
+\item {} [2, 5, 8, 9, 12] s'ha rotat zero cops.
+\end{itemize*}
+
+\medskip
+
+Resoleu aquest problema \emph{iterativament} en \emph{temps logarítmic},
+usant aquesta capçalera per C++:
+
+\begin{lstlisting}[language=C++,morekeywords={string,vector}]
+    int number_of_rotations (const vector<int>& v);
+\end{lstlisting}
+
+O aquesta per Python:
+
+\begin{lstlisting}[language=Python]
+    number_of_rotations(v: list[int]) -> int
+\end{lstlisting}
+
+
+\medskip
+
+Doneu l'invariant del bucle en un comentari a l'inici del bucle de la funció.
+
+\ObservationNoMain

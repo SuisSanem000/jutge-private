@@ -1,0 +1,38 @@
+
+\Problem{Covering with intervals}
+
+\Statement
+
+Given a natural $k$ and several numbers $x_1, \ldots, x_n$,
+we want to find the smallest possible set
+of closed intervals of length $k$ that cover those numbers.
+In other words, we must find a set of intervals
+$\{[y_1, y_1 + k], \dots, [y_m, y_m + k]\}$
+such that
+\begin{itemize}
+\item
+for every $x_i$,
+there exists some $j$ such that $x_i \in [y_j, y_j + k]$;
+\item
+$m$ is minimum.
+\end{itemize}
+For instance, if $k=10$ and the $x_i$'s are $14, 19, 23$ and $27$,
+a possible solution is
+$\{[12, 22], [1.8, 2.8]\}$,
+since every $x_i$ belongs to (at least) one of the two intervals,
+and it is not possible to cover the four numbers with a single interval.
+
+
+\Input
+
+Input consists of several cases,
+each of which starts with $k$, followed by $n$, followed by $n$ different numbers.
+All numbers in the input are integers. Assume $1 \le k, n \le 10^5$.
+
+
+\Output
+
+For every case, print the minimum number of closed intervals of length
+$k$ that cover the given numbers.
+
+\Sample

@@ -1,0 +1,76 @@
+
+type: FillIn
+
+text: |
+
+    Avalueu les expressions de la dreta.
+
+
+context: |
+
+    `2 ** 3 ** 2` = R1
+
+    `-17 // 4` = R2
+    
+    `-(17 // 4)` = R2b
+    
+    `-17 % 4` = R3
+    
+    `-(17 % 4)` = R3b
+    
+    `(5 + 2 < 8) == (3 + 2 == 4)` = R4
+    
+    `24 // 4 // 4` = R5
+
+
+items:
+
+    R1:
+        maxlength: 10
+        placeholder: "?"
+        correct: 512
+        ignorecase: false
+        trim: true
+
+    R2:
+        maxlength: 10
+        placeholder: "?"
+        correct: "-5"
+        ignorecase: false
+        trim: true
+        
+    R2b:
+        maxlength: 10
+        placeholder: "?"
+        correct: "-4"
+        ignorecase: false
+        trim: true
+        
+    R3:
+        maxlength: 10
+        placeholder: "?"
+        correct: "3"
+        ignorecase: false
+        trim: true
+        
+    R3b:
+        maxlength: 10
+        placeholder: "?"
+        correct: "-1"
+        ignorecase: false
+        trim: true
+        
+    R4:
+        maxlength: 10
+        placeholder: "?"
+        correct: "False"
+        ignorecase: false
+        trim: true
+        
+    R5:
+        maxlength: 10
+        placeholder: "?"
+        correct: 1
+        ignorecase: false
+        trim: true
+     

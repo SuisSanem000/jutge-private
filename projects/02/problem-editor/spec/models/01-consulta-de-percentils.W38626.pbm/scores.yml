@@ -1,0 +1,6 @@
+- part: Correctesa
+  prefix: private-correctesa-
+  points: 5
+- part: Eficiència
+  prefix: private-
+  points: 5

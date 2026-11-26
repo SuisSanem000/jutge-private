@@ -1,0 +1,42 @@
+
+\Problem{Bi-increasing vector}
+
+\Statement
+
+In this problem,
+we say that a vector with $n$ integer numbers $v[0..n-1]$
+is \emph{bi-increasing}
+if $n \ge 2$,
+$v[0] > v[n-1]$,
+and there exists an index $j$ between $0$ and $n-2$ such that:
+\begin{itemize}
+\item $v[0] \le \ldots \le v[j-1] \le v[j]$,
+\item $v[j+1] \le v[j+2] \le \ldots \le v[n-1]$.
+\end{itemize}
+
+\smallskip
+
+For instance, the vector
+$[12, 12, 15, 20, 1, 3, 3, 5, 9]$
+is bi-increasing (with $j = 3$).
+
+\bigskip
+
+Implement an \emph{efficient} function
+
+\begin{lstlisting}
+    bool search(int x, const vector<int>& v);
+\end{lstlisting}
+
+such that, given an integer number $x$ and a bi-increasing vector $v$,
+returns if $x$ is in $v$ or not.
+You can use and implement auxiliary functions if you need them.
+
+
+\Precondition
+
+The vector $v$ is bi-increasing.
+
+
+\ObservationNoMain
+

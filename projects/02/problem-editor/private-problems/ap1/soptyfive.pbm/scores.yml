@@ -1,0 +1,12 @@
+-   part: sample
+    prefix: sample
+    points: 10
+-   part: sum_minutes
+    prefix: easy
+    points: 20
+-   part : compute_top_artists
+    prefix: normal
+    points: 30
+-   part: compute_top_songs
+    prefix: hard
+    points: 40

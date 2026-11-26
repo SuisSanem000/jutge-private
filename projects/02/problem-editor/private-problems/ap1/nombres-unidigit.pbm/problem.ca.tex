@@ -1,0 +1,22 @@
+\Problem{Nombres unidígit}
+
+\Statement
+
+Un nombre $n$ es diu que és \emph{unidígit} en base $b$ si tots els dígits de la seva representació tenen el mateix valor, és a dir, es pot representar com
+\[ n = d\cdot b^k + d\cdot b^{k-1} + \cdots + d\cdot b + d = d \cdot (b^k + b^{k-1} + \cdots + b + 1)\]
+per algun valor de $k$ i amb $d < b$.
+
+\medskip
+
+Per exemple, 777 és unidígit en base 10, 15 és unidígit en base 2 (representació binària: 1111) i 2324517 és unidígit en base 56, atès que
+\[ 2324517 = 13 \cdot (56^3 + 56^2 + 56 + 1).\]
+
+\medskip
+
+Observacions: tots els nombres $0,\ldots,b-1$ són unidígit en base $b$ (i només tenen un dígit) i tot nombre $n\geq 3$ es pot representar en base $n-1$ com a 11.
+
+\medskip
+
+Feu un programa que, donada una seqüència de nombres naturals, per a cada nombre escrigui la base $b\geq 2$ més petita amb la que es pot representar com un nombre unidígit i el dígit $d$ d'aquella representació.
+
+\SampleTwoCol

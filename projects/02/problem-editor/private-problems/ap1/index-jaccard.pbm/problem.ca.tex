@@ -1,0 +1,48 @@
+
+\Problem{Índex de Jaccard}
+
+\Statement
+
+L'\emph{índex de Jaccard} és
+és una mesura de semblança i diversitat de dos conjunts.
+Concretament, l'Índex de Jaccard $J(A,B)$ de $A$ i $B$
+és \[ J(A,B) = \frac{\mid A\cap B\mid }{\mid A\cup B\mid }. \]
+
+Per exemple, l'índex de Jaccard dels conjunts
+$\{1,2,3\}$ i $\{3,4\}$ és $0.25$.
+
+\medskip
+
+Escriviu un programa que calculi els índexs de Jaccard de diferents
+parells de conjunts d'enters.
+
+\Input
+
+L'entrada conté diferents casos.
+Cada cas descriu dos conjunts $A$ i $B$.
+El primer conjunt $A$ comença amb la seva cardinalitat $m \geq 0$
+i després venen els seus $m$ enters en ordre estrictament creixent.
+El segon conjunt $B$ comença amb la seva cardinalitat $m \geq 0$
+i després venen els seus $n$ enters en ordre estrictament creixent.
+Per a cada cas, $m+n\ge1$.
+
+\Output
+
+Per a cada cas de l'entrada, escriviu els índexs de Jaccard dels
+seus dos conjunts en una línia diferent amb tres dígits de precisió.
+
+\Hint
+
+\begin{itemize}
+
+\item Un xic de teoria de conjunts us pot estalviar un valuós
+temps de programació.
+
+\item Useu @cout.setf(ios::fixed); cout.precision(3);@ al principi del
+vostre programa per escriure nombres reals amb tres dígits de precisió.
+
+\end{itemize}
+\smallskip
+
+\Sample
+

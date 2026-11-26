@@ -1,0 +1,19 @@
+
+\Problem{Semiprimalitat}
+
+\Statement
+
+En matemàtiques, un natural és \emph{semiprimer} si és el
+producte de dos nombres primers. Els primers nombres semiprimers són
+4($= 2\times2$), 6($= 3\times2$), 9($= 3\times3$), 10($= 2\times5$), 14($= 2\times7$).
+
+\medskip
+
+Escriviu una funció
+
+\lstset{language=Python}
+\begin{lstlisting}
+    def semiprimalitat(n: int) -> Optional[tuple[int, int]]: ...
+\end{lstlisting}
+
+que, donat un natural $n$, retorni dos nombres primers $p$ i $q$ tals que $pq=n$ amb $p \le q$ si $n$ és semiprimer, i retorni \texttt{None} altrament.

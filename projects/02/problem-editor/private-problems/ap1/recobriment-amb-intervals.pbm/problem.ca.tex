@@ -1,0 +1,38 @@
+
+\Problem{Recobriment amb intervals}
+
+\Statement
+
+Donats un natural $k$ i diversos nombres $x_1, \ldots, x_n$,
+es vol trobar el conjunt més petit possible
+d'intervals tancats de mida $k$ que cobreixin aquests nombres.
+En altres paraules, cal trobar un conjunt d'intervals
+$\{[y_1, y_1 + k], \dots, [y_m, y_m + k]\}$
+tal que
+\begin{itemize}
+\item
+per a cada $x_i$,
+existeixi alguna $j$ tal que $x_i \in [y_j, y_j + k]$;
+\item
+la $m$ sigui mínima.
+\end{itemize}
+Per exemple, si $k=10$ i les $x_i$'s són $14, 19, 23$ i $27$,
+una possible solució és
+$\{[12, 22], [18, 28]\}$,
+ja que cada $x_i$ es troba (com a mínim) dins d'un dels dos intervals,
+i no és possible cobrir els quatre nombres amb un sol interval.
+
+
+\Input
+
+L'entrada consisteix en diversos casos, cadascun dels quals comença
+amb $k$, seguit $n$, seguits de $n$ nombres diferents. Tots els
+nombres de l'entrada són enters. Assumiu $1 \le k, n \le 10^5$.
+
+
+\Output
+
+Per a cada cas, escriviu el nombre mínim d'intervals tancats de mida
+$k$ que cobreixin els nombres donats.
+
+\Sample

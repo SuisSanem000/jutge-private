@@ -1,0 +1,4 @@
+solution: Python3
+handler: std
+source_modifier: none
+checker: loosy

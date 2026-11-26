@@ -1,0 +1,65 @@
+\Problem{Generadors de Recamán}
+
+\UsePython
+
+\Statement
+
+La seqüència de Recamán amb paràmetre $k$ va ser descrita pel matemàtic colombià Bernardo Recamán Santos i és definada així:
+
+\[
+a_n = \begin{cases}
+    0 & \text{ si $n=0$,}\\
+    a_{n-1}-n-k & \text{ si $n>0$ i $a_{n-1}-n-k>0$ i $a_{n-1}-n-k$ no ha
+aparagut abans,}\\
+    a_{n-1}+n+k & \text{ altrament.}\\
+\end{cases}
+\]
+
+\smallskip
+
+Així, els deu primers termes de la seqüència de Recamán amb $k=0$ són [0, 1, 3, 6, 2, 7, 13, 20, 12, 21]
+i els deu primers termes de la seqüència de Recamán amb $k=2$ són [0, 3, 7, 2, 8, 1, 9, 18, 28, 17].
+
+\begin{enumerate}
+
+    \item Escriviu una funció
+
+    \begin{lstlisting}
+    def recaman(k: int) -> Iterator[int]
+    \end{lstlisting}\vspace*{-6mm}
+
+    que, donat un natural $k$, generi la seqüència de Recamán amb paràmetre $k$.
+
+    \item Escriviu una funció
+
+    \begin{lstlisting}
+    def recaman_from(k: int, n: int) -> Iterator[int]
+    \end{lstlisting}\vspace*{-6mm}
+
+    que, donat uns naturals $k$ i $n$, generi la seqüència de Recamán amb paràmetre $k$ començant pel terme $n$-èsim.
+
+    \item Escriviu una funció
+
+    \begin{lstlisting}
+    def recaman_first_completion(k: int, x: int) -> int
+    \end{lstlisting}\vspace*{-6mm}
+
+    que, donat uns naturals $k$ i $x$, retorni el primer $n$ tal que $\{a_0,...,a_n\}$ conté tots els naturals fins a $x$ ($\{0,...,x\}$). Assumiu que aquest valor existeix, malgrat que aquest fet no ha estat encara mai demostrat.
+
+
+\end{enumerate}
+
+\Observations
+
+\begin{itemize}
+
+\item Implementeu totes les funcions de forma senzilla, clara i concisa aprofitant Python.
+
+\item Descarregueu-vos el fitxer \texttt{code.py} i anomeneu-lo \texttt{recaman.py}. El programa principal i l'esquelet de les funcions ja se us dóna implementat.
+
+\item El Jutge dóna puntuacions parcials per a cada apartat i pel joc de proves públic, però l'avaluació va a càrrec del professor.
+
+\end{itemize}
+
+
+\Sample

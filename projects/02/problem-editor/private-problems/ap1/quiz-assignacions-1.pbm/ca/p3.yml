@@ -1,0 +1,27 @@
+
+type: FillIn
+
+text: |
+
+    Considereu la instrucció següent:
+
+    ```python
+    peixos = peixos - 1
+    ```
+
+context: |
+
+    Sabent que el valor final de `peixos` és `$peixos`,
+    quin era el seu valor inicial?
+
+    R1
+
+    
+items:
+
+    R1:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$inicial"
+        ignorecase: true
+        trim: true

@@ -1,0 +1,45 @@
+
+\Problem{Ordenació per Selecció amb Iteradors}
+
+\Statement
+
+L'algorisme d'\textbf{ordenació per selecció} consisteix en, de forma iterativa, trobar l'element mínim de la part no ordenada i col·locar-lo al principi d'aquesta part. Concretament:
+
+\begin{enumerate}
+\item Es busca l'element mínim del rang \verb|[begin, end)| i s'intercanvia amb l'element apuntat per \verb|begin|.
+\item Seguidament, es busca el mínim del rang que va des del següent a \verb|begin| fins a \verb|end|, i s'intercanvia amb el segon element.
+\item Es repeteix fins que queda un sol element per processar.
+\end{enumerate}
+
+Fes una funció amb la capçalera
+\begin{verbatim}
+/**
+ * @brief Ordena un rang d'una llista usant selecció.
+ *
+ * @param begin Iterador al principi del rang.
+ * @param end Iterador al final del rang (no inclòs).
+ * @pre begin i end delimiten un rang vàlid d'una llista.
+ * @post El rang [begin, end) queda ordenat ascendentment.
+ */
+void ordenacio_seleccio(list<int>::iterator begin,
+                        list<int>::iterator end);
+\end{verbatim}
+que ordeni el rang \verb|[begin, end)| d'una llista d'enters usant l'algorisme d'ordenació per selecció.
+
+Per exemple, si la llista conté \verb|5 3 1 4 2|, després de cridar la funció la llista ha de contenir \verb|1 2 3 4 5|.
+
+\Input
+
+L'entrada consisteix en una seqüència d'enters separats per espais, que es llegeix fins al final de l'entrada.
+
+\Output
+
+La sortida és una línia amb els elements de la llista ordenada ascendentment, separats per espais.
+
+\Observation
+
+Als fitxers públics (icona del gatet) trobaràs: \verb|main.cc| (el programa principal, amb l'entrada/sortida feta), \verb|ordenacio.cc| (a on has d'implementar la funció) i un \verb|Makefile|.
+
+Has d'implementar \verb|ordenacio_seleccio| al fitxer \verb|ordenacio.cc| i enviar \textbf{només} aquest fitxer.
+
+\SampleTwoCol

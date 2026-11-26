@@ -1,22 +1,16 @@
-# Ignore entire resources folder (managed solely by Simin)
-resources/
-resources/**
-
-# Ignore problem-editor repositories anywhere
-**/problem-editor/
-problem-editor/
-
-# Ignore all cloned Jutge repositories
+# Ignore local-only folders (private-local and cloned repos inside it)
+resources/private-local/
+private-local/
+**/private-local/
 jutge_repos/
 **/jutge_repos/
 
-# Ignore OS and editor configuration
+# Ignore Jutge problem.yml files (contain server email + passcode credentials)
+**/problem.yml
+
+# Ignore OS, editor, and environment files
 .vscode/
 .DS_Store
 **/._*
-
-# Ignore local personal notes, credentials, and environment files
-private-local/
-**/private-local/
 .env
 .env.*

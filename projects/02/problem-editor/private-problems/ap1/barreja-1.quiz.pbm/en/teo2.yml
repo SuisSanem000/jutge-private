@@ -1,0 +1,44 @@
+type: Matching
+
+text: |
+
+    Indica si els paràmetres son reals o formals.
+    ```cpp
+    #include <iostream>
+    using namespace std;
+
+    int foo(int n, int m) {
+        if (n > m) return n;
+        else return m;
+    }
+
+    int bar(int a, int b, int c) {
+        return foo(a-1, foo(b+1, c-2));
+    }
+
+    int main() {
+        int x, y, z;
+        cin >> x >> y >> z;
+        cout << bar(x+1, y-1, z+2) << endl;
+    }
+    ```
+
+partial_answer: true
+
+labels:
+    - Paràmetre
+    - Tipus
+
+left:
+    - "$a"
+    - "$b"
+    - "$c"
+    - "$d"
+    - "$e"
+
+right:
+    - Real
+    - Real
+    - Real
+    - Formal
+    - Formal

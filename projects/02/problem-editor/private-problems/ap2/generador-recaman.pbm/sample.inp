@@ -1,0 +1,9 @@
+recaman 0 10
+recaman 2 10
+recaman_from 0 3 10
+recaman_from 2 3 10
+recaman_first_completion 0 0
+recaman_first_completion 0 1
+recaman_first_completion 0 2
+recaman_first_completion 0 3
+recaman_first_completion 0 4

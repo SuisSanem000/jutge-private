@@ -1,0 +1,16 @@
+
+type: Ordering
+
+text: |
+    Sabent que els valors inicials de `x` i `y` són `x = $x` i `y = $y`, reordeneu les instruccions per tal que el programa escrigui `$y $x`.
+
+label: Programa
+
+items:
+    - z = x
+    - x = y
+    - y = z
+    - print(x‚ y)
+    - x = z
+
+nota: la coma del print no és una coma de debò, és un simbol unicode que s'hi assembla perquè amb una coma de debò peta.

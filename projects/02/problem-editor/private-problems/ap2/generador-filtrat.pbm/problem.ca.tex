@@ -1,0 +1,39 @@
+\Problem{Filtre}
+
+\UsePython
+
+\Statement
+
+Donada una seqüència de paraules i un enter $k\ge 1$, cal generar, en l'ordre en què es recorre la seqüència, només aquelles aparicions de cada paraula quan apareix cada $k$ cops. 
+
+\newcommand{\ratlla}[1]{\underline{#1}}
+
+\medskip
+Per exemple, si $k=2$, amb la seqüència\smallskip
+
+~{\qquad}\textit{a a b a a x a x a b a x b b a}\smallskip
+
+obtenim la seqüència\smallskip
+
+~{\qquad}\textit{a a x a b b a}\smallskip
+
+perquè només els elements en negreta \smallskip
+
+~{\qquad}\textit{a \textbf{a} b a \textbf{a} x a \textbf{x a b} a x b \textbf{b a}}\smallskip
+
+han de generar-se.
+
+
+\bigskip
+
+Per a fer-ho, el vostre programa ha d'implementar el generador
+
+\begin{lstlisting}
+    def filtre(paraules: Iterable[str], k: int) -> Iterator[str]: ...
+\end{lstlisting}
+
+\medskip
+
+Descarregueu-vos el fitxer \textit{code.py}. El programa principal i l'esquelet de la funció ja se us dóna implementat.
+
+\Sample

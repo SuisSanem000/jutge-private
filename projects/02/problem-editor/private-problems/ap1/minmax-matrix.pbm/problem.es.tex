@@ -1,0 +1,26 @@
+\Problem{Min-Max Matrix}
+
+\UsePython
+
+\Statement
+
+Dada una matriz cuadrada $M$ de $ n\times n$ (con $n\geq 1$) de elementos enteros,
+su matriz minMax es la matriz $mM$ de tamaño $n\times 2$ tal que para todo $i$ (con $0\leq i <n$),
+$mM[i][0]$ es el elemento mínimo de la fila $y$ de la matriz $M$ y $[i][1]$ es
+el elemento máximo de la columna $i$ de la matriz $M$.
+
+\medskip
+
+Por ejemplo, si $M = [[1,2,3], [3,1,2], [2,3,1]]$, $mM = [[1,3], [1,3], [1,3]]$
+
+\medskip
+
+Implementad la función @min_max(M)@ que dada la matriz cuadrada $M$
+devuelve su matriz minMax.
+
+\medskip
+
+Si os conviene, se pueden utilizar las funciones @min()@ y @max()@ de Python,
+que dada una lista, devuelven su elemento mínimo y máximo respectivamente.
+
+\SampleSession

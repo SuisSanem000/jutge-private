@@ -1,0 +1,40 @@
+\Problem{Escriptura d'arbres en graelles}
+
+\Statement
+
+Sigui un arbre binari on cada node guarda una lletra.
+Volem dibuixar aquest arbre binari posant els nodes dins d'una graella (matriu).
+Aquesta graella ha de tenir tantes files com nivells de l'arbre. Tindrà tantes
+columnes com nodes de l'arbre.
+
+\medskip
+
+Condicions:
+
+\begin{itemize}
+
+    \item La fila de cada node ha de correspondre al seu nivell.
+
+    \item Si un node està en una columna, tots els nodes de l'arbre esquerre han d'estar en columnes inferiors
+    i tots els nodes de l'arbre dret han d'estar en columnes superiors.
+
+    \item Les posicions lliures de nodes de la graella contenen un punt.
+
+\end{itemize}
+
+
+
+\Input
+
+L’entrada comença amb un natural $n$, el nombre d’arbres que cal tractar.
+Després apareix la descripció dels $n$ arbres, corresponent al seu recorregut en
+preordre, tot indicant els arbres buits marcats amb guions.
+
+
+\Output
+
+Cal dibuixar cada arbre de l'entrada dins de la seva graella, deixant una línia
+en blanc darrera de cada graella. Fixeu-vos en el cas de l'arbre buit.
+
+
+\SampleTwoCol

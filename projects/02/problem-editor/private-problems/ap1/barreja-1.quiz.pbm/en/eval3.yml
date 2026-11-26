@@ -1,0 +1,11 @@
+type: SingleChoice
+
+text: "Quant val `not ($a * $b > 9) != $c or ($c != $d and ($e / $b >= $f))`?"
+
+shuffle: false
+
+choices:
+    -   text: "`true`"
+        correct: $s1
+    -   text: "`false`" 
+        correct: $s2

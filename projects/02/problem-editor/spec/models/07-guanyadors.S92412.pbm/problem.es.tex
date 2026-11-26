@@ -1,0 +1,38 @@
+
+\Problem{Ganadores}
+
+\Statement
+
+Suponiendo la declaración de la tupla \verb|Player| siguiente
+\begin{verbatim}
+struct Player { 
+    string name; 
+    int score;
+};
+\end{verbatim}
+haz una función con la cabecera
+\begin{verbatim}
+vector<string> winners(vector<Player>::iterator begin,
+                       vector<Player>::iterator end);
+\end{verbatim}
+que devuelva un vector con los jugadores con la puntuación máxima.
+Ten en cuenta que puede haber varios.
+
+\Input
+
+La función recibe dos iteradores indicando principio y final de una subsecuencia de un vector de jugadores. Esta subsecuencia puede tener cualquier
+longitud, incluso estar vacía. La subsecuencia también podría ser el vector entero.
+
+\Output
+
+La función devuelve un vector con los nombres de los jugadores que tienen
+a la vez la puntuación máxima en el mismo orden que se encuentran en el vector
+original.
+
+\Observation
+
+En los archivos públicos (icono del gatito) encontrarás: \verb|main.cc|, \verb|player.hh| (declaración de la tupla \verb|Player|), \verb|guanyadors.cc| (donde debes implementar la función). También hay un \verb|Makefile| y el directorio \verb|.vscode| que tiene la configuración para compilar y depurar con VSCode.
+
+Debes implementar \verb|winners| en el archivo \verb|guanyadors.cc|, compilar (está preparado para poder compilar y depurar con VSCode), y enviar solo el archivo \verb|guanyadors.cc|.
+\SampleTwoCol
+

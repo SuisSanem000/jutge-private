@@ -1,0 +1,6 @@
+-   part: "Correctesa: arbres d'alçada <= 4"
+    prefix: private-correctesa-
+    points: 5
+-   part: "Eficiència: Arbre d'alçada 10000"
+    prefix: private-
+    points: 5

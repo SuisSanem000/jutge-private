@@ -1,0 +1,40 @@
+\Problem{Primers bessons}
+
+
+\Statement
+
+Els nombres primers bessons són aquelles parelles de nombres primers que difereixen en 2. És a dir, $p$ i $q$ (amb $p < q$) són primers bessons si $p$ i $q$ són primers i $q = p + 2$. Excepte pel cas del 2 i el 3, aquesta és la mínima diferència que pot haver-hi entre dos primers. Els primers exemples de la llista de primers bessons són les parelles $(3, 5)$, $(5,7)$ i $(11,13)$. 
+
+
+\medskip
+
+El terme va ser utilitzat per primera vegada pel matemàtic alemany Paul Stäckel qui, a finals del segle XIX, va fer alguns càlculs numèrics relacionats amb aquests nombres i altres qüestions connexes. No se sap si existeixen infinits nombres primers bessons. La conjectura dels nombres primers bessons que afirma que, efectivament, hi ha infinits primers bessons, encara no ha estat demostrada [Wikipedia].
+
+\medskip
+
+Escriviu un programa que donat un nombre natural $n$ calculi l'$n$-èsim parell de nombres primers bessons. Per exemple, si $n = 3$, el programa ha de calcular els primers bessons 11 i 13.
+
+\medskip
+
+El vostre programa ha de definir i usar la funció 
+@nth_twin_primes(n: int) -> tuple[int, int]@
+que retorna l'$n$-èsim parell de nombres bessons per $n \ge 1$. 
+El vostre programa també ha de definir i usar la funció 
+@are_primes(m: int, n: int) -> bool@,
+que indica si $m$ i $n$ són nombres primers, per $m,n\ge 2$.
+
+
+\Input
+
+L'entrada consisteix en una serie d'enters estrictament positius $n$. 
+
+\Output
+
+Per cada $n$ cal escriure una línia els dos nombres primers bessons que formen el parell, separats per un espai. Cada parell han d'anar en ordre creixent.
+
+\Sample
+
+
+\Observation
+
+Com que molts parells de nombres seran compostos, no és bona idea determinar si ambdós son primers per separat a la funció @are_primes@.

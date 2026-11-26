@@ -1,0 +1,4 @@
+handler: std
+source_modifier: no_main
+func_name: factor_mes_petit
+solution: Python3

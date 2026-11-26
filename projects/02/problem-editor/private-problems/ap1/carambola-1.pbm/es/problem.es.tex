@@ -1,0 +1,85 @@
+\Problem{Carambola (1)}
+
+\Statement
+% de $1.5 \times 3$ metres  
+
+El billar francés o \emph{carambola} es una de las modalidades de juegos de billar existentes. En este ejercicio queremos simular una versión simple de este juego. 
+
+Tenemos un jugador y dos bolas (blanca y roja) sobre un tablero tapizado que no tiene agujeros en las esquinas. Se coloca la bola roja en el tablero sin que toque ninguna banda, y la bola blanca en una de las cuatro esquinas (mirad la figura).
+
+La bola blanca inicia el recorrido por la diagonal y rebota (siguiendo la otra diagonal) cuando choca con una banda.  Si llega a una esquina (donde solo hay una diagonal) se para.
+
+\FigureC{width=8cm}{Rebots1} 
+
+\ \\ 
+Para la simulación asumiremos que tenemos un tablero de dimensiones $n\times m$ y que el recorrido de la  bola blanca acaba cuando:
+
+\begin{enumerate}
+    \item choca con una esquina del tablero, 
+    \item choca con la bola roja,  
+    \item choca con cuatro bandas.
+\end{enumerate}
+
+El jugador hace \emph{carambola} si el recorrido de la bola blanca acaba encontrando la bola roja después de haber tocado exactamente tres bandas. 
+
+\smallskip
+Haced un programa que lea la configuración de un tablero de billar francés y determine si el jugador hace o no carambola. El programa también ha de enumerar las posiciones en que la bola choca con las bandas del tablero y mostrar la configuración final. 
+
+%\newpage
+
+%\ \\ 
+Vuestro programa ha de utilizar las siguientes definiciones:
+
+\begin{quote}
+
+\textbf{typedef} vector$<$ vector $<$\textbf{char}$>$ $>$ Tablero;
+
+\textbf{struct}  Bola $\{$ 
+
+\hspace{10pt} \textbf{int} x\_ant, y\_ant;\hspace{10pt} // Posicion anterior de la bola
+
+\hspace{10pt} \textbf{int} x\_act, y\_act;\hspace{11pt} // Posicion actual de la bola
+
+\hspace{10pt} \textbf{int} x\_sig, y\_sig;\hspace{10pt} // Posicion siguiente de la bola
+
+$\}$;
+
+\end{quote}
+
+%\ \\ 
+y también ha de definir, implementar y utilizar la función:
+
+\begin{quote}
+ $void$ mover\_hasta\_chocar ($Tablero$\& t, $Bola$\& b); 
+\end{quote}
+
+que, dados un tablero $t$ y la bola blanca $b$,  
+mueve la bola $b$ sobre $t$ en la dirección y sentido definidos por su posición actual y siguiente. La bola se ha de mover hasta chocar con la bola roja (si lo hace) o hasta chocar con una banda o esquina. Cuando acaba la ejecución de la función, $b$  ha de tener como posición actual la posición donde se para, y la posición previa y siguiente han de ser las correctas. 
+   
+Hay que tener en cuenta que, cuando la bola se mueve a una esquina, la posición siguiente ha de ser la misma que la posición actual puesto que la bola no saldrá de esta posición. Además, las posiciones recorridas por la bola han de quedar marcadas en $t$. 
+
+
+%    - xoca_cantonada => xoca_banda
+%    - pot ser xoca_bola i xoca_banda (i/o xoca_cantonada) true al mateix temps 
+
+%\newpage
+
+\Input
+
+La entrada consiste en diversas descripciones iniciales de tableros de billar francés. Cada una está formada por dos enteros $n, m \geq 2$ que indican el número de files i columnas de la matriz que representa el tablero, respectivamente. A continuación viene una secuencia de cuatro enteros $x_1, y_1, x_2, y_2$ que describen las posiciones iniciales $(x_1, y_1)$ y $(x_2, y_2)$ de las dos bolas. 
+
+\ \\
+La bola en la posición $(x_1, y_1)$ es la bola blanca y  siempre está colocada en una de las esquinas del tablero (es decir, en las posiciones $(0,0)$, 
+$(0, m - 1)$, $(n - 1, 0)$ o $(n - 1, m - 1)$). La bola en la posición $(x_2,y_2)$ es la bola roja y siempre está colocada en la parte interior del tablero, sin tocar las bandas (es decir, $0<x_2<n-1$ y $0<y_2<m-1$).
+
+
+\Output
+
+Para cada tablero de entrada, escribid las coordenadea de las posiciones donde la bola jugadora choca con las bandas del tablero. Indicad también si hace carambola o no y mostrad la trayectoria descrita. Seguid el formato especificado en los ejemplos. 
+
+%\ \\
+\medskip
+
+
+
+\Sample

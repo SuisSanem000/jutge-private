@@ -1,0 +1,66 @@
+\Problem{Cheapest Routes}
+\Statement
+We have collected abundant
+information about the local roads and accommodations in a region that
+we will traverse. Our plan is to go from city $A$ to city $B$ and
+we would like to spend the least possible money. For each road
+connecting two cities $u$ and $v$ we know the cost $\omega(u,v)=\omega(v,u)$
+to travel
+along that road (tolls, fuel, meals during the journey, \ldots). Every
+time we go from a city $u$ to one of its neighbors $v$ we must stop at
+$v$ and spend there one night; we know the cost $\omega'(v)$
+of stopping at each city $v$ (the cost added by $A$ and $B$ to
+our route is 0, since they
+are our initial and final points).
+All costs, of vertices and of edges, are positive. Thus the cost
+of the route 
+\[
+P = [A, v_1, \ldots, v_n, B]
+\]
+is
+\[
+  \text{cost}(P) = \omega(A,v_1) + \omega(v_1,v_2) + \ldots + \omega(v_n,B) 
+  + \omega'(v_1)+\ldots+\omega'(v_n).
+\]
+
+Write a program in C++ which, given an undirected weighted graph with
+positive
+costs at the vertices and at the edges, and two vertices $A$ and $B$,
+returns the cost of the cheapest route to go from $A$ to $B$, or an
+indication that not such route exists.
+%% If several different paths
+%% between $A$ and $B$ have minimal cost, return the one with less edges;
+%% if there are ties, return the one for which the sequence of vertices
+%% is lexicographically smallest.
+
+\Input
+All data in the input are positive integers.
+The input starts with two integers $2{\le}n{\le}10000$ and $m$, $0{\le}m\le{20n}$.
+After that, a sequence of positive
+integers $\omega'(0), \ldots, \omega'(n-1)$ of
+the weights $\omega'(u)$ of the
+$n$ vertices of the graph.  Then the input contains
+a sequence of the $m$ edges in the graph
+as triplets of the form ${\langle}u,v,\omega(u,v)\rangle$. Vertices
+$u$ and $v$ are integers 
+in $\{0,\ldots,n-1\}$ and the weights $\omega(u,v)$ are positive integers.
+No weight, of edges or vertices, is larger than 100000.
+
+You can assume that there are no two different edges connecting
+the same pair of vertices nor any edge connecting a vertex to itself.
+Finally, there is
+a sequence of pairs ${\langle}A_i, B_i\rangle$, with each $A_i$ and $B_i$
+denoting vertices of the graph ($0{\le}A_i,B_i<n$).
+
+\Output
+For each pair ${\langle}A_i, B_i\rangle$ in the input sequence the program
+writes the cost $\delta$ of the cheapest route between $A_i$ and $B_i$. with the format
+\texttt{c($A_i$,$B_i$) = $\delta$}.
+% and the cheapest path itself
+% (a sequence of vertices starting
+% with $A_i$ and ending with $B_i$)
+If no route exists between $A_i$ and $B_i$ the program
+writes \texttt{c($A_i$,$B_i$) = +oo}. The ouput for each case is
+ended with a newline (\texttt{endl}).
+
+\SampleTwoCol

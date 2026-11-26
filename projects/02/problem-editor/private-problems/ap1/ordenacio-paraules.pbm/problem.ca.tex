@@ -1,0 +1,37 @@
+
+\Problem{Ordenació de paraules}
+
+
+\Statement
+
+Donat un vector de paraules úniques
+on cada paraula té o bé només lletres minúscules o bé només lletres majúscules,
+cal reordenar el vector en aquest ordre:
+\begin{itemize}
+\item
+abans, les paraules amb lletres minúscules;
+\item
+en cas d'empat, les paraules més curtes;
+\item
+en cas d'un altre empat, en ordre alfabètic.
+\end{itemize}
+
+\medskip
+
+Escriviu un procediment
+
+\begin{lstlisting}
+    void ordenar(vector<string>& paraules);
+\end{lstlisting}
+
+que ordeni @paraules@
+segons els criteris indicats anteriorment.
+
+
+\Precondition
+
+Totes les paraules del vector són diferents,
+i les seves lletres són o bé totes minúscules o bé totes majúscules.
+
+
+\ObservationNoMain

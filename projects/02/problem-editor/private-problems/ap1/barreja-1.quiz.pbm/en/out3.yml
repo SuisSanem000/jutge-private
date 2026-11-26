@@ -1,0 +1,38 @@
+type: FillIn
+
+text: "Quina és la sortida del següent programa?"
+    
+context:  |
+
+    ```cpp
+    #include <iostream>
+    using namespace std;
+
+    int foo(int a, int b) {
+        if (a > b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+
+    int main() {
+        int x, y;
+        cin >> x >> y;
+        cout << foo(x, y) << endl;
+    }
+    ```
+    Input:
+
+        $a
+
+        $b
+
+    Output:
+    
+        X
+
+items:
+    X:
+        maxlength: 3
+        correct:   $c

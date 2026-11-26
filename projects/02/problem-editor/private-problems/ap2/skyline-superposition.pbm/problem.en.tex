@@ -1,0 +1,49 @@
+\Problem{Superposition of two rectilinear skylines}
+
+\Statement
+
+The skyline of a city shows the horizon view of its buildings. In this problem we are dealing with rectilinear skylines such us the ones shown in the figure.
+Each skyline can be represented by a vector of points $[(x_0,y_0),\ldots,(x_{n-1},y_{n-1})]$ with the following properties:
+\begin{eqnarray*}
+    x_i, y_i \geq 0 & & \forall i\in\{0,\ldots,n-1\}\\
+    x_{i-1} < x_i & & \forall i\in\{1,\ldots,n-1\}\\
+    y_{i-1} \neq y{i} & & \forall i\in\{1,\ldots,n-1\}\\
+    x_0 > 0, & & y_{n-1} = 0
+\end{eqnarray*}
+An empty skyline is represented by an empty vector. A non-empty skyline must have at least two points.
+
+\medskip
+
+The next figure shows three skylines that are represented by the red points. The top-left skyline is represented by the vector of points:
+\[ [(1,2), (4,4), (6,1), (8,0), (10,3), (12,1), (14,0)] \]
+
+\FigureC{width=10cm}{sky}
+
+The problem consists of generating the skyline obtained by the superposition of two skylines. In the figure, the skyline at the right is obtained by the superposition of the two skylines at the left.
+
+\Input
+
+The input will start with a number $t$ of test cases.
+Each test case will be made of two skylines.
+Each skyline will be represented by its number of points $n$ and
+its set of points $x_0~y_0~x_1~y_1~\ldots~x_{n-1}~y_{n-1}$
+(fullfilling the previous properties).
+All the values are integers.
+
+
+\Output
+
+The output will consist of $t$ lines,
+each one representing the skyline obtained after the superposition
+of two skylines of the corresponding test.
+Use the same format as the input.
+
+\Observation
+
+Download the \emph{code.cc} or \emph{code.py} file: you only have to implement the
+\emph{skyline$\_$superposition()} function. Do not modify the other functions.
+
+
+\clearpage
+
+\SampleTwoCol

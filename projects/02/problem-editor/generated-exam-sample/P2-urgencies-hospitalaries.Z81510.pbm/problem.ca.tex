@@ -1,0 +1,86 @@
+
+\Problem{Urgències Hospitalàries}
+
+\Statement
+
+Es vol simular el funcionament d'unes urgències hospitalàries.
+Els pacients arriben a urgències amb una certa prioritat (1, 2 o
+3, on 1 és la més alta) i un identificador. Quan el metge està
+lliure, s'atén al pacient amb la prioritat més alta (el número
+més petit).
+
+\medskip
+
+A les urgències, hi ha una sola consulta, de manera que només un
+pacient pot estar dins alhora. L'entrada consisteix en una
+seqüència d'events de dos tipus:
+
+\begin{itemize}
+
+\item \verb|arriba <id> <prioritat> <timestamp>|: arriba un
+pacient amb identificador \verb|id|, prioritat \verb|prioritat| i
+a l'instant \verb|timestamp|.
+
+\item \verb|seguent <timestamp>|: el pacient que estava a la
+consulta surt, i el pacient a la cua amb més prioritat entra a la
+consulta a l'instant \verb|timestamp|.
+
+\end{itemize}
+
+\medskip
+
+Cada cop que un pacient entra a la consulta (event
+\verb|seguent|), s'escriu el seu identificador. Quan es llegeix
+l'event \verb|seguent|, el pacient que entra és el que té la
+prioritat més alta entre els que estan esperant. Si hi ha empat,
+s'atén al que va arribar abans.
+
+\medskip
+
+Al final de l'entrada, s'escriu el temps d'espera mitjà dels
+pacients atesos per a cada prioritat (1, 2 i 3). El temps
+d'espera d'un pacient és la diferència entre el moment en què
+entra a la consulta i el moment en què va arribar.
+
+\Input
+
+Una seqüència d'events, un per línia. Els events tenen el format
+descrit més amunt. L'entrada garanteix que els events tenen
+sentit: mai hi ha més d'un pacient a la consulta, i quan es fa
+\verb|seguent| hi ha almenys un pacient esperant.
+
+\Output
+
+Per a cada event \verb|seguent|, s'escriu l'identificador del
+pacient que entra a la consulta.
+
+\medskip
+
+Al final, per a cada prioritat que hagi tingut almenys un pacient
+atès, s'escriu una línia amb el format 
+\verb|prioritat <p>: <mitjana>|, on \verb|<p>| és la prioritat i 
+\verb|<mitjana>| és el temps d'espera mitjà amb 2 decimals.
+
+\Observation
+
+Als fitxers públics (icona del gatet) trobaràs: \verb|main.cc|
+(programa principal que has de completar), \verb|pacient.hh|, els
+fitxers \verb|*.hh| dels contenidors de PRO2 que pots necessitar
+(incloent \verb|assert.hh|), un \verb|Makefile|,
+\verb|.clang-format| i el directori \verb|.vscode|.
+
+\medskip
+
+Has de completar el fitxer \verb|main.cc| i enviar-lo.
+
+\medskip
+
+Per posar la precisió de la sortida a 2 decimals, utilitza al
+principi del \verb|main|:
+
+\begin{verbatim}
+cout.setf(ios::fixed);
+cout.precision(2);
+\end{verbatim}
+
+\SampleTwoCol

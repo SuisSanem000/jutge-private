@@ -1,0 +1,22 @@
+
+type: Matching
+
+text: Aparelleu els valors amb els seus tipus.
+
+labels:
+    - Valors
+    - Tipus
+
+left:
+    - "$vint"
+    - "$vfloat"
+    - "'$vstr'"
+    - "$vbool"
+    - "None"
+
+right:
+    - "int"
+    - "float"
+    - "str"
+    - "bool"
+    - "None"

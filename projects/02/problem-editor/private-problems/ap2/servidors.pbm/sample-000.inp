@@ -1,0 +1,17 @@
+4
+merc1 alp3 merc2 appo
+
+TRANSFER merc1 merc2
+EXECUTE appo 1
+ADD alp3 500
+ADD alp3 1000
+ADD zig 400
+TRANSFER alp3 merc2
+ADD alp3 200
+TRANSFER alp3 merc2
+EXECUTE merc2 8
+EXECUTE bbbb 1
+TRANSFER  merc2 alp3
+TRANSFER bbb merc2
+TRANSFER merc2 bbb
+EXECUTE appo 1

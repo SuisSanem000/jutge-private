@@ -1,0 +1,29 @@
+\Problem{Una sola escala}
+
+
+\Statement
+
+Tenim el cost dels vols entre $n$ parells de ciutats enmagatzemats en una
+matriu $m$ tal que $m_{i,j}$ representa el cost de volar de la ciutat $i$ a la
+ciutat $j$. Donades dues ciutats $a$ i $b$ i  un valor limit $c$, volem saber
+totes les escales que es poden fer per viatjar de la ciutat $a$ a la ciutat
+$b$ amb un cost inferior o igual a $c$.
+
+\Input
+
+L'entrada comença amb el nombre de ciutats, un natural $n$.
+A continuació ve la matriu $n\times n$ amb els costos dels vols,
+que també són naturals. El cost de viatjar d'una ciutat a ella mateixa és zero
+però els costos no tenen perquè ser simètrics.
+Finalment, ve una seqüència de tripletes de naturals $a,b,c$, indicant
+que es volen les escales per viatjar de la ciutat $a$ a la ciutat
+$b$ amb un cost inferior o igual a $c$. Es té que $0\le a,b<n$.
+
+\Output
+
+Per a cada tripleta $a,b,c$, cal escriure la llista de ciutats que permeten fer l'escala
+(o \texttt{res} si no n'hi ha cap). Seguiu el format dels exemples i fixeu-vos que és lícit
+utilitzar la ciutat de sortida o d'arribada com a escala.
+
+\SampleTwoCol
+

@@ -1,0 +1,58 @@
+
+type: FillIn
+
+text: |
+
+    Completeu el programa perquè escrigui les primeres `n` potències de 2.
+
+
+context: |
+
+    ```python
+    from yogi import read
+
+    n = read(int)
+    i = R2
+    p = R3
+    while R4 <= n:
+        print(p)
+        i = i R5 1
+        p = p R6 2
+    ```
+    
+items:
+
+    R2:
+        maxlength: 10
+        placeholder: "?"
+        correct: "1"
+        ignorecase: true
+        trim: true
+
+    R3:
+        maxlength: 10
+        placeholder: "?"
+        correct: "1"
+        ignorecase: true
+        trim: true
+
+    R4:
+        maxlength: 10
+        placeholder: "?"
+        correct: "i"
+        ignorecase: true
+        trim: true
+
+    R5:
+        maxlength: 10
+        placeholder: "?"
+        correct: "+"
+        ignorecase: true
+        trim: true
+
+    R6:
+        maxlength: 10
+        placeholder: "?"
+        correct: "*"
+        ignorecase: true
+        trim: true

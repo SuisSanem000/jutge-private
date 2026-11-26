@@ -1,0 +1,8 @@
+empty
+push 3
+top
+push 3
+empty
+top
+pop
+empty

@@ -1,0 +1,6 @@
+-   part: "Apartat 1: tresors accessibles"
+    prefix: private-apartat1
+    points: 5
+-   part: "Apartat 2: tresors inaccessibles"
+    prefix: private-apartat2
+    points: 5

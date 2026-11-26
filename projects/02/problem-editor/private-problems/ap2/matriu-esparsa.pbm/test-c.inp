@@ -1,0 +1,18 @@
+create a 10
+create b 10
+set a 9 3 2
+set a 9 2 3
+set a 9 9 7
+set a 9 2 6
+set a 9 5 8
+print a
+#
+set b 9 4 2
+set b 9 2 4
+set b 9 7 7
+set b 9 0 5
+set b 9 6 1
+print b
+#
+add a b
+print a

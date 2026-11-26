@@ -1,0 +1,57 @@
+
+\Problem{Donacions}
+
+\Statement
+
+Volem mantenir informació bàsica de les donacions monetàries a un hospital.
+En particular, volem guardar quants diners en total ha donat cada persona,
+identificada de forma única amb el seu NIF (8 dígits seguits de la lletra majúscula de control).
+
+\medskip
+
+El programa permet fer cinc operacions diferents:
+\begin{itemize}
+\item
+\texttt{N}:
+Escriu el nombre de donants precedit de \qq{number:}.
+Fixeu-vos que hi pot haver menys donants que donacions,
+si hi ha donants repetits.
+\item
+\texttt{D} $n$ $m$:
+S'apunta que la persona amb NIF $n$ ha donat $m$ diners.
+Si la persona ja havia fet alguna donació, n'acumula els imports.
+\item
+\texttt{Q} $n$:
+Consulta quants diners ha donat de moment la persona amb NIF $n$.
+Cal escriure $-1$ si encara no ha fet cap donació.
+\item
+\texttt{P}:
+Escriu una línia amb tots els NIFs que acaben amb un dígit parell
+(ignorant el caràcter de control),
+amb els NIFs ordenats alfabèticament.
+Cal separar els NIFs amb espais.
+\item
+\texttt{L}:
+Escriu la informació del donant amb el NIF més gran alfabèticament.
+Si no n'hi ha cap, escriu \qq{None}.
+\end{itemize}
+
+
+\Input
+
+L'entrada consisteix en diverses operacions segons s'ha indicat anteriorment.
+Els NIFs són correctes, i les donacions són nombres naturals.
+
+
+\Output
+
+Per a cada operació (excepte les donacions),
+escriviu la informació demanada.
+
+\Observations
+
+Per aquest exercici, amb un programa sense funcions n'hi ha prou.
+
+
+\Sample
+

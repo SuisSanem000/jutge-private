@@ -1,0 +1,87 @@
+{
+  "write_top": {
+    "name": "write_top",
+    "long_name": "write_top( const Jobs_Queue & pq)",
+    "tokens": 32,
+    "nloc": 4,
+    "lines": 4,
+    "ccn": 2.0,
+    "parameters": [
+      "pq"
+    ]
+  },
+  "read_servers": {
+    "name": "read_servers",
+    "long_name": "read_servers( int p)",
+    "tokens": 42,
+    "nloc": 9,
+    "lines": 9,
+    "ccn": 2.0,
+    "parameters": [
+      "intp"
+    ]
+  },
+  "add_job": {
+    "name": "add_job",
+    "long_name": "add_job( Servers & servers)",
+    "tokens": 74,
+    "nloc": 12,
+    "lines": 12,
+    "ccn": 2.0,
+    "parameters": [
+      "servers"
+    ]
+  },
+  "execute_job": {
+    "name": "execute_job",
+    "long_name": "execute_job( Servers & servers , int & max_p)",
+    "tokens": 119,
+    "nloc": 16,
+    "lines": 16,
+    "ccn": 4.0,
+    "parameters": [
+      "servers",
+      "max_p"
+    ]
+  },
+  "transfer_job": {
+    "name": "transfer_job",
+    "long_name": "transfer_job( Servers & servers)",
+    "tokens": 145,
+    "nloc": 19,
+    "lines": 19,
+    "ccn": 3.0,
+    "parameters": [
+      "servers"
+    ]
+  },
+  "main": {
+    "name": "main",
+    "long_name": "main()",
+    "tokens": 127,
+    "nloc": 19,
+    "lines": 21,
+    "ccn": 5.0,
+    "parameters": []
+  },
+  "*": {
+    "lines": 94,
+    "nloc": 85,
+    "tokens": 573,
+    "name": "solution.cc",
+    "ccn": 5,
+    "comments": 0,
+    "language": "SUM",
+    "halstead": {
+      "operators-count": 360.0,
+      "distinct-operators": 36.0,
+      "operands-count": 212.0,
+      "distinct-operands": 51.0,
+      "program-length": 572.0,
+      "program-vocabulary": 87.0,
+      "volume": 3685.36,
+      "difficulty": 74.82,
+      "effort": 275751.92
+    }
+  }
+}

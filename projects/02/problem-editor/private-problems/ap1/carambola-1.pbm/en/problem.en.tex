@@ -1,0 +1,79 @@
+\Problem{Carambole (1)}
+
+\Statement
+% de $1.5 \times 3$ metres  
+
+Carom (or carambole) billiards is one of the existing modalities of billiard games. In this case we wish to solve a simplified version of this game. 
+There is a player and two balls (white and red) on a cloth-covered, pocketless table.  The red ball is placed inside the table, without touching any  corner or border, and the white ball in one of the corners (see figure).
+
+The white ball starts a traversal following the diagonal and changes direction (following the other diagonal) when reaching a table side.  If it arrives to a corner (where only one diagonal exists) the ball stops.
+  
+\FigureC{width=8cm}{Rebots1}
+
+For the simulation we assume that we have a table of dimension $n\times m$ and that the white ball traversal finishes whenever:
+\begin{enumerate}
+    \item touches a corner of the table, 
+    \item touches the red ball, 
+    \item touches four sides of the table,
+    \end{enumerate}
+
+The player makes a \emph{carambole} when the white ball traversal ends touching the red ball after touching exactly three sides of the table. 
+
+\ \\
+Your task is to write a program that reads the configuration of a Carom billiard table and determines whether the player has made a carambole.   The program must also enumerate the positions where the white ball touches the sides of the table and must show the final configuration of the table.
+
+
+
+%\ \\ 
+Your program must use the following definitions:
+
+\begin{quote}
+
+\textbf{typedef} vector$<$ vector $<$\textbf{char}$>$ $>$ Table;
+
+\textbf{struct}  Ball $\{$ 
+
+\hspace{10pt} \textbf{int} x\_pre, y\_pre;\hspace{10pt} // Previous position of the ball
+
+\hspace{10pt} \textbf{int} x\_cur, y\_cur;\hspace{11pt} // Current position of the ball
+
+\hspace{10pt} \textbf{int} x\_nex, y\_nex;\hspace{10pt} // Next position of the ball
+
+$\}$;
+
+\end{quote}
+
+%\ \\ 
+Your program must also design, implement and use the following function:
+
+\begin{quote}
+ \textbf{void} move\_until\_touching ($Table$\& t, $Ball$\& b);
+
+\end{quote}
+
+which, given a table $t$ and a ball $b$,
+moves the ball $b$ within $t$ in the direction and orientation defined by the ball's current and next position. The ball must stop when touching the red ball (if it does) or one side or one corner of the table.  After finalizing the execution  of the function, $b$ must hold the stop position as actual position and both previous and last positions correctly settled. 
+
+Take into account that when the ball touches a corner the next position must be this corner. 
+The positions visited by the ball while moving on $t$ must be marked in $t$. 
+
+
+
+\Input
+
+The input is formed by several descriptions of a configuration of a Carom billiard. Each one is formed by two integers  $n, m \geq 2$ corresponding to the number of rows and columns in the matrix representing the table, respectively.  Followed by a sequence of four integers  $x_1, y_1, x_2, y_2$ giving the initial positions of the two balls.
+
+\ \\
+The ball at position $(x_1, y_1)$ is the white ball and it is always placed in one of the corners (i.e., one of  $(0,0)$, 
+$(0, m - 1)$, $(n - 1, 0)$ or $(n - 1, m - 1)$).  The ball at position $(x_2,y_2)$ is the red ball it is allways placed inside the table (i.e., $0<x_2<n-1$ and $0<y_2< m-1$).
+
+
+\Output
+
+For each input configuration table you have to write the coordinates of the positions where the white ball touches the sides. Yo have also to indicate if the player makes carambole or not as well as to show the trajectory followed by the white ball. Please follow the format specified in the examples.
+%\ \\
+\medskip
+
+
+
+\Sample

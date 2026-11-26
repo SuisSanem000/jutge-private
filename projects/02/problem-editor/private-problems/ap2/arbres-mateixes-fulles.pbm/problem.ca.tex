@@ -1,0 +1,85 @@
+
+\newcommand{\bolarep}[1]{\Tcircle{\mbox{\scriptsize #1}}}
+\newcommand{\arbrerep}[2]{\pstree[levelsep=25pt,treesep=12pt]{\bolarep{#1}}{#2}}
+
+
+\Problem{Arbres --- Mateixes fulles}
+
+
+\Statement
+
+En un arbre binari, una fulla és un node sense cap fill. 
+
+\medskip
+
+\begin{latexonly}
+Per exemple, l'arbre
+\[
+\arbrerep{3}
+{
+  \pstree{\bolarep{0}}
+  {
+    \pstree{\bolarep{7}}
+    {
+      \Tn
+      \bolarep{4}
+    }
+    \pstree{\bolarep{2}}
+    {
+      \Tn
+      \Tn
+    }
+  }
+  \pstree{\bolarep{5}}
+  {
+    \pstree{\bolarep{4}}
+    {
+      \Tn
+      \Tn
+    }
+    \pstree{\bolarep{7}}
+    {
+      \pstree{\bolarep{6}}
+      {
+        \Tn
+        \pstree{\bolarep{1}}
+        {
+          \Tn
+          \Tn
+        }
+      }
+      \Tn
+    }
+  }
+}
+\vspace*{-0.5cm}
+\]
+té com a fulles (d'esquerra a dreta) 4, 2, 4, 1.
+\end{latexonly}
+
+\medskip
+
+Feu una funció que, donats dos arbres binaris de naturals, 
+digui si tenen o no les mateixes fulles d'esquerra a dreta. 
+Resoleu el problema utilitzant una funció que generi 
+les fulles d'esquerra a dreta d'un arbre binari. 
+Digueu quin és el cost asimptòtic en el cas millor i en el cas pitjor de les vostres funcions.
+
+\Observations
+
+\begin{itemize}
+    
+    \item Descarregueu-vos el fitxer \texttt{code.py}. El programa principal,
+    les estructures de dades, 
+    la lectura de l'arbre i l'esquelet de les funcions ja se us dónen implementats.
+
+    \item
+    El programa principal serveix per provar les funcions i llegeix $p$ parells d'arbres en preordre (amb valors $-1$ pels arbres buits)
+    i escriu, per a cada parell, les fulles d'esquerra a dreta dels dos arbres i si tenen o no les mateixes fulles d'esquerra a dreta. 
+    
+    \item Us pot anar bé fer servir la funció @zip_longest@ d'@itertools@ que funciona com @zip@ però afegeix @None@s si una de les dues seqüències acaba abans que l'altra.
+    
+\end{itemize}
+
+
+\SampleOneCol

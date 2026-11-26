@@ -1,0 +1,30 @@
+
+\Problem{La bossa}
+
+\Statement
+
+Heu d'implementar una classe per a una "bossa d'enters" amb les operacions següents:
+
+\begin{itemize}
+
+\item \texttt{init}: Crear una bossa buida amb paràmetre $k$ (amb $k\ge0$).
+
+\item \texttt{add}: Afegir un enter a una bossa. Es poden afegir fins a $k$ repeticions de cada enter: Quan la bossa contingui $k$ repeticions d'un cert enter, afegir aquell enter no canvia la bossa.
+
+\item Esborrar (\texttt{remove\_minimum}) i obtenir (\texttt{minimum}) l'element més petit de la bossa (si no és buida). L'operació d'esborrar només esborra una de les ocurrències de l'element mínim en cas de tenir-ne repeticions.
+
+\item Saber quants elements hi ha a la bossa comptant possibles repeticions (\texttt{size}) i quants elements diferents (sense repeticions) hi ha a la bossa (\texttt{items}).
+
+\item Saber si la bossa és buida (\texttt{empty}).
+
+\end{itemize}
+
+\medskip
+
+Descarregueu-vos el fitxer \texttt{code.py} i anomeneu-lo \texttt{bag.py}. Aquest ja conté la interfície de la classe i un programa principal de proves que la fa servir.
+
+\bigskip
+
+Doneu el cost asimptòtic de cadascuna de les operacions públiques en funció d'$n$ on $n$ és el nombre d'elements a la bossa; podeu suposar que $k$ és un valor constant. Comproveu els possibles errors amb assercions. La vostra implementació ha de ser eficient: cap operació pot tenir cost superior a logarítmic. Documenteu el vostre codi adequadament (ni poc, ni massa).
+
+\SampleOneCol

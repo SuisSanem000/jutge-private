@@ -1,0 +1,13 @@
+type: SingleChoice
+
+text: "Quant val `not '$c' / '$d' != '$e' or '$b' / '$a' != '$f'`?
+        
+  > Els nombres sense el punt decimal son de tipus enter"
+
+shuffle: false
+
+choices:
+    -   text: "True"
+        correct: $s1
+    -   text: "False"
+        correct: $s2

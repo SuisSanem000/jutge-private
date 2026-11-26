@@ -1,0 +1,18 @@
+
+# Ignore jtk generated files
+
+jtk-*
+
+# Ignore disposable files
+
+*~
+*.pdf
+*.exe
+*.hi
+*.o
+*.class
+*.jar
+*.pyc
+a.out
+__pycache__/
+

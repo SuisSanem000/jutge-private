@@ -1,0 +1,44 @@
+
+\Problem{Erdős number (2)}
+
+\Statement
+
+Paul Erdős was one of the most prolific mathematicians in history.
+He wrote so many works, and with so many coauthors,
+that there is the tradition to compute the so called ``Erdős number'',
+defined as follows:
+Erdős has Erdős number 0.
+Each of his collaborators has Erdős number 1.
+Those who collaborated with the direct collaborators of Erdős
+(but did not collaborate with Erdős himself) have Erdős number 2, etc.
+People with no connection with Erdős have an undefined Erdős number.
+
+\medskip
+
+Given the information  of the authorship of the $w$ works
+of a group of $n$ mathematicians,
+can you compute the Erdős number of each one,
+according to the known information?
+
+
+\Input
+
+Input consists of several cases.
+Every case begins with $n$ and $w$,
+followed by the information of the works:
+for each one, the number of coauthors (between 1 and $n$),
+followed by those coauthors (all different, in any order).
+Assume that the mathematicians are numbered from 0 to $n - 1$,
+that Erdős corresponds to 0,
+and that there is at least one publication by Erdős.
+
+
+\Output
+
+For every case, print the Erdős number of every mathematician,
+or \qq{no} if it is undefined.
+Print a line with 10 dashes at the end of every case.
+
+
+\Sample
+

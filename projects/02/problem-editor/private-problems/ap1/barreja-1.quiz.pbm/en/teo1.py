@@ -1,0 +1,11 @@
+muls = [4, 8, 16, 32, 64]
+n = random.choice(muls)
+b = pow(2, n)
+a = b-1
+c = b+1
+d = pow(2, n-1)
+e = d-1
+f = d+1
+g = n
+h = n+1
+i = n-1

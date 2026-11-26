@@ -1,0 +1,32 @@
+
+type: MultipleChoice
+
+text: |
+
+    Marqueu els ítems que sigui valors correctes de tipus text (`str`).
+
+choices:
+    -   text: "'Jordi'"
+        correct: true
+    -   text: "\"Jordi\""
+        correct: true
+    -   text: Jordi
+        correct: false
+    -   text: "''"
+        correct: true
+    -   text: "\"\""
+        correct: true
+    -   text: "'''No em marquis'''"
+        correct: true
+    -   text: "'\\''"
+        correct: true
+    -   text: "'❌'"
+        correct: true
+    -   text: "12"
+        correct: false
+    -   text: "True"
+        correct: false
+    -   text: "False"
+        correct: false
+    -   text: "str(math.pi)"
+        correct: true

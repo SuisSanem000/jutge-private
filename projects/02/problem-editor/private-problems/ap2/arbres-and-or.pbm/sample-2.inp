@@ -1,0 +1,4 @@
+NOT(AND(OR(a,b),AND(b,NOT(c))))
+a 
+c a
+b x

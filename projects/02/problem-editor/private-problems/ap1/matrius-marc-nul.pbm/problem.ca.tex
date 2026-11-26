@@ -1,0 +1,44 @@
+
+\Problem{Matrius amb marc nul}
+
+\Statement
+
+Donada una matriu $M$ de mida $m\times n$, i una posició $(i,j)$ dins d'ella, diem que el \emph{marc} de $M$ és la suma dels elements a l'esquerra i al damunt de la posició $(i,j)$ (amb la fila $i$ i la columna $j$ incloses). Altrament dit, el marc de $(i,j)$ és $\sum_{p=1}^i\sum_{q=1}^j M_{p,q}$. Un marc és \emph{nul} si val zero.
+
+\medskip
+
+Per exemple, per la matriu
+
+$$
+\left(
+    \begin{array}{rrrrrr}
+         3 & 2 & -4 & 5 & 7 & 6 \\
+         1 &-3 & -4 & 4 & 8 & -4 \\
+         3 &-2 & -1 &-2 &-1 & 6 \\
+         3 &-7 & -2 &-3 & 0 & -2 \\
+        -3 & 8 & -4 & 5 & 6 & 6 \\
+    \end{array}
+\right)
+$$
+
+\medskip
+
+el marc de $(2,4)$ és $3+2-4+5+1-3-4+4 = 4$ i el marc de $(4,2)$ és $3+2+1-3+3-2+3-7 = 0$. Per tant, el marc de $(4,2)$ és nul.
+
+\medskip
+
+Feu un programa que, donada una matriu, indiqui si aquesta té algun marc nul.
+
+\Input 
+
+L'entrada és una matriu d'$m\times n$ enters. Primer es donen dos enters $m$ i $n$ (amb $m,n\ge 1$) i després els $mn$ enters.
+
+\Output
+
+La sortida ha d'indicar si la matriu té algun marc nul o no, seguint el format dels exemples.
+
+\Observation 
+
+El vostre algorisme ha de funcionar en temps lineal respecte el nombre d'elements a la matriu. 
+
+\Sample

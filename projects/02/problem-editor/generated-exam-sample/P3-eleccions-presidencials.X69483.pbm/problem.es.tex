@@ -1,0 +1,59 @@
+
+\Problem{Elecciones Presidenciales}
+
+\Statement
+
+Las elecciones presidenciales de los UUEE están muy dominadas por el dinero. Se
+quiere saber qué empresas hacen contribuciones excesivas a las
+campañas electorales.
+
+\medskip
+
+La entrada consiste primero en un umbral (un entero positivo), y
+después un listado de contribuciones monetarias, cada una con el
+nombre de la empresa y la cantidad en dólares. Una misma empresa
+puede hacer múltiples contribuciones.
+
+\medskip
+
+Al final, hay que listar, por orden alfabético, aquellas empresas
+donde la suma de las tres contribuciones más grandes supere el
+umbral dado. Si una empresa ha hecho menos de tres
+contribuciones, se suman todas las que tenga.
+
+\medskip
+
+Si ninguna empresa supera el umbral, hay que escribir
+\verb|eleccions netes!|.
+
+\Input
+
+La primera línea contiene un entero positivo, el umbral. Después,
+cada línea contiene el nombre de una empresa (una palabra sin
+espacios) y un entero positivo (la cantidad de la contribución).
+
+\Output
+
+Para cada empresa que supere el umbral, se escribe el nombre de
+la empresa en una línea, por orden alfabético. Si ninguna empresa
+supera el umbral, se escribe \verb|eleccions netes!|.
+
+\Observation
+
+Este problema tiene como centro de interés la
+\textbf{eficiencia}. Hay que implementar el programa con las
+mejores estructuras de datos posible.
+
+\medskip
+
+En los archivos públicos (icono del gatito) encontrarás:
+\verb|main.cc| (programa principal que debes completar), los
+ficheros \verb|*.hh| de los contenedores que puedas necesitar
+(incluyendo \verb|assert.hh|), un \verb|Makefile|,
+\verb|.clang-format| y el directorio \verb|.vscode|.
+
+\medskip
+
+Debes completar el archivo \verb|main.cc| y enviarlo.
+
+\SampleTwoCol

@@ -1,0 +1,38 @@
+
+\Problem{Pac-man}
+
+\Statement
+
+Donat un tauler rectangular que conté en Pac-man,
+digueu si pot arribar a menjar-se algun bolet energètic.
+Per poder arribar-hi,
+en Pac-man només pot fer moviments horitzontals i verticals,
+sense travessar cap mur.
+En Pac-man no pot estar mai massa a prop d'un fantasma:
+sempre hi ha d'haver una casella de marge,
+ja sigui horitzontalment, verticalment, o en diagonal.
+Fixeu-vos en els exemples d'entrada i sortida.
+
+
+\Input
+
+L'entrada consisteix en diversos casos.
+Cada cas comença amb el nombre de files $f$
+i el nombre de columnes $c$ del tauler.
+Segueixen $f$ files amb $c$ caràcters cadascuna.
+Una \q{P} indica la posició inicial d'en Pac-man.
+Una \q{F} indica la posició d'un fantasma (que no es mou).
+Una \q{B} indica la posició d'un bolet.
+Una \q{X} indica un mur.
+Un punt indica una posició buida.
+Suposeu $3 \le f \le 100$, $3 \le c \le 100$,
+que les files i columnes de la vora del tauler només contenen murs,
+i que cada tauler té exactament una \q{P}.
+
+
+\Output
+
+Per a cada cas, digueu si en Pac-man es pot menjar algun bolet o no.
+
+
+\Sample

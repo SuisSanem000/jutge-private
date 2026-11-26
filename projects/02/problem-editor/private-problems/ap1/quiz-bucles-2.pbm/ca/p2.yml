@@ -1,0 +1,25 @@
+
+type: FillIn
+
+text: |
+
+    ```python
+    x = $n
+    y = 1
+    for i in range(2, x + 1):
+        y = y * i
+    print(y)
+    ```
+
+context: |
+
+    La sortida del programa de l'esquerra és: R1
+    
+items:
+
+    R1:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$r"
+        ignorecase: true
+        trim: true

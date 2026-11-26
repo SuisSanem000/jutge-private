@@ -1,0 +1,52 @@
+\newcommand{\cert}{\textit{cert}}
+\newcommand{\fals}{\textit{fals}}
+
+\Problem{Expressió booleana completament parentitzada}
+
+\Statement
+
+Feu un programa que llegeixi una expressió booleana completament parentitzada,
+i que escrigui el resultat d'avaluar-la.
+Els operadors admissibles són \emph{conjunció} i \emph{disjunció}
+(binaris) i \emph{negació} (unari).
+
+
+\Input
+
+
+Els valors booleans es representen per \q{0} i \q{1}.
+La conjunció, la disjunció i la negació es representen amb
+ \q{*}, \q{+} i \q{!} respectivament.
+
+\medskip
+
+L'entrada és una expressió completament parentitzada.
+Això vol dir que sempre apareixen parèntesis
+al voltant de les expressions amb operadors binaris.
+Per exemple,
+\begin{itemize*}
+
+    \item l'expressió $\cert \land \fals$ vindria donada així: \texttt{(1*0)}
+    \item l'expressió $\fals \lor (\cert \land \fals)$ vindria donada així: \texttt{(0+(1*0))}
+    \item l'expressió $\lnot(\fals \lor (\cert \land \fals))$ vindria donada així: \texttt{!(0+(1*0))}
+
+\end{itemize*}
+
+
+\Output
+
+Cal escriure el resultat d'avaluar l'expressió en una línia.
+
+
+\Hint
+
+Fixeu-vos que una expressió és d'una d'aquestes possibilitats:
+\begin{itemize*}
+\item o bé és directament un dígit zero o u;
+\item o bé és l'operador unari de negació, seguit d'una expressió;
+\item o bé és un parèntesi obert, seguit d'una expressió, d'un operador binari,
+d'una altra expressió, i d'un parèntesi tancat.
+\end{itemize*}
+
+\Sample
+

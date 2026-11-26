@@ -1,0 +1,33 @@
+
+\Problem{Enquestes UPC}
+
+\Statement
+
+La UPC necessita un programa per a processar les enquestes de satisfacció que responen els estudiants. El programa ha de llegir a l'entrada totes les enquestes de totes les assignatures i produir un llistat ordenat dels resultats per a cada assignatura.
+
+\medskip
+
+El número $n$ de preguntes per a cada enquesta s'indica al principi, amb $3\leq n\leq 20$. Cada enquesta $e$ té el codi de l'assignatura i les respostes a les $n$ preguntes de l'enquesta, que són valors numèrics $e_i$, $1 \leq i \leq n$ amb $0 \leq e_i \leq 5$. El resultat per a cada assignatura és la llista de les mitjanes dels valors de cada pregunta de l'enquesta.
+
+\medskip
+
+Per a calcular la mitjana de la forma més fiable estadísticament, no es tenen en compte per al càlcul l'enquesta amb pitjor resultat i l'enquesta amb millor resultat, perquè s'assumeix que ambdós extrems són enquestes amb biaix. Només es treu una enquesta de cada extrem, encara que hi hagi més d'una enquesta amb el pitjor o millor resultat. No obstant, aquesta correcció només s'aplica quan la quantitat d'enquestes per a una mateixa assignatura és major o igual a 5, per contrarestar l'escassetat de mostres.
+
+\medskip
+
+\textbf{Comparació de dues enquestes}: una enquesta $a$ amb valors $a_i$ és major (millor) que una altra enquesta $b$ amb valors $b_i$ si la suma $s_a = \sum_{i} a_i$ és major que la suma $s_b = \sum_i b_i$.
+
+\Input
+
+L'entrada comença amb un natural $n$, el número de preguntes de cada enquesta. Després ve un natural positiu $m$, que és el nombre total d'enquestes. A continuació venen les enquestes, cadascuna amb un codi d'assignatura (un natural) i els valors $e_i$, $1 \leq i \leq n$, amb $1 \leq e_i \leq 5$. Les enquestes tenen un ordre aleatori.
+
+\Output
+
+La sortida és una llista dels resultats, ordenats per codi d'assignatura, a on cada resultat conté el codi de l'assignatura, seguit per les $n$ mitjanes de cada pregunta de l'enquesta. Els resultats han de tenir exactament dos decimals.
+
+\Observation
+
+Recordeu que podeu escriure un real \texttt{x} amb dos decimals amb la comanda \texttt{print(f"\{x:.2f\}")}.
+
+
+\Sample

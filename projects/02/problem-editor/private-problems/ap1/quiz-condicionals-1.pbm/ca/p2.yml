@@ -1,0 +1,89 @@
+
+type: MultipleChoice
+
+text: |
+
+    Es vol llegir dos nombres enters i escriure el més petit dels dos.
+    Digues quins d'aquests programes són correctes per aquesta especificació.
+
+
+    Programa A:
+
+    ```python
+    x = read(int)
+    y = read(int)
+    if x - y <= 0:
+        m = x
+    else:
+        m = y
+    print(m)
+    ```
+
+    Programa B:
+
+    ```python
+    x = read(int)
+    y = read(int)
+    if x <= y:
+        print(x)
+    else:
+        print(y)
+    ```
+
+    Programa C:
+
+    ```python
+    x = read(int)
+    y = read(int)
+    if x < y:
+        print(x)
+    else:
+        print(y)
+    ```
+
+    Programa D:
+
+    ```python
+    x = read(int)
+    y = read(int)
+    if x <= y:
+        y = x
+    print(y)
+    ```
+
+    Programa E:
+
+    ```python
+    x = read(int)
+    y = read(int)
+    if x <= y:
+        print(x)
+    if y <= x:
+        print(y)
+    ```
+
+    Programa F:
+
+    ```python
+    x = read(int)
+    y = read(int)
+    if x < y:
+        print(x)
+    if y < x:
+        print(y)
+    ```
+
+
+choices:
+    -   text: A
+        correct: true    
+    -   text: B
+        correct: true    
+    -   text: C
+        correct: true    
+    -   text: D
+        correct: true
+    -   text: E
+    -   text: F
+ 
+shuffle: False       

@@ -1,0 +1,12 @@
+add anna 25
+add joan 31
+add pere 40
+add sara 40
+print
+minimum
+remove
+minimum
+print
+update sara 12
+minimum
+print

@@ -1,0 +1,42 @@
+
+\Problem{Permutacions quasi ordenades}
+
+\Statement
+
+Donat un enter $k\geq 0$, diem que una permutació d'$n$ elements 
+$\{1,\dots,n\}$ està quasi ordenada si com a màxim hi ha $k$ elements
+que estan en una posició diferent de la seva posició natural.
+\medskip
+
+Per exemple, aquestes són totes les permutacions quasi ordenades per a $n=6$
+i $k=0$ (i també per a $k=1$):
+
+\begin{verbatim}
+1 2 3 4 5 6
+\end{verbatim}
+
+i aquestes són totes les permutacions quasi ordenades per a $n=5$ i $k=2$:
+
+\begin{verbatim}
+1 2 3 4 5
+1 2 3 5 4
+1 2 4 3 5
+1 2 5 4 3
+1 3 2 4 5
+1 4 3 2 5
+1 5 3 4 2
+2 1 3 4 5
+3 2 1 4 5
+4 2 3 1 5
+5 2 3 4 1
+\end{verbatim}
+
+\medskip
+
+Feu un programa de generació exhaustiva que llegeixi dos nombres naturals
+$n > 0$ i $k\geq 0$ i escrigui totes les permutacions quasi ordenades 
+de $\{1,\dots,n\}$ en ordre lexicogràfic de tal manera que cada permutació
+tingui com a màxim $k$ elements en una posició diferent de la seva posició 
+natural.
+
+\Sample

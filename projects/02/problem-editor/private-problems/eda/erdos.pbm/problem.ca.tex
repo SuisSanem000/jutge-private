@@ -1,0 +1,42 @@
+
+\Problem{Nombre d'Erdős (2)}
+
+\Statement
+
+Paul Erdős va ser un dels matemàtics més prolífics de la història.
+Va escriure tants treballs, i amb tants coautors,
+que existeix la tradició de calcular el ``nombre d'Erdős'',
+definit així:
+Erdős té nombre d'Erdős 0.
+Cadascun dels seus col·laboradors té nombre d'Erdős 1.
+Els qui van col·laborar amb els col·laboradors directes d'Erdős
+(però no amb Erdős mateix) tenen nombre d'Erdős 2, etc.
+Les persones sense connexió amb Erdős tenen un nombre d'Erdős indefinit.
+
+\medskip
+
+Donada la informació de l'autoria dels $t$ treballs d'un grup d'$n$ matemàtics,
+podeu calcular el nombre d'Erdős de cadascun segons la informació coneguda?
+
+
+\Input
+
+L'entrada consisteix en diversos casos.
+Cada cas comença amb $n$ i $t$,
+seguits de la informació dels treballs:
+per a cadascun, el nombre de coautors (entre 1 i $n$),
+seguit d'aquests coautors (tots diferents, i en qualsevol ordre).
+Suposeu que els matemàtics es numeren entre~0 i $n-1$,
+que Erdős es correspon al 0,
+i que sempre apareix en almenys una publicació.
+
+
+\Output
+
+Per a cada cas, escriviu el nombre d'Erdős de cada matemàtic,
+o bé \qq{no} si és indefinit.
+Escriviu una línia amb 10 guions al final de cada cas.
+
+
+\Sample
+

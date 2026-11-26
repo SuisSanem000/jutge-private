@@ -1,0 +1,13 @@
+collatz 3
+collatz 14
+collatz 15
+collatz_length 3
+collatz_highest 3
+collatz_highest_position 3
+collatz_11 14
+collatz_11 11
+collatz_first_common 14 15
+collatz_common_elements 14 15
+collatz_union 7 6
+collatz_top_numbers 12
+collatz_first_missing 3

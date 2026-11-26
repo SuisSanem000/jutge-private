@@ -1,0 +1,41 @@
+type: FillIn
+
+text: |
+
+    ```c++
+    void f1(int& x, int& y) {
+        int z = y;
+        y = x;
+        x = z;
+    }
+
+    int main() {
+        int a = $a, b = $b;
+        f1(a, b);
+    }
+    ```
+
+context: |
+
+    Digueu quin és el valor de les variables de la funció `main` al final del programa de l'esquerra:
+
+    `a`: R1
+
+    `b`: R2
+
+items:
+
+    R1:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$b"
+        ignorecase: true
+        trim: true    
+        
+    R2:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$a"
+        ignorecase: true
+        trim: true
+

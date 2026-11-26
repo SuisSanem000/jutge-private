@@ -1,0 +1,26 @@
+\Problem{El Coleccionista de Letras Únicas}
+
+\Statement
+
+Un peculiar bibliotecario tiene la costumbre de organizar los libros basándose en secuencias de letras únicas. Su teoría es que las palabras más interesantes son aquellas que contienen la mayor cantidad posible de letras diferentes consecutivas.  Para ayudarle, necesitamos crear un programa que analice cadenas de texto y encuentre la subcadena más larga donde no se repita ningún carácter. Por ejemplo, en la cadena ``cerebro'', la subcadena más larga con caracteres únicos es ``ebro''.
+Cada letra mayúscula se considera diferente de su versión en minúscula.
+
+\Input
+
+La entrada consiste en varios casos de prueba. Cada caso de prueba contiene una única línea con una cadena no vacía de longitud igual o inferior a $260000$, formada únicamente por caracteres del alfabeto inglés (a--z, A--Z).
+
+\Output
+
+Para cada caso de prueba, el programa debe imprimir una línea con dos elementos separados por un espacio:
+la subcadena más larga con caracteres únicos y la posición donde comienza esta subcadena (numerando desde 0).
+Si existe más de una solución, se debe imprimir la que aparece primero en la cadena original.
+
+\Sample
+
+\Observation
+
+Recordad que las funciones \texttt{ord} y \texttt{chr} permiten convertir entre un carácter y su código numérico ASCII: por ejemplo, \texttt{chr(ord('x')+1)} devuelve \texttt{'y'}. El mayor código numérico de las letras consideradas es el de la \texttt{'z'}, y el menor el de la \texttt{'A'}.
+
+\Observation
+
+Se espera una solución en tiempo lineal, que procese cada carácter rápidamente sin importar el número total de letras distintas en el alfabeto.

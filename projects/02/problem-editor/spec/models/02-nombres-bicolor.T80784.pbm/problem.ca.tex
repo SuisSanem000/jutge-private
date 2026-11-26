@@ -1,0 +1,31 @@
+\Problem{Nombres bicolor}
+
+\Statement
+
+Definim com a número \emph{bicolor} un natural $n$ amb només dos dígits diferents que estan repetits en dos blocs (o "colors"). Més formalment, la seqüència de dígits de $n$ és $d_1d_2\ldots d_ke_1e_2\ldots e_l$, on $d$ i $e$ són els dos dígits i, $d\neq e$, $k > 0$ i $l > 0$.
+
+\medskip
+
+Exemples de números bicolor: 7722, 44111, 666699, 277 i 45. \\
+Exemples de números que \textbf{no} són bicolor: 121, 113311, 7878, 1234, 7, 99910.
+
+\medskip
+
+Implementa una \textbf{funció} \verb|is_bicolor| que rep un natural i determina si és bicolor. La funció rep un número $n >= 0$ i retorna \verb|true| si és bicolor i \verb|false| en cas contrari.
+
+\medskip
+
+La capçalera de la funció ha de ser:
+
+\begin{verbatim}
+/**
+ * @pre  n >= 0
+ * @post retorna cert si n és bicolor, fals en cas contrari
+ */
+bool is_bicolor(int n);
+\end{verbatim}
+
+\Observation
+
+Només cal enviar la funció demanada; el programa principal serà ignorat.
+

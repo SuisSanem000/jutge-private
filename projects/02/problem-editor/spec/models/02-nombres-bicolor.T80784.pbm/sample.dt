@@ -1,0 +1,7 @@
+is_bicolor(0) -> false
+is_bicolor(11) -> false
+is_bicolor(45) -> true
+is_bicolor(123) -> false
+is_bicolor(112) -> true
+is_bicolor(555) -> false
+is_bicolor(1333) -> true

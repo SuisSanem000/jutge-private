@@ -1,0 +1,5 @@
+handler: std
+source_modifier: none
+checker: epsilon
+epsilon: 0.02
+compilers: G++17

@@ -1,0 +1,66 @@
+
+\Problem{Sous desorbitats}
+
+\Statement
+
+La gestió nefasta d'un club esportiu ha provocat que alguns dels seus
+esportistes professionals tinguin sous desorbitats. Implementeu la
+funció
+\begin{lstlisting}
+void split(const BD& data, const Fitxa& f, vector<string>& up, vector<string>& down);
+\end{lstlisting}
+que, a partir d'una base de dades @data@ que conté les fitxes dels
+esportistes ordenades decreixenment per nivell d'absurditat, i donada
+la fitxa @f@ d'un d'aquests esportistes, retorna dos vectors de textos
+@up@ i @down@, on @up@ conté els noms dels esportistes amb fitxes mes
+absurdes que @f@, i @down@ conté els noms dels esportistes amb fitxes
+menys absurdes que @f@, ambdós en el mateix ordre en què apareixen a
+@data@.  \bigskip
+
+Cada fitxa consta d'un identificador únic (un enter), el nom de
+l'esportista (un text), i una llista no buida de rebuts de nòmina (un
+vector d'enters).
+
+\begin{lstlisting}
+struct Fitxa {
+    int id;
+    string nom;
+    vector<int> nomines;
+}
+\end{lstlisting}
+
+
+Es considera que una fitxa @f1@ és \emph{mes absurda} que una fitxa
+@f2@ si, o bé el sou total de @f1@ és mes gran que el sou total de
+@f2@, o bé els sous totals són iguals però @f1@ conté menys rebuts de
+nòmina que @f2@, o bé coincideixen en aquestes dues coses però les
+fitxes no tenen exactament els mateixos rebuts de nòmina i, al primer
+rebut en què les quantitats difereixen, la quantitat de @f1@ és mes
+gran que la de @f2@. En cas que les fitxes coincideixin en tots els
+rebuts de nòmina, es considera que @f1@ és mes absurda que @f2@ si
+l'identificador de @f1@ és mes petit que l'identificador de @f2@.
+\bigskip
+
+La base de dades és un vector de fitxes ordenat decreixenment per
+nivell d'absurditat:
+
+\begin{lstlisting}
+using BD = vector<Fitxa>;
+\end{lstlisting}
+
+
+Per ajudar-vos a resoldre el problema, descarregueu el fitxer \texttt{code.cc}
+disponible a la pàgina de l'enunciat. Hi trobareu el programa principal \textit{main()}
+que s'encarrega de tota la gerstió de l'entrada/sortida i de la crida a \textit{split()}.
+Per fer proves, podeu fer servir
+l'exemple que us proposem. La sortida conté el número total de fitxes,
+el número de fitxes mes absurdes que la fitxa donada, el número de
+fitxes menys absurdes que la fitxa donada, seguit dels noms a @up@ i
+@down@.
+
+\medskip
+
+A més, també us oferim un tros de codi que implementa una cerca dicotòmica en un vector d'enters ordenat creixentment. Si ho trobeu necessari, adapteu-lo al vostre problema.
+
+\clearpage
+\SampleOneCol

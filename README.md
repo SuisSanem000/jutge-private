@@ -18,20 +18,21 @@
 
 ```text
 jutge-private/
-├── resources/        # Read-only upstream repos & professor materials (gitignored)
-├── private-local/    # Local-only notes, credentials, env files (gitignored)
-├── doc/              # AI rules, dated AI logs, project state, specs & architecture docs
+├── resources/                  # Read-only upstream & professor materials (tracked & pushed)
+│   └── private-local/          # Local-only repos, notes, credentials (gitignored)
+├── doc/                        # AI rules, dated AI logs, project state, specs & architecture docs
 │   ├── ai-assistant/
 │   ├── ai-log/
 │   ├── project-state/
 │   ├── core-topics/
 │   └── understanding/
-└── projects/         # 10–15 day deliverable phases for supervisors
-    └── 01-demo-20261112/
+└── projects/                   # 10–15 day deliverable phases for supervisors
+    ├── 01-demo-20261112/
+    └── 02/
 ```
 
 ## Key Policies
 
-- **`resources/` is read-only:** Upstream repos and original professor notes stay untouched and gitignored.
+- **`resources/` is read-only for AI:** Professor materials in `resources/` are tracked and pushed, while `resources/private-local/` stays strictly local and gitignored.
 - **No leaked secrets or local paths:** Credentials and local machine paths never enter tracked files.
 - **Short lowercase-with-dashes naming:** Used across `doc/` and `projects/` for clarity and traceability.

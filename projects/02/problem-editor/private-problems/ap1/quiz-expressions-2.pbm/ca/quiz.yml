@@ -1,0 +1,23 @@
+title: Expressions 2
+
+statement: Qüestions sobre expressions en Python.
+
+shuffle: false
+
+questions:
+
+    -   title:  "Pregunta #1"
+        file:   p1
+        score:  25
+
+    -   title:  "Pregunta #2"
+        file:   p2
+        score:  25
+
+    -   title:  "Pregunta #3"
+        file:   p3
+        score:  25
+
+    -   title:  "Pregunta #4"
+        file:   p4
+        score:  25

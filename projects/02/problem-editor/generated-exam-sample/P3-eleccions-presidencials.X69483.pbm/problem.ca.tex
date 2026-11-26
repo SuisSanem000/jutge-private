@@ -1,0 +1,59 @@
+
+\Problem{Eleccions Presidencials}
+
+\Statement
+
+Les eleccions presidencials dels UUEE estan molt dominades pels
+diners. Es vol saber quines empreses fan contribucions excessives
+a les campanyes electorals.
+
+\medskip
+
+L'entrada consisteix primer en un llindar (un enter positiu), i
+després un llistat de contribucions monetàries, cadascuna amb el
+nom de l'empresa i la quantitat en dòlars. Una mateixa empresa
+pot fer múltiples contribucions.
+
+\medskip
+
+Al final, cal llistar, per ordre alfabètic, aquelles empreses on
+la suma de les tres contribucions més grans superi el llindar
+donat. Si una empresa ha fet menys de tres contribucions, es
+sumen totes les que tingui.
+
+\medskip
+
+Si cap empresa supera el llindar, cal escriure 
+\verb|eleccions netes!|.
+
+\Input
+
+La primera línia conté un enter positiu, el llindar. Després,
+cada línia conté el nom d'una empresa (una paraula sense espais)
+i un enter positiu (la quantitat de la contribució).
+
+\Output
+
+Per a cada empresa que superi el llindar, s'escriu el nom de
+l'empresa en una línia, per ordre alfabètic. Si cap empresa
+supera el llindar, s'escriu \verb|eleccions netes!|.
+
+\Observation
+
+Aquest problema té com a centre d'interès l'\textbf{eficiència}.
+Cal implementar el programa amb les millors estructures de dades
+possible.
+
+\medskip
+
+Als fitxers públics (icona del gatet) trobaràs: \verb|main.cc|
+(programa principal que has de completar), \verb|pacient.hh|, els
+fitxers \verb|*.hh| dels contenidors de PRO2 que pots necessitar
+(incloent \verb|assert.hh|), un \verb|Makefile|,
+\verb|.clang-format| i el directori \verb|.vscode|.
+
+\medskip
+
+Has de completar el fitxer \verb|main.cc| i enviar-lo.
+
+\SampleTwoCol

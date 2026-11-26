@@ -1,0 +1,18 @@
+
+type: MultipleChoice
+
+text: |
+
+    Marqueu els elements que siguin expressions sintàcticament correctes en Python.
+
+choices:
+    -   text: "`$a * ($b + $c)`"
+        correct: true
+    -   text: "`$a ($b + $c)`"
+    -   text: "`$a // 0`"
+        correct: true
+    -   text: "`((($a == $b)))`"
+        correct: true
+    -   text: "`($a + $b) * ($c // 2))`"
+    -   text: "`($d + $c + 2) ** ($b - $c)`"
+        correct: true

@@ -1,0 +1,34 @@
+
+type: MultipleChoice
+
+text: |
+
+    Marqueu els identificadors que **no** són vàlids en Python.
+
+choices:
+    -   text: "`x`"
+    -   text: "`a`"
+    -   text: "`nombre_de_campanes`"
+    -   text: "`nombreDeCampanes`"
+    -   text: "`β`"
+    -   text: "`cantonada2`"
+    -   text: "`cantonada_2`"
+    -   text: "`foo`"
+    -   text: "`bar`"
+    
+    -   text: "`cantonada-2`"
+        correct: true
+    -   text: "`2cantonada`"
+        correct: true
+    -   text: "`2_cantonada`"
+        correct: true
+    -   text: "`segona-cantonada`"
+        correct: true
+    -   text: "`nombre-de-campanes`"
+        correct: true
+    -   text: "`nombre de campanes`"
+        correct: true
+    -   text: "`22`"
+        correct: true
+    -   text: "`'networkx'`"
+        correct: true

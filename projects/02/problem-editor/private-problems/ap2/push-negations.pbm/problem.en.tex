@@ -1,0 +1,58 @@
+\newcommand{\cert}{\textit{cert}}
+\newcommand{\fals}{\textit{fals}}
+
+\Problem{Push negations}
+
+\Statement
+
+
+We wish to trasform a Boolean expression by pushing
+all the negations down to the variables. For instance,
+$\lnot(a\land b)$ should be trasformed to
+$(\lnot a\lor \lnot b)$.
+
+\medskip
+
+Expressions may contain variables (lowercase letters), conjunctions
+(\texttt{'*'}), disjunctions (\texttt{'+'}) and negations (\texttt{'!'}).
+For simplicity, expressions are written in their fully parenthised form.
+See the examples.
+
+\medskip
+
+You are given an almost complete program (see attached code \texttt{code.cc}).
+The main function is already written, as well as a
+a simple @Formula@ class that represents Boolean expressions
+using tree nodes. Here is the @Node@ structure of these trees:
+
+\begin{lstlisting}
+    struct Node {
+        char op;        // operand ('a'-'z') or operator ('+' or '*')
+        bool neg;       // tells if this node is negated
+        Node* left;     // left subformula
+        Node* right;    // right subformula
+    };
+\end{lstlisting}
+
+Each leaf node contains a variable in its @op@ field.
+Each non-leaf node contains \texttt{'+'} or \texttt{'*'} in its @op@ field
+and pointers to its left and right children. In addition, all nodes have a @neg@
+field that indicates whether or not this node is negated.
+
+\medskip
+
+The only attribute in the @Formula@ class is the @root@ of the tree od nodes.
+
+\medskip
+
+Your task is just to implement the @void push_negations()@ method of the @Formula@
+class.
+
+\medskip
+
+Do do so, you can add private methods to the class, but you cannot alter the
+@Node@ structure nor the existing methods, constructors and destructors. The
+@main()@ function is already written and you do not have to modify it.
+
+\Sample
+

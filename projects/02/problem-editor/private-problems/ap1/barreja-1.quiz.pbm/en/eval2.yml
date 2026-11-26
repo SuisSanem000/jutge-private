@@ -1,0 +1,11 @@
+type: SingleChoice
+
+text: "Quant val `$a / $b + $c < $a * $b % $d`?"
+
+shuffle: false
+
+choices:
+    -   text: "`true`"
+        correct: $s1
+    -   text: "`false`"
+        correct: $s2

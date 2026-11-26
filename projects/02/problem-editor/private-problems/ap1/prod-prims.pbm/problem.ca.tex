@@ -1,0 +1,47 @@
+
+\Problem{Nombres semiprimers}
+
+\Statement
+
+En matemàtiques, un natural és \emph{semiprimer} si és el
+producte de dos nombres primers. Els primers nombres semiprimers són
+4($= 2\times2$), 6($= 3\times2$), 9($= 3\times3$), 10($= 2\times5$), 14($= 2\times7$).
+
+\medskip
+
+1.~ Feu una funció
+
+\begin{lstlisting}
+    bool primer(int n);
+\end{lstlisting}
+
+que indiqui si un natural $n$ és o
+no primer. En aquest apartat, no podeu utilitzar bucles, per tant, serà bo que definiu una
+funció auxiliar amb algun paràmetre addicional.
+
+\medskip
+
+2.~ Utilitzeu la funció anterior per implementar una acció
+
+\begin{lstlisting}
+    void semiprimer(int n, bool& b, int& p, int& q);
+\end{lstlisting}
+
+que, donat un natural
+$n$, desa en $b$ si $n$ és o no semiprimer. A més, quan $b$ és cert, desa en
+$p$ i $q$ dos nombres primers tals que $pq=n$ i $p \le q$.
+
+
+\medskip
+
+3.~ Feu un programa que llegeixi una seqüència
+de naturals i que, per a cadascun, digui si és o no semiprimer i, en cas afirmatiu,
+escrigui la seva descomposició obtinguda per l'acció @semiprimer()@. Seguiu
+el format dels exemples.
+
+
+\Observation
+
+Com sempre en informàtica, els nombres naturals inclouen el zero.
+
+\Sample

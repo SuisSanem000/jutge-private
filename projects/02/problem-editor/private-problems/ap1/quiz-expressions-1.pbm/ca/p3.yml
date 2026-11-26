@@ -1,0 +1,66 @@
+
+type: FillIn
+
+text: |
+
+    
+    Suposant que 
+    `x = $x`,
+    `y = $y` i 
+    `z = $z`,
+    trieu quin és el resultat de les expressions de la dreta.
+
+    Fixeu-vos que les condicions són booleanes i, per tant,
+    la resposta ha de ser `False` o `True`.
+
+
+context: |
+
+    `x + y == y + z` = R1
+
+    `x + y != y + z` = R2
+    
+    `x + y > y + z` = R3
+    
+    `x < y < z` = R4
+    
+    `x <= y <= z` = R5
+
+
+items:
+
+    R1:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$r1"
+        ignorecase: false
+        trim: true
+
+    R2:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$r2"
+        ignorecase: false
+        trim: true
+        
+    R3:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$r3"
+        ignorecase: false
+        trim: true
+        
+    R4:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$r4"
+        ignorecase: false
+        trim: true
+        
+    R5:
+        maxlength: 10
+        placeholder: "?"
+        correct: "$r5"
+        ignorecase: false
+        trim: true
+     

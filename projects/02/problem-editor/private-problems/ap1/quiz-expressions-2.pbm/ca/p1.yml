@@ -1,0 +1,32 @@
+
+type: FillIn
+
+text: |
+
+    L'Anna té `caramels` caramels per dividir entre `amics` amics. 
+    
+
+context: |
+
+    Escriviu una expressió senzilla que indiqui quants caramels rebrà cada amic de l'Anna: R1
+
+    Escriviu una expressió senzilla que indiqui quants caramels li quedaran a l'Anna: R2
+
+    **Nota:** Separeu els operadors amb un espai.
+
+items:
+
+    R1:
+        maxlength: 30
+        placeholder: "?"
+        correct: "caramels // amics"
+        ignorecase: true
+        trim: true
+
+    R2:
+        maxlength: 30
+        placeholder: "?"
+        correct: "caramels % amics"
+        ignorecase: true
+        trim: true
+        

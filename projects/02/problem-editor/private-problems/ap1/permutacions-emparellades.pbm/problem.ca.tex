@@ -1,0 +1,44 @@
+
+\Problem{Nombre de permutacions emparellades}
+
+\Statement
+
+Una permutació d'$n$ elements $\{0,\dots,n-1\}$ es diu \emph{emparellada} si els elements a les posicions parells són tots parells o tots senars i, si els elements en posicions senars es troben en ordre creixent. Les posicions es comencen a comptar des de zero per l'esquerra.
+
+\medskip
+
+Per exemple, aquestes són totes les permutacions emparellades per a $n=5$:
+
+\begin{verbatim}
+0 1 2 3 4
+0 1 4 3 2
+2 1 0 3 4
+2 1 4 3 0
+4 1 0 3 2
+4 1 2 3 0
+\end{verbatim}
+
+i aquestes són totes les permutacions emparellades per a $n=6$:
+
+\begin{verbatim}
+0 1 2 3 4 5
+0 1 4 3 2 5
+1 0 3 2 5 4
+1 0 5 2 3 4
+2 1 0 3 4 5
+2 1 4 3 0 5
+3 0 1 2 5 4
+3 0 5 2 1 4
+4 1 0 3 2 5
+4 1 2 3 0 5
+5 0 1 2 3 4
+5 0 3 2 1 4
+\end{verbatim}
+
+\medskip
+
+Feu un programa de generació exhaustiva que llegeixi una seqüència de nombre naturals $n$ i que, per a cadascun d'ells, escrigui el nombre de permutacions emparellades d'$n$ elements. Especifiqueu adientment el procediment recursiu.
+
+
+
+\Sample
