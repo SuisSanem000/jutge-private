@@ -6,7 +6,7 @@
 doc/
 ├── ai-assistant/        # Strictly user-ordered AI operational rules
 │   └── rules.md
-├── ai-log/              # Dated daily folders (YYYY-MM-DD/NN-YYYY-MM-DD-HHMM.md)
+├── ai-log/              # Dated daily folders (YYYY-MM-DD/NN.md)
 ├── project-state/       # Current mandate, meeting summaries, and learning tracker
 │   ├── state.md
 │   ├── meetings.md
