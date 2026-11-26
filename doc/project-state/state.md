@@ -29,7 +29,7 @@
 | Phase | Deliverable | Dates | Status |
 |---|---|---|---|
 | [01-demo-20261112](../../projects/01-demo-20261112/README.md) | `.pbm` demo (`dominant-peaks.pbm`), Claude task, explanations, and Nov 12 presentation | 2026-11-11 – 2026-11-12 | Completed |
-| `02-<next-phase>` | Next 10–15 day supervisor deliverable (`pedit` CLI & problem-editing workflows) | TBD | Pending definition |
+| [02](../../projects/02/readme.md) | `pedit` CLI & PDF Problem Viewer | 2026-11-26 – TBD | Planning (awaiting confirmation) |
 
 ---
 

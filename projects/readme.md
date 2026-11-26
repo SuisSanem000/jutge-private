@@ -7,6 +7,7 @@ This directory holds time-boxed implementation phases delivered to supervisors e
 | Phase | Summary | Status |
 |---|---|---|
 | [01-demo-20261112](./01-demo-20261112/README.md) | `.pbm` demo (`dominant-peaks.pbm`), Claude prompt & explanations, and Nov 12 meeting presentation | Completed |
+| [02](./02/readme.md) | `pedit` CLI & PDF Problem Viewer | Planning (awaiting confirmation) |
 
 ## Policies
 
