@@ -1,38 +1,45 @@
-# Phase 02 — `pedit` CLI & PDF Problem Viewer
+# Phase 02 — Unified `pedit` CLI & PDF Problem Viewer
 
 ## Table of Contents
 
 - [What This Achieves](#what-this-achieves)
-- [Deliverables](#deliverables)
-- [Live Demos & Repositories](#live-demos--repositories)
-- [Technical Steps](#technical-steps)
+- [Live Demo & Repositories](#live-demo--repositories)
+- [CLI & Viewer Commands](#cli--viewer-commands)
+- [Technical Details](#technical-details)
+- [Related Docs](#related-docs)
 
 ## What This Achieves
 
-- **Keeps `jtk` unchanged:** Uses `jtk` (`4.4.50`) as the deterministic build, test, and lint engine.
-- **AI problem editing (`pedit`):** Teachers write a short request; `pedit` loads Jutge rules/skills, calls OpenRouter (`openai/gpt-4o-mini`), edits `.pbm` files, and auto-verifies with `jtk`.
-- **Visual problem inspection (`viewer`):** Teachers select any `.pbm` folder (from repo or PC) and view its PDF statement, code, and sample tests in a browser.
-- **Safe public demo:** Hosts only self-authored tools and synthetic `sum-evens.pbm` on GitHub Pages without exposing private exam problems.
+- **One unified tool (`pedit/`):** Combines the AI problem-editor CLI and the Problem PDF Viewer in `projects/02/problem-editor/pedit/` on top of unmodified `jtk` (`4.4.50`).
+- **One root GitHub Pages link:** Shows `pedit` CLI download + usage at the top and the interactive Problem PDF Viewer (with **Open `.pbm` from PC**) below.
+- **Low-cost OpenRouter AI:** Uses `@openrouter/sdk` (default `openai/gpt-4o-mini`), hidden `spec/` & `skills/` prompts, and closed-loop `jtk` verification (never writes `*.cor`).
+- **Safe public mirror:** Shares only self-authored `pedit/` and synthetic `sum-evens.pbm` publicly without private exam problems.
 
-## Deliverables
+## Live Demo & Repositories
 
-| Deliverable | Purpose | Docs |
+| Target | Contents | Link / Status |
 |---|---|---|
-| **`pedit` CLI** | AI + deterministic `.pbm` editor wrapping `jtk` | [CLI Docs](../cli/doc/readme.md) • [`jtk` vs `pedit`](../cli/doc/jtk-vs-pedit.md) • [Issues](../cli/doc/issues.md) |
-| **PDF Problem Viewer** | Browser UI for `.pbm` PDFs, code, and samples | [Viewer Docs](../pdf-viewer/doc/readme.md) • [Issues](../pdf-viewer/doc/issues.md) |
-| **Phase Notes** | Supervisor email draft & CI notes | [Supervisor Email](./supervisor-email.md) • [Phase Issues](./issues.md) |
+| **Public Pages Demo** (`SuisSanem000/pedit-demo`) | Unified `pedit/` + `sum-evens.pbm` | [Live Page](https://suissanem000.github.io/pedit-demo/) • [Repo](https://github.com/SuisSanem000/pedit-demo) |
+| **Local Source** (`projects/02/problem-editor/pedit/`) | CLI + Viewer + Tests | Gitignored source of truth |
+| **Private Upstream** (`jutge-org/problem-editor`) | Full repo + unified `pedit/` | Synced on request |
 
-## Live Demos & Repositories
+## CLI & Viewer Commands
 
-| Target | Contents | Status |
-|---|---|---|
-| **Local Source** (`projects/02/problem-editor/`) | `pedit/`, `viewer/`, `generated-demo/sum-evens.pbm/` | Gitignored source of truth |
-| **Public Pages Mirror** ([`SuisSanem000/pedit-demo`](https://github.com/SuisSanem000/pedit-demo)) | `pedit/`, `viewer/`, `demo-problems/sum-evens.pbm/` | Live: [Hub](https://suissanem000.github.io/pedit-demo/) • [CLI](https://suissanem000.github.io/pedit-demo/cli/) • [Viewer](https://suissanem000.github.io/pedit-demo/pdf-viewer/) |
-| **Private Upstream** (`jutge-org/problem-editor`) | Synced at `f4465de` (`v2026-11-26-2`) | Up to date |
+| Action | Command |
+|---|---|
+| **Install** | `cd pedit && bun install` |
+| **Inspect / Build (`jtk`)** | `bun run src/index.ts list --dir ..` • `status <pbm>` • `build` / `pdf` / `lint` / `verify <pbm>` |
+| **AI Create / Edit** | `bun run src/index.ts create <dir.pbm> "<idea>"` • `edit <pbm> ["<req>"] [--preset add-edge-tests]` • `chat <pbm>` |
+| **Start PDF Viewer** | `bun run src/index.ts viewer --dir .. --port 3456` |
+| **Export Static Pages** | `bun run export ./dist-pages` |
 
-## Technical Steps
+## Technical Details
 
-- **Step 1 — CLI (`pedit/`):** Built Bun/TS CLI (`index.ts`, `jtk.ts`, `pbm.ts`, `pdf.ts`, `ai.ts`); verified `bun test` (2/2) + live `create` and `edit` on `sum-evens.pbm`.
-- **Step 2 — PDF Fallback (`pdf.ts`):** Runs `jtk make pdf` first; falls back to headless Chrome if local BasicTeX lacks `moreverb.sty`.
-- **Step 3 — Viewer (`viewer/`):** Built `Bun.serve` API (`server.ts`), static exporter (`export-static.ts`), and dual-mode UI (`public/index.html`) with local PC `.pbm` folder picker.
-- **Step 4 — GitHub Actions:** Automated `pedit.tar.gz` bundle + static viewer deployment on `SuisSanem000/pedit-demo`.
+- **Modules (`pedit/src/`):** `index.ts` (CLI router), `jtk.ts` (`jtk` + `generate.ts` runner), `pbm.ts` (scanner & write guard), `pdf.ts` (`jtk make pdf` + headless Chrome fallback), `ai.ts` (`@openrouter/sdk` + 2-retry loop), `viewer-server.ts`, `export-static.ts`, and `public/index.html`.
+- **Verification:** `bun test` (2/2 pass), live OpenRouter `create` + `edit` on `sum-evens.pbm` (`openai/gpt-4o-mini`), live `pedit viewer` (`HTTP 200`, `%PDF-1.4`), and `export-static.ts` all verified.
+
+## Related Docs
+
+- [How `pedit` Differs from `jtk`](./jtk-vs-pedit.md)
+- [Phase 02 Issues Log](./issues.md)
+- [Supervisor Email Draft](./supervisor-email.md)

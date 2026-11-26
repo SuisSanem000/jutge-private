@@ -1,13 +1,27 @@
-# Phase 02 — Workspace & CI Issues
+# Phase 02 — Issues Log
 
 ## Table of Contents
 
-- [2026-11-26 — GitHub Pages Disabled on Private `jutge-org/problem-editor`](#2026-11-26--github-pages-disabled-on-private-jutge-orgproblem-editor)
+- [CLI Issues](#cli-issues)
+- [PDF & Viewer Issues](#pdf--viewer-issues)
+- [GitHub Pages & CI Issues](#github-pages--ci-issues)
 
----
+## CLI Issues
 
-## 2026-11-26 — GitHub Pages Disabled on Private `jutge-org/problem-editor`
+| Date | Issue | Resolution |
+|---|---|---|
+| 2026-11-26 | `google/gemini-2.0-flash-lite-001` retired on OpenRouter | Switched `CHEAP_MODELS` / default to `openai/gpt-4o-mini` |
+| 2026-11-26 | `jtk make` failed Zod check when `problem.en.yml` omitted `email` | Updated `ai.ts` prompt to require `title`, `author`, and `email` |
+| 2026-11-26 | Small models echoed protected `*.cor` keys on `pedit edit` | Stripped `*.cor` / `problem.yml` from LLM writes in `ai.ts` so `jtk make` regenerates `.cor` |
 
-- **What happened:** Enabling GitHub Pages via `gh api -X POST repos/jutge-org/problem-editor/pages -f build_type=workflow` failed with HTTP `422`: `"Your current plan does not support GitHub Pages for this repository."`
-- **Cause:** `jutge-org/problem-editor` is currently `PRIVATE`, and the org's GitHub plan only supports Pages on `PUBLIC` repositories (or GitHub Team/Enterprise).
-- **Workaround / Next action:** Kept `.github/workflows/pages.yml` committed on `jutge-org/problem-editor` (`main`) and verified identical Pages build/deployment on public `SuisSanem000/jutge-private`. Once `jutge-org/problem-editor` is made public (or upgraded), Pages will deploy automatically.
+## PDF & Viewer Issues
+
+| Date | Issue | Resolution |
+|---|---|---|
+| 2026-11-26 | `jtk make pdf` exited `0` with `Error in LaTeX` (`moreverb.sty` missing in macOS BasicTeX) | Added `pedit/src/pdf.ts` to verify `.pdf` creation and fall back to headless Chrome HTML-to-PDF |
+
+## GitHub Pages & CI Issues
+
+| Date | Issue | Resolution |
+|---|---|---|
+| 2026-11-26 | `jutge-org/problem-editor` returned HTTP `422` enabling Pages (private org plan) | Created public safe mirror `SuisSanem000/pedit-demo` for live Pages |

@@ -2,7 +2,7 @@
 
 > UPC scholarship workspace for **`jtk` (`@jutge.org/toolkit`)** and the Jutge.org problem-authoring & AI tooling ecosystem.
 
-**Live GitHub Pages (Public Demo Mirror):** [Demo Hub (`pedit-demo`)](https://suissanem000.github.io/pedit-demo/) • [CLI](https://suissanem000.github.io/pedit-demo/cli/) • [PDF Viewer](https://suissanem000.github.io/pedit-demo/pdf-viewer/)
+**Live GitHub Pages (Public Demo):** [pedit CLI & PDF Problem Viewer](https://suissanem000.github.io/pedit-demo/)
 
 ## Table of Contents
 
