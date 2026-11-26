@@ -37,7 +37,7 @@
 | Phase | Deliverable | Dates | Status |
 |---|---|---|---|
 | [01-demo-20261112](../../projects/01-demo-20261112/README.md) | `.pbm` demo (`dominant-peaks.pbm`), Claude task, explanations, and Nov 12 presentation | 2026-11-11 – 2026-11-12 | Completed |
-| [02](../../projects/02/readme.md) | `pedit` CLI & PDF Problem Viewer | 2026-11-26 – TBD | Planning (awaiting confirmation) |
+| [02](../../projects/02/doc/readme.md) | `pedit` CLI & PDF Problem Viewer | 2026-11-26 | Completed & Synced |
 
 ---
 
@@ -59,4 +59,4 @@
 - **2026-10-25:** Pau shared `problem-editor` specs, pedagogical constitution, 7 reference models, and Claude skills.
 - **2026-10-27:** Jordi added private exam problems (`private-problems/`) to `problem-editor`.
 - **2026-11-12:** Phase 1 demo (`dominant-peaks.pbm`) presented; direction pivoted from rewriting `jtk` to building `pedit` on top of unmodified `jtk`, OpenRouter SDK, and a minimal problem-viewer web UI.
-- **2026-11-26:** Workspace reorganized (`doc/ai-assistant/`, `doc/ai-log/`, `doc/project-state/`, `projects/02/`); duplicate docs consolidated and `start-here.md` created.
+- **2026-11-26:** Implemented `pedit` CLI + Problem PDF Viewer in `projects/02/problem-editor/`, verified OpenRouter (`openai/gpt-4o-mini`) + `jtk` closed loop, enabled GitHub Pages, synced `jutge-org/problem-editor` (`687f6f5`, tag `v2026-11-26`), and streamlined `doc/`.

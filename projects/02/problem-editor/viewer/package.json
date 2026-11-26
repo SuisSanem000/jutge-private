@@ -1,0 +1,14 @@
+{
+  "name": "pedit-viewer",
+  "version": "0.1.0",
+  "description": "Minimal local web & static Problem PDF Viewer for Jutge .pbm folders",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run server.ts",
+    "start": "bun run server.ts",
+    "export": "bun run export-static.ts"
+  },
+  "dependencies": {
+    "yaml": "^2.7.0"
+  }
+}

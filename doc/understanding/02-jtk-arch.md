@@ -9,6 +9,7 @@
 - [Config and login](#config-and-login)
 - [AI backend](#ai-backend)
 - [Compilers](#compilers)
+- [Key Debt & Gaps (Merged)](#key-debt--gaps-merged)
 
 Repo: `resources/jutge_repos/jutge-toolkit`. Package `@jutge.org/toolkit` v4.4.50, Apache-2.0, ESM, Bun. 384 commits, 2026-01-08 to 2026-10-22 (Jordi Petit 354, Pau Fernandez 29, one other).
 
@@ -73,3 +74,9 @@ There is no direct OpenAI or Gemini SDK. Every call goes through the Jutge.org A
 ## Compilers
 
 `compilers/base.ts` defines `compileNormal`, `compileWithMain` (concatenate `main.<ext>` onto the source) and `execute`. Lookup by id and by extension in `compilers/index.ts`. Supported: C, C++, Python, Haskell, Clojure, Java, Rust, R, Verilog, PRO2, MakePRO2, and the Run* variants.
+
+## Key Debt & Gaps (Merged)
+
+- **Architecture & testing:** Zero unit tests; `tui` prompts/console I/O mixed directly into core functions; `lib/settings.ts` runs top-level `await` file I/O on import; `stage` shells out recursively to `jtk`; no execution timeouts or sandboxing.
+- **Duplication & bugs:** Repeated golden-solution/compile logic; `proglangNames` disagrees between `data.ts` (`hs: 'GHC'`) and `stager.ts` (`'Haskell'`); `selectCompiler()` uses golden solution extension during `jtk make exe`; `jtk make pdf` can log `Error in LaTeX` while still exiting `0`; `generate statement` references missing prompt templates; ChatBot failures write `'Failed to get response'` to disk.
+- **Gaps for AI agents:** No `--json` machine-readable output contract, no closed-loop compile+test verification, `generate.ts` must be invoked separately before `jtk make`, and no first-class wrong-solution verdict assertions (`pedit` wraps unmodified `jtk` to supply these).

@@ -15,9 +15,9 @@
 | ID | Skill / Technology | Priority | Status | Jutge Application |
 |---|---|---|---|---|
 | `SK-01` | **Typst** | `P0 - High` | In Progress | Used by Pau for exam/solution PDFs (`PRO2_Parcial_2026P_Solucio.typ`); fast alternative to heavy LaTeX/Pandoc PDF builds. |
-| `SK-02` | **MCP / CLI Agent Bridge** | `P0 - High` | Planned | Treating unmodified `jtk` as an MCP/tool backend driven deterministically by `pedit`. |
+| `SK-02` | **MCP / CLI Agent Bridge** | `P0 - High` | Implemented (Phase 02) | `pedit/src/jtk.ts` wraps unmodified `jtk` deterministically for CLI & viewer. |
 | `SK-03` | **WebStreams / SSE** | `P1 - Medium` | Planned | Understanding `api.jutge.org` streaming outputs (`upload`, JutgeAI chat routing). |
-| `SK-04` | **OpenRouter SDK & DeepSeek Harness** | `P0 - High` | Planned | Calling DeepSeek v4 and other models from `pedit` before later Jutge API routing. |
+| `SK-04` | **OpenRouter SDK & DeepSeek Harness** | `P0 - High` | Implemented (Phase 02) | `pedit/src/ai.ts` uses `@openrouter/sdk` with closed-loop `jtk` retries; tested with `openai/gpt-4o-mini`. |
 | `SK-05` | **OpenCode CLI** | `P1 - Medium` | Planned | Evaluating terminal-based OpenRouter workflows (Pau's suggestion). |
 
 ---

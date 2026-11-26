@@ -8,12 +8,15 @@ jutge_repos/
 # Ignore Jutge problem.yml files (contain server email + passcode credentials)
 **/problem.yml
 
+# Ignore dependencies, caches, and temp build files
+node_modules/
+**/node_modules/
+.cache_ggshield/
+**/jtk-*
+
 # Ignore OS, editor, and environment files
 .vscode/
 .DS_Store
 **/._*
 .env
 .env.*
-
-# Added by ggshield
-.cache_ggshield

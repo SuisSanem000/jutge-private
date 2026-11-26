@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>pedit CLI — Phase 02</title>
   <style>
-    body { font-family: system-ui, -apple-system, sans-serif; max-width: 760px; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; color: #111; }
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 780px; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; color: #111; }
     code, pre { background: #f6f8fa; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, monospace; }
+    code { padding: 0.15rem 0.35rem; }
     pre { padding: 1rem; overflow-x: auto; }
     .btn { display: inline-block; padding: 0.6rem 1.1rem; background: #0969da; color: #fff; border-radius: 6px; text-decoration: none; font-weight: 600; margin: 0.5rem 0; }
     .btn:hover { background: #0757b5; }
@@ -15,24 +16,36 @@
 <body>
   <p><a href="../">&larr; Back to 02</a></p>
   <h1><code>pedit</code> CLI</h1>
-  <p>AI-assisted Jutge problem-editor CLI built around unmodified <code>jtk</code> (4.4.50).</p>
+  <p>AI-assisted Jutge problem-editor CLI built in Bun + TypeScript around unmodified <code>jtk</code> (4.4.50).</p>
 
-  <h2>Download</h2>
-  <p><a class="btn" href="./pedit.tar.gz" download>Download pedit bundle (pedit.tar.gz)</a></p>
-  <p><small>Bundle is packaged automatically by GitHub Actions once <code>projects/02/problem-editor/pedit/</code> is added.</small></p>
+  <h2>Download &amp; Run</h2>
+  <p><a class="btn" href="./pedit.tar.gz" download>Download pedit CLI (pedit.tar.gz)</a></p>
+  <pre>tar -xzf pedit.tar.gz
+cd pedit
+bun install
+bun run src/index.ts --help</pre>
 
   <h2>How It Works</h2>
   <ul>
-    <li><strong>Unmodified <code>jtk</code> backend:</strong> Calls <code>jtk make</code>, <code>jtk make pdf</code>, <code>jtk lint</code>, and <code>jtk verify</code> deterministically.</li>
-    <li><strong>OpenRouter SDK:</strong> Lets you choose models (e.g. DeepSeek v4) for conversational edits, with future routing to Jutge's API.</li>
-    <li><strong>Hidden master prompts:</strong> Loads <code>spec/</code> and <code>skills/</code> automatically so prompts stay focused only on the problem idea or edit request.</li>
-    <li><strong>Closed-loop verification:</strong> Re-runs <code>jtk</code> after edits so errors self-correct.</li>
+    <li><strong>Unmodified <code>jtk</code> backend:</strong> Runs <code>jtk make</code>, <code>jtk make pdf</code>, <code>jtk lint</code>, <code>jtk verify</code>, and <code>jtk clean</code> with structured <code>--json</code> output.</li>
+    <li><strong>OpenRouter SDK:</strong> Uses <code>@openrouter/sdk</code> with selectable low-cost models (default <code>google/gemma-4-26b-a4b-it:free</code> or <code>openai/gpt-4o-mini</code>), reading <code>OPENROUTER_API_KEY</code> (or <code>ANTHROPIC_AUTH_TOKEN</code> when routed via OpenRouter).</li>
+    <li><strong>Hidden master prompts &amp; skills:</strong> Preloads <code>spec/constitucio.md</code>, <code>spec/problema-jutge.md</code>, and <code>skills/problemes-jutge/SKILL.md</code> so user prompts stay short.</li>
+    <li><strong>Closed-loop verification:</strong> Blocks LLM writes to <code>*.cor</code> / <code>problem.yml</code>, runs <code>generate.ts</code> + <code>jtk make all</code> + PDF render + <code>jtk lint</code>, and auto-retries up to 2 times on errors.</li>
   </ul>
 
-  <h2>Planned Commands</h2>
-  <pre>pedit list
-pedit status &lt;problem.pbm&gt;
-pedit build &lt;problem.pbm&gt; --json
-pedit edit &lt;problem.pbm&gt; "add edge case tests for empty input"</pre>
+  <h2>Commands</h2>
+  <pre>pedit list [--dir ..] [--json]
+pedit status &lt;problem.pbm&gt; [--json]
+pedit show &lt;problem.pbm&gt; [file]
+pedit build &lt;problem.pbm&gt; [--json]
+pedit pdf &lt;problem.pbm&gt; [--json]
+pedit lint &lt;problem.pbm&gt; [--json]
+pedit verify &lt;problem.pbm&gt;
+pedit meta &lt;problem.pbm&gt; --lang en --title "..." --author "..." --email "..."
+pedit handler &lt;problem.pbm&gt; --compilers G++17
+pedit models | pedit presets
+pedit create &lt;dir.pbm&gt; "&lt;problem idea&gt;" [--model openai/gpt-4o-mini]
+pedit edit &lt;dir.pbm&gt; ["&lt;instruction&gt;"] [--preset add-edge-tests]
+pedit chat &lt;dir.pbm&gt;</pre>
 </body>
 </html>

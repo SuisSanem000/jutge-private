@@ -19,25 +19,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Install pedit dependencies
+        run: bun install --cwd projects/02/problem-editor/pedit
 
       - name: Build static site
         run: |
           rm -rf _site
-          mkdir -p _site/02/pedit-cli-and-pdf-viewer
+          mkdir -p _site/02/pedit-cli-and-pdf-viewer/cli _site/02/pedit-cli-and-pdf-viewer/pdf-viewer
 
-          # Phase 02 static pages (hub, cli, pdf-viewer)
-          cp -r projects/02/pages/* _site/02/pedit-cli-and-pdf-viewer/
+          # Phase 02 hub (only two links: cli/ and pdf-viewer/) + CLI page
+          cp projects/02/pages/index.html _site/02/pedit-cli-and-pdf-viewer/index.html
+          cp projects/02/pages/cli/index.html _site/02/pedit-cli-and-pdf-viewer/cli/index.html
 
-          # Package pedit CLI if present
-          if [ -d "projects/02/problem-editor/pedit" ]; then
-            tar -czf _site/02/pedit-cli-and-pdf-viewer/cli/pedit.tar.gz -C projects/02/problem-editor pedit
-          fi
+          # Package pedit CLI bundle (excluding node_modules and .env)
+          tar --exclude='node_modules' --exclude='.env*' -czf _site/02/pedit-cli-and-pdf-viewer/cli/pedit.tar.gz -C projects/02/problem-editor pedit
 
-          # Copy sample PDFs for live static preview
-          mkdir -p _site/02/pedit-cli-and-pdf-viewer/pdf-viewer/samples
-          if [ -d "projects/02/problem-editor/generated-exam-sample" ]; then
-            cp projects/02/problem-editor/generated-exam-sample/*.pdf _site/02/pedit-cli-and-pdf-viewer/pdf-viewer/samples/ || true
-          fi
+          # Export full interactive static PDF Problem Viewer
+          bun run projects/02/problem-editor/viewer/export-static.ts _site/02/pedit-cli-and-pdf-viewer/pdf-viewer
 
           # Root index pointing to latest phase
           cat > _site/index.html <<'HTML'
