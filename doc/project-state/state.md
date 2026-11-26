@@ -7,7 +7,7 @@
 ## 1. People & Roles
 
 | Person | Role |
-|---|---|
+| --- | --- |
 | Jordi Petit | UPC Professor, Jutge.org creator & lead |
 | Pau Fernandez | UPC collaborator & maintainer of `problem-editor` |
 | Simin Shoeibi | UPC master's intern leading `pedit` architecture & delivery |
@@ -17,7 +17,7 @@
 ## 2. Directory Model
 
 | Folder | Owner | Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `resources/` | Simin | Read-only upstream clones (`jutge_repos/`, `problem-editor/`) and professor notes. Never modified by AI. |
 | `doc/` | AI & Simin | AI assistant rules, daily AI logs, current project state, core topic translations/guides, and architecture references. |
 | `projects/` | Simin & AI | Time-boxed 10–15 day deliverable phases for supervisor check-ins. |
@@ -27,9 +27,9 @@
 ## 3. Phase Registry (`projects/`)
 
 | Phase | Deliverable | Dates | Status |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | [01-demo-20261112](../../projects/01-demo-20261112/README.md) | `.pbm` demo (`dominant-peaks.pbm`), Claude task, explanations, and Nov 12 presentation | 2026-11-11 – 2026-11-12 | Completed |
-| [02](../../projects/02/readme.md) | `pedit` CLI & PDF Problem Viewer | 2026-11-26 – TBD | Planning (awaiting confirmation) |
+| `02-<next-phase>` | Next 10–15 day supervisor deliverable (`pedit` CLI & problem-editing workflows) | TBD | Pending definition |
 
 ---
 
