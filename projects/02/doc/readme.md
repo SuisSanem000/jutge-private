@@ -21,7 +21,7 @@
 |---|---|---|
 | **Public Pages Demo** (`SuisSanem000/pedit-demo`) | Unified `pedit/` + `sum-evens.pbm` | [Live Page](https://suissanem000.github.io/pedit-demo/) • [Repo](https://github.com/SuisSanem000/pedit-demo) |
 | **Local Source** (`projects/02/problem-editor/pedit/`) | CLI + Viewer + Tests | Gitignored source of truth |
-| **Private Upstream** (`jutge-org/problem-editor`) | Full repo + unified `pedit/` | Synced on request |
+| **Private Upstream** (`jutge-org/problem-editor`) | Reset to `6779486` (`2026-11-11`) | Untouched; demo lives on `pedit-demo` |
 
 ## CLI & Viewer Commands
 
