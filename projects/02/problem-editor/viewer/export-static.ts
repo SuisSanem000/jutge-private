@@ -77,6 +77,7 @@ writeFileSync(
   JSON.stringify(
     {
       mode: "static",
+      sourceLabel: "problem-editor/ (generated-demo/, generated-exam-sample/, spec/models/)",
       generatedAt: new Date().toISOString(),
       problems: manifestProblems,
       extraPdfs,

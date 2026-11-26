@@ -29,7 +29,7 @@
 ## Live Pages & Sync
 
 - **GitHub Pages (`jutge-private`):** `/02/pedit-cli-and-pdf-viewer/` (`cli/` with `pedit.tar.gz` download + `pdf-viewer/` static app).
-- **Upstream sync (`jutge-org/problem-editor`):** Pushed `pedit/`, `viewer/`, `generated-demo/`, compiled PDFs, `.github/workflows/pages.yml`, and `README.md` at `687f6f5` (tag `v2026-11-26`).
+- **Upstream sync (`jutge-org/problem-editor`):** Pushed at `687f6f5` (tag `v2026-11-26`) and fixed README links at `eb330c2`; further upstream syncs paused until explicitly requested.
 
 ---
 

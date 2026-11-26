@@ -19,20 +19,22 @@
     header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0.7rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
     header h1 { margin: 0; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; }
     .badge { font-size: 0.75rem; padding: 0.15rem 0.45rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
-    .layout { flex: 1; display: grid; grid-template-columns: 300px 1fr; min-height: 0; }
+    .layout { flex: 1; display: grid; grid-template-columns: 320px 1fr; min-height: 0; }
     aside { background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; min-height: 0; }
-    .search-box { padding: 0.65rem; border-bottom: 1px solid var(--border); }
+    .source-bar { padding: 0.65rem; border-bottom: 1px solid var(--border); background: #f8fafc; font-size: 0.78rem; color: var(--muted); display: flex; flex-direction: column; gap: 0.45rem; }
+    .source-path { font-family: ui-monospace, SFMono-Regular, monospace; color: var(--text); word-break: break-all; font-weight: 600; }
+    .search-box { padding: 0.55rem 0.65rem; border-bottom: 1px solid var(--border); }
     .search-box input { width: 100%; padding: 0.45rem 0.65rem; border: 1px solid var(--border); border-radius: 6px; font-size: 0.88rem; }
     .problem-list { flex: 1; overflow-y: auto; padding: 0.4rem; }
     .prob-item { width: 100%; text-align: left; border: 1px solid transparent; background: transparent; padding: 0.55rem 0.65rem; border-radius: 6px; cursor: pointer; margin-bottom: 0.25rem; }
     .prob-item:hover { background: var(--bg); }
     .prob-item.active { background: var(--accent-soft); border-color: #54aeff; }
     .prob-title { font-weight: 600; font-size: 0.9rem; display: block; }
-    .prob-meta { font-size: 0.76rem; color: var(--muted); display: flex; justify-content: space-between; margin-top: 0.2rem; }
+    .prob-meta { font-size: 0.74rem; color: var(--muted); display: flex; justify-content: space-between; margin-top: 0.2rem; gap: 0.35rem; }
     main { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
     .toolbar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0.6rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; }
     .group { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
-    button.btn, a.btn { padding: 0.35rem 0.7rem; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); color: var(--text); font-size: 0.82rem; font-weight: 600; cursor: pointer; text-decoration: none; }
+    button.btn, a.btn, label.btn { padding: 0.35rem 0.7rem; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); color: var(--text); font-size: 0.82rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem; }
     button.btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
     button.btn.active { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
     button.btn:disabled { opacity: 0.5; cursor: not-allowed; }
@@ -42,8 +44,8 @@
     .content { flex: 1; min-height: 0; padding: 0.75rem; display: flex; flex-direction: column; }
     iframe { width: 100%; height: 100%; border: 1px solid var(--border); border-radius: 8px; background: #fff; }
     pre { margin: 0; padding: 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: auto; flex: 1; font-family: ui-monospace, SFMono-Regular, monospace; font-size: 0.84rem; line-height: 1.45; }
-    .empty { margin: auto; text-align: center; color: var(--muted); max-width: 440px; }
-    @media (max-width: 820px) { .layout { grid-template-columns: 1fr; grid-template-rows: 220px 1fr; } }
+    .empty { margin: auto; text-align: center; color: var(--muted); max-width: 460px; }
+    @media (max-width: 820px) { .layout { grid-template-columns: 1fr; grid-template-rows: 260px 1fr; } }
   </style>
 </head>
 <body>
@@ -54,6 +56,19 @@
 
   <div class="layout">
     <aside>
+      <div class="source-bar">
+        <div>
+          <span>Opened folder:</span>
+          <div class="source-path" id="sourceLabel">-</div>
+        </div>
+        <div class="group">
+          <label class="btn primary">
+            Open .pbm from PC
+            <input id="localPbmPicker" type="file" webkitdirectory directory multiple hidden />
+          </label>
+          <button class="btn" id="openDirPathBtn" hidden>Switch Server Folder</button>
+        </div>
+      </div>
       <div class="search-box">
         <input id="searchInput" type="search" placeholder="Filter .pbm problems..." />
       </div>
@@ -84,7 +99,7 @@
       </div>
 
       <div class="content" id="contentArea">
-        <div class="empty">Select a problem folder on the left to inspect its compiled PDF statement, solution, tests, and metadata.</div>
+        <div class="empty">Select a problem folder on the left, or click <strong>Open .pbm from PC</strong> to view any local <code>.pbm</code> folder directly in your browser.</div>
       </div>
     </main>
   </div>
@@ -92,6 +107,7 @@
   <script>
     const state = {
       mode: 'static',
+      sourceLabel: '-',
       problems: [],
       extraPdfs: [],
       selected: null,
@@ -117,11 +133,18 @@
         state.mode = 'static';
       }
 
+      applyLoadedData(data);
+    }
+
+    function applyLoadedData(data) {
       state.problems = data.problems || [];
       state.extraPdfs = data.extraPdfs || [];
+      state.sourceLabel = data.sourceLabel || data.root || 'problem-editor/';
+      document.getElementById('sourceLabel').textContent = state.sourceLabel;
       document.getElementById('modeBadge').textContent = state.mode === 'server' ? 'Live Bun Server' : 'Static Pages';
 
       if (state.mode === 'server') {
+        document.getElementById('openDirPathBtn').hidden = false;
         document.getElementById('rebuildPdfBtn').hidden = false;
         document.getElementById('makeBtn').hidden = false;
         document.getElementById('lintBtn').hidden = false;
@@ -158,7 +181,7 @@
       const list = document.getElementById('problemList');
       list.innerHTML = '';
       const filtered = state.problems.filter(p =>
-        !q || p.name.toLowerCase().includes(q) || p.title.toLowerCase().includes(q)
+        !q || p.name.toLowerCase().includes(q) || p.title.toLowerCase().includes(q) || (p.relPath || '').toLowerCase().includes(q)
       );
 
       for (const p of filtered) {
@@ -168,7 +191,7 @@
         btn.innerHTML = `
           <span class="prob-title">${escapeHtml(p.title || p.name)}</span>
           <span class="prob-meta">
-            <span>${escapeHtml(p.name)}</span>
+            <span>${escapeHtml(p.relPath || p.name)}</span>
             <span>${p.languages.join(', ') || '-'}${pdfCount ? ' • PDF' : ''}</span>
           </span>`;
         btn.onclick = () => selectProblem(p.id);
@@ -180,7 +203,7 @@
       const p = state.problems.find(x => x.id === id);
       if (!p) return;
       state.selected = p;
-      state.lang = p.languages[0] || 'en';
+      state.lang = p.languages[0] || Object.keys(p.pdfs || {})[0] || 'en';
       renderList();
       renderToolbar();
       await loadFiles();
@@ -209,6 +232,10 @@
     async function loadFiles() {
       const p = state.selected;
       if (!p) return;
+      if (p.localFiles) {
+        state.files = p.localFiles;
+        return;
+      }
       const url = state.mode === 'server' ? `/api/problems/${encodeURIComponent(p.id)}/files` : p.filesUrl;
       try {
         const res = await fetch(url);
@@ -222,6 +249,9 @@
     function currentPdfUrl(rebuild = false) {
       const p = state.selected;
       if (!p) return null;
+      if (p.localFiles) {
+        return p.pdfs?.[state.lang] || Object.values(p.pdfs || {})[0] || null;
+      }
       if (state.mode === 'server') {
         return `/api/problems/${encodeURIComponent(p.id)}/pdf?lang=${encodeURIComponent(state.lang || 'en')}${rebuild ? '&rebuild=1' : ''}`;
       }
@@ -247,7 +277,7 @@
 
       if (state.tab === 'pdf') {
         if (!pdfUrl) {
-          area.innerHTML = `<div class="empty">No precompiled PDF found for this problem (${escapeHtml(state.lang || 'en')}).${state.mode === 'server' ? ' Click <strong>Rebuild PDF</strong> to compile via <code>jtk make pdf</code>.' : ''}</div>`;
+          area.innerHTML = `<div class="empty">No precompiled PDF found for this problem (${escapeHtml(state.lang || 'en')}).${state.mode === 'server' && !p.localFiles ? ' Click <strong>Rebuild PDF</strong> to compile via <code>jtk make pdf</code>.' : ' Run <code>pedit pdf &lt;problem.pbm&gt;</code> locally to generate its PDF.'}</div>`;
         } else {
           area.innerHTML = `<iframe src="${pdfUrl}"></iframe>`;
         }
@@ -288,7 +318,7 @@
     }
 
     async function runAction(action) {
-      if (state.mode !== 'server' || !state.selected) return;
+      if (state.mode !== 'server' || !state.selected || state.selected.localFiles) return;
       state.lastLog = `Running jtk ${action}...`;
       if (action === 'pdf' && state.tab === 'pdf') {
         const rebuildUrl = currentPdfUrl(true);
@@ -305,6 +335,96 @@
       state.tab = 'log';
       renderContent();
     }
+
+    // Client-side .pbm folder picker (works on both GitHub Pages and localhost)
+    document.getElementById('localPbmPicker').addEventListener('change', async (e) => {
+      const fileList = Array.from(e.target.files || []);
+      if (!fileList.length) return;
+
+      const grouped = new Map();
+      for (const f of fileList) {
+        const rel = f.webkitRelativePath || f.name;
+        const parts = rel.split('/');
+        const pbmIdx = parts.findIndex(seg => seg.endsWith('.pbm'));
+        if (pbmIdx === -1) continue;
+        const pbmRel = parts.slice(0, pbmIdx + 1).join('/');
+        const inner = parts.slice(pbmIdx + 1).join('/');
+        if (!grouped.has(pbmRel)) grouped.set(pbmRel, []);
+        grouped.get(pbmRel).push({ inner, file: f });
+      }
+
+      if (!grouped.size) {
+        alert('No .pbm folder found inside the selected directory.');
+        return;
+      }
+
+      const loaded = [];
+      for (const [pbmRel, entries] of grouped.entries()) {
+        const pbmName = pbmRel.split('/').pop();
+        const langs = new Set();
+        const pdfs = {};
+        const localFiles = {};
+        let title = pbmName.replace(/\.pbm$/, '');
+
+        for (const { inner, file } of entries) {
+          if (inner === 'problem.yml' || inner.includes('/')) continue;
+          const pdfM = /^problem\.([a-z]{2})\.pdf$/.exec(inner);
+          if (pdfM) {
+            langs.add(pdfM[1]);
+            pdfs[pdfM[1]] = URL.createObjectURL(file);
+            continue;
+          }
+          const texM = /^problem\.([a-z]{2})\.tex$/.exec(inner);
+          if (texM) langs.add(texM[1]);
+          const ymlM = /^problem\.([a-z]{2})\.yml$/.exec(inner);
+          if (ymlM) langs.add(ymlM[1]);
+
+          if (/\.(tex|yml|cc|cpp|py|hs|clj|ts|inp|cor|ops|md)$/.test(inner)) {
+            const txt = await file.text();
+            localFiles[inner] = txt;
+            if (ymlM) {
+              const tM = /^title:\s*(.+)$/m.exec(txt);
+              if (tM && (ymlM[1] === 'en' || title === pbmName.replace(/\.pbm$/, ''))) {
+                title = tM[1].trim().replace(/^["']|["']$/g, '');
+              }
+            }
+          }
+        }
+
+        loaded.push({
+          id: 'local__' + pbmRel,
+          name: pbmName,
+          relPath: pbmRel,
+          title,
+          languages: Array.from(langs).sort(),
+          pdfs,
+          localFiles
+        });
+      }
+
+      loaded.sort((a, b) => a.relPath.localeCompare(b.relPath));
+      state.problems = loaded;
+      state.sourceLabel = 'Local PC selection (' + (fileList[0].webkitRelativePath.split('/')[0] || 'folder') + ')';
+      document.getElementById('sourceLabel').textContent = state.sourceLabel;
+      renderList();
+      if (loaded[0]) selectProblem(loaded[0].id);
+    });
+
+    document.getElementById('openDirPathBtn').onclick = async () => {
+      const dir = prompt('Enter full path to a folder containing .pbm problems:', state.sourceLabel);
+      if (!dir) return;
+      const res = await fetch('/api/open-dir', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ dir })
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        alert(data.error || 'Failed to open directory');
+        return;
+      }
+      applyLoadedData(data);
+    };
 
     function escapeHtml(s) {
       return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));

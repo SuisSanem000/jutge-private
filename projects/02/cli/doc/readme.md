@@ -52,7 +52,7 @@ bun run src/index.ts chat <dir.pbm>
 ## OpenRouter & Skills Integration
 
 - Reads `OPENROUTER_API_KEY` from environment or `.env`, with automatic fallback to `ANTHROPIC_AUTH_TOKEN` when `ANTHROPIC_BASE_URL` targets OpenRouter.
-- Low-cost models listed in `CHEAP_MODELS`: `google/gemma-4-26b-a4b-it:free` (default), `openai/gpt-4o-mini`, and `deepseek/deepseek-chat-v3-0324`.
+- Low-cost models listed in `CHEAP_MODELS`: `openai/gpt-4o-mini` (default), `google/gemini-2.5-flash-lite`, and `deepseek/deepseek-chat-v3-0324`.
 - Preloads `spec/constitucio.md`, `spec/problema-jutge.md`, and `skills/problemes-jutge/SKILL.md` behind the scenes so prompts stay short.
 
 ---

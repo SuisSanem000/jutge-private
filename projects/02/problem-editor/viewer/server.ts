@@ -6,7 +6,7 @@ import { discoverProblems, inspectProblem, readProblemContext } from "../pedit/s
 import { buildProblemPdfs } from "../pedit/src/pdf.ts";
 
 const PORT = Number(process.env.PORT || 3456);
-const ROOT_DIR = resolve(process.env.PEDIT_PROBLEMS_DIR || join(import.meta.dir, ".."));
+let rootDir = resolve(process.env.PEDIT_PROBLEMS_DIR || join(import.meta.dir, ".."));
 const INDEX_HTML_PATH = join(import.meta.dir, "public", "index.html");
 
 function json(data: unknown, status = 200): Response {
@@ -17,7 +17,7 @@ function json(data: unknown, status = 200): Response {
 }
 
 function findById(id: string, includePrivate: boolean) {
-  return discoverProblems(ROOT_DIR, includePrivate).find((p) => p.id === id);
+  return discoverProblems(rootDir, includePrivate).find((p) => p.id === id);
 }
 
 const server = Bun.serve({
@@ -34,8 +34,23 @@ const server = Bun.serve({
     }
 
     if (pathname === "/api/problems" && req.method === "GET") {
-      const problems = discoverProblems(ROOT_DIR, includePrivate);
-      return json({ mode: "server", root: ROOT_DIR, problems });
+      const problems = discoverProblems(rootDir, includePrivate);
+      return json({
+        mode: "server",
+        root: rootDir,
+        sourceLabel: rootDir,
+        problems,
+      });
+    }
+
+    if (pathname === "/api/open-dir" && req.method === "POST") {
+      const body = (await req.json().catch(() => ({}))) as { dir?: string };
+      if (!body.dir || !existsSync(resolve(body.dir))) {
+        return json({ error: "Directory does not exist" }, 400);
+      }
+      rootDir = resolve(body.dir);
+      const problems = discoverProblems(rootDir, includePrivate);
+      return json({ mode: "server", root: rootDir, sourceLabel: rootDir, problems });
     }
 
     const pdfMatch = /^\/api\/problems\/([^/]+)\/pdf$/.exec(pathname);
@@ -47,12 +62,12 @@ const server = Bun.serve({
       const reqLang = url.searchParams.get("lang") || p.languages[0] || "en";
       const rebuild = url.searchParams.get("rebuild") === "1";
 
-      let info = inspectProblem(p.path, ROOT_DIR);
+      let info = inspectProblem(p.path, rootDir);
       let pdfPath = info.pdfs[reqLang] || Object.values(info.pdfs)[0];
 
       if (!pdfPath || rebuild) {
         const res = await buildProblemPdfs(p.path);
-        info = inspectProblem(p.path, ROOT_DIR);
+        info = inspectProblem(p.path, rootDir);
         pdfPath = info.pdfs[reqLang] || Object.values(info.pdfs)[0];
         if (!res.ok && !pdfPath) {
           return json({ error: "PDF build failed", details: res }, 500);
@@ -98,4 +113,4 @@ const server = Bun.serve({
   },
 });
 
-console.log(`PDF Problem Viewer running at http://localhost:${server.port} (root: ${ROOT_DIR})`);
+console.log(`PDF Problem Viewer running at http://localhost:${server.port} (root: ${rootDir})`);

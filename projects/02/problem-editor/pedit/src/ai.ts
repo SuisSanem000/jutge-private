@@ -11,8 +11,8 @@ export interface ModelInfo {
 }
 
 export const CHEAP_MODELS: ModelInfo[] = [
-  { id: "google/gemma-4-26b-a4b-it:free", note: "Free OpenRouter model ($0) for testing" },
-  { id: "openai/gpt-4o-mini", note: "Ultra-low-cost reliable structured JSON model" },
+  { id: "openai/gpt-4o-mini", note: "Default ultra-low-cost reliable JSON model" },
+  { id: "google/gemini-2.5-flash-lite", note: "Ultra-low-cost fast Gemini model" },
   { id: "deepseek/deepseek-chat-v3-0324", note: "DeepSeek model (per Nov 12 meeting)" },
 ];
 
