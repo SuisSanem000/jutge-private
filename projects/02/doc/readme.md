@@ -28,7 +28,7 @@
 
 ## Live Pages & Sync
 
-- **GitHub Pages (`jutge-private`):** `/02/pedit-cli-and-pdf-viewer/` (`cli/` with `pedit.tar.gz` download + `pdf-viewer/` static app).
+- **Public Demo Mirror (`SuisSanem000/pedit-demo`):** [`pedit-demo`](https://github.com/SuisSanem000/pedit-demo) • Live Pages: [Hub](https://suissanem000.github.io/pedit-demo/) • [CLI](https://suissanem000.github.io/pedit-demo/cli/) • [PDF Viewer](https://suissanem000.github.io/pedit-demo/pdf-viewer/) (contains only self-authored `pedit/`, `viewer/`, and synthetic `sum-evens.pbm`).
 - **Upstream sync (`jutge-org/problem-editor`):** Pushed at `687f6f5` (tag `v2026-11-26`) and fixed README links at `eb330c2`; further upstream syncs paused until explicitly requested.
 
 ---
