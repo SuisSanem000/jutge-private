@@ -1,4 +1,4 @@
-# Sync to `jutge-org/problem-editor`
+# Sync to `pedit-demo` & `jutge-org/problem-editor`
 
 ## Table of Contents
 
@@ -10,15 +10,16 @@
 ## Reusable Prompt
 
 ```text
-Take all code in the latest project's `problem-editor/` folder (for example `projects/02/problem-editor/`), sync and push everything to https://github.com/jutge-org/problem-editor on `main`, tag the commit with today's date (`YYYY-MM-DD`) so it is clear in the commit history, and update GitHub Actions / GitHub Pages and README links properly on that repository as well.
+Take the code from local `projects/02/problem-editor/` and sync both:
+1. `https://github.com/SuisSanem000/pedit-demo` (public GitHub Pages mirror: only `pedit/`, `viewer/`, safe `demo-problems/`, and `.github/workflows/pages.yml` — never private professor/exam materials).
+2. `https://github.com/jutge-org/problem-editor` (`main` branch, date-tagged commit `YYYY-MM-DD`, updating `README.md` and `.github/workflows/pages.yml`).
 ```
 
 ---
 
 ## Execution Checklist
 
-1. Locate the latest phase folder under `projects/` containing `problem-editor/` (e.g. `projects/02/problem-editor/`).
-2. Clone or update `https://github.com/jutge-org/problem-editor` in a temporary directory outside tracked repo files (never commit nested `.git` into `jutge-private`).
-3. Copy updated code, `pedit/`, `viewer/`, `.github/workflows/pages.yml`, and updated `README.md` routes into that `problem-editor` clone (excluding secrets, `.env*`, and `**/problem.yml` if private).
-4. Commit with a date-prefixed message (e.g. `2026-11-26: sync pedit cli and pdf viewer from phase 02`), create a date tag if appropriate (`git tag -a vYYYY-MM-DD -m "..."`), and push to `origin main` (and tags).
-5. Verify GitHub Pages workflow and README links on `jutge-org/problem-editor`, log to `doc/ai-log/YYYY-MM-DD/NN.md`, and push `jutge-private`.
+1. Read from local `projects/<NN>/problem-editor/` (gitignored source of truth in `jutge-private`).
+2. **Public mirror (`SuisSanem000/pedit-demo`):** Sync only `pedit/`, `viewer/`, safe `demo-problems/`, and `.github/workflows/pages.yml` (excluding `node_modules/`, `.env*`, `**/problem.yml`, `private-problems/`, `spec/`, `skills/`, `generated-exam-sample/`), commit with `YYYY-MM-DD: ...`, and push `main`.
+3. **Upstream (`jutge-org/problem-editor`):** Sync `pedit/`, `viewer/`, `generated-demo/`, `.github/workflows/pages.yml`, and `README.md` (excluding `node_modules/`, `.env*`, `**/problem.yml`), commit with `YYYY-MM-DD: ...`, tag `vYYYY-MM-DD`, and push `main --tags`.
+4. Verify no secrets or local paths leaked, log to `doc/ai-log/YYYY-MM-DD/NN.md`, and push `jutge-private`.
