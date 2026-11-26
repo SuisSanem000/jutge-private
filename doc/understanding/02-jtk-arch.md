@@ -1,4 +1,4 @@
-# 03 — jtk architecture (verified against the code)
+# 02 — jtk architecture (verified against the code)
 
 ## Table of Contents
 

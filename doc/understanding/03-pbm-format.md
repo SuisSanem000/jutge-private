@@ -1,4 +1,4 @@
-# 04 — Problem format (.pbm) and grading
+# 03 — Problem format (.pbm) and grading
 
 ## Table of Contents
 

@@ -478,7 +478,7 @@ When you meet with Professor Jordi Petit and Pau Fernandez, you can connect your
 ## Related Documentation & Further Reading
 
 - [Jutge Private Workspace Root Map](../../../README.md)
-- [Ecosystem Architecture & Repositories Guide](../../understanding/02-ecosystem.md)
+- [Ecosystem Architecture & Repositories Guide](../../understanding/01-ecosystem.md)
 - [Jutge Toolkit (`jtk`) Execution Architecture](../../understanding/03-jtk-architecture.md)
 - [Problem Format, Scoring, and Grading Specifications](../../understanding/04-problem-format-and-grading.md)
 - [Dominant Peaks Generated Problem Workspace](../../../work/01-meeting-presentation-and-demo-20261112/01-claude-task/dominant-peaks.pbm/)

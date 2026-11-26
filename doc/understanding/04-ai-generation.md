@@ -2,7 +2,7 @@
 
 > **Document Role:** Architectural and technical analysis of how AI is used in Jutge.  
 > **Audience:** Senior Software Engineer onboarding to the project.  
-> **Navigation:** [Root Workspace](../../README.md) • [Senior Developer Brief](./01-senior-dev-brief.md) • [jtk Architecture](./03-jtk-architecture.md) • [Problem Format](./04-problem-format-and-grading.md)
+> **Navigation:** [Root Workspace](../../README.md) • [jtk Architecture](./02-jtk-arch.md) • [Problem Format](./03-pbm-format.md)
 
 ## Table of Contents
 

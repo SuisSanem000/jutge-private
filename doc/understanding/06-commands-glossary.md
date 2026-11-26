@@ -1,4 +1,4 @@
-# 07 — Commands cheat sheet and glossary
+# 06 — Commands cheat sheet and glossary
 
 ## Table of Contents
 
