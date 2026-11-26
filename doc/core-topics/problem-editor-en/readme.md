@@ -5,6 +5,15 @@
 > **Target Audience:** Senior Software Engineer executing Phases 1 & 2.  
 > **Navigation:** [Root Workspace](../../README.md) • [Phase 1 & 2 Execution Guide](../../work/01-meeting-presentation-and-demo-20261112/README.md) • [Constitution Spec](./spec/constitution.md) • [Problem Spec](./spec/problem-spec.md)
 
+## Table of Contents
+
+- [1. What Is `problem-editor`?](#1-what-is-problem-editor)
+  - [The Goal](#the-goal)
+- [2. Proposed System Architecture (Pau's Vision)](#2-proposed-system-architecture-paus-vision)
+- [3. The 4 Proposed Phases](#3-the-4-proposed-phases)
+- [4. Translated Folder & Specification Map](#4-translated-folder--specification-map)
+- [5. Other Repositories Included in `problem-editor`](#5-other-repositories-included-in-problem-editor)
+
 ---
 
 ## 1. What Is `problem-editor`?

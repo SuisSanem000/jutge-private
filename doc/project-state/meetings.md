@@ -2,6 +2,11 @@
 
 > Source originals remain untouched under `resources/original-info-from-professors/`.
 
+## Table of Contents
+
+- [2026-11-12 — Pivot to `pedit` & Next Steps](#2026-11-12--pivot-to-pedit--next-steps)
+- [2026-10-22 — Kickoff Meeting](#2026-10-22--kickoff-meeting)
+
 ---
 
 ## 2026-11-12 — Pivot to `pedit` & Next Steps

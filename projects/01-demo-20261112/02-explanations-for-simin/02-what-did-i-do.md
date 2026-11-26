@@ -3,6 +3,18 @@
 > **Location:** `work/01-meeting-presentation-and-demo-20261112/02-explanations-for-simin/02-what-did-i-do.md`  
 > **Parent Navigation:** [Explanations Overview](./README.md) • [What Is Problem Editor?](./01-what-is-problem-editor.md) • [Task 01 Root](../README.md)
 
+## Table of Contents
+
+- [1. Executive Summary](#1-executive-summary)
+- [2. Phase 1: What You Studied & Mastered](#2-phase-1-what-you-studied--mastered)
+- [3. Phase 2: What You Implemented with Claude Code](#3-phase-2-what-you-implemented-with-claude-code)
+  - [Step 1: Algorithmic Problem Design](#step-1-algorithmic-problem-design)
+  - [Step 2: Claude Code Delegation & Prompt Engineering](#step-2-claude-code-delegation--prompt-engineering)
+  - [Step 3: What Claude Generated](#step-3-what-claude-generated)
+  - [Step 4: Verification via `jtk`](#step-4-verification-via-jtk)
+  - [Step 5: Real-World Issues Caught and Self-Corrected by Claude Code](#step-5-real-world-issues-caught-and-self-corrected-by-claude-code)
+- [4. The Big Technical Finding: Why `jtk` Must Be Rebuilt](#4-the-big-technical-finding-why-jtk-must-be-rebuilt)
+
 ---
 
 ## 1. Executive Summary

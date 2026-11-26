@@ -6,6 +6,23 @@
 > **Original Problem Editor Path:** `resources/professor gave 2026-10-25/problem-editor/`  
 > **Meeting Proposal Document:** [PROPOSAL-PRESENTATION-20261112.md](../03-for-meeting-tomorrow/PROPOSAL-PRESENTATION-20261112.md)
 
+## Table of Contents
+
+- [1. Why Running Claude Inside `problem-editor` Is the Best Strategy](#1-why-running-claude-inside-problem-editor-is-the-best-strategy)
+- [2. Step-by-Step Instructions in VS Code](#2-step-by-step-instructions-in-vs-code)
+  - [Step 1: Open `problem-editor` in VS Code](#step-1-open-problem-editor-in-vs-code)
+  - [Step 2: Open the Claude Code Extension](#step-2-open-the-claude-code-extension)
+  - [Step 3: Copy and Paste the Master Prompt](#step-3-copy-and-paste-the-master-prompt)
+  - [Step 4: Approve File Creation Permissions](#step-4-approve-file-creation-permissions)
+  - [Step 5: What Gets Created Inside `problem-editor/dominant-peaks.pbm/`](#step-5-what-gets-created-inside-problem-editordominant-peakspbm)
+- [3. Terminal Compilation & Verification](#3-terminal-compilation--verification)
+  - [Self-Correction Loop (If Errors Occur)](#self-correction-loop-if-errors-occur)
+- [4. What to Tell Your Supervisors Tomorrow (November 12)](#4-what-to-tell-your-supervisors-tomorrow-november-12)
+  - [Part 1: "What Did I Study?" (Phase 1)](#part-1-what-did-i-study-phase-1)
+  - [Part 2: "What Did I Implement?" (Phase 2 Demo)](#part-2-what-did-i-implement-phase-2-demo)
+  - [Part 3: "Key Architectural Insight & The Proposal for Phase 3"](#part-3-key-architectural-insight--the-proposal-for-phase-3)
+- [5. Quick Links & Workspace Reference](#5-quick-links--workspace-reference)
+
 ---
 
 ## 1. Why Running Claude Inside `problem-editor` Is the Best Strategy

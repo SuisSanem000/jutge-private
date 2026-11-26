@@ -1,5 +1,14 @@
 # 04 — Problem format (.pbm) and grading
 
+## Table of Contents
+
+- [Folder anatomy](#folder-anatomy)
+- [handler.yml keys (zod `Handler`)](#handleryml-keys-zod-handler)
+- [Problem types (problem-editor view, C++ focus)](#problem-types-problem-editor-view-c-focus)
+- [Lint rules (`lib/lint.ts`)](#lint-rules-liblintts)
+- [Grading on the server](#grading-on-the-server)
+- [Known inconsistencies in the spec material](#known-inconsistencies-in-the-spec-material)
+
 Sources: jtk code (`lib/types.ts`, `lib/problem.ts`, `lib/lint.ts`), jtk `docs/problem-anatomy.md`, problem specification documentation, `jutge-driver-std/std/judge.py`.
 
 ## Folder anatomy

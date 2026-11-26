@@ -4,6 +4,11 @@
 > **Purpose:** Reference implementations demonstrating exact file structures for different problem categories.  
 > **Navigation:** [Problem Editor Master README](../README.md) • [Constitution Spec](./constitution.md) • [Problem Spec](./problem-spec.md)
 
+## Table of Contents
+
+- [The 7 Reference Models](#the-7-reference-models)
+- [Key Lessons from Inspecting the Models](#key-lessons-from-inspecting-the-models)
+
 ---
 
 ## The 7 Reference Models

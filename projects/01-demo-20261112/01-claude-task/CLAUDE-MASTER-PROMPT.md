@@ -5,6 +5,10 @@
 > **Workspace Context:** Run this prompt in VS Code when the workspace root is **`problem-editor`** (`resources/professor gave 2026-10-25/problem-editor/`).  
 > **Related Guide:** See [How to Use Claude Code Guide](./HOW-TO-USE-CLAUDE-CODE.md) for step-by-step instructions.
 
+## Table of Contents
+
+- [Master Prompt for Claude Code (Running Inside `problem-editor`)](#master-prompt-for-claude-code-running-inside-problem-editor)
+
 ---
 
 ```text

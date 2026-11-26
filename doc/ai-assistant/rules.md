@@ -1,5 +1,9 @@
 # AI Assistant Rules
 
+## Table of Contents
+
+- [Hard Rules](#hard-rules)
+
 Read this file and [Project State](../project-state/state.md) at the start of every session.
 
 ## Hard Rules
@@ -14,3 +18,4 @@ Read this file and [Project State](../project-state/state.md) at the start of ev
 8. **Technical integrity:** Never hand-write or LLM-generate `*.cor` files (always generate them via `jtk make`). Do not modify `jtk`; build `pedit` to interact with `jtk`. Verify claims against source code, label unchecked claims as *inference*, and never invent terminal output.
 9. **Project phases:** Organize deliverables in `projects/` as 10–15 day phases (`01-...`, `02-...`) for supervisor reviews and keep [Project State](../project-state/state.md) updated.
 10. **Auto-sync rules:** Whenever Simin states or implies a project rule in chat, immediately update this `doc/ai-assistant/rules.md` file (without duplicates).
+11. **Table of Contents (TOC):** Every markdown file in `doc/`, `projects/`, and root `README.md` must include a `## Table of Contents` section with anchor links.

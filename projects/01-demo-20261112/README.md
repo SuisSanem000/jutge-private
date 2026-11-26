@@ -6,6 +6,12 @@
 > **Author:** Simin Shoeibi  
 > **Navigation:** [Root Workspace](../../README.md) • [Work Directory](../README.md)
 
+## Table of Contents
+
+- [Clean 3-Folder Structure](#clean-3-folder-structure)
+- [Quick Navigation Links](#quick-navigation-links)
+- [Quick Meeting Strategy](#quick-meeting-strategy)
+
 ---
 
 ## Clean 3-Folder Structure

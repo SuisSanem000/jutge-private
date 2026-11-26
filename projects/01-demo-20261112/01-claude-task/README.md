@@ -4,6 +4,12 @@
 > **Purpose:** Contains everything related to the task delegated to Claude Code, including the master prompt, execution guide, problem idea, and the complete generated problem directory.  
 > **Parent Navigation:** [Task 01 Root Overview](../README.md) • [Explanations for Simin](../02-explanations-for-simin/README.md) • [Meeting Materials](../03-for-meeting-tomorrow/README.md)
 
+## Table of Contents
+
+- [What Is in This Folder?](#what-is-in-this-folder)
+- [The Generated Problem Anatomy (`dominant-peaks.pbm/`)](#the-generated-problem-anatomy-dominant-peakspbm)
+- [How to Verify or Reproduce](#how-to-verify-or-reproduce)
+
 ---
 
 ## What Is in This Folder?

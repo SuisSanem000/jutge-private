@@ -1,5 +1,10 @@
 # `projects/` — Supervisor Deliverables (10–15 Day Phases)
 
+## Table of Contents
+
+- [Phase Registry](#phase-registry)
+- [Policies](#policies)
+
 This directory holds time-boxed implementation phases delivered to supervisors every 10–15 days.
 
 ## Phase Registry

@@ -4,6 +4,19 @@
 > **Rule:** Detailed technical anatomy and invariants for all Jutge problems.  
 > **Navigation:** [Problem Editor Master README](../README.md) • [Constitution Spec](./constitution.md) • [Reference Models Guide](./models-guide.md)
 
+## Table of Contents
+
+- [1. What Is a Jutge Problem?](#1-what-is-a-jutge-problem)
+  - [Standard Grading Verdicts](#standard-grading-verdicts)
+- [2. Problem Types & Compiler Modes](#2-problem-types--compiler-modes)
+  - [1. `G++17` (Single C++ Source File)](#1-g17-single-c-source-file)
+  - [2. `PRO2` (Single File Linked with Teacher Library)](#2-pro2-single-file-linked-with-teacher-library)
+  - [3. `MakePRO2` (Multi-File Archive)](#3-makepro2-multi-file-archive)
+- [3. The `.pbm` Folder Anatomy](#3-the-pbm-folder-anatomy)
+- [4. Problem Statement Anatomy (`problem.en.tex`)](#4-problem-statement-anatomy-problementex)
+- [5. Testcase Generator (`generate.ts`)](#5-testcase-generator-generatets)
+- [6. Pre-Flight Quality Checklist (For AI & Human Review)](#6-pre-flight-quality-checklist-for-ai--human-review)
+
 ---
 
 ## 1. What Is a Jutge Problem?

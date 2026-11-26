@@ -6,6 +6,16 @@
 > **Subject:** Restructure & Rebuild of `@jutge.org/toolkit` (`jtk`) and Problem-Editor AI Integration  
 > **Navigation:** [Meeting Folder Overview](./README.md) • [Speaking Script](./01-meeting-speaking-script.md) • [Questions to Ask](./02-questions-to-ask-professors.md) • [Task 01 Root](../README.md) • [Root Workspace](../../../README.md)
 
+## Table of Contents
+
+- [1. Executive Summary & Findings](#1-executive-summary--findings)
+  - [Key Architectural Strengths to Retain](#key-architectural-strengths-to-retain)
+  - [Bottlenecks Blocking the AI Problem-Editor Vision](#bottlenecks-blocking-the-ai-problem-editor-vision)
+- [2. Proposed System Architecture (jtk v5)](#2-proposed-system-architecture-jtk-v5)
+  - [Core Design Principles](#core-design-principles)
+- [3. 4-Month Roadmap](#3-4-month-roadmap)
+- [4. Key Decisions for Today's Meeting](#4-key-decisions-for-todays-meeting)
+
 ---
 
 ## 1. Executive Summary & Findings

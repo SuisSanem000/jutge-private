@@ -1,5 +1,12 @@
 # 02 — Ecosystem
 
+## Table of Contents
+
+- [Layers](#layers)
+- [Repos](#repos)
+- [Legacy → jtk command mapping](#legacy--jtk-command-mapping)
+- [What matters for the rewrite](#what-matters-for-the-rewrite)
+
 All repos are under `resources/jutge_repos/` (cloned, read only). Data from git history and READMEs.
 
 ## Layers

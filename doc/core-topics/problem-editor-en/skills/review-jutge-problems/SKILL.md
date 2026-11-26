@@ -4,6 +4,15 @@ description: |
     Skill for reviewing and validating one or more Jutge.org programming problems 
     for consistency, pedagogical standards, correctness, and completeness.
 ---
+## Table of Contents
+
+- [Problem Review Checklist](#problem-review-checklist)
+  - [1. Problem Type & Configuration](#1-problem-type--configuration)
+  - [2. Problem Statement Review](#2-problem-statement-review)
+  - [3. Solution Code Review](#3-solution-code-review)
+  - [4. Generator Review (`generate.ts`)](#4-generator-review-generatets)
+  - [5. Limits & Scoring (`scores.yml`, `.ops`)](#5-limits--scoring-scoresyml-ops)
+
 
 First, read the [Pedagogical Constitution & Guidelines](../../spec/constitution.md) and the [Problem Specification](../../spec/problem-spec.md).
 

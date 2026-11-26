@@ -2,6 +2,12 @@
 
 > **Goal (2026-11-12 meeting notes):** Simple web interface to demonstrate a problem folder visually — no special architecture, database, or auth.
 
+## Table of Contents
+
+- [Architecture](#architecture)
+- [Core Features](#core-features)
+- [What We Build First (MVP Step 1)](#what-we-build-first-mvp-step-1)
+
 ---
 
 ## Architecture

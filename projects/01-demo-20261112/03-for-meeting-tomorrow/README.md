@@ -5,6 +5,13 @@
 > **Supervisors:** Prof. Jordi Petit & Pau Fernandez  
 > **Parent Navigation:** [Task 01 Root Overview](../README.md) • [Claude Task & Generated Code](../01-claude-task/README.md) • [Explanations for Simin](../02-explanations-for-simin/README.md)
 
+## Table of Contents
+
+- [What Is in This Folder?](#what-is-in-this-folder)
+- [Meeting Day Checklist](#meeting-day-checklist)
+  - [1. Before Joining the Call](#1-before-joining-the-call)
+  - [2. During the Meeting](#2-during-the-meeting)
+
 ---
 
 ## What Is in This Folder?

@@ -4,6 +4,27 @@
 > **Audience:** Senior Software Engineer onboarding to the Jutge scholarship project.  
 > **Purpose:** 15-minute executive architectural briefing covering domain, codebase state, and initial roadmap.
 
+## Table of Contents
+
+- [1. Executive Context & The Core Problem](#1-executive-context--the-core-problem)
+  - [What is Jutge.org?](#what-is-jutgeorg)
+  - [The Problem](#the-problem)
+  - [The Objective of this 4-Month Internship](#the-objective-of-this-4-month-internship)
+- [2. High-Level System Architecture](#2-high-level-system-architecture)
+  - [The Key Repositories & Actors](#the-key-repositories--actors)
+- [3. The Core Domain Entity: The Problem Folder (`.pbm`)](#3-the-core-domain-entity-the-problem-folder-pbm)
+- [4. Current State & Technical Debt Assessment](#4-current-state--technical-debt-assessment)
+- [5. Clean Workspace Structure (No Folder Duplication)](#5-clean-workspace-structure-no-folder-duplication)
+- [6. Prioritized 4-Hour Study Plan](#6-prioritized-4-hour-study-plan)
+  - [Hour 1: Domain & The Problem Spec (60 min)](#hour-1-domain--the-problem-spec-60-min)
+  - [Hour 2: The Problem Editor Vision & Agent Skills (60 min)](#hour-2-the-problem-editor-vision--agent-skills-60-min)
+  - [Hour 3: Existing `jtk` Codebase & Architectural Debt (60 min)](#hour-3-existing-jtk-codebase--architectural-debt-60-min)
+  - [Hour 4: Meeting Strategy & Proposal Selection (60 min)](#hour-4-meeting-strategy--proposal-selection-60-min)
+- [7. Concrete Proposals for the November 12th Meeting](#7-concrete-proposals-for-the-november-12th-meeting)
+  - [Proposal A: The Technical Architecture RFC & 4-Month Roadmap (Strategic Lead)](#proposal-a-the-technical-architecture-rfc--4-month-roadmap-strategic-lead)
+  - [Proposal B: Working Proof-of-Concept — Closed-Loop Verifier (Tangible Engineering)](#proposal-b-working-proof-of-concept--closed-loop-verifier-tangible-engineering)
+  - [Proposal C: Upstream `problem-editor` Bug Fixes & Spec Audit (Immediate Contributions)](#proposal-c-upstream-problem-editor-bug-fixes--spec-audit-immediate-contributions)
+
 ---
 
 ## 1. Executive Context & The Core Problem

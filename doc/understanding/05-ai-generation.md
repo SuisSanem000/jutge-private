@@ -4,6 +4,20 @@
 > **Audience:** Senior Software Engineer onboarding to the project.  
 > **Navigation:** [Root Workspace](../../README.md) • [Senior Developer Brief](./01-senior-dev-brief.md) • [jtk Architecture](./03-jtk-architecture.md) • [Problem Format](./04-problem-format-and-grading.md)
 
+## Table of Contents
+
+- [1. What Is This Document & Why Does It Exist?](#1-what-is-this-document--why-does-it-exist)
+- [2. Approach 1: How `jtk generate` Works Today (The Legacy Tool)](#2-approach-1-how-jtk-generate-works-today-the-legacy-tool)
+  - [The Execution Pipeline](#the-execution-pipeline)
+  - [Why the Current Tool Is Broken ("Open-Loop")](#why-the-current-tool-is-broken-open-loop)
+- [3. Approach 2: The Future Vision (Pau's Problem Editor & Agent Skills)](#3-approach-2-the-future-vision-paus-problem-editor--agent-skills)
+  - [How Pau Tested the Concept](#how-pau-tested-the-concept)
+  - [The Long-Term Vision (The SaaS Problem Editor)](#the-long-term-vision-the-saas-problem-editor)
+- [4. The Architectural Gap: Why Your Internship Exists](#4-the-architectural-gap-why-your-internship-exists)
+  - [Why Current `jtk` Fails as an Agent Backend](#why-current-jtk-fails-as-an-agent-backend)
+- [5. Architectural Comparison: Current vs. Target](#5-architectural-comparison-current-vs-target)
+- [6. What This Means for Your Implementation Work](#6-what-this-means-for-your-implementation-work)
+
 ---
 
 ## 1. What Is This Document & Why Does It Exist?

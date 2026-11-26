@@ -1,5 +1,12 @@
 # 07 — Commands cheat sheet and glossary
 
+## Table of Contents
+
+- [Normal flow](#normal-flow)
+- [Headless generation](#headless-generation)
+- [Corrections to old commands](#corrections-to-old-commands)
+- [Glossary](#glossary)
+
 Commands were checked against `toolkit/*.ts`. Terminal output is **not** shown here because it was never verified.
 
 ## Normal flow

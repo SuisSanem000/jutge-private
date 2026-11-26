@@ -3,6 +3,18 @@
 > **Location:** `work/01-meeting-presentation-and-demo-20261112/03-for-meeting-tomorrow/02-questions-to-ask-professors.md`  
 > **Parent Navigation:** [Meeting Materials Overview](./README.md) • [Engineering Proposal](./PROPOSAL-PRESENTATION-20261112.md) • [Speaking Script](./01-meeting-speaking-script.md) • [Task 01 Root](../README.md)
 
+## Table of Contents
+
+- [1. Problem Editor Storage & Organization Questions (For Pau Fernandez)](#1-problem-editor-storage--organization-questions-for-pau-fernandez)
+  - [Question 1: Where should generated problems live in `problem-editor`?](#question-1-where-should-generated-problems-live-in-problem-editor)
+  - [Question 2: Typst PDF Statement Compilation](#question-2-typst-pdf-statement-compilation)
+- [2. Architecture & Engine Rebuild Questions (For Jordi Petit & Pau Fernandez)](#2-architecture--engine-rebuild-questions-for-jordi-petit--pau-fernandez)
+  - [Question 3: Git Repository & PR Review Workflow](#question-3-git-repository--pr-review-workflow)
+  - [Question 4: Agent Interface Priority (CLI `--json` vs MCP Server)](#question-4-agent-interface-priority-cli---json-vs-mcp-server)
+  - [Question 5: Language Scope for Month 1 Test Fixtures](#question-5-language-scope-for-month-1-test-fixtures)
+  - [Question 6: Jutge AI Token / LLM Endpoint](#question-6-jutge-ai-token--llm-endpoint)
+  - [Question 7: Code Comments & Statement Languages (English vs Catalan)](#question-7-code-comments--statement-languages-english-vs-catalan)
+
 ---
 
 ## 1. Problem Editor Storage & Organization Questions (For Pau Fernandez)

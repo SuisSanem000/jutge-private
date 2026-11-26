@@ -2,6 +2,12 @@
 
 > Targeted technologies needed for `pedit`, problem generation, and exam tooling.
 
+## Table of Contents
+
+- [Skill Dashboard](#skill-dashboard)
+- [Active Focus: `SK-01` Typst](#active-focus-sk-01-typst)
+- [Upcoming: `SK-04` OpenRouter SDK & DeepSeek Harness](#upcoming-sk-04-openrouter-sdk--deepseek-harness)
+
 ---
 
 ## Skill Dashboard

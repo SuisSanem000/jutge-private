@@ -2,6 +2,13 @@
 
 > **Navigation:** [Task Overview](../README.md) • [Master Prompt](../CLAUDE-MASTER-PROMPT.md) • [Execution Guide](../HOW-TO-USE-CLAUDE-CODE.md)
 
+## Table of Contents
+
+- [Summary](#summary)
+- [Constraints](#constraints)
+- [Complexity Requirements](#complexity-requirements)
+- [Test Case Strategy](#test-case-strategy)
+
 ## Summary
 Given a sequence of integers representing the elevations of mountain peaks from left to right, a peak is called **dominant** if it is strictly higher than every peak that appears to its right in the sequence. The last peak in the sequence is always dominant by definition.
 

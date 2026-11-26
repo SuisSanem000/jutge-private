@@ -4,6 +4,11 @@ description: |
     Skill for when the user wants to create, draft, or modify Jutge.org 
     programming problems according to official specifications and pedagogical guidelines.
 ---
+## Table of Contents
+
+- [1. Problem Creation Workflow](#1-problem-creation-workflow)
+- [2. Problem Modification Workflow](#2-problem-modification-workflow)
+
 
 First, read the [Pedagogical Constitution & Guidelines](../../spec/constitution.md), which must always be complied with under all circumstances with maximum priority.
 

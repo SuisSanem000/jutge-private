@@ -4,6 +4,11 @@
 > **Purpose:** Deep-dive explanations answering the two core questions: What is `problem-editor`, and what did Simin do?  
 > **Parent Navigation:** [Task 01 Root Overview](../README.md) • [Claude Task & Generated Code](../01-claude-task/README.md) • [Meeting Materials](../03-for-meeting-tomorrow/README.md)
 
+## Table of Contents
+
+- [Documents in This Folder](#documents-in-this-folder)
+- [Key Takeaway Summary](#key-takeaway-summary)
+
 ---
 
 ## Documents in This Folder

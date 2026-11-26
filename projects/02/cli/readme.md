@@ -2,6 +2,12 @@
 
 > **Core rule:** Keep `jtk` (`4.4.50`) completely unchanged. `jtk` acts as the deterministic tool/MCP backend; `pedit` is the new problem-editor CLI built around it.
 
+## Table of Contents
+
+- [Goal](#goal)
+- [Problem-Editing Operations Catalog](#problem-editing-operations-catalog)
+- [What We Build First (MVP Step 1)](#what-we-build-first-mvp-step-1)
+
 ---
 
 ## Goal

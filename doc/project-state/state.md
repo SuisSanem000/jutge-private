@@ -2,6 +2,14 @@
 
 > **Current Mandate (post-2026-11-12 pivot):** Keep `jtk` unchanged (`jtk` serves as the deterministic tool/MCP layer) and build a separate CLI/agent tool named **`pedit`** (problem editor) using the OpenRouter SDK (starting with DeepSeek v4, routing through Jutge's API later) plus a simple web interface to display problems kept in a folder.
 
+## Table of Contents
+
+- [1. People & Roles](#1-people--roles)
+- [2. Directory Model](#2-directory-model)
+- [3. Phase Registry (`projects/`)](#3-phase-registry-projects)
+- [4. Immediate Next Focus (from 2026-11-12 Meeting)](#4-immediate-next-focus-from-2026-11-12-meeting)
+- [5. Timeline Log](#5-timeline-log)
+
 ---
 
 ## 1. People & Roles

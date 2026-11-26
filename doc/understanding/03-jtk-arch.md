@@ -1,5 +1,15 @@
 # 03 — jtk architecture (verified against the code)
 
+## Table of Contents
+
+- [Entry and build](#entry-and-build)
+- [Commands (`toolkit/*.ts`)](#commands-toolkitts)
+- [lib/ modules](#lib-modules)
+- [Main flows](#main-flows)
+- [Config and login](#config-and-login)
+- [AI backend](#ai-backend)
+- [Compilers](#compilers)
+
 Repo: `resources/jutge_repos/jutge-toolkit`. Package `@jutge.org/toolkit` v4.4.50, Apache-2.0, ESM, Bun. 384 commits, 2026-01-08 to 2026-10-22 (Jordi Petit 354, Pau Fernandez 29, one other).
 
 ## Entry and build

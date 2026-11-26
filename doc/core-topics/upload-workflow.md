@@ -2,9 +2,32 @@
 
 > **Topic Summary:** A complete technical and operational guide explaining what part of the Jutge platform the professor demonstrated in your initial meeting, the exact documents and source code behind it, the web service protocol, and a step-by-step practical manual for defining, compiling, validating, and uploading problems using your authorized UPC account credentials.
 
----
-
 ## Table of Contents
+
+- [1. Executive Summary: What Part of the Project Was This?](#1-executive-summary-what-part-of-the-project-was-this)
+  - [What Specific Part of the Project Does This Represent?](#what-specific-part-of-the-project-does-this-represent)
+  - [Why Did the Professor Demonstrate This in the Terminal?](#why-did-the-professor-demonstrate-this-in-the-terminal)
+  - [How Does This Connect to Your Scholarship?](#how-does-this-connect-to-your-scholarship)
+- [2. Codebase & Documentation Map](#2-codebase--documentation-map)
+- [3. Under the Hood: Web Service Protocol & Architecture](#3-under-the-hood-web-service-protocol--architecture)
+  - [Detailed Protocol Details:](#detailed-protocol-details)
+- [4. Step-by-Step Practical Guide](#4-step-by-step-practical-guide)
+  - [Step 0: Prerequisites & Tool Verification](#step-0-prerequisites--tool-verification)
+  - [Step 1: Authenticate with Jutge Web Services](#step-1-authenticate-with-jutge-web-services)
+  - [Step 2: Define and Scaffold a Problem Directory](#step-2-define-and-scaffold-a-problem-directory)
+  - [Step 3: Local Compilation, Linting, and Verification](#step-3-local-compilation-linting-and-verification)
+  - [Step 4: Clean and Upload to Jutge Web Services](#step-4-clean-and-upload-to-jutge-web-services)
+  - [Step 5: Post-Upload Configuration, Sharing, and Testing](#step-5-post-upload-configuration-sharing-and-testing)
+- [5. Deep Dive into Implementation Source Code](#5-deep-dive-into-implementation-source-code)
+  - [Authentication Hierarchy (`lib/login.ts`)](#authentication-hierarchy-liblogints)
+  - [Packaging and Upload Logic (`lib/upload.ts`)](#packaging-and-upload-logic-libuploadts)
+  - [API Client & WebStream Streaming (`lib/jutge_api_client.ts`)](#api-client--webstream-streaming-libjutgeapiclientts)
+- [6. Tool Comparison: `jtk` vs `jutge` CLI](#6-tool-comparison-jtk-vs-jutge-cli)
+- [7. Safety Invariants & Common Pitfalls](#7-safety-invariants--common-pitfalls)
+- [8. Meeting Preparation Talking Points](#8-meeting-preparation-talking-points)
+- [Related Documentation & Further Reading](#related-documentation--further-reading)
+
+---
 
 1. [Executive Summary: What Part of the Project Was This?](#1-executive-summary-what-part-of-the-project-was-this)
 2. [Codebase & Documentation Map](#2-codebase--documentation-map)

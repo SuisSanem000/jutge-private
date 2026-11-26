@@ -1,6 +1,19 @@
 
 # What I did: the "Dominant Mountain Peaks" problem
 
+## Table of Contents
+
+- [The problem](#the-problem)
+- [The idea of the fast solution (O(N))](#the-idea-of-the-fast-solution-on)
+- [The slow solution (O(N²))](#the-slow-solution-on²)
+- [The files I created (folder `dominant-peaks.pbm/`)](#the-files-i-created-folder-dominant-peakspbm)
+- [The tests](#the-tests)
+- [Scores](#scores)
+- [How I checked it](#how-i-checked-it)
+- [Problems I found and fixed](#problems-i-found-and-fixed)
+- [Differences from the original request](#differences-from-the-original-request)
+- [Not done / not checked](#not-done--not-checked)
+
 ## The problem
 We have a list of mountain heights. A peak is "dominant" if it is higher than ALL the peaks to its right. The last peak is always dominant. For each list, we print the dominant peaks from left to right.
 

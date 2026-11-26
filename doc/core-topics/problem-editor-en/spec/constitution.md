@@ -4,6 +4,14 @@
 > **Rule:** This constitution must always be followed strictly with maximum priority.  
 > **Navigation:** [Problem Editor Master README](../README.md) • [Problem Spec](./problem-spec.md) • [Claude Skills](../skills/jutge-problems/SKILL.md)
 
+## Table of Contents
+
+- [1. Programming Pedagogy](#1-programming-pedagogy)
+- [2. C++ Language Standard (C++17 Subset)](#2-c-language-standard-c17-subset)
+  - [Operator Overloading Rule](#operator-overloading-rule)
+- [3. Educational Concepts & Prerequisites (DAG)](#3-educational-concepts--prerequisites-dag)
+- [4. Source Code Conventions](#4-source-code-conventions)
+
 ---
 
 ## 1. Programming Pedagogy

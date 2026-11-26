@@ -7,6 +7,39 @@
 > **Meeting Date:** November 12, 2026  
 > **Format:** 10 Simple Slides • Easy-to-Speak Sentences • Exact Commands & Real Results
 
+## Table of Contents
+
+- [Slide 1: Welcome & Overview](#slide-1-welcome--overview)
+  - [On the Slide:](#on-the-slide)
+  - [What to Say Aloud:](#what-to-say-aloud)
+- [Slide 2: The 4 Phases from Pau's Roadmap](#slide-2-the-4-phases-from-paus-roadmap)
+  - [On the Slide:](#on-the-slide-1)
+  - [What to Say Aloud:](#what-to-say-aloud-1)
+- [Slide 3: What I Learned (The Rules for Making Problems)](#slide-3-what-i-learned-the-rules-for-making-problems)
+  - [On the Slide:](#on-the-slide-2)
+  - [What to Say Aloud:](#what-to-say-aloud-2)
+- [Slide 4: How I Used Claude Code Safely](#slide-4-how-i-used-claude-code-safely)
+  - [On the Slide:](#on-the-slide-3)
+  - [What to Say Aloud:](#what-to-say-aloud-3)
+- [Slide 5: The Problem: "Dominant Mountain Peaks"](#slide-5-the-problem-dominant-mountain-peaks)
+  - [On the Slide:](#on-the-slide-4)
+  - [What to Say Aloud:](#what-to-say-aloud-4)
+- [Slide 6: Commands to Test the Problem](#slide-6-commands-to-test-the-problem)
+  - [On the Slide:](#on-the-slide-5)
+  - [What to Say Aloud:](#what-to-say-aloud-5)
+- [Slide 7: Look at My Terminal Results!](#slide-7-look-at-my-terminal-results)
+  - [On the Slide:](#on-the-slide-6)
+  - [What to Say Aloud:](#what-to-say-aloud-6)
+- [Slide 8: Uploading to Jutge.org](#slide-8-uploading-to-jutgeorg)
+  - [On the Slide:](#on-the-slide-7)
+  - [What to Say Aloud:](#what-to-say-aloud-7)
+- [Slide 9: What is "Headless Core"? (Phase 3 Idea)](#slide-9-what-is-headless-core-phase-3-idea)
+  - [On the Slide:](#on-the-slide-8)
+  - [What to Say Aloud:](#what-to-say-aloud-8)
+- [Slide 10: Next Steps & Questions for Jordi & Pau](#slide-10-next-steps--questions-for-jordi--pau)
+  - [On the Slide:](#on-the-slide-9)
+  - [What to Say Aloud:](#what-to-say-aloud-9)
+
 ---
 
 ## Slide 1: Welcome & Overview

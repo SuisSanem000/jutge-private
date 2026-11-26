@@ -1,5 +1,12 @@
 # 08 — Verification log of the old `doc/ai-documents/`
 
+## Table of Contents
+
+- [Claims that held (kept)](#claims-that-held-kept)
+- [Corrected](#corrected)
+- [Dropped](#dropped)
+- [Still unverified](#still-unverified)
+
 The old folder (9 files, 877 lines, written by an earlier AI assistant) was checked against the code. It was then removed from the working tree. It stays in git history (see the commit that removes it).
 
 ## Claims that held (kept)

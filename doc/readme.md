@@ -2,6 +2,10 @@
 
 > Organized by purpose with short lowercase-with-dashes filenames.
 
+## Table of Contents
+
+- [Quick Links](#quick-links)
+
 ```text
 doc/
 ├── ai-assistant/        # Strictly user-ordered AI operational rules

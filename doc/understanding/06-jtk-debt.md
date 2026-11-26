@@ -1,5 +1,13 @@
 # 06 — Observations for the jtk rewrite
 
+## Table of Contents
+
+- [Structural problems](#structural-problems)
+- [Duplication](#duplication)
+- [Bugs and inconsistencies](#bugs-and-inconsistencies)
+- [Things worth preserving](#things-worth-preserving)
+- [Gaps relative to the professors' goals (from the 2026-10-22 meeting and problem-editor README)](#gaps-relative-to-the-professors-goals-from-the-2026-10-22-meeting-and-problem-editor-readme)
+
 Observations only. Not a design. Each item was read in the code of `resources/jutge_repos/jutge-toolkit` (v4.4.50). Items marked *not tested* were not run.
 
 ## Structural problems

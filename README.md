@@ -2,6 +2,12 @@
 
 > UPC scholarship workspace for **`jtk` (`@jutge.org/toolkit`)** and the Jutge.org problem-authoring & AI tooling ecosystem.
 
+## Table of Contents
+
+- [Where to Look First](#where-to-look-first)
+- [Directory Structure](#directory-structure)
+- [Key Policies](#key-policies)
+
 ---
 
 ## Where to Look First

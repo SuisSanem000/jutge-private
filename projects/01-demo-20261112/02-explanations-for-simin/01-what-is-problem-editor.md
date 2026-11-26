@@ -3,6 +3,14 @@
 > **Location:** `work/01-meeting-presentation-and-demo-20261112/02-explanations-for-simin/01-what-is-problem-editor.md`  
 > **Parent Navigation:** [Explanations Overview](./README.md) • [What Did I Do?](./02-what-did-i-do.md) • [Task 01 Root](../README.md)
 
+## Table of Contents
+
+- [1. The Real-World Problem It Solves](#1-the-real-world-problem-it-solves)
+- [2. Pau Fernandez's Vision: The Problem Editor SaaS](#2-pau-fernandezs-vision-the-problem-editor-saas)
+  - [Core Principles of Pau's Vision](#core-principles-of-paus-vision)
+- [3. The 4 Proposed Phases](#3-the-4-proposed-phases)
+- [4. Anatomy of the Upstream `problem-editor` Folder](#4-anatomy-of-the-upstream-problem-editor-folder)
+
 ---
 
 ## 1. The Real-World Problem It Solves

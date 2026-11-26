@@ -4,6 +4,15 @@
 > **Audience:** Prof. Jordi Petit & Pau Fernandez  
 > **Parent Navigation:** [Meeting Materials Overview](./README.md) • [Engineering Proposal](./PROPOSAL-PRESENTATION-20261112.md) • [Questions to Ask](./02-questions-to-ask-professors.md) • [Task 01 Root](../README.md)
 
+## Table of Contents
+
+- [1. Meeting Agenda & Timeline (30–45 min total)](#1-meeting-agenda--timeline-3045-min-total)
+- [2. Word-for-Word Speaking Script](#2-word-for-word-speaking-script)
+  - [Part 1: The Opener (Roadmap Alignment)](#part-1-the-opener-roadmap-alignment)
+  - [Part 2: Phase 1 Mastery (Format & Pedagogy)](#part-2-phase-1-mastery-format--pedagogy)
+  - [Part 3: Phase 2 Live Demonstration (The Generated Problem)](#part-3-phase-2-live-demonstration-the-generated-problem)
+  - [Part 4: The Pivot to Phase 3 & The 4-Month Rebuild](#part-4-the-pivot-to-phase-3--the-4-month-rebuild)
+
 ---
 
 ## 1. Meeting Agenda & Timeline (30–45 min total)
