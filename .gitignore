@@ -8,6 +8,7 @@ problem-editor/
 
 # Ignore all cloned Jutge repositories
 jutge_repos/
+**/jutge_repos/
 
 # Ignore OS and editor configuration
 .vscode/
@@ -16,5 +17,6 @@ jutge_repos/
 
 # Ignore local personal notes, credentials, and environment files
 private-local/
+**/private-local/
 .env
 .env.*

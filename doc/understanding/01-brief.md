@@ -1,7 +1,8 @@
 # Senior Developer Project Brief: Jutge & Problem-Editor
 
+> **Note (2026-11-12 pivot):** After the November 12 meeting, the project direction shifted from rewriting `jtk` to keeping `jtk` unchanged and building a separate problem-editor CLI (`pedit`). See [Project State](../project-state/state.md) for current goals.
 > **Audience:** Senior Software Engineer onboarding to the Jutge scholarship project.  
-> **Purpose:** 15-minute executive architectural briefing covering domain, codebase state, and 4-month roadmap.
+> **Purpose:** 15-minute executive architectural briefing covering domain, codebase state, and initial roadmap.
 
 ---
 
