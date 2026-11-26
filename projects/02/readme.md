@@ -1,5 +1,7 @@
 # Phase 02 — `pedit` CLI & PDF Problem Viewer
 
+> **Current Focus:** Build **`pedit`** (AI-assisted Jutge problem editor CLI) + a minimal local web PDF problem viewer on top of unmodified `jtk`.
+
 Phase 02 implements the two post-Nov 12 priorities:
 
 1. [**`cli/`**](./cli/readme.md) — `pedit` CLI wrapping unmodified `jtk` (`4.4.50`), common `.pbm` editing helpers, and OpenRouter SDK integration.
