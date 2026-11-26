@@ -1,4 +1,0 @@
-handler: std
-source_modifier: no_main
-func_name: is_bicolor
-compilers: G++17

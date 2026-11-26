@@ -1,7 +1,0 @@
-Lee una secuencia de números y, cada vez que aparezca un 0, debes imprimir y eliminar el 
-número más grande de los que había guardados hasta ese momento.
-Si aparece un 0 y no hay ningún número guardado, no hagas nada.
-
-O la de urgencias:
-Se van leyendo triples: identificador, gravedad, hora. Hay T salas de triage. Hay tres tipos 
-de pacientes: 1 y 2.

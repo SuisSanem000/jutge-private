@@ -1,2 +1,0 @@
-print(extraneous_maybe(list(range(10_000)), list(range(5_000, -1, -1)) + [-666] + list(range(5_001, 10_000))))
-print(extraneous_maybe(list(range(10_000)), list(range(5_000, -1, -1)) + list(range(5_001, 10_000))))

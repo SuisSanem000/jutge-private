@@ -1,2 +1,0 @@
-all:
-	jutge-make-problem

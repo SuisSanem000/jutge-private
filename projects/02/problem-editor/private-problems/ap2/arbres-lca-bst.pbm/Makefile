@@ -1,2 +1,0 @@
-CXX = g++-9
-CXXFLAGS = -O2

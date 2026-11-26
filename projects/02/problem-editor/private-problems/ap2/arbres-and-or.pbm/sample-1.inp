@@ -1,3 +1,0 @@
-AND(OR(a,b),NOT(c))
-a 
-c a

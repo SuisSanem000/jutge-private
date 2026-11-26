@@ -21,8 +21,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
 
-      - name: Install pedit dependencies
-        run: bun install --cwd projects/02/problem-editor/pedit
+      - name: Install pedit dependencies (if present)
+        run: |
+          if [ -f "projects/02/problem-editor/pedit/package.json" ]; then
+            bun install --cwd projects/02/problem-editor/pedit
+          fi
 
       - name: Build static site
         run: |
@@ -33,11 +36,27 @@ jobs:
           cp projects/02/pages/index.html _site/02/pedit-cli-and-pdf-viewer/index.html
           cp projects/02/pages/cli/index.html _site/02/pedit-cli-and-pdf-viewer/cli/index.html
 
-          # Package pedit CLI bundle (excluding node_modules and .env)
-          tar --exclude='node_modules' --exclude='.env*' -czf _site/02/pedit-cli-and-pdf-viewer/cli/pedit.tar.gz -C projects/02/problem-editor pedit
+          # Package pedit CLI bundle if present
+          if [ -d "projects/02/problem-editor/pedit" ]; then
+            tar --exclude='node_modules' --exclude='.env*' -czf _site/02/pedit-cli-and-pdf-viewer/cli/pedit.tar.gz -C projects/02/problem-editor pedit
+          fi
 
-          # Export full interactive static PDF Problem Viewer
-          bun run projects/02/problem-editor/viewer/export-static.ts _site/02/pedit-cli-and-pdf-viewer/pdf-viewer
+          # Export PDF viewer if present, else write a clean status page
+          if [ -f "projects/02/problem-editor/viewer/export-static.ts" ]; then
+            bun run projects/02/problem-editor/viewer/export-static.ts _site/02/pedit-cli-and-pdf-viewer/pdf-viewer
+          else
+            cat > _site/02/pedit-cli-and-pdf-viewer/pdf-viewer/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <head><meta charset="utf-8" /><title>PDF Problem Viewer</title></head>
+          <body style="font-family:system-ui,sans-serif;max-width:680px;margin:3rem auto;padding:0 1rem;line-height:1.6;">
+            <p><a href="../">&larr; Back to 02</a></p>
+            <h1>PDF Problem Viewer</h1>
+            <p><code>projects/02/problem-editor/</code> is currently kept local-only (gitignored) pending supervisor confirmation on public sharing.</p>
+          </body>
+          </html>
+          HTML
+          fi
 
           # Root index pointing to latest phase
           cat > _site/index.html <<'HTML'

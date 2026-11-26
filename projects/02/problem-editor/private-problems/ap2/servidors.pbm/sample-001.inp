@@ -1,7 +1,0 @@
-4 a b c d
-EXECUTE a 1
-ADD a 3500
-ADD a 5000
-EXECUTE d 3
-EXECUTE a 0
-TRANSFER a a

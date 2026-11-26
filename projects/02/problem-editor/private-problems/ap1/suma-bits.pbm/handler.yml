@@ -1,5 +1,0 @@
-handler: std
-solution: Python3
-checker: elastic
-separator: "\n"
-presentation_error: 1
