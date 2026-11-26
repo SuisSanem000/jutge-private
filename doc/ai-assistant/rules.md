@@ -9,7 +9,7 @@ Read this file and [Project State](../project-state/state.md) at the start of ev
 ## Hard Rules
 
 1. **Read-only `resources/`:** Never create, edit, or delete any file under `resources/` or production grading repos (`jutge-driver-std`, `jutge-dockerfiles`, `jutge-exec`). The cloned `problem-editor/` repo lives directly under `resources/` root (`resources/problem-editor/`).
-2. **Write scope:** Write only inside `doc/`, `projects/`, root `README.md`, and `.gitignore`. Do not create root `CLAUDE.md` or stray memory files.
+2. **Write scope:** Write only inside `doc/`, `projects/`, `.github/`, root `README.md`, and `.gitignore`. Do not create root `CLAUDE.md` or stray memory files.
 3. **Commit & push:** Commit and push to `origin/main` after every change. Keep the repository public (`SuisSanem000/jutge-private`) unless explicitly instructed otherwise.
 4. **Local-only folders:** Keep `resources/private-local/` (and any `private-local/`, `jutge_repos/`, `**/problem.yml`, `.env`, `.env.*`) in `.gitignore`; never track, commit, or push them. Track and push `resources/` (outside `resources/private-local/`), `doc/`, and `projects/`.
 5. **Privacy & secrets:** Never commit personal emails, passwords, passcodes, API tokens, or local PC paths (`/Users/...`, `file:///Users/...`). Use generic placeholders (e.g., `<your-upc-email>`, `<your-password>`, `<repo-root>/...`) and relative markdown links.
@@ -20,3 +20,4 @@ Read this file and [Project State](../project-state/state.md) at the start of ev
 10. **Auto-sync rules:** Whenever Simin states or implies a project rule in chat, immediately update this `doc/ai-assistant/rules.md` file (without duplicates).
 11. **Table of Contents (TOC):** Every markdown file in `doc/`, `projects/`, and root `README.md` must include a `## Table of Contents` section with anchor links.
 12. **Task-scoped docs:** Save technical and informational notes for a specific feature/task inside its `projects/<phase>/<feature>/` folder, while always saving a concise response summary in `doc/ai-log/YYYY-MM-DD/NN.md`.
+13. **Sync to `jutge-org/problem-editor`:** When Simin triggers [`sync-problem-editor.md`](./sync-problem-editor.md), push the latest `projects/<NN>/problem-editor/` code to `https://github.com/jutge-org/problem-editor` (`main`) with a date-tagged commit, and update its GitHub Actions Pages and `README.md` links.

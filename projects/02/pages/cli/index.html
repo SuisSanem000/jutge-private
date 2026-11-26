@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>pedit CLI — Phase 02</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 760px; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; color: #111; }
+    code, pre { background: #f6f8fa; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, monospace; }
+    pre { padding: 1rem; overflow-x: auto; }
+    .btn { display: inline-block; padding: 0.6rem 1.1rem; background: #0969da; color: #fff; border-radius: 6px; text-decoration: none; font-weight: 600; margin: 0.5rem 0; }
+    .btn:hover { background: #0757b5; }
+  </style>
+</head>
+<body>
+  <p><a href="../">&larr; Back to 02</a></p>
+  <h1><code>pedit</code> CLI</h1>
+  <p>AI-assisted Jutge problem-editor CLI built around unmodified <code>jtk</code> (4.4.50).</p>
+
+  <h2>Download</h2>
+  <p><a class="btn" href="./pedit.tar.gz" download>Download pedit bundle (pedit.tar.gz)</a></p>
+  <p><small>Bundle is packaged automatically by GitHub Actions once <code>projects/02/problem-editor/pedit/</code> is added.</small></p>
+
+  <h2>How It Works</h2>
+  <ul>
+    <li><strong>Unmodified <code>jtk</code> backend:</strong> Calls <code>jtk make</code>, <code>jtk make pdf</code>, <code>jtk lint</code>, and <code>jtk verify</code> deterministically.</li>
+    <li><strong>OpenRouter SDK:</strong> Lets you choose models (e.g. DeepSeek v4) for conversational edits, with future routing to Jutge's API.</li>
+    <li><strong>Hidden master prompts:</strong> Loads <code>spec/</code> and <code>skills/</code> automatically so prompts stay focused only on the problem idea or edit request.</li>
+    <li><strong>Closed-loop verification:</strong> Re-runs <code>jtk</code> after edits so errors self-correct.</li>
+  </ul>
+
+  <h2>Planned Commands</h2>
+  <pre>pedit list
+pedit status &lt;problem.pbm&gt;
+pedit build &lt;problem.pbm&gt; --json
+pedit edit &lt;problem.pbm&gt; "add edge case tests for empty input"</pre>
+</body>
+</html>

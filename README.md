@@ -2,6 +2,8 @@
 
 > UPC scholarship workspace for **`jtk` (`@jutge.org/toolkit`)** and the Jutge.org problem-authoring & AI tooling ecosystem.
 
+**Live GitHub Pages (Latest):** [02 — `pedit` CLI & PDF Viewer](https://suissanem000.github.io/jutge-private/02/pedit-cli-and-pdf-viewer/) • [CLI](https://suissanem000.github.io/jutge-private/02/pedit-cli-and-pdf-viewer/cli/) • [PDF Viewer](https://suissanem000.github.io/jutge-private/02/pedit-cli-and-pdf-viewer/pdf-viewer/)
+
 ## Table of Contents
 
 - [Where to Look First](#where-to-look-first)
