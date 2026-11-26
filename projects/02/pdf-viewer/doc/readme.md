@@ -1,52 +1,40 @@
 # PDF Problem Viewer
 
-> Implemented in `projects/02/problem-editor/viewer/`.
-
 ## Table of Contents
 
-- [Architecture](#architecture)
-- [Endpoints & Files](#endpoints--files)
-- [How to Run](#how-to-run)
-- [Verification Results](#verification-results)
-- [Issues Log](#issues-log)
+- [What This Achieves](#what-this-achieves)
+- [Features & Modes](#features--modes)
+- [Technical Details](#technical-details)
+- [Verification](#verification)
 
----
+## What This Achieves
 
-## Architecture
+- **Instant visual review:** Shows any `.pbm` problem's compiled PDF statement alongside its LaTeX, solution, sample tests, and `handler.yml`.
+- **Transparent folder scope:** Displays the opened root folder (`sourceLabel` / `root`) at the top of the sidebar.
+- **Open any `.pbm` from PC:** Includes a browser folder picker (`Open .pbm from PC`) that works offline/client-side even on static GitHub Pages, plus server directory switching locally.
+- **Zero heavy stack:** Runs with `Bun.serve` + plain HTML/JS (no database, auth, or framework).
 
-- **Zero-framework local server:** `server.ts` (`Bun.serve`, port `3456`) scans `projects/02/problem-editor/` (`generated-demo/`, `generated-exam-sample/`, `spec/models/`, excluding `private-problems/` unless `?private=1`), serves compiled PDFs, and supports switching folders via `POST /api/open-dir`.
-- **Dual-mode UI:** `public/index.html` shows the opened root folder at the top of the sidebar, includes an **Open `.pbm` from PC** folder picker (working client-side on both GitHub Pages and localhost), and provides **Rebuild PDF**, **`jtk make`**, and **`jtk lint`** buttons in server mode.
-- **Static exporter:** `export-static.ts` bundles `index.html`, `manifest.json`, PDFs, and sanitized `files.json` (omitting local machine paths and `problem.yml`) for GitHub Pages.
+## Features & Modes
 
----
+| Mode | Where It Runs | Capabilities |
+|---|---|---|
+| **Live Server (`server.ts`)** | Localhost (`PORT=3456`) | Scans folder, auto-builds PDFs, **Rebuild PDF** / **`jtk make`** / **`jtk lint`** buttons, `Switch Server Folder` |
+| **Static Pages (`export-static.ts`)** | GitHub Pages (`pedit-demo`) | Prebuilt `manifest.json` + PDFs + sanitized `files.json` + client-side **Open `.pbm` from PC** |
 
-## Endpoints & Files
+## Technical Details
 
-- `GET /api/problems` — list discovered `.pbm` problems, opened `root`/`sourceLabel`, and languages.
-- `POST /api/open-dir` — switch scanned local folder on the live server.
-- `GET /api/problems/:id/pdf?lang=<lang>&rebuild=0` — serve `problem.<lang>.pdf` (auto-builds if missing or `rebuild=1`).
-- `GET /api/problems/:id/files` — return `handler.yml`, `problem.<lang>.tex`/`.yml`, `solution*`, and `sample-*`.
-- `POST /api/problems/:id/action` — execute `make`, `pdf`, `lint`, or `verify`.
+- **API Endpoints (`server.ts`):**
+  - `GET /api/problems`: Returns opened `root`/`sourceLabel` and `.pbm` list (excludes `private-problems/` unless `?private=1`).
+  - `POST /api/open-dir`: Switches the scanned local directory on the live server.
+  - `GET /api/problems/:id/pdf?lang=<lang>&rebuild=0`: Serves `problem.<lang>.pdf` (calls `buildProblemPdfs` if missing or `rebuild=1`).
+  - `GET /api/problems/:id/files`: Returns inspectable text files (never exposes `problem.yml`).
+  - `POST /api/problems/:id/action`: Runs `make`, `pdf`, `lint`, or `verify` via unmodified `jtk`.
+- **Run locally:** `cd projects/02/problem-editor/viewer && bun run server.ts`.
 
----
+## Verification
 
-## How to Run
-
-```bash
-cd projects/02/problem-editor/viewer
-bun run server.ts
-# Open http://localhost:3456
-```
-
----
-
-## Verification Results
-
-- Live `Bun.serve` smoke test (`PORT=3459`): `GET /api/problems` listed `generated-demo/sum-evens.pbm` + 10 public `.pbm` folders; `GET /api/problems/generated-demo__sum-evens.pbm/pdf` returned HTTP `200` (`112,086` bytes, `%PDF-1.4`).
-- `bun run export-static.ts`: Exported `11` problems (`sum-evens.pbm` + `P1`..`P3` PDFs) and `2` exam PDFs cleanly with local paths stripped.
-
----
-
-## Issues Log
-
-See [PDF Viewer Issues](./issues.md).
+| Check | Result |
+|---|---|
+| **Live server (`PORT=3459`)** | `GET /api/problems` listed `11` public `.pbm` problems; `/pdf` returned `HTTP 200` (`%PDF-1.4`, `112,086` bytes) |
+| **Static export (`export-static.ts`)** | Exported `11` problems (`sum-evens.pbm` + `P1..P3` PDFs) and `2` exam PDFs with local paths stripped |
+| **Issues** | See [PDF Viewer Issues](./issues.md) (macOS BasicTeX `moreverb.sty` fallback) |

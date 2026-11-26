@@ -1,69 +1,51 @@
 # `pedit` CLI
 
-> Implemented in `projects/02/problem-editor/pedit/` wrapping unmodified `jtk` (`4.4.50`).
-
 ## Table of Contents
 
-- [Overview & Architecture](#overview--architecture)
-- [Commands](#commands)
-- [OpenRouter & Skills Integration](#openrouter--skills-integration)
-- [Verification Results](#verification-results)
+- [What This Achieves](#what-this-achieves)
+- [Core Commands](#core-commands)
+- [Technical Architecture](#technical-architecture)
+- [Verification](#verification)
 - [Related Docs](#related-docs)
 
----
+## What This Achieves
 
-## Overview & Architecture
+- **No changes to `jtk`:** Wraps `jtk` (`4.4.50`) cleanly with `--json` output for scripts and AI agents.
+- **Selectable low-cost AI:** Uses `@openrouter/sdk` (default `openai/gpt-4o-mini`; supports `google/gemini-2.5-flash-lite`, `deepseek/deepseek-chat-v3-0324`).
+- **Hidden master prompts:** Loads `spec/constitucio.md`, `spec/problema-jutge.md`, and `skills/problemes-jutge/SKILL.md` automatically so users only write short ideas or edit requests.
+- **Safety & closed loop:** Blocks LLM writes to `*.cor` and `problem.yml`; runs `generate.ts`, `jtk make`, PDF build, and `jtk lint` with up to 2 auto-fix retries.
 
-- `src/index.ts` — CLI router (`--json`, `--dir`, `--model`, `--preset`, `--lang`, `--include-private`).
-- `src/jtk.ts` — Subprocess wrapper for `jtk make`, `jtk make pdf`, `jtk lint`, `jtk verify`, `jtk clean`, and `bun run generate.ts`.
-- `src/pbm.ts` — `.pbm` discovery/inspection, deterministic `meta`/`handler` editors, and guarded writes (never writes `*.cor` or `problem.yml`).
-- `src/pdf.ts` — Runs `jtk make pdf`, detects BasicTeX `Error in LaTeX` silently exiting `0`, and renders missing PDFs via Chrome headless fallback.
-- `src/ai.ts` — `@openrouter/sdk` integration with hidden skills/specs and up to 2 automatic closed-loop self-correction retries.
+## Core Commands
 
----
+| Group | Command | Purpose |
+|---|---|---|
+| **Inspect** | `pedit list [--dir ..] [--json]` | Find `.pbm` folders (excludes `private-problems/` by default) |
+| **Inspect** | `pedit status <pbm>` / `pedit show <pbm> [file]` | Show languages, PDFs, tests, or file contents |
+| **Build (`jtk`)** | `pedit build` / `pdf` / `lint` / `verify` / `clean <pbm>` | Run unmodified `jtk` commands and return JSON |
+| **Direct Edit** | `pedit meta <pbm> --lang en --title "..."` | Update `problem.<lang>.yml` without AI |
+| **Direct Edit** | `pedit handler <pbm> --compilers G++17` | Update `handler.yml` without AI |
+| **AI Authoring** | `pedit create <dir.pbm> "<idea>"` | Generate `.pbm` problem + verify in closed loop |
+| **AI Editing** | `pedit edit <pbm> ["<req>"] [--preset <name>]` | Edit `.pbm` via OpenRouter + preset shortcuts |
+| **Interactive** | `pedit chat <pbm>` | Multi-turn terminal editing loop |
+| **Discovery** | `pedit models` / `pedit presets` | List low-cost models and edit presets |
 
-## Commands
+## Technical Architecture
 
-```bash
-cd projects/02/problem-editor/pedit && bun install
+- **Runtime:** Bun + TypeScript (`projects/02/problem-editor/pedit/`).
+- **Modules:**
+  - `src/index.ts`: CLI flag parser and command router.
+  - `src/jtk.ts`: Subprocess runner with timeouts for `jtk` and `bun run generate.ts`.
+  - `src/pbm.ts`: `.pbm` scanner, YAML updaters, and path/write guard (`assertSafeRelativePath`).
+  - `src/pdf.ts`: `jtk make pdf` runner + headless Chrome HTML-to-PDF fallback.
+  - `src/ai.ts`: `@openrouter/sdk` client (`OPENROUTER_API_KEY` or `ANTHROPIC_AUTH_TOKEN` fallback), preset prompts, and retry loop.
 
-bun run src/index.ts list [--dir ..] [--json]
-bun run src/index.ts status <problem.pbm> [--json]
-bun run src/index.ts show <problem.pbm> [file] [--json]
+## Verification
 
-bun run src/index.ts build <problem.pbm> [--json]
-bun run src/index.ts pdf <problem.pbm> [--json]
-bun run src/index.ts lint <problem.pbm> [--json]
-bun run src/index.ts verify <problem.pbm>
-bun run src/index.ts clean <problem.pbm>
-
-bun run src/index.ts meta <problem.pbm> --lang en --title "..." --author "..." --email "..."
-bun run src/index.ts handler <problem.pbm> --compilers G++17
-
-bun run src/index.ts models [--json]
-bun run src/index.ts presets [--json]
-bun run src/index.ts create <dir.pbm> "<idea>" [--model openai/gpt-4o-mini] [--json]
-bun run src/index.ts edit <dir.pbm> ["<instruction>"] [--preset add-edge-tests] [--json]
-bun run src/index.ts chat <dir.pbm>
-```
-
----
-
-## OpenRouter & Skills Integration
-
-- Reads `OPENROUTER_API_KEY` from environment or `.env`, with automatic fallback to `ANTHROPIC_AUTH_TOKEN` when `ANTHROPIC_BASE_URL` targets OpenRouter.
-- Low-cost models listed in `CHEAP_MODELS`: `openai/gpt-4o-mini` (default), `google/gemini-2.5-flash-lite`, and `deepseek/deepseek-chat-v3-0324`.
-- Preloads `spec/constitucio.md`, `spec/problema-jutge.md`, and `skills/problemes-jutge/SKILL.md` behind the scenes so prompts stay short.
-
----
-
-## Verification Results
-
-- `bun test` (`tests/pedit.test.ts`): **2 passed, 0 failed** (13 assertions covering write guards, metadata/handler updates, and `.pbm` discovery).
-- Live OpenRouter `pedit create` (`openai/gpt-4o-mini`): Created `projects/02/problem-editor/generated-demo/sum-evens.pbm` cleanly (`jtk make` + `jtk lint` + PDF build passed in 1 attempt).
-- Live OpenRouter `pedit edit`: Added `sample-3.inp` with negative integers (`jtk make` generated `sample-3.cor` and `jtk lint` passed with 0 issues).
-
----
+| Check | Scope | Result |
+|---|---|---|
+| **Unit tests (`bun test`)** | Write guards, YAML edits, `.pbm` discovery | 2/2 passed (13 assertions) |
+| **Live `pedit create`** | `sum-evens.pbm` via `openai/gpt-4o-mini` | Passed in 1 attempt (`jtk make` + `lint` + PDF) |
+| **Live `pedit edit`** | Added `sample-3.inp` with negative numbers | Passed in 1 attempt (`sample-3.cor` generated by `jtk`) |
 
 ## Related Docs
 
