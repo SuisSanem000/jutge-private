@@ -12,9 +12,9 @@
 
 ## Where to Look First
 
-1. **AI Rules & Current State:** [AI Assistant Rules](./doc/ai-assistant/rules.md) • [Project State](./doc/project-state/state.md)
-2. **Meeting Decisions & Learning Plan:** [Meetings Summary](./doc/project-state/meetings.md) • [Skill Tracker](./doc/project-state/learning.md)
-3. **Architecture & `jtk` Reference:** [Documentation Map](./doc/readme.md) • [Brief](./doc/understanding/01-brief.md) • [Ecosystem](./doc/understanding/02-ecosystem.md) • [`.pbm` Format](./doc/understanding/04-pbm-format.md)
+1. **AI Entry & Current State:** [AI Start Here](./doc/ai-assistant/start-here.md) • [AI Assistant Rules](./doc/ai-assistant/rules.md) • [Project State](./doc/project-state/state.md)
+2. **Learning Plan:** [Skill Tracker](./doc/project-state/learning.md)
+3. **Architecture & `jtk` Reference:** [Documentation Map](./doc/readme.md) • [Ecosystem](./doc/understanding/02-ecosystem.md) • [`.pbm` Format](./doc/understanding/04-pbm-format.md)
 4. **Core Workflows & Translations:** [Upload Workflow](./doc/core-topics/upload-workflow.md) • [Problem Editor (EN)](./doc/core-topics/problem-editor-en/readme.md)
 5. **Deliverable Phases:** [Projects Index](./projects/readme.md) • [Phase 01 Demo (2026-11-12)](./projects/01-demo-20261112/README.md) • [Phase 02 (Active)](./projects/02/readme.md)
 
