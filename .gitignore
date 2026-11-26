@@ -20,6 +20,3 @@ node_modules/
 **/._*
 .env
 .env.*
-
-# Added by ggshield
-.cache_ggshield
