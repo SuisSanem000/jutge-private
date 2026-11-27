@@ -37,7 +37,7 @@
 | Phase | Deliverable | Dates | Status |
 |---|---|---|---|
 | [01-demo-20261112](../../projects/01-demo-20261112/README.md) | `.pbm` demo (`dominant-peaks.pbm`), Claude task, explanations, and Nov 12 presentation | 2026-11-11 – 2026-11-12 | Completed |
-| [02](../../projects/02/doc/readme.md) | `pedit` CLI & PDF Problem Viewer | 2026-11-26 | Completed & Synced |
+| [02-pedit-cli-and-viewer](../../projects/02-pedit-cli-and-viewer/doc/readme.md) | `pedit` CLI & PDF Problem Viewer | 2026-11-26 – 2026-11-27 | Ready for Demo |
 
 ---
 
@@ -59,4 +59,4 @@
 - **2026-10-25:** Pau shared `problem-editor` specs, pedagogical constitution, 7 reference models, and Claude skills.
 - **2026-10-27:** Jordi added private exam problems (`private-problems/`) to `problem-editor`.
 - **2026-11-12:** Phase 1 demo (`dominant-peaks.pbm`) presented; direction pivoted from rewriting `jtk` to building `pedit` on top of unmodified `jtk`, OpenRouter SDK, and a minimal problem-viewer web UI.
-- **2026-11-26:** Implemented `pedit` CLI + Problem PDF Viewer in `projects/02/problem-editor/`, verified OpenRouter (`openai/gpt-4o-mini`) + `jtk` closed loop, enabled GitHub Pages, synced `jutge-org/problem-editor` (`687f6f5`, tag `v2026-11-26`), and streamlined `doc/`.
+- **2026-11-26 – 2026-11-27:** Implemented `pedit` CLI + Problem PDF Viewer in `projects/02-pedit-cli-and-viewer/problem-editor/pedit/`, verified OpenRouter (`openai/gpt-4o-mini`) + `jtk` closed loop, deployed public demo on `SuisSanem000/pedit-demo` GitHub Pages, and kept `jutge-org/problem-editor` at `6779486` pending demo sign-off.

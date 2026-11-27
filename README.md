@@ -18,7 +18,7 @@
 2. **Learning Plan:** [Skill Tracker](./doc/project-state/learning.md)
 3. **Architecture & `jtk` Reference:** [Documentation Map](./doc/readme.md) • [Ecosystem](./doc/understanding/01-ecosystem.md) • [`.pbm` Format](./doc/understanding/03-pbm-format.md)
 4. **Core Workflows & Translations:** [Upload Workflow](./doc/core-topics/upload-workflow.md) • [Problem Editor (EN)](./doc/core-topics/problem-editor-en/readme.md)
-5. **Deliverable Phases:** [Projects Index](./projects/readme.md) • [Phase 01 Demo (2026-11-12)](./projects/01-demo-20261112/README.md) • [Phase 02 (Active)](./projects/02/doc/readme.md)
+5. **Deliverable Phases:** [Projects Index](./projects/readme.md) • [Phase 01 Demo (2026-11-12)](./projects/01-demo-20261112/README.md) • [Phase 02 (`pedit` CLI & Viewer)](./projects/02-pedit-cli-and-viewer/doc/readme.md)
 
 ---
 
