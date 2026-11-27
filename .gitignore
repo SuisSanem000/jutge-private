@@ -18,6 +18,7 @@ node_modules/
 # Ignore OS, editor, and environment files
 .vscode/
 .DS_Store
+**/.DS_Store
 **/._*
 .env
 .env.*
